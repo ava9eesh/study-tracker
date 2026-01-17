@@ -32,13 +32,20 @@ export default function Dashboard({ user, name }) {
   };
 
   const updateAnalytics = async () => {
-    const ref = doc(db, "analytics", user);
-    const snap = await getDoc(ref);
-    const today = new Date().toDateString();
+  const ref = doc(db, "analytics", user);
+  const snap = await getDoc(ref);
+  const today = new Date().toDateString();
 
-    let data = snap.exists()
-      ? snap.data()
-      : { totalDone: 0, todayDone: 0, lastDay: today };
+  let data;
+
+  if (!snap.exists()) {
+    data = {
+      totalDone: 1,
+      todayDone: 1,
+      lastDay: today,
+    };
+  } else {
+    data = snap.data();
 
     if (data.lastDay !== today) {
       data.todayDone = 0;
@@ -47,38 +54,39 @@ export default function Dashboard({ user, name }) {
 
     data.totalDone += 1;
     data.todayDone += 1;
+  }
 
-    await setDoc(ref, data);
-    setAnalytics(data);
-  };
+  await setDoc(ref, data);
+  setAnalytics(data); // 🔥 THIS WAS MISSING
+};
+
 
   /* ---------- STATUS SYSTEM ---------- */
-  const cycleStatus = (key, lesson) => {
-    const updated = { ...progress };
-    updated[key] ??= {};
+  const cycleStatus = async (key, lesson) => {
+  const updated = { ...progress };
+  updated[key] ??= {};
 
-    const current = updated[key][lesson] || "todo";
-    const next =
-      current === "todo"
-        ? "doing"
-        : current === "doing"
-        ? "done"
-        : "todo";
+  const prev = updated[key][lesson] || "todo";
 
-    updated[key][lesson] = next;
-    setProgress(updated);
-    saveProgress(user, updated);
+  const next =
+    prev === "todo"
+      ? "doing"
+      : prev === "doing"
+      ? "done"
+      : "todo";
 
-    if (next === "done") updateAnalytics();
-    setStreak(updateStreak(user));
-  };
+  updated[key][lesson] = next;
+  setProgress(updated);
+  saveProgress(user, updated);
 
-  const statusColor = (status) =>
-    status === "done"
-      ? "bg-green-700/50"
-      : status === "doing"
-      ? "bg-yellow-600/40"
-      : "bg-red-600/30";
+  // ✅ ONLY update analytics when switching TO done
+  if (prev !== "done" && next === "done") {
+    await updateAnalytics();
+  }
+
+  setStreak(updateStreak(user));
+};
+
 
   /* ---------- PROGRESS ---------- */
   const overallProgress = () => {
