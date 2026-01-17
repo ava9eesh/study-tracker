@@ -8,6 +8,11 @@ import { db } from "../utils/firebase";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 
 export default function Dashboard({ user, name }) {
+  const statusColor = (status) => {
+  if (status === "done") return "bg-green-700/50";
+  if (status === "doing") return "bg-yellow-600/40";
+  return "bg-red-600/30"; // todo
+};
   const [progress, setProgress] = useState({});
   const [streak, setStreak] = useState({ count: 0 });
   const [analytics, setAnalytics] = useState({
