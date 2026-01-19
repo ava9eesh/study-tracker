@@ -4,13 +4,13 @@ import { useState } from "react";
 import { syllabus } from "../data/syllabus";
 
 const STATUS_STYLES = {
-  todo: "border-gray-500 text-gray-300 bg-gray-700",
-  doing: "border-yellow-500 text-black bg-yellow-400",
-  done: "border-green-500 text-white bg-green-600",
-  mastered: "border-purple-500 text-white bg-purple-600",
+  todo: "bg-gray-700 text-gray-200",
+  doing: "bg-yellow-400 text-black",
+  done: "bg-green-600 text-white",
+  mastered: "bg-purple-600 text-white",
 };
 
-export default function Dashboard() {
+export default function Dashboard({ logout }) {
   const [progress, setProgress] = useState({});
   const [open, setOpen] = useState({});
   const [search, setSearch] = useState("");
@@ -25,9 +25,47 @@ export default function Dashboard() {
     }));
   };
 
+  /* -------- PROGRESS BAR LOGIC -------- */
+  const allLessons = Object.values(syllabus)
+    .flat()
+    .map((l) => l.name);
+
+  const completedCount = allLessons.filter((l) => {
+    const s = progress[l]?.status;
+    return s === "done" || s === "mastered";
+  }).length;
+
+  const progressPercent = allLessons.length
+    ? Math.round((completedCount / allLessons.length) * 100)
+    : 0;
+
   return (
     <div className="min-h-screen bg-black text-white p-6 max-w-6xl mx-auto">
-      <h1 className="text-3xl font-semibold mb-4">Class 9 Dashboard</h1>
+      {/* HEADER */}
+      <div className="flex justify-between items-center mb-6">
+        <h1 className="text-3xl font-semibold">Class 9 Dashboard</h1>
+
+        <button
+          onClick={() => logout && logout()}
+          className="px-4 py-2 rounded bg-zinc-800 hover:bg-zinc-700 text-sm"
+        >
+          Logout
+        </button>
+      </div>
+
+      {/* PROGRESS BAR */}
+      <div className="mb-6">
+        <div className="flex justify-between text-sm mb-1 opacity-80">
+          <span>Overall Progress</span>
+          <span>{progressPercent}%</span>
+        </div>
+        <div className="w-full h-2 bg-zinc-800 rounded">
+          <div
+            className="h-2 bg-green-500 rounded transition-all"
+            style={{ width: `${progressPercent}%` }}
+          />
+        </div>
+      </div>
 
       {/* SEARCH */}
       <input
@@ -70,12 +108,12 @@ export default function Dashboard() {
                     </div>
 
                     {/* STATUS BUTTONS */}
-                    <div className="flex gap-2">
+                    <div className="flex gap-2 mb-3">
                       {["todo", "doing", "done", "mastered"].map((s) => (
                         <button
                           key={s}
                           onClick={() => setStatus(lesson.name, s)}
-                          className={`px-3 py-1 rounded border text-sm transition
+                          className={`px-3 py-1 rounded text-sm border transition
                             ${
                               current === s
                                 ? STATUS_STYLES[s]
@@ -89,19 +127,32 @@ export default function Dashboard() {
                     </div>
 
                     {/* LINKS */}
-                    <div className="flex gap-4 mt-3 text-sm">
+                    <div className="flex gap-4 text-sm">
                       {lesson.video && (
                         <a
                           href={lesson.video}
                           target="_blank"
+                          rel="noopener noreferrer"
                           className="text-blue-400 hover:underline"
                         >
                           Lesson Video
                         </a>
                       )}
-                      <span className="text-purple-400 opacity-50">
-                        PYQs
-                      </span>
+
+                      {lesson.pyq ? (
+                        <a
+                          href={lesson.pyq}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-purple-400 hover:underline"
+                        >
+                          PYQs
+                        </a>
+                      ) : (
+                        <span className="text-purple-400 opacity-40 cursor-not-allowed">
+                          PYQs
+                        </span>
+                      )}
                     </div>
                   </div>
                 );
