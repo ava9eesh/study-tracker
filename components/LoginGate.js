@@ -6,6 +6,8 @@ import {
   onAuthStateChanged,
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../utils/firebase";
 import { useEffect, useState } from "react";
 
 import Dashboard from "./Dashboard";
@@ -13,19 +15,26 @@ import ModeSelector from "./ModeSelector";
 
 export default function LoginGate() {
   const [user, setUser] = useState(null);
-  const [step, setStep] = useState("loading"); 
-  // loading | mode | dashboard
+  const [ready, setReady] = useState(false);
+  const [hasMode, setHasMode] = useState(false);
 
   useEffect(() => {
-    const unsub = onAuthStateChanged(auth, (u) => {
+    const unsub = onAuthStateChanged(auth, async (u) => {
       if (!u) {
         setUser(null);
-        setStep("login");
+        setReady(true);
         return;
       }
 
       setUser(u);
-      setStep("mode"); // always go to mode once
+
+      // 🔥 CHECK FIRESTORE ONCE
+      const snap = await getDoc(doc(db, "users", u.uid));
+      if (snap.exists() && snap.data()?.settings) {
+        setHasMode(true);
+      }
+
+      setReady(true);
     });
 
     return () => unsub();
@@ -36,7 +45,7 @@ export default function LoginGate() {
     await signInWithPopup(auth, provider);
   };
 
-  if (step === "loading") return null;
+  if (!ready) return null;
 
   if (!user) {
     return (
@@ -51,11 +60,11 @@ export default function LoginGate() {
     );
   }
 
-  if (step === "mode") {
+  if (!hasMode) {
     return (
       <ModeSelector
         user={user}
-        onDone={() => setStep("dashboard")}
+        onDone={() => setHasMode(true)}
       />
     );
   }
