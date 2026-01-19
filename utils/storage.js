@@ -1,7 +1,7 @@
-export function getProgress(user) {
-  return JSON.parse(localStorage.getItem(`progress-${user}`)) || {};
-}
+export const getProgress = (uid) => {
+  return JSON.parse(localStorage.getItem(`progress-${uid}`)) || {};
+};
 
-export function saveProgress(user, progress) {
-  localStorage.setItem(`progress-${user}`, JSON.stringify(progress));
-}
+export const saveProgress = (uid, data) => {
+  localStorage.setItem(`progress-${uid}`, JSON.stringify(data));
+};
