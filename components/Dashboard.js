@@ -2,6 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { syllabus } from "@/data/syllabus9";
+import { doc, getDoc, setDoc } from "firebase/firestore";
+import { db } from "@/utils/firebase";
+import { signOut } from "firebase/auth";
+import { auth } from "@/utils/firebase";
 
 const STATUS_COLORS = {
   todo: "bg-zinc-700",
@@ -10,23 +14,44 @@ const STATUS_COLORS = {
   mastered: "bg-purple-600",
 };
 
-const STATUS_ORDER = ["todo", "doing", "done", "mastered"];
+const STATUSES = ["todo", "doing", "done", "mastered"];
 
-export default function Dashboard({ selectedClass }) {
+export default function Dashboard({ user, selectedClass }) {
   const [data, setData] = useState({});
   const [search, setSearch] = useState("");
-  const [openSections, setOpenSections] = useState({});
+  const [open, setOpen] = useState({});
 
+  /* ---------------- FIRESTORE LOAD ---------------- */
   useEffect(() => {
-    const saved = localStorage.getItem("progress-9th");
-    if (saved) setData(JSON.parse(saved));
-  }, []);
+    const load = async () => {
+      const ref = doc(db, "users", user.uid);
+      const snap = await getDoc(ref);
+      if (snap.exists() && snap.data().progress) {
+        setData(snap.data().progress);
+      }
+    };
+    load();
+  }, [user.uid]);
 
+  /* ---------------- FIRESTORE SAVE ---------------- */
   useEffect(() => {
-    localStorage.setItem("progress-9th", JSON.stringify(data));
-  }, [data]);
+    if (!user) return;
+    const ref = doc(db, "users", user.uid);
+    setDoc(
+      ref,
+      {
+        class: selectedClass,
+        progress: data,
+      },
+      { merge: true }
+    );
+  }, [data, user, selectedClass]);
 
-  const updateLesson = (subject, lesson, updates) => {
+  /* ---------------- HELPERS ---------------- */
+  const toggle = (key) =>
+    setOpen((prev) => ({ ...prev, [key]: !prev[key] }));
+
+  const updateLesson = (subject, lesson, changes) => {
     setData((prev) => ({
       ...prev,
       [subject]: {
@@ -36,41 +61,46 @@ export default function Dashboard({ selectedClass }) {
           revisions: 0,
           pyqs: 0,
           video: "",
-          pyqLink: "",
+          pyqsLink: "",
           ...(prev[subject]?.[lesson] || {}),
-          ...updates,
+          ...changes,
         },
       },
     }));
   };
 
-  const allLessons = Object.values(data).flatMap((s) => Object.values(s));
-  const completed = allLessons.filter(
-    (l) => l.status === "done" || l.status === "mastered"
-  ).length;
-  const total = Object.values(syllabus)
+  /* ---------------- PROGRESS ---------------- */
+  const allLessons = Object.values(syllabus)
     .flatMap((s) =>
       Array.isArray(s) ? s : Object.values(s).flat()
+    );
+
+  const completed = Object.values(data)
+    .flatMap((s) => Object.values(s))
+    .filter(
+      (l) => l.status === "done" || l.status === "mastered"
     ).length;
 
-  const percent = total ? Math.round((completed / total) * 100) : 0;
+  const percent = allLessons.length
+    ? Math.round((completed / allLessons.length) * 100)
+    : 0;
 
-  const toggle = (key) =>
-    setOpenSections((p) => ({ ...p, [key]: !p[key] }));
-
+  /* ---------------- RENDER LESSON ---------------- */
   const renderLesson = (subject, lesson) => {
-    const l = data?.[subject]?.[lesson] || {};
     if (!lesson.toLowerCase().includes(search.toLowerCase())) return null;
+
+    const l = data?.[subject]?.[lesson] || { status: "todo" };
 
     return (
       <div
         key={lesson}
-        className={`p-3 rounded mb-2 ${STATUS_COLORS[l.status || "todo"]}`}
+        className={`p-3 rounded mb-2 ${STATUS_COLORS[l.status]}`}
       >
         <div className="font-semibold mb-2">{lesson}</div>
 
+        {/* STATUS */}
         <div className="flex gap-2 mb-2">
-          {STATUS_ORDER.map((s) => (
+          {STATUSES.map((s) => (
             <button
               key={s}
               onClick={() => updateLesson(subject, lesson, { status: s })}
@@ -83,6 +113,7 @@ export default function Dashboard({ selectedClass }) {
           ))}
         </div>
 
+        {/* COUNTERS */}
         <div className="flex gap-4 text-sm mb-2">
           <label>
             Revisions:
@@ -90,7 +121,7 @@ export default function Dashboard({ selectedClass }) {
               type="number"
               min="0"
               max="100"
-              value={l.revisions || 0}
+              value={l.revisions}
               onChange={(e) =>
                 updateLesson(subject, lesson, {
                   revisions: Number(e.target.value),
@@ -106,7 +137,7 @@ export default function Dashboard({ selectedClass }) {
               type="number"
               min="0"
               max="100"
-              value={l.pyqs || 0}
+              value={l.pyqs}
               onChange={(e) =>
                 updateLesson(subject, lesson, {
                   pyqs: Number(e.target.value),
@@ -117,9 +148,10 @@ export default function Dashboard({ selectedClass }) {
           </label>
         </div>
 
+        {/* LINKS */}
         <input
           placeholder="Lesson video link"
-          value={l.video || ""}
+          value={l.video}
           onChange={(e) =>
             updateLesson(subject, lesson, { video: e.target.value })
           }
@@ -128,9 +160,9 @@ export default function Dashboard({ selectedClass }) {
 
         <input
           placeholder="PYQs link"
-          value={l.pyqLink || ""}
+          value={l.pyqsLink}
           onChange={(e) =>
-            updateLesson(subject, lesson, { pyqLink: e.target.value })
+            updateLesson(subject, lesson, { pyqsLink: e.target.value })
           }
           className="w-full bg-black p-1 rounded text-sm"
         />
@@ -138,23 +170,23 @@ export default function Dashboard({ selectedClass }) {
     );
   };
 
+  /* ---------------- UI ---------------- */
   return (
     <div className="p-6 max-w-6xl mx-auto text-white">
+      {/* HEADER */}
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-3xl font-bold">
-          Dashboard – Class {selectedClass}
+          Class {selectedClass} Dashboard
         </h1>
         <button
-          onClick={() => {
-            localStorage.removeItem("progress-9th");
-            location.reload();
-          }}
+          onClick={() => signOut(auth)}
           className="bg-red-600 px-4 py-2 rounded"
         >
           Logout
         </button>
       </div>
 
+      {/* SEARCH */}
       <input
         placeholder="Search lessons..."
         className="w-full mb-4 p-2 rounded bg-zinc-900"
@@ -162,6 +194,7 @@ export default function Dashboard({ selectedClass }) {
         onChange={(e) => setSearch(e.target.value)}
       />
 
+      {/* PROGRESS */}
       <div className="mb-6">
         <div className="flex justify-between text-sm">
           <span>Overall Progress</span>
@@ -175,16 +208,17 @@ export default function Dashboard({ selectedClass }) {
         </div>
       </div>
 
+      {/* SYLLABUS */}
       {Object.entries(syllabus).map(([subject, content]) => (
         <div key={subject} className="mb-6">
           <button
             onClick={() => toggle(subject)}
             className="text-2xl font-semibold mb-2"
           >
-            {subject} {openSections[subject] ? "▾" : "▸"}
+            {subject} {open[subject] ? "▾" : "▸"}
           </button>
 
-          {openSections[subject] &&
+          {open[subject] &&
             (Array.isArray(content)
               ? content.map((l) => renderLesson(subject, l))
               : Object.entries(content).map(([sub, lessons]) => (
@@ -193,9 +227,9 @@ export default function Dashboard({ selectedClass }) {
                       onClick={() => toggle(subject + sub)}
                       className="text-lg mb-1"
                     >
-                      {sub} {openSections[subject + sub] ? "▾" : "▸"}
+                      {sub} {open[subject + sub] ? "▾" : "▸"}
                     </button>
-                    {openSections[subject + sub] &&
+                    {open[subject + sub] &&
                       lessons.map((l) => renderLesson(subject, l))}
                   </div>
                 )))}
