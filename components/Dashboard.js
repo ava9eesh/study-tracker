@@ -5,92 +5,114 @@ import { syllabus } from "../data/syllabus";
 import { db } from "../utils/firebase";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 
-export default function Dashboard({ user }) {
+export default function Dashboard({ user, logout }) {
   const [progress, setProgress] = useState({});
+  const [search, setSearch] = useState("");
+  const [open, setOpen] = useState({});
 
   const uid = user.uid;
 
-  // LOAD FROM FIRESTORE
   useEffect(() => {
-    async function load() {
-      const snap = await getDoc(doc(db, "users", uid));
-      if (snap.exists()) {
-        setProgress(snap.data().progress || {});
-      }
-    }
-    load();
+    getDoc(doc(db, "users", uid)).then((snap) => {
+      if (snap.exists()) setProgress(snap.data().progress || {});
+    });
   }, [uid]);
 
-  // SAVE TO FIRESTORE
-  async function save(updated) {
+  function save(updated) {
     setProgress(updated);
-    await setDoc(
-      doc(db, "users", uid),
-      { progress: updated },
-      { merge: true }
-    );
+    setDoc(doc(db, "users", uid), { progress: updated }, { merge: true });
   }
 
-  function updateLesson(name, field, value) {
-    const updated = {
+  function update(lesson, field, value) {
+    save({
       ...progress,
-      [name]: {
-        status: "todo",
-        revisions: 0,
-        pyqs: 0,
-        ...progress[name],
-        [field]: value,
-      },
-    };
-    save(updated);
+      [lesson]: { status: "todo", revisions: 0, pyqs: 0, ...progress[lesson], [field]: value },
+    });
   }
+
+  const totalLessons = Object.values(syllabus).flat().length;
+  const completed = Object.values(progress).filter(
+    (l) => l?.status === "done" || l?.status === "mastered"
+  ).length;
 
   return (
     <div className="p-6 text-white">
-      <h1 className="text-2xl mb-4">Dashboard – Class 9th</h1>
+      <button onClick={logout} className="absolute top-4 right-4 bg-red-600 px-3 py-1 rounded">Logout</button>
 
-      {syllabus.Science.map((lesson) => {
-        const data = progress[lesson.name] || {
-          status: "todo",
-          revisions: 0,
-          pyqs: 0,
-        };
+      <h1 className="text-2xl mb-2">Dashboard – Class 9th</h1>
 
-        return (
-          <div key={lesson.name} className="mb-6 p-4 bg-zinc-900 rounded">
-            <h2 className="text-lg font-semibold">{lesson.name}</h2>
+      {/* SEARCH */}
+      <input
+        placeholder="Search lessons..."
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+        className="w-full p-2 mb-4 bg-zinc-800 rounded"
+      />
 
-            {/* STATUS */}
-            <div className="flex gap-2 mt-2">
-              <button onClick={() => updateLesson(lesson.name, "status", "todo")} className="bg-gray-600 px-3 py-1 rounded">To Do</button>
-              <button onClick={() => updateLesson(lesson.name, "status", "doing")} className="bg-yellow-600 px-3 py-1 rounded">Doing</button>
-              <button onClick={() => updateLesson(lesson.name, "status", "done")} className="bg-green-600 px-3 py-1 rounded">Done</button>
-              <button onClick={() => updateLesson(lesson.name, "status", "mastered")} className="bg-purple-600 px-3 py-1 rounded">Mastered</button>
-            </div>
+      {/* PROGRESS */}
+      <div className="mb-6">
+        <div className="flex justify-between text-sm">
+          <span>Overall Progress</span>
+          <span>{Math.round((completed / totalLessons) * 100)}%</span>
+        </div>
+        <div className="h-2 bg-zinc-700 rounded">
+          <div className="h-2 bg-green-500 rounded" style={{ width: `${(completed / totalLessons) * 100}%` }} />
+        </div>
+      </div>
 
-            {/* COUNTERS */}
-            <div className="mt-2 text-sm">
-              Revisions:
-              <button onClick={() => updateLesson(lesson.name, "revisions", Math.max(0, data.revisions - 1))}> − </button>
-              {data.revisions}
-              <button onClick={() => updateLesson(lesson.name, "revisions", Math.min(100, data.revisions + 1))}> + </button>
+      {/* SUBJECTS */}
+      {Object.entries(syllabus).map(([subject, lessons]) => (
+        <div key={subject} className="mb-6">
+          <button
+            onClick={() => setOpen({ ...open, [subject]: !open[subject] })}
+            className="text-xl font-semibold mb-2"
+          >
+            {subject}
+          </button>
 
-              <br />
+          {open[subject] &&
+            lessons
+              .filter((l) => l.name.toLowerCase().includes(search.toLowerCase()))
+              .map((lesson) => {
+                const d = progress[lesson.name] || { status: "todo", revisions: 0, pyqs: 0 };
 
-              PYQs:
-              <button onClick={() => updateLesson(lesson.name, "pyqs", Math.max(0, data.pyqs - 1))}> − </button>
-              {data.pyqs}
-              <button onClick={() => updateLesson(lesson.name, "pyqs", Math.min(100, data.pyqs + 1))}> + </button>
-            </div>
+                return (
+                  <div key={lesson.name} className="bg-zinc-900 p-4 rounded mb-3">
+                    <h3>{lesson.name}</h3>
 
-            {/* LINKS */}
-            <div className="flex gap-4 mt-2 text-sm">
-              <a href={lesson.video} target="_blank" className="text-blue-400">Lesson Video</a>
-              {lesson.pyq && <a href={lesson.pyq} target="_blank" className="text-purple-400">PYQs</a>}
-            </div>
-          </div>
-        );
-      })}
+                    <div className="flex gap-2 mt-2">
+                      {["todo", "doing", "done", "mastered"].map((s) => (
+                        <button
+                          key={s}
+                          onClick={() => update(lesson.name, "status", s)}
+                          className={`px-2 py-1 rounded ${
+                            s === "doing" ? "bg-yellow-600" :
+                            s === "done" ? "bg-green-600" :
+                            s === "mastered" ? "bg-purple-600" : "bg-gray-600"
+                          }`}
+                        >
+                          {s.toUpperCase()}
+                        </button>
+                      ))}
+                    </div>
+
+                    <div className="text-sm mt-2">
+                      Revisions: {d.revisions}
+                      <button onClick={() => update(lesson.name, "revisions", Math.min(100, d.revisions + 1))}> + </button>
+                      <br />
+                      PYQs: {d.pyqs}
+                      <button onClick={() => update(lesson.name, "pyqs", Math.min(100, d.pyqs + 1))}> + </button>
+                    </div>
+
+                    <div className="flex gap-4 mt-2 text-sm">
+                      {lesson.video && <a href={lesson.video} target="_blank" className="text-blue-400">Lesson Video</a>}
+                      {lesson.pyq && <a href={lesson.pyq} target="_blank" className="text-purple-400">PYQs</a>}
+                    </div>
+                  </div>
+                );
+              })}
+        </div>
+      ))}
     </div>
   );
 }
