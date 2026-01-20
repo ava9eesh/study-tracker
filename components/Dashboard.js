@@ -17,6 +17,7 @@ export default function Dashboard() {
   const [search, setSearch] = useState("");
   const [open, setOpen] = useState({});
   const [lessonData, setLessonData] = useState({});
+  const [selectedClass, setSelectedClass] = useState("9");
 
   /* ---------- LOAD / SAVE ---------- */
 
@@ -53,18 +54,47 @@ export default function Dashboard() {
     }));
   };
 
+  /* ---------- PROGRESS ---------- */
+
+  const allLessons = [];
+
+  const collectLessons = (data, prefix) => {
+    if (Array.isArray(data)) {
+      data.forEach((l) =>
+        allLessons.push(`${prefix}::${l}`)
+      );
+    } else {
+      Object.entries(data).forEach(([k, v]) =>
+        collectLessons(v, `${prefix}-${k}`)
+      );
+    }
+  };
+
+  Object.entries(syllabus).forEach(([k, v]) =>
+    collectLessons(v, k)
+  );
+
+  const completed = allLessons.filter(
+    (id) => lessonData[id]?.status === "done" || lessonData[id]?.status === "mastered"
+  ).length;
+
+  const progress =
+    allLessons.length === 0
+      ? 0
+      : Math.round((completed / allLessons.length) * 100);
+
   /* ---------- RENDER LESSON ---------- */
 
   const renderLesson = (lesson, subjectKey) => {
-    if (!lesson?.title) return null;
+    if (typeof lesson !== "string") return null;
 
     if (
       search &&
-      !lesson.title.toLowerCase().includes(search.toLowerCase())
+      !lesson.toLowerCase().includes(search.toLowerCase())
     )
       return null;
 
-    const id = `${subjectKey}::${lesson.title}`;
+    const id = `${subjectKey}::${lesson}`;
     const data = lessonData[id] || DEFAULT_LESSON;
     const openKey = `lesson-${id}`;
 
@@ -75,7 +105,7 @@ export default function Dashboard() {
           className="flex items-center gap-2 w-full text-left font-medium"
         >
           <span>{open[openKey] ? "▼" : "▶"}</span>
-          <span>{lesson.title}</span>
+          {lesson}
         </button>
 
         {open[openKey] && (
@@ -101,7 +131,6 @@ export default function Dashboard() {
             <div className="flex gap-8">
               <Counter
                 label="Revisions"
-                color="text-green-400"
                 value={data.revisions}
                 onChange={(v) =>
                   updateLesson(id, { revisions: v })
@@ -109,24 +138,11 @@ export default function Dashboard() {
               />
               <Counter
                 label="PYQs"
-                color="text-pink-400"
                 value={data.pyqs}
-                onChange={(v) => updateLesson(id, { pyqs: v })}
+                onChange={(v) =>
+                  updateLesson(id, { pyqs: v })
+                }
               />
-            </div>
-
-            {/* LINKS */}
-            <div className="flex gap-4 text-blue-400">
-              {lesson.video && (
-                <a href={lesson.video} target="_blank">
-                  Lesson Video
-                </a>
-              )}
-              {lesson.pyq && (
-                <a href={lesson.pyq} target="_blank">
-                  PYQs
-                </a>
-              )}
             </div>
           </div>
         )}
@@ -155,26 +171,24 @@ export default function Dashboard() {
               data.map((l) => renderLesson(l, name))}
 
             {!Array.isArray(data) &&
-              Object.entries(data).map(([sub, lessons]) => (
-                <div key={sub} className="ml-4 mt-4">
-                  <button
-                    onClick={() =>
-                      toggle(`${key}-${sub}`)
-                    }
-                    className="flex items-center gap-2 font-medium text-gray-300"
-                  >
-                    <span>
-                      {open[`${key}-${sub}`] ? "▼" : "▶"}
-                    </span>
-                    {sub}
-                  </button>
-
-                  {open[`${key}-${sub}`] &&
-                    lessons.map((l) =>
-                      renderLesson(l, `${name}-${sub}`)
-                    )}
-                </div>
-              ))}
+              Object.entries(data).map(([sub, lessons]) => {
+                const subKey = `${key}-${sub}`;
+                return (
+                  <div key={sub} className="ml-4 mt-4">
+                    <button
+                      onClick={() => toggle(subKey)}
+                      className="flex items-center gap-2 font-medium text-gray-300"
+                    >
+                      <span>{open[subKey] ? "▼" : "▶"}</span>
+                      {sub}
+                    </button>
+                    {open[subKey] &&
+                      lessons.map((l) =>
+                        renderLesson(l, `${name}-${sub}`)
+                      )}
+                  </div>
+                );
+              })}
           </div>
         )}
       </div>
@@ -187,9 +201,40 @@ export default function Dashboard() {
     <main className="max-w-5xl mx-auto p-6 space-y-6">
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-semibold">
-          Dashboard – Class 9
+          Dashboard – Class {selectedClass}
         </h1>
         <button className="text-red-500">Logout</button>
+      </div>
+
+      {/* CLASS SELECTOR */}
+      <div className="flex gap-2">
+        {["9", "10", "11", "12", "JEE/NEET"].map((c) => (
+          <button
+            key={c}
+            disabled={c !== "9"}
+            onClick={() => setSelectedClass(c)}
+            className={`px-3 py-1 rounded ${
+              selectedClass === c
+                ? "bg-blue-600"
+                : "bg-zinc-800 opacity-50"
+            }`}
+          >
+            {c}
+          </button>
+        ))}
+      </div>
+
+      {/* PROGRESS */}
+      <div>
+        <div className="mb-1 text-sm">
+          Overall Progress — {progress}%
+        </div>
+        <div className="h-2 rounded bg-zinc-800 overflow-hidden">
+          <div
+            className="h-full bg-blue-500"
+            style={{ width: `${progress}%` }}
+          />
+        </div>
       </div>
 
       <div className="flex gap-3">
@@ -221,9 +266,9 @@ export default function Dashboard() {
   );
 }
 
-/* ---------- COUNTER COMPONENT ---------- */
+/* ---------- COUNTER ---------- */
 
-function Counter({ label, value, onChange, color }) {
+function Counter({ label, value, onChange }) {
   return (
     <div className="flex items-center gap-2">
       <button
@@ -232,7 +277,7 @@ function Counter({ label, value, onChange, color }) {
       >
         −
       </button>
-      <span className={color}>
+      <span>
         {label}: {value}
       </span>
       <button
