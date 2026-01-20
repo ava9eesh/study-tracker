@@ -3,24 +3,14 @@
 import { useEffect, useState } from "react";
 import { syllabus } from "../data/syllabus";
 
-/* ---------------- CONFIG ---------------- */
-
-const DEFAULT_LESSON = {
-  status: "todo",
-  revisions: 0,
-  pyqs: 0,
-};
-
-/* ---------------- COMPONENT ---------------- */
+const STATUS = ["todo", "doing", "done", "mastered"];
 
 export default function Dashboard() {
-  const [search, setSearch] = useState("");
   const [open, setOpen] = useState({});
+  const [search, setSearch] = useState("");
   const [lessonData, setLessonData] = useState({});
-  const [selectedClass, setSelectedClass] = useState("9");
 
-  /* ---------- LOAD / SAVE ---------- */
-
+  /* -------------------- PERSISTENCE -------------------- */
   useEffect(() => {
     const saved = localStorage.getItem("lessonData");
     if (saved) setLessonData(JSON.parse(saved));
@@ -32,134 +22,170 @@ export default function Dashboard() {
   };
 
   const resetProgress = () => {
-    if (confirm("Reset all progress?")) {
-      setLessonData({});
-      localStorage.removeItem("lessonData");
-    }
+    if (!confirm("Reset all progress?")) return;
+    setLessonData({});
+    localStorage.removeItem("lessonData");
   };
 
-  /* ---------- HELPERS ---------- */
-
+  /* -------------------- HELPERS -------------------- */
   const toggle = (key) =>
-    setOpen((prev) => ({ ...prev, [key]: !prev[key] }));
+    setOpen((p) => ({ ...p, [key]: !p[key] }));
 
   const updateLesson = (id, patch) => {
-    setLessonData((prev) => ({
-      ...prev,
+    setLessonData((p) => ({
+      ...p,
       [id]: {
-        ...DEFAULT_LESSON,
-        ...prev[id],
+        status: "todo",
+        revisions: 0,
+        pyqs: 0,
+        ...p[id],
         ...patch,
       },
     }));
   };
 
-  /* ---------- PROGRESS ---------- */
-
-  const allLessons = [];
-
-  const collectLessons = (data, prefix) => {
-    if (Array.isArray(data)) {
-      data.forEach((l) =>
-        allLessons.push(`${prefix}::${l}`)
-      );
-    } else {
-      Object.entries(data).forEach(([k, v]) =>
-        collectLessons(v, `${prefix}-${k}`)
-      );
-    }
-  };
-
-  Object.entries(syllabus).forEach(([k, v]) =>
-    collectLessons(v, k)
-  );
-
-  const completed = allLessons.filter(
-    (id) => lessonData[id]?.status === "done" || lessonData[id]?.status === "mastered"
+  /* -------------------- PROGRESS -------------------- */
+  const allLessons = Object.keys(lessonData).length || 1;
+  const doneLessons = Object.values(lessonData).filter(
+    (l) => l.status === "done" || l.status === "mastered"
   ).length;
 
-  const progress =
-    allLessons.length === 0
-      ? 0
-      : Math.round((completed / allLessons.length) * 100);
+  const progress = Math.round((doneLessons / allLessons) * 100);
 
-  /* ---------- RENDER LESSON ---------- */
-
-  const renderLesson = (lesson, subjectKey) => {
-    if (typeof lesson !== "string") return null;
-
+  /* -------------------- RENDER LESSON -------------------- */
+  const renderLesson = (lesson, meta, path) => {
     if (
       search &&
       !lesson.toLowerCase().includes(search.toLowerCase())
     )
       return null;
 
-    const id = `${subjectKey}::${lesson}`;
-    const data = lessonData[id] || DEFAULT_LESSON;
-    const openKey = `lesson-${id}`;
+    const id = [...path, lesson].join("::");
+    const data = lessonData[id] || {
+      status: "todo",
+      revisions: 0,
+      pyqs: 0,
+    };
 
     return (
       <div key={id} className="ml-6 mt-3 rounded-xl bg-zinc-900 p-4">
-        <button
-          onClick={() => toggle(openKey)}
-          className="flex items-center gap-2 w-full text-left font-medium"
-        >
-          <span>{open[openKey] ? "▼" : "▶"}</span>
-          {lesson}
-        </button>
+        <div className="font-medium">{lesson}</div>
 
-        {open[openKey] && (
-          <div className="mt-4 space-y-4 text-sm">
-            {/* STATUS */}
-            <div className="flex gap-2 flex-wrap">
-              {["todo", "doing", "done", "mastered"].map((s) => (
-                <button
-                  key={s}
-                  onClick={() => updateLesson(id, { status: s })}
-                  className={`px-3 py-1 rounded ${
-                    data.status === s
-                      ? "bg-blue-500/20 text-blue-400"
-                      : "bg-zinc-800"
-                  }`}
-                >
-                  {s.toUpperCase()}
-                </button>
-              ))}
-            </div>
+        <div className="mt-2 flex gap-2 flex-wrap">
+          {STATUS.map((s) => (
+            <button
+              key={s}
+              onClick={() => updateLesson(id, { status: s })}
+              className={`px-3 py-1 rounded text-sm ${
+                data.status === s
+                  ? "bg-blue-600"
+                  : "bg-zinc-800"
+              }`}
+            >
+              {s.toUpperCase()}
+            </button>
+          ))}
+        </div>
 
-            {/* REVISIONS / PYQS */}
-            <div className="flex gap-8">
-              <Counter
-                label="Revisions"
-                value={data.revisions}
-                onChange={(v) =>
-                  updateLesson(id, { revisions: v })
-                }
-              />
-              <Counter
-                label="PYQs"
-                value={data.pyqs}
-                onChange={(v) =>
-                  updateLesson(id, { pyqs: v })
-                }
-              />
-            </div>
-          </div>
-        )}
+        <div className="mt-2 flex gap-6 text-sm">
+          <button
+            onClick={() =>
+              updateLesson(id, {
+                revisions: Math.max(0, data.revisions - 1),
+              })
+            }
+          >
+            −
+          </button>
+          <span>Revisions: {data.revisions}</span>
+          <button
+            onClick={() =>
+              updateLesson(id, { revisions: data.revisions + 1 })
+            }
+          >
+            +
+          </button>
+
+          <button
+            onClick={() =>
+              updateLesson(id, {
+                pyqs: Math.max(0, data.pyqs - 1),
+              })
+            }
+          >
+            −
+          </button>
+          <span>PYQs: {data.pyqs}</span>
+          <button
+            onClick={() =>
+              updateLesson(id, { pyqs: data.pyqs + 1 })
+            }
+          >
+            +
+          </button>
+        </div>
+
+        <div className="mt-2 flex gap-4 text-sm text-blue-400">
+          {meta?.video && (
+            <a href={meta.video} target="_blank">
+              Lesson Video
+            </a>
+          )}
+          {meta?.pyq && (
+            <a href={meta.pyq} target="_blank">
+              PYQs
+            </a>
+          )}
+        </div>
       </div>
     );
   };
 
-  /* ---------- RENDER SUBJECT ---------- */
+  /* -------------------- RECURSIVE RENDER -------------------- */
+  const renderNode = (node, path = []) => {
+    if (Array.isArray(node)) {
+      return node.map((item) =>
+        typeof item === "string"
+          ? renderLesson(item, {}, path)
+          : renderLesson(item.name, item, path)
+      );
+    }
 
+    return Object.entries(node).map(([key, value]) => {
+      const openKey = [...path, key].join("::");
+
+      return (
+        <div key={openKey} className="ml-4 mt-4">
+          <button
+            onClick={() => toggle(openKey)}
+            className="flex items-center gap-2 font-medium"
+          >
+            <span>{open[openKey] ? "▼" : "▶"}</span>
+            {key}
+          </button>
+
+          {open[openKey] && (
+            <div className="mt-2">
+              {renderNode(value, [...path, key])}
+            </div>
+          )}
+        </div>
+      );
+    });
+  };
+
+  /* -------------------- SUBJECT -------------------- */
   const renderSubject = (name, data) => {
     const key = `subject-${name}`;
 
     return (
-      <div key={name} className="rounded-2xl bg-zinc-900 p-5">
+      <div
+        key={key}
+        className="rounded-2xl bg-zinc-900 p-5"
+      >
         <button
           onClick={() => toggle(key)}
-          className="flex justify-between w-full text-left text-lg font-semibold"
+          className="flex w-full items-center justify-between text-lg font-semibold"
         >
           {name}
           <span>{open[key] ? "▼" : "▶"}</span>
@@ -167,89 +193,48 @@ export default function Dashboard() {
 
         {open[key] && (
           <div className="mt-4">
-            {Array.isArray(data) &&
-              data.map((l) => renderLesson(l, name))}
-
-            {!Array.isArray(data) &&
-              Object.entries(data).map(([sub, lessons]) => {
-                const subKey = `${key}-${sub}`;
-                return (
-                  <div key={sub} className="ml-4 mt-4">
-                    <button
-                      onClick={() => toggle(subKey)}
-                      className="flex items-center gap-2 font-medium text-gray-300"
-                    >
-                      <span>{open[subKey] ? "▼" : "▶"}</span>
-                      {sub}
-                    </button>
-                    {open[subKey] &&
-                      lessons.map((l) =>
-                        renderLesson(l, `${name}-${sub}`)
-                      )}
-                  </div>
-                );
-              })}
+            {renderNode(data, [name])}
           </div>
         )}
       </div>
     );
   };
 
-  /* ---------- UI ---------- */
-
+  /* -------------------- UI -------------------- */
   return (
     <main className="max-w-5xl mx-auto p-6 space-y-6">
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-semibold">
-          Dashboard – Class {selectedClass}
+          Dashboard – Class 9
         </h1>
         <button className="text-red-500">Logout</button>
-      </div>
-
-      {/* CLASS SELECTOR */}
-      <div className="flex gap-2">
-        {["9", "10", "11", "12", "JEE/NEET"].map((c) => (
-          <button
-            key={c}
-            disabled={c !== "9"}
-            onClick={() => setSelectedClass(c)}
-            className={`px-3 py-1 rounded ${
-              selectedClass === c
-                ? "bg-blue-600"
-                : "bg-zinc-800 opacity-50"
-            }`}
-          >
-            {c}
-          </button>
-        ))}
-      </div>
-
-      {/* PROGRESS */}
-      <div>
-        <div className="mb-1 text-sm">
-          Overall Progress — {progress}%
-        </div>
-        <div className="h-2 rounded bg-zinc-800 overflow-hidden">
-          <div
-            className="h-full bg-blue-500"
-            style={{ width: `${progress}%` }}
-          />
-        </div>
       </div>
 
       <div className="flex gap-3">
         <button
           onClick={saveProgress}
-          className="px-4 py-2 rounded bg-green-600"
+          className="bg-green-600 px-4 py-2 rounded"
         >
           Save
         </button>
         <button
           onClick={resetProgress}
-          className="px-4 py-2 rounded bg-zinc-700"
+          className="bg-zinc-700 px-4 py-2 rounded"
         >
           Reset
         </button>
+      </div>
+
+      <div>
+        <div className="mb-1 text-sm">
+          Progress: {progress}%
+        </div>
+        <div className="h-2 bg-zinc-800 rounded">
+          <div
+            className="h-2 bg-blue-600 rounded"
+            style={{ width: `${progress}%` }}
+          />
+        </div>
       </div>
 
       <input
@@ -259,33 +244,9 @@ export default function Dashboard() {
         className="w-full rounded-xl bg-zinc-900 px-4 py-3 outline-none"
       />
 
-      {Object.entries(syllabus).map(([name, data]) =>
-        renderSubject(name, data)
+      {Object.entries(syllabus).map(([n, d]) =>
+        renderSubject(n, d)
       )}
     </main>
-  );
-}
-
-/* ---------- COUNTER ---------- */
-
-function Counter({ label, value, onChange }) {
-  return (
-    <div className="flex items-center gap-2">
-      <button
-        onClick={() => onChange(Math.max(0, value - 1))}
-        className="px-2 bg-zinc-800 rounded"
-      >
-        −
-      </button>
-      <span>
-        {label}: {value}
-      </span>
-      <button
-        onClick={() => onChange(value + 1)}
-        className="px-2 bg-zinc-800 rounded"
-      >
-        +
-      </button>
-    </div>
   );
 }
