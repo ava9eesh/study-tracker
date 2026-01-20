@@ -29,7 +29,6 @@ export default function RootLayout({ children }) {
             <a
               href="https://discord.com/users/i_love_zandu_bam"
               target="_blank"
-              rel="noreferrer"
               className="text-blue-400 hover:underline"
             >
               i_love_zandu_bam

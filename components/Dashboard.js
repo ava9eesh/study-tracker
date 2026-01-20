@@ -12,18 +12,14 @@ const STATUS_COLORS = {
 
 export default function Dashboard() {
   const [search, setSearch] = useState("");
-  const [openSubjects, setOpenSubjects] = useState({});
-  const [openLessons, setOpenLessons] = useState({});
-  const [data, setData] = useState({});
+  const [open, setOpen] = useState({});
+  const [lessonData, setLessonData] = useState({});
 
-  const toggleSubject = (key) =>
-    setOpenSubjects((p) => ({ ...p, [key]: !p[key] }));
-
-  const toggleLesson = (key) =>
-    setOpenLessons((p) => ({ ...p, [key]: !p[key] }));
+  const toggle = (key) =>
+    setOpen((p) => ({ ...p, [key]: !p[key] }));
 
   const updateLesson = (lesson, patch) => {
-    setData((p) => ({
+    setLessonData((p) => ({
       ...p,
       [lesson]: {
         status: "todo",
@@ -36,34 +32,40 @@ export default function Dashboard() {
   };
 
   const renderLesson = (lesson) => {
-    const l = data[lesson] || { status: "todo", revisions: 0, pyqs: 0 };
-    const key = `lesson-${lesson}`;
-
     if (
       search &&
-      typeof lesson === "string" &&
       !lesson.toLowerCase().includes(search.toLowerCase())
     )
       return null;
 
+    const data = lessonData[lesson] || {
+      status: "todo",
+      revisions: 0,
+      pyqs: 0,
+    };
+
+    const key = `lesson-${lesson}`;
+
     return (
       <div key={lesson} className="ml-6 mt-3 rounded-xl bg-zinc-900 p-4">
         <button
-          onClick={() => toggleLesson(key)}
+          onClick={() => toggle(key)}
           className="w-full text-left font-medium"
         >
           {lesson}
         </button>
 
-        {openLessons[key] && (
+        {open[key] && (
           <div className="mt-3 space-y-3 text-sm">
-            <div className="flex gap-2">
+            <div className="flex gap-2 flex-wrap">
               {["todo", "doing", "done", "mastered"].map((s) => (
                 <button
                   key={s}
                   onClick={() => updateLesson(lesson, { status: s })}
                   className={`px-3 py-1 rounded ${
-                    l.status === s ? STATUS_COLORS[s] : "bg-zinc-800"
+                    data.status === s
+                      ? STATUS_COLORS[s]
+                      : "bg-zinc-800"
                   }`}
                 >
                   {s.toUpperCase()}
@@ -74,18 +76,24 @@ export default function Dashboard() {
             <div className="flex gap-6">
               <button
                 onClick={() =>
-                  updateLesson(lesson, { revisions: l.revisions + 1 })
+                  updateLesson(lesson, {
+                    revisions: data.revisions + 1,
+                  })
                 }
                 className="text-blue-400"
               >
-                Revisions: {l.revisions} +
+                Revisions: {data.revisions} +
               </button>
 
               <button
-                onClick={() => updateLesson(lesson, { pyqs: l.pyqs + 1 })}
+                onClick={() =>
+                  updateLesson(lesson, {
+                    pyqs: data.pyqs + 1,
+                  })
+                }
                 className="text-pink-400"
               >
-                PYQs: {l.pyqs} +
+                PYQs: {data.pyqs} +
               </button>
             </div>
           </div>
@@ -94,20 +102,27 @@ export default function Dashboard() {
     );
   };
 
-  const renderBlock = (title, items) => {
-    const key = `subject-${title}`;
+  const renderSubject = (subject, content) => {
+    const key = `subject-${subject}`;
 
     return (
-      <div className="rounded-2xl bg-zinc-900 p-5">
+      <div key={subject} className="rounded-2xl bg-zinc-900 p-5">
         <button
-          onClick={() => toggleSubject(key)}
+          onClick={() => toggle(key)}
           className="w-full text-left text-lg font-semibold"
         >
-          {title}
+          {subject}
         </button>
 
-        {openSubjects[key] &&
-          items.map((lesson) => renderLesson(lesson))}
+        {open[key] &&
+          (Array.isArray(content)
+            ? content.map(renderLesson)
+            : Object.entries(content).map(([sub, lessons]) => (
+                <div key={sub} className="ml-4 mt-4">
+                  <div className="font-medium">{sub}</div>
+                  {lessons.map(renderLesson)}
+                </div>
+              )))}
       </div>
     );
   };
@@ -115,7 +130,9 @@ export default function Dashboard() {
   return (
     <main className="max-w-5xl mx-auto p-6 space-y-6">
       <div className="flex justify-between items-center">
-        <h1 className="text-2xl font-semibold">Dashboard – Class 9</h1>
+        <h1 className="text-2xl font-semibold">
+          Dashboard – Class 9
+        </h1>
         <button className="text-red-500">Logout</button>
       </div>
 
@@ -126,59 +143,9 @@ export default function Dashboard() {
         className="w-full rounded-xl bg-zinc-900 px-4 py-3 outline-none"
       />
 
-      {renderBlock("Science", syllabus.Science)}
-      {renderBlock("Mathematics", syllabus.Mathematics)}
-
-      <div className="rounded-2xl bg-zinc-900 p-5">
-        <button
-          onClick={() => toggleSubject("sst")}
-          className="w-full text-left text-lg font-semibold"
-        >
-          SST
-        </button>
-
-        {openSubjects.sst &&
-          Object.entries(syllabus.SST).map(([k, v]) => (
-            <div key={k} className="ml-4 mt-3">
-              <div className="font-medium">{k}</div>
-              {v.map((l) => renderLesson(l))}
-            </div>
-          ))}
-      </div>
-
-      <div className="rounded-2xl bg-zinc-900 p-5">
-        <button
-          onClick={() => toggleSubject("english")}
-          className="w-full text-left text-lg font-semibold"
-        >
-          English
-        </button>
-
-        {openSubjects.english &&
-          Object.entries(syllabus.English).map(([k, v]) => (
-            <div key={k} className="ml-4 mt-3">
-              <div className="font-medium">{k}</div>
-              {v.map((l) => renderLesson(l))}
-            </div>
-          ))}
-      </div>
-
-      <div className="rounded-2xl bg-zinc-900 p-5">
-        <button
-          onClick={() => toggleSubject("hindi")}
-          className="w-full text-left text-lg font-semibold"
-        >
-          Hindi
-        </button>
-
-        {openSubjects.hindi &&
-          Object.entries(syllabus.Hindi).map(([k, v]) => (
-            <div key={k} className="ml-4 mt-3">
-              <div className="font-medium">{k}</div>
-              {v.map((l) => renderLesson(l))}
-            </div>
-          ))}
-      </div>
+      {Object.entries(syllabus).map(([subject, content]) =>
+        renderSubject(subject, content)
+      )}
     </main>
   );
 }
