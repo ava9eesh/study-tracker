@@ -1,285 +1,184 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { syllabus } from "../data/syllabus";
 
-/* -----------------------------
-   BASIC 9TH SYLLABUS (SAFE)
------------------------------- */
-const SYLLABUS = {
-  Science: [
-    "Matter in Our Surroundings",
-    "Is Matter Around Us Pure?",
-    "Atoms and Molecules",
-    "Structure of the Atom",
-    "The Fundamental Unit of Life",
-    "Tissues",
-    "Motion",
-    "Force and Laws of Motion",
-    "Gravitation",
-    "Work and Energy",
-    "Sound",
-    "Improvement in Food Resources",
-  ],
-  Mathematics: [
-    "Number Systems",
-    "Polynomials",
-    "Coordinate Geometry",
-    "Linear Equations in Two Variables",
-    "Lines and Angles",
-    "Triangles",
-    "Quadrilaterals",
-    "Circles",
-    "Statistics",
-  ],
-  SST: [
-    "The French Revolution",
-    "What is Democracy?",
-    "India – Size and Location",
-    "The Story of Village Palampur",
-  ],
-  English: [
-    "The Fun They Had",
-    "The Sound of Music",
-    "The Little Girl",
-  ],
-  Hindi: [
-    "Dukh Ka Adhikar",
-    "Everest: Meri Shikhar Yatra",
-  ],
+const STATUS_COLORS = {
+  todo: "",
+  doing: "bg-yellow-500/20 text-yellow-400",
+  done: "bg-green-500/20 text-green-400",
+  mastered: "bg-purple-500/20 text-purple-400",
 };
 
-/* -----------------------------
-   HELPERS
------------------------------- */
-const emptyLesson = {
-  status: "todo", // todo | doing | done | mastered
-  revisions: 0,
-  pyqs: 0,
-};
-
-/* -----------------------------
-   DASHBOARD
------------------------------- */
 export default function Dashboard() {
-  const [selectedClass, setSelectedClass] = useState(null);
-  const [collapsedSubjects, setCollapsedSubjects] = useState({});
-  const [collapsedLessons, setCollapsedLessons] = useState({});
+  const [search, setSearch] = useState("");
+  const [openSubjects, setOpenSubjects] = useState({});
+  const [openLessons, setOpenLessons] = useState({});
   const [data, setData] = useState({});
 
-  /* LOAD SAVED DATA */
-  useEffect(() => {
-    const saved = localStorage.getItem("study-data");
-    if (saved) setData(JSON.parse(saved));
-  }, []);
+  const toggleSubject = (key) =>
+    setOpenSubjects((p) => ({ ...p, [key]: !p[key] }));
 
-  /* SAVE HANDLER */
-  const saveProgress = () => {
-    localStorage.setItem("study-data", JSON.stringify(data));
-    alert("Progress saved 💾");
+  const toggleLesson = (key) =>
+    setOpenLessons((p) => ({ ...p, [key]: !p[key] }));
+
+  const updateLesson = (lesson, patch) => {
+    setData((p) => ({
+      ...p,
+      [lesson]: {
+        status: "todo",
+        revisions: 0,
+        pyqs: 0,
+        ...p[lesson],
+        ...patch,
+      },
+    }));
   };
 
-  /* CLASS SELECTOR */
-  if (!selectedClass) {
+  const renderLesson = (lesson) => {
+    const l = data[lesson] || { status: "todo", revisions: 0, pyqs: 0 };
+    const key = `lesson-${lesson}`;
+
+    if (
+      search &&
+      typeof lesson === "string" &&
+      !lesson.toLowerCase().includes(search.toLowerCase())
+    )
+      return null;
+
     return (
-      <div className="min-h-screen flex items-center justify-center bg-black text-white">
-        <div className="glass p-6 rounded-xl w-[320px]">
-          <h2 className="text-xl font-semibold mb-4 text-center">
-            Select your class
-          </h2>
+      <div key={lesson} className="ml-6 mt-3 rounded-xl bg-zinc-900 p-4">
+        <button
+          onClick={() => toggleLesson(key)}
+          className="w-full text-left font-medium"
+        >
+          {lesson}
+        </button>
 
-          <div className="grid grid-cols-2 gap-3">
-            <button
-              onClick={() => setSelectedClass("9th")}
-              className="bg-blue-600 py-2 rounded-lg"
-            >
-              9th
-            </button>
+        {openLessons[key] && (
+          <div className="mt-3 space-y-3 text-sm">
+            <div className="flex gap-2">
+              {["todo", "doing", "done", "mastered"].map((s) => (
+                <button
+                  key={s}
+                  onClick={() => updateLesson(lesson, { status: s })}
+                  className={`px-3 py-1 rounded ${
+                    l.status === s ? STATUS_COLORS[s] : "bg-zinc-800"
+                  }`}
+                >
+                  {s.toUpperCase()}
+                </button>
+              ))}
+            </div>
 
-            {["10th", "11th", "12th", "JEE/NEET"].map((c) => (
+            <div className="flex gap-6">
               <button
-                key={c}
-                disabled
-                className="bg-gray-700 opacity-60 py-2 rounded-lg cursor-not-allowed"
+                onClick={() =>
+                  updateLesson(lesson, { revisions: l.revisions + 1 })
+                }
+                className="text-blue-400"
               >
-                {c} 🚧
+                Revisions: {l.revisions} +
               </button>
-            ))}
+
+              <button
+                onClick={() => updateLesson(lesson, { pyqs: l.pyqs + 1 })}
+                className="text-pink-400"
+              >
+                PYQs: {l.pyqs} +
+              </button>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     );
-  }
+  };
 
-  /* PROGRESS CALC */
-  const allLessons = Object.values(SYLLABUS).flat();
-  const completed = allLessons.filter(
-    (l) => data[l]?.status === "done" || data[l]?.status === "mastered"
-  ).length;
-  const progress = Math.round((completed / allLessons.length) * 100);
+  const renderBlock = (title, items) => {
+    const key = `subject-${title}`;
 
-  /* -----------------------------
-     RENDER
-  ------------------------------ */
+    return (
+      <div className="rounded-2xl bg-zinc-900 p-5">
+        <button
+          onClick={() => toggleSubject(key)}
+          className="w-full text-left text-lg font-semibold"
+        >
+          {title}
+        </button>
+
+        {openSubjects[key] &&
+          items.map((lesson) => renderLesson(lesson))}
+      </div>
+    );
+  };
+
   return (
-    <div className="min-h-screen bg-black text-white px-8 py-6">
-      {/* TOP BAR */}
-      <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl font-semibold">
-          Dashboard — Class {selectedClass}
-        </h1>
+    <main className="max-w-5xl mx-auto p-6 space-y-6">
+      <div className="flex justify-between items-center">
+        <h1 className="text-2xl font-semibold">Dashboard – Class 9</h1>
+        <button className="text-red-500">Logout</button>
+      </div>
 
+      <input
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+        placeholder="Search lessons..."
+        className="w-full rounded-xl bg-zinc-900 px-4 py-3 outline-none"
+      />
+
+      {renderBlock("Science", syllabus.Science)}
+      {renderBlock("Mathematics", syllabus.Mathematics)}
+
+      <div className="rounded-2xl bg-zinc-900 p-5">
         <button
-          onClick={() => setSelectedClass(null)}
-          className="text-red-400 hover:text-red-500"
+          onClick={() => toggleSubject("sst")}
+          className="w-full text-left text-lg font-semibold"
         >
-          Logout
+          SST
         </button>
+
+        {openSubjects.sst &&
+          Object.entries(syllabus.SST).map(([k, v]) => (
+            <div key={k} className="ml-4 mt-3">
+              <div className="font-medium">{k}</div>
+              {v.map((l) => renderLesson(l))}
+            </div>
+          ))}
       </div>
 
-      {/* SAVE + PROGRESS */}
-      <div className="mb-6">
+      <div className="rounded-2xl bg-zinc-900 p-5">
         <button
-          onClick={saveProgress}
-          className="bg-green-600 px-4 py-2 rounded-lg mb-3"
+          onClick={() => toggleSubject("english")}
+          className="w-full text-left text-lg font-semibold"
         >
-          Save Progress
+          English
         </button>
 
-        <div className="text-sm mb-1">Overall Progress — {progress}%</div>
-        <div className="h-2 bg-gray-800 rounded">
-          <div
-            className="h-2 bg-blue-500 rounded"
-            style={{ width: `${progress}%` }}
-          />
-        </div>
+        {openSubjects.english &&
+          Object.entries(syllabus.English).map(([k, v]) => (
+            <div key={k} className="ml-4 mt-3">
+              <div className="font-medium">{k}</div>
+              {v.map((l) => renderLesson(l))}
+            </div>
+          ))}
       </div>
 
-      {/* SUBJECTS */}
-      <div className="space-y-4">
-        {Object.entries(SYLLABUS).map(([subject, lessons]) => (
-          <div key={subject} className="glass rounded-xl">
-            {/* SUBJECT HEADER */}
-            <button
-              onClick={() =>
-                setCollapsedSubjects((p) => ({
-                  ...p,
-                  [subject]: !p[subject],
-                }))
-              }
-              className="w-full flex justify-between items-center px-5 py-4 text-lg font-medium"
-            >
-              {subject}
-              <span>{collapsedSubjects[subject] ? "▶" : "▼"}</span>
-            </button>
+      <div className="rounded-2xl bg-zinc-900 p-5">
+        <button
+          onClick={() => toggleSubject("hindi")}
+          className="w-full text-left text-lg font-semibold"
+        >
+          Hindi
+        </button>
 
-            {/* LESSONS */}
-            {!collapsedSubjects[subject] && (
-              <div className="px-5 pb-4 space-y-3">
-                {lessons.map((lesson) => {
-                  const ldata = data[lesson] || emptyLesson;
-
-                  return (
-                    <div key={lesson} className="bg-black/40 p-4 rounded-lg">
-                      {/* LESSON HEADER */}
-                      <button
-                        onClick={() =>
-                          setCollapsedLessons((p) => ({
-                            ...p,
-                            [lesson]: !p[lesson],
-                          }))
-                        }
-                        className="w-full flex justify-between items-center text-left"
-                      >
-                        <span>{lesson}</span>
-                        <span className="text-sm">
-                          {collapsedLessons[lesson] ? "▶" : "▼"}
-                        </span>
-                      </button>
-
-                      {/* LESSON BODY */}
-                      {!collapsedLessons[lesson] && (
-                        <div className="mt-3 space-y-3 text-sm">
-                          {/* STATUS */}
-                          <div className="flex gap-2">
-                            {["todo", "doing", "done", "mastered"].map(
-                              (s) => (
-                                <button
-                                  key={s}
-                                  onClick={() =>
-                                    setData((p) => ({
-                                      ...p,
-                                      [lesson]: {
-                                        ...ldata,
-                                        status: s,
-                                      },
-                                    }))
-                                  }
-                                  className={`px-3 py-1 rounded ${
-                                    ldata.status === s
-                                      ? s === "doing"
-                                        ? "bg-yellow-500"
-                                        : s === "done"
-                                        ? "bg-green-600"
-                                        : s === "mastered"
-                                        ? "bg-purple-600"
-                                        : "bg-gray-600"
-                                      : "bg-gray-700"
-                                  }`}
-                                >
-                                  {s.toUpperCase()}
-                                </button>
-                              )
-                            )}
-                          </div>
-
-                          {/* REVISIONS / PYQS */}
-                          <div className="flex gap-6">
-                            <div>
-                              Revisions: {ldata.revisions}
-                              <button
-                                onClick={() =>
-                                  setData((p) => ({
-                                    ...p,
-                                    [lesson]: {
-                                      ...ldata,
-                                      revisions: ldata.revisions + 1,
-                                    },
-                                  }))
-                                }
-                                className="ml-2 px-2 bg-gray-700 rounded"
-                              >
-                                +
-                              </button>
-                            </div>
-
-                            <div>
-                              PYQs: {ldata.pyqs}
-                              <button
-                                onClick={() =>
-                                  setData((p) => ({
-                                    ...p,
-                                    [lesson]: {
-                                      ...ldata,
-                                      pyqs: ldata.pyqs + 1,
-                                    },
-                                  }))
-                                }
-                                className="ml-2 px-2 bg-gray-700 rounded"
-                              >
-                                +
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
-            )}
-          </div>
-        ))}
+        {openSubjects.hindi &&
+          Object.entries(syllabus.Hindi).map(([k, v]) => (
+            <div key={k} className="ml-4 mt-3">
+              <div className="font-medium">{k}</div>
+              {v.map((l) => renderLesson(l))}
+            </div>
+          ))}
       </div>
-    </div>
+    </main>
   );
 }
