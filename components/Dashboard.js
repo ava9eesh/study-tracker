@@ -16,16 +16,16 @@ export default function Dashboard() {
   const [lessonData, setLessonData] = useState({});
 
   const toggle = (key) =>
-    setOpen((p) => ({ ...p, [key]: !p[key] }));
+    setOpen((prev) => ({ ...prev, [key]: !prev[key] }));
 
   const updateLesson = (lesson, patch) => {
-    setLessonData((p) => ({
-      ...p,
+    setLessonData((prev) => ({
+      ...prev,
       [lesson]: {
         status: "todo",
         revisions: 0,
         pyqs: 0,
-        ...p[lesson],
+        ...prev[lesson],
         ...patch,
       },
     }));
@@ -102,27 +102,36 @@ export default function Dashboard() {
     );
   };
 
-  const renderSubject = (subject, content) => {
-    const key = `subject-${subject}`;
+  const renderSubject = (subjectName, subjectData) => {
+    const key = `subject-${subjectName}`;
 
     return (
-      <div key={subject} className="rounded-2xl bg-zinc-900 p-5">
+      <div key={subjectName} className="rounded-2xl bg-zinc-900 p-5">
         <button
           onClick={() => toggle(key)}
           className="w-full text-left text-lg font-semibold"
         >
-          {subject}
+          {subjectName}
         </button>
 
-        {open[key] &&
-          (Array.isArray(content)
-            ? content.map(renderLesson)
-            : Object.entries(content).map(([sub, lessons]) => (
-                <div key={sub} className="ml-4 mt-4">
-                  <div className="font-medium">{sub}</div>
-                  {lessons.map(renderLesson)}
-                </div>
-              )))}
+        {open[key] && (
+          <div className="mt-4">
+            {Array.isArray(subjectData) &&
+              subjectData.map(renderLesson)}
+
+            {!Array.isArray(subjectData) &&
+              Object.entries(subjectData).map(
+                ([subName, lessons]) => (
+                  <div key={subName} className="ml-4 mt-4">
+                    <div className="font-medium text-gray-300">
+                      {subName}
+                    </div>
+                    {lessons.map(renderLesson)}
+                  </div>
+                )
+              )}
+          </div>
+        )}
       </div>
     );
   };
@@ -143,8 +152,8 @@ export default function Dashboard() {
         className="w-full rounded-xl bg-zinc-900 px-4 py-3 outline-none"
       />
 
-      {Object.entries(syllabus).map(([subject, content]) =>
-        renderSubject(subject, content)
+      {Object.entries(syllabus).map(([name, data]) =>
+        renderSubject(name, data)
       )}
     </main>
   );
