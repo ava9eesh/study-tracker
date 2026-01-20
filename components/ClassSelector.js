@@ -1,31 +1,30 @@
-export default function ClassSelector({ onSelect }) {
-  const classes = [
-    { name: "9th", enabled: true },
-    { name: "10th", enabled: false },
-    { name: "11th", enabled: false },
-    { name: "12th", enabled: false },
-    { name: "JEE", enabled: false },
-    { name: "NEET", enabled: false },
-  ];
+"use client";
 
+export default function ClassSelector({ onSelect }) {
   return (
-    <div className="h-screen flex items-center justify-center">
-      <div className="bg-zinc-900 p-6 rounded text-white">
-        <h2 className="mb-4 text-xl">Select your class</h2>
+    <div className="min-h-screen flex items-center justify-center bg-black text-white">
+      <div className="glass p-6 rounded-xl w-[320px] space-y-5">
+        <h2 className="text-lg font-semibold text-center">
+          Select your class
+        </h2>
 
         <div className="grid grid-cols-2 gap-3">
-          {classes.map((c) => (
+          {/* 9th */}
+          <button
+            onClick={() => onSelect("9th")}
+            className="bg-blue-600 hover:bg-blue-700 transition py-2 rounded font-medium"
+          >
+            9th
+          </button>
+
+          {/* Disabled */}
+          {["10th", "11th", "12th", "JEE / NEET"].map((cls) => (
             <button
-              key={c.name}
-              disabled={!c.enabled}
-              onClick={() => c.enabled && onSelect(c.name)}
-              className={`px-4 py-2 rounded ${
-                c.enabled
-                  ? "bg-blue-600 hover:bg-blue-500"
-                  : "bg-zinc-700 cursor-not-allowed"
-              }`}
+              key={cls}
+              disabled
+              className="bg-zinc-800 text-gray-400 py-2 rounded cursor-not-allowed"
             >
-              {c.name} {!c.enabled && "🚧"}
+              {cls} 🚧
             </button>
           ))}
         </div>
