@@ -45,77 +45,98 @@ export default function Dashboard() {
   /* ---------------- render lesson ---------------- */
 
   const renderLesson = (lesson) => {
-    if (search && !matchesSearch(lesson)) return null;
+  const title = typeof lesson === "string" ? lesson : lesson.name;
+  const video = typeof lesson === "object" ? lesson.video : null;
+  const pyq = typeof lesson === "object" ? lesson.pyq : null;
 
-    const data = lessonData[lesson] || {
-      status: "todo",
-      revisions: 0,
-      pyqs: 0,
-    };
+  if (search && !title.toLowerCase().includes(search.toLowerCase())) {
+    return null;
+  }
 
-    return (
-      <div
-        key={lesson}
-        className="ml-6 mt-3 rounded-xl bg-zinc-900/70 p-4"
-      >
-        <button
-          onClick={() => toggleLesson(lesson)}
-          className="
-            w-full text-left font-medium
-            focus:outline-none
-          "
-        >
-          {lesson}
-        </button>
-
-        {openLessons[lesson] && (
-          <div className="mt-3 space-y-3 text-sm">
-            {/* STATUS */}
-            <div className="flex gap-2 flex-wrap">
-              {["todo", "doing", "done", "mastered"].map((s) => (
-                <button
-                  key={s}
-                  onClick={() => updateLesson(lesson, { status: s })}
-                  className={`px-3 py-1 rounded-md ${
-                    data.status === s
-                      ? STATUS_STYLES[s]
-                      : "bg-zinc-800 text-gray-400"
-                  }`}
-                >
-                  {s.toUpperCase()}
-                </button>
-              ))}
-            </div>
-
-            {/* COUNTERS */}
-            <div className="flex gap-6 text-sm">
-              <button
-                onClick={() =>
-                  updateLesson(lesson, {
-                    revisions: data.revisions + 1,
-                  })
-                }
-                className="text-blue-400 hover:underline"
-              >
-                Revisions: {data.revisions} +
-              </button>
-
-              <button
-                onClick={() =>
-                  updateLesson(lesson, {
-                    pyqs: data.pyqs + 1,
-                  })
-                }
-                className="text-pink-400 hover:underline"
-              >
-                PYQs: {data.pyqs} +
-              </button>
-            </div>
-          </div>
-        )}
-      </div>
-    );
+  const data = lessonData[title] || {
+    status: "todo",
+    revisions: 0,
+    pyqs: 0,
   };
+
+  return (
+    <div key={title} className="ml-6 mt-3 rounded-xl bg-zinc-900/70 p-4">
+      <button
+        onClick={() => toggleLesson(title)}
+        className="w-full text-left font-medium focus:outline-none"
+      >
+        {title}
+      </button>
+
+      {openLessons[title] && (
+        <div className="mt-3 space-y-3 text-sm">
+          {/* STATUS */}
+          <div className="flex gap-2 flex-wrap">
+            {["todo", "doing", "done", "mastered"].map((s) => (
+              <button
+                key={s}
+                onClick={() => updateLesson(title, { status: s })}
+                className={`px-3 py-1 rounded-md ${
+                  data.status === s
+                    ? STATUS_STYLES[s]
+                    : "bg-zinc-800 text-gray-400"
+                }`}
+              >
+                {s.toUpperCase()}
+              </button>
+            ))}
+          </div>
+
+          {/* COUNTERS */}
+          <div className="flex gap-6">
+            <button
+              onClick={() =>
+                updateLesson(title, { revisions: data.revisions + 1 })
+              }
+              className="text-blue-400 hover:underline"
+            >
+              Revisions: {data.revisions} +
+            </button>
+
+            <button
+              onClick={() =>
+                updateLesson(title, { pyqs: data.pyqs + 1 })
+              }
+              className="text-pink-400 hover:underline"
+            >
+              PYQs: {data.pyqs} +
+            </button>
+          </div>
+
+          {/* LINKS */}
+          {(video || pyq) && (
+            <div className="flex gap-4 text-sm pt-2">
+              {video && (
+                <a
+                  href={video}
+                  target="_blank"
+                  className="text-blue-400 hover:underline"
+                >
+                  Lesson Video
+                </a>
+              )}
+              {pyq && (
+                <a
+                  href={pyq}
+                  target="_blank"
+                  className="text-purple-400 hover:underline"
+                >
+                  PYQs
+                </a>
+              )}
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+};
+
 
   /* ---------------- render subject ---------------- */
 
