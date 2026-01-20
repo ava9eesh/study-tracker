@@ -2,76 +2,55 @@
 
 import { useEffect, useState } from "react";
 import { syllabus } from "../data/syllabus";
-import { loadUserData, saveUserData } from "../utils/firestore";
 
 export default function Dashboard({ user }) {
   const [search, setSearch] = useState("");
   const [collapsed, setCollapsed] = useState({});
   const [progress, setProgress] = useState({});
-  const uid = user.uid;
 
-  const videoLinks = {
-    "Matter in Our Surroundings":
-      "https://www.youtube.com/results?search_query=matter+in+our+surroundings+class+9",
-    "Is Matter Around Us Pure?":
-      "https://www.youtube.com/results?search_query=is+matter+around+us+pure+class+9",
-    "Atoms and Molecules":
-      "https://www.youtube.com/results?search_query=atoms+and+molecules+class+9",
-    "Structure of the Atom":
-      "https://www.youtube.com/results?search_query=structure+of+atom+class+9",
-    "The Fundamental Unit of Life":
-      "https://www.youtube.com/results?search_query=cell+class+9",
-    Tissues: "https://www.youtube.com/results?search_query=cell+class+9",
-    Motion: "https://www.youtube.com/results?search_query=motion+class+9",
-    "Force and Laws of Motion":
-      "https://www.youtube.com/results?search_query=force+and+laws+of+motion+class+9",
-    Gravitation:
-      "https://www.youtube.com/results?search_query=gravitation+class+9",
-    "Work and Energy":
-      "https://www.youtube.com/results?search_query=work+and+energy+class+9",
-    Sound: "https://www.youtube.com/results?search_query=sound+class+9",
-    "Improvement in Food Resources":
-      "https://www.youtube.com/results?search_query=improvement+in+food+resources+class+9",
+  /* ---------- helpers ---------- */
+
+  const toggleSubject = (subject) => {
+    setCollapsed((prev) => ({
+      ...prev,
+      [subject]: !prev[subject],
+    }));
   };
 
-  // 🔥 Load Firestore on login
-  useEffect(() => {
-    async function load() {
-      const data = await loadUserData(uid);
-      if (data?.progress) setProgress(data.progress);
-    }
-    load();
-  }, [uid]);
-
-  // 🔥 Save Firestore on change
-  useEffect(() => {
-    saveUserData(uid, { progress });
-  }, [progress, uid]);
-
-  function toggleSubject(name) {
-    setCollapsed((p) => ({ ...p, [name]: !p[name] }));
-  }
-
-  function updateLesson(lesson, field, value) {
-    setProgress((p) => ({
-      ...p,
-      [lesson]: { ...p[lesson], [field]: value },
+  const updateLesson = (lessonName, field, value) => {
+    setProgress((prev) => ({
+      ...prev,
+      [lessonName]: {
+        status: "To Do",
+        revisions: 0,
+        pyqs: 0,
+        ...prev[lessonName],
+        [field]: value,
+      },
     }));
-  }
+  };
 
-  function statusColor(active, name) {
+  const statusClass = (active, label) => {
     if (!active) return "bg-zinc-800 text-zinc-400";
-    if (name === "Doing") return "bg-yellow-500 text-black";
-    if (name === "Done") return "bg-green-500 text-black";
-    if (name === "Mastered") return "bg-purple-500 text-white";
-    return "bg-zinc-600";
-  }
+    if (label === "Doing") return "bg-yellow-500 text-black";
+    if (label === "Done") return "bg-green-500 text-black";
+    if (label === "Mastered") return "bg-purple-500 text-white";
+    return "bg-zinc-600 text-white";
+  };
 
-  const allLessons = Object.values(syllabus)
-    .flatMap((v) =>
-      Array.isArray(v) ? v : Object.values(v).flat()
-    )
-    .flat();
+  /* ---------- progress bar ---------- */
+
+  const allLessons = [];
+
+  const collectLessons = (block) => {
+    if (Array.isArray(block)) {
+      block.forEach((l) => l?.name && allLessons.push(l.name));
+    } else {
+      Object.values(block).forEach(collectLessons);
+    }
+  };
+
+  Object.values(syllabus).forEach(collectLessons);
 
   const completed = allLessons.filter(
     (l) =>
@@ -79,17 +58,22 @@ export default function Dashboard({ user }) {
       progress[l]?.status === "Mastered"
   ).length;
 
-  const percent = Math.round((completed / allLessons.length) * 100) || 0;
+  const percent =
+    allLessons.length > 0
+      ? Math.round((completed / allLessons.length) * 100)
+      : 0;
+
+  /* ---------- render ---------- */
 
   return (
     <div className="min-h-screen bg-black text-white p-6">
       <h1 className="text-2xl font-bold mb-2">
-        Welcome, {user.displayName}
+        Welcome, {user?.displayName}
       </h1>
 
-      {/* Progress bar */}
+      {/* progress */}
       <div className="mb-6">
-        <div className="text-sm mb-1">Overall Progress: {percent}%</div>
+        <div className="text-sm mb-1">Overall Progress — {percent}%</div>
         <div className="h-2 bg-zinc-800 rounded">
           <div
             className="h-2 bg-green-500 rounded"
@@ -98,31 +82,32 @@ export default function Dashboard({ user }) {
         </div>
       </div>
 
+      {/* search */}
       <input
+        className="w-full mb-6 p-2 rounded bg-zinc-900 outline-none"
         placeholder="Search lessons..."
-        className="w-full mb-6 p-2 rounded bg-zinc-900"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
 
+      {/* subjects */}
       {Object.entries(syllabus).map(([subject, content]) => (
         <div key={subject} className="mb-6 bg-zinc-900 rounded-xl p-4">
           <button
-            className="text-lg font-semibold w-full text-left"
             onClick={() => toggleSubject(subject)}
+            className="w-full text-left text-lg font-semibold"
           >
             {subject}
           </button>
 
           {!collapsed[subject] && (
             <div className="mt-4 space-y-4">
-              {renderLessons(
+              {renderBlock(
                 content,
                 search,
                 progress,
                 updateLesson,
-                videoLinks,
-                statusColor
+                statusClass
               )}
             </div>
           )}
@@ -137,65 +122,61 @@ export default function Dashboard({ user }) {
   );
 }
 
-function renderLessons(
-  content,
+/* ---------- recursive renderer ---------- */
+
+function renderBlock(
+  block,
   search,
   progress,
   updateLesson,
-  videoLinks,
-  statusColor
+  statusClass
 ) {
-  if (Array.isArray(content)) {
-    return content
+  if (Array.isArray(block)) {
+    return block
       .filter(
-        (l) =>
-          typeof l === "string" &&
-          l.toLowerCase().includes(search.toLowerCase())
+        (lesson) =>
+          typeof lesson?.name === "string" &&
+          lesson.name.toLowerCase().includes(search.toLowerCase())
       )
       .map((lesson) => (
         <LessonCard
-          key={lesson}
+          key={lesson.name}
           lesson={lesson}
-          data={progress[lesson] || {}}
+          data={progress[lesson.name] || {}}
           updateLesson={updateLesson}
-          videoLinks={videoLinks}
-          statusColor={statusColor}
+          statusClass={statusClass}
         />
       ));
   }
 
-  return Object.entries(content).map(([sub, lessons]) => (
-    <div key={sub}>
+  return Object.entries(block).map(([sub, lessons]) => (
+    <div key={sub} className="ml-2">
       <h3 className="font-semibold mt-2">{sub}</h3>
-      {renderLessons(
+      {renderBlock(
         lessons,
         search,
         progress,
         updateLesson,
-        videoLinks,
-        statusColor
+        statusClass
       )}
     </div>
   ));
 }
 
-function LessonCard({
-  lesson,
-  data,
-  updateLesson,
-  videoLinks,
-  statusColor,
-}) {
+/* ---------- lesson card ---------- */
+
+function LessonCard({ lesson, data, updateLesson, statusClass }) {
   return (
     <div className="bg-zinc-800 rounded p-3">
-      <div className="font-medium mb-2">{lesson}</div>
+      <div className="font-medium mb-2">{lesson.name}</div>
 
+      {/* status */}
       <div className="flex gap-2 mb-2">
         {["To Do", "Doing", "Done", "Mastered"].map((s) => (
           <button
             key={s}
-            onClick={() => updateLesson(lesson, "status", s)}
-            className={`px-3 py-1 rounded ${statusColor(
+            onClick={() => updateLesson(lesson.name, "status", s)}
+            className={`px-3 py-1 rounded ${statusClass(
               data.status === s,
               s
             )}`}
@@ -205,6 +186,7 @@ function LessonCard({
         ))}
       </div>
 
+      {/* counters */}
       <div className="flex gap-4 text-sm mb-2">
         <div>
           Revisions: {data.revisions || 0}
@@ -212,7 +194,7 @@ function LessonCard({
             className="ml-2"
             onClick={() =>
               updateLesson(
-                lesson,
+                lesson.name,
                 "revisions",
                 Math.min(100, (data.revisions || 0) + 1)
               )
@@ -228,7 +210,7 @@ function LessonCard({
             className="ml-2"
             onClick={() =>
               updateLesson(
-                lesson,
+                lesson.name,
                 "pyqs",
                 Math.min(100, (data.pyqs || 0) + 1)
               )
@@ -239,13 +221,20 @@ function LessonCard({
         </div>
       </div>
 
+      {/* links */}
       <div className="flex gap-4 text-sm text-blue-400">
-        {videoLinks[lesson] && (
-          <a href={videoLinks[lesson]} target="_blank">
+        {lesson.video && (
+          <a href={lesson.video} target="_blank" rel="noreferrer">
             Lesson Video
           </a>
         )}
-        <span className="text-zinc-500">PYQs</span>
+        {lesson.pyq ? (
+          <a href={lesson.pyq} target="_blank" rel="noreferrer">
+            PYQs
+          </a>
+        ) : (
+          <span className="text-zinc-500">PYQs</span>
+        )}
       </div>
     </div>
   );
