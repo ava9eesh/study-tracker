@@ -1,10 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { syllabus } from "../data/syllabus";
 
-/* ------------------ CONFIG ------------------ */
+/* ---------------- CONFIG ---------------- */
 
+const CLASSES = ["9th", "10th", "11th", "12th", "JEE/NEET"];
 const STATUSES = ["todo", "doing", "done", "mastered"];
 
 const STATUS_STYLE = {
@@ -14,32 +15,91 @@ const STATUS_STYLE = {
   mastered: "bg-purple-500/20 text-purple-400",
 };
 
-/* ------------------ DASHBOARD ------------------ */
+/* ---------------- DASHBOARD ---------------- */
 
 export default function Dashboard() {
-  const [search, setSearch] = useState("");
+  const [selectedClass, setSelectedClass] = useState(null);
   const [open, setOpen] = useState({});
+  const [search, setSearch] = useState("");
   const [data, setData] = useState({});
 
-  const toggle = (key) =>
-    setOpen((prev) => ({ ...prev, [key]: !prev[key] }));
+  /* ---------- LOAD / SAVE ---------- */
 
-  const updateLesson = (lesson, patch) => {
+  useEffect(() => {
+    const savedClass = localStorage.getItem("class");
+    const savedData = localStorage.getItem("progress");
+
+    if (savedClass) setSelectedClass(savedClass);
+    if (savedData) setData(JSON.parse(savedData));
+  }, []);
+
+  const saveProgress = () => {
+    localStorage.setItem("progress", JSON.stringify(data));
+    localStorage.setItem("class", selectedClass);
+    alert("Progress saved");
+  };
+
+  const resetProgress = () => {
+    if (!confirm("Reset all progress?")) return;
+    setData({});
+    localStorage.removeItem("progress");
+  };
+
+  /* ---------- HELPERS ---------- */
+
+  const toggle = (key) =>
+    setOpen((p) => ({ ...p, [key]: !p[key] }));
+
+  const updateLesson = (title, patch) => {
     setData((prev) => ({
       ...prev,
-      [lesson]: {
+      [title]: {
         status: "todo",
         revisions: 0,
         pyqs: 0,
-        ...prev[lesson],
+        ...prev[title],
         ...patch,
       },
     }));
   };
 
-  /* ------------------ LESSON ------------------ */
+  /* ---------- CLASS SELECTOR ---------- */
+
+  if (!selectedClass) {
+    return (
+      <main className="min-h-screen flex items-center justify-center bg-black text-white">
+        <div className="glass p-6 rounded-xl space-y-4">
+          <h2 className="text-xl font-semibold text-center">
+            Select your class
+          </h2>
+
+          <div className="grid grid-cols-2 gap-3">
+            {CLASSES.map((c) => (
+              <button
+                key={c}
+                disabled={c !== "9th"}
+                onClick={() => setSelectedClass(c)}
+                className={`rounded-lg px-4 py-2 ${
+                  c === "9th"
+                    ? "bg-blue-600"
+                    : "bg-zinc-800 opacity-50"
+                }`}
+              >
+                {c}
+                {c !== "9th" && " 🚧"}
+              </button>
+            ))}
+          </div>
+        </div>
+      </main>
+    );
+  }
+
+  /* ---------- LESSON ---------- */
 
   const Lesson = ({ lesson }) => {
+    if (!lesson?.title) return null;
+
     if (
       search &&
       !lesson.title.toLowerCase().includes(search.toLowerCase())
@@ -66,13 +126,17 @@ export default function Dashboard() {
         {open[key] && (
           <div className="mt-3 space-y-3 text-sm">
             {/* STATUS */}
-            <div className="flex flex-wrap gap-2">
+            <div className="flex gap-2 flex-wrap">
               {STATUSES.map((s) => (
                 <button
                   key={s}
-                  onClick={() => updateLesson(lesson.title, { status: s })}
+                  onClick={() =>
+                    updateLesson(lesson.title, { status: s })
+                  }
                   className={`px-3 py-1 rounded ${
-                    d.status === s ? STATUS_STYLE[s] : "bg-zinc-800"
+                    d.status === s
+                      ? STATUS_STYLE[s]
+                      : "bg-zinc-800"
                   }`}
                 >
                   {s.toUpperCase()}
@@ -88,7 +152,6 @@ export default function Dashboard() {
                     revisions: Math.max(0, d.revisions - 1),
                   })
                 }
-                className="text-blue-400"
               >
                 −
               </button>
@@ -99,7 +162,6 @@ export default function Dashboard() {
                     revisions: d.revisions + 1,
                   })
                 }
-                className="text-blue-400"
               >
                 +
               </button>
@@ -112,7 +174,6 @@ export default function Dashboard() {
                     pyqs: Math.max(0, d.pyqs - 1),
                   })
                 }
-                className="text-pink-400"
               >
                 −
               </button>
@@ -123,7 +184,6 @@ export default function Dashboard() {
                     pyqs: d.pyqs + 1,
                   })
                 }
-                className="text-pink-400"
               >
                 +
               </button>
@@ -148,7 +208,7 @@ export default function Dashboard() {
     );
   };
 
-  /* ------------------ SUBJECT ------------------ */
+  /* ---------- SUBJECT ---------- */
 
   const Subject = ({ name, value }) => {
     const key = `subject-${name}`;
@@ -165,13 +225,9 @@ export default function Dashboard() {
 
         {open[key] && (
           <div className="mt-4 space-y-4">
-            {/* SIMPLE SUBJECT */}
             {Array.isArray(value) &&
-              value.map((lesson) => (
-                <Lesson key={lesson.title} lesson={lesson} />
-              ))}
+              value.map((l) => <Lesson key={l.title} lesson={l} />)}
 
-            {/* NESTED SUBJECT */}
             {!Array.isArray(value) &&
               Object.entries(value).map(([sub, lessons]) => {
                 const subKey = `${key}-${sub}`;
@@ -179,22 +235,16 @@ export default function Dashboard() {
                   <div key={sub} className="ml-4">
                     <button
                       onClick={() => toggle(subKey)}
-                      className="flex w-full justify-between font-medium text-gray-300"
+                      className="flex w-full justify-between font-medium"
                     >
                       {sub}
                       <span>{open[subKey] ? "▼" : "▶"}</span>
                     </button>
 
-                    {open[subKey] && (
-                      <div className="mt-3 space-y-3">
-                        {lessons.map((lesson) => (
-                          <Lesson
-                            key={lesson.title}
-                            lesson={lesson}
-                          />
-                        ))}
-                      </div>
-                    )}
+                    {open[subKey] &&
+                      lessons.map((l) => (
+                        <Lesson key={l.title} lesson={l} />
+                      ))}
                   </div>
                 );
               })}
@@ -204,15 +254,32 @@ export default function Dashboard() {
     );
   };
 
-  /* ------------------ UI ------------------ */
+  /* ---------- UI ---------- */
 
   return (
-    <main className="mx-auto max-w-5xl space-y-6 p-6">
-      <div className="flex items-center justify-between">
+    <main className="max-w-5xl mx-auto p-6 space-y-6">
+      <div className="flex justify-between items-center">
         <h1 className="text-2xl font-semibold">
-          Dashboard – Class 9
+          Dashboard – Class {selectedClass}
         </h1>
-        <button className="text-red-500">Logout</button>
+        <button
+          onClick={() => {
+            localStorage.clear();
+            location.reload();
+          }}
+          className="text-red-500"
+        >
+          Logout
+        </button>
+      </div>
+
+      <div className="flex gap-3">
+        <button onClick={saveProgress} className="bg-green-600 px-4 py-2 rounded">
+          Save
+        </button>
+        <button onClick={resetProgress} className="bg-zinc-800 px-4 py-2 rounded">
+          Reset
+        </button>
       </div>
 
       <input
