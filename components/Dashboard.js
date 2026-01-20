@@ -1,191 +1,162 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { syllabus } from "../data/syllabus";
 
-const STATUS = ["todo", "doing", "done", "mastered"];
+const CLASSES = ["9th", "10th", "11th", "12th", "JEE / NEET"];
+const STATUSES = ["todo", "doing", "done", "mastered"];
 
 export default function Dashboard() {
-  const [open, setOpen] = useState({});
+  const [selectedClass, setSelectedClass] = useState("9th");
   const [search, setSearch] = useState("");
-  const [lessonData, setLessonData] = useState({});
+  const [open, setOpen] = useState({});
+  const [data, setData] = useState({});
 
-  /* -------------------- PERSISTENCE -------------------- */
+  /* -------------------- LOAD / SAVE -------------------- */
   useEffect(() => {
-    const saved = localStorage.getItem("lessonData");
-    if (saved) setLessonData(JSON.parse(saved));
+    const saved = localStorage.getItem("progress");
+    if (saved) setData(JSON.parse(saved));
   }, []);
 
   const saveProgress = () => {
-    localStorage.setItem("lessonData", JSON.stringify(lessonData));
-    alert("Progress saved");
+    localStorage.setItem("progress", JSON.stringify(data));
+    alert("Progress saved ✅");
   };
 
   const resetProgress = () => {
     if (!confirm("Reset all progress?")) return;
-    setLessonData({});
-    localStorage.removeItem("lessonData");
+    setData({});
+    localStorage.removeItem("progress");
   };
 
   /* -------------------- HELPERS -------------------- */
   const toggle = (key) =>
     setOpen((p) => ({ ...p, [key]: !p[key] }));
 
-  const updateLesson = (id, patch) => {
-    setLessonData((p) => ({
-      ...p,
-      [id]: {
+  const lessonKey = (name) => `lesson::${name}`;
+
+  const updateLesson = (lesson, patch) => {
+    setData((prev) => ({
+      ...prev,
+      [lesson]: {
         status: "todo",
         revisions: 0,
         pyqs: 0,
-        ...p[id],
+        ...prev[lesson],
         ...patch,
       },
     }));
   };
 
   /* -------------------- PROGRESS -------------------- */
-  const allLessons = Object.keys(lessonData).length || 1;
-  const doneLessons = Object.values(lessonData).filter(
-    (l) => l.status === "done" || l.status === "mastered"
-  ).length;
+  const allLessons = useMemo(() => {
+    const collect = [];
+    Object.values(syllabus).forEach((s) => {
+      if (Array.isArray(s)) collect.push(...s);
+      else Object.values(s).forEach((x) => collect.push(...x));
+    });
+    return collect;
+  }, []);
 
-  const progress = Math.round((doneLessons / allLessons) * 100);
+  const progressPercent = useMemo(() => {
+    if (!allLessons.length) return 0;
+    const done = allLessons.filter(
+      (l) => data[l]?.status === "done" || data[l]?.status === "mastered"
+    ).length;
+    return Math.round((done / allLessons.length) * 100);
+  }, [data, allLessons]);
 
   /* -------------------- RENDER LESSON -------------------- */
-  const renderLesson = (lesson, meta, path) => {
+  const renderLesson = (lesson) => {
     if (
       search &&
       !lesson.toLowerCase().includes(search.toLowerCase())
     )
       return null;
 
-    const id = [...path, lesson].join("::");
-    const data = lessonData[id] || {
-      status: "todo",
-      revisions: 0,
-      pyqs: 0,
-    };
+    const l = data[lesson] || { status: "todo", revisions: 0, pyqs: 0 };
+    const key = lessonKey(lesson);
 
     return (
-      <div key={id} className="ml-6 mt-3 rounded-xl bg-zinc-900 p-4">
-        <div className="font-medium">{lesson}</div>
+      <div key={lesson} className="ml-6 mt-3 rounded-xl bg-zinc-900 p-4">
+        <button
+          onClick={() => toggle(key)}
+          className="flex items-center gap-2 font-medium"
+        >
+          <span>{open[key] ? "▼" : "▶"}</span>
+          {lesson}
+        </button>
 
-        <div className="mt-2 flex gap-2 flex-wrap">
-          {STATUS.map((s) => (
-            <button
-              key={s}
-              onClick={() => updateLesson(id, { status: s })}
-              className={`px-3 py-1 rounded text-sm ${
-                data.status === s
-                  ? "bg-blue-600"
-                  : "bg-zinc-800"
-              }`}
-            >
-              {s.toUpperCase()}
-            </button>
-          ))}
-        </div>
+        {open[key] && (
+          <div className="mt-3 space-y-3 text-sm">
+            <div className="flex gap-2 flex-wrap">
+              {STATUSES.map((s) => (
+                <button
+                  key={s}
+                  onClick={() => updateLesson(lesson, { status: s })}
+                  className={`px-3 py-1 rounded ${
+                    l.status === s ? "bg-blue-600" : "bg-zinc-800"
+                  }`}
+                >
+                  {s.toUpperCase()}
+                </button>
+              ))}
+            </div>
 
-        <div className="mt-2 flex gap-6 text-sm">
-          <button
-            onClick={() =>
-              updateLesson(id, {
-                revisions: Math.max(0, data.revisions - 1),
-              })
-            }
-          >
-            −
-          </button>
-          <span>Revisions: {data.revisions}</span>
-          <button
-            onClick={() =>
-              updateLesson(id, { revisions: data.revisions + 1 })
-            }
-          >
-            +
-          </button>
+            <div className="flex gap-6">
+              <button
+                onClick={() =>
+                  updateLesson(lesson, {
+                    revisions: Math.max(0, l.revisions - 1),
+                  })
+                }
+              >
+                −
+              </button>
+              <span>Revisions: {l.revisions}</span>
+              <button
+                onClick={() =>
+                  updateLesson(lesson, { revisions: l.revisions + 1 })
+                }
+              >
+                +
+              </button>
+            </div>
 
-          <button
-            onClick={() =>
-              updateLesson(id, {
-                pyqs: Math.max(0, data.pyqs - 1),
-              })
-            }
-          >
-            −
-          </button>
-          <span>PYQs: {data.pyqs}</span>
-          <button
-            onClick={() =>
-              updateLesson(id, { pyqs: data.pyqs + 1 })
-            }
-          >
-            +
-          </button>
-        </div>
-
-        <div className="mt-2 flex gap-4 text-sm text-blue-400">
-          {meta?.video && (
-            <a href={meta.video} target="_blank">
-              Lesson Video
-            </a>
-          )}
-          {meta?.pyq && (
-            <a href={meta.pyq} target="_blank">
-              PYQs
-            </a>
-          )}
-        </div>
+            <div className="flex gap-6">
+              <button
+                onClick={() =>
+                  updateLesson(lesson, {
+                    pyqs: Math.max(0, l.pyqs - 1),
+                  })
+                }
+              >
+                −
+              </button>
+              <span>PYQs: {l.pyqs}</span>
+              <button
+                onClick={() =>
+                  updateLesson(lesson, { pyqs: l.pyqs + 1 })
+                }
+              >
+                +
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     );
   };
 
-  /* -------------------- RECURSIVE RENDER -------------------- */
-  const renderNode = (node, path = []) => {
-    if (Array.isArray(node)) {
-      return node.map((item) =>
-        typeof item === "string"
-          ? renderLesson(item, {}, path)
-          : renderLesson(item.name, item, path)
-      );
-    }
-
-    return Object.entries(node).map(([key, value]) => {
-      const openKey = [...path, key].join("::");
-
-      return (
-        <div key={openKey} className="ml-4 mt-4">
-          <button
-            onClick={() => toggle(openKey)}
-            className="flex items-center gap-2 font-medium"
-          >
-            <span>{open[openKey] ? "▼" : "▶"}</span>
-            {key}
-          </button>
-
-          {open[openKey] && (
-            <div className="mt-2">
-              {renderNode(value, [...path, key])}
-            </div>
-          )}
-        </div>
-      );
-    });
-  };
-
-  /* -------------------- SUBJECT -------------------- */
-  const renderSubject = (name, data) => {
-    const key = `subject-${name}`;
+  /* -------------------- RENDER SUBJECT -------------------- */
+  const renderSubject = (name, content) => {
+    const key = `subject::${name}`;
 
     return (
-      <div
-        key={key}
-        className="rounded-2xl bg-zinc-900 p-5"
-      >
+      <div key={name} className="rounded-2xl bg-zinc-900 p-5">
         <button
           onClick={() => toggle(key)}
-          className="flex w-full items-center justify-between text-lg font-semibold"
+          className="flex w-full justify-between text-lg font-semibold"
         >
           {name}
           <span>{open[key] ? "▼" : "▶"}</span>
@@ -193,7 +164,26 @@ export default function Dashboard() {
 
         {open[key] && (
           <div className="mt-4">
-            {renderNode(data, [name])}
+            {Array.isArray(content) &&
+              content.map(renderLesson)}
+
+            {!Array.isArray(content) &&
+              Object.entries(content).map(([sub, lessons]) => {
+                const subKey = `${key}::${sub}`;
+                return (
+                  <div key={sub} className="ml-4 mt-4">
+                    <button
+                      onClick={() => toggle(subKey)}
+                      className="flex gap-2 font-medium"
+                    >
+                      <span>{open[subKey] ? "▼" : "▶"}</span>
+                      {sub}
+                    </button>
+                    {open[subKey] &&
+                      lessons.map(renderLesson)}
+                  </div>
+                );
+              })}
           </div>
         )}
       </div>
@@ -205,36 +195,48 @@ export default function Dashboard() {
     <main className="max-w-5xl mx-auto p-6 space-y-6">
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-semibold">
-          Dashboard – Class 9
+          Dashboard – Class {selectedClass}
         </h1>
         <button className="text-red-500">Logout</button>
       </div>
 
-      <div className="flex gap-3">
-        <button
-          onClick={saveProgress}
-          className="bg-green-600 px-4 py-2 rounded"
-        >
-          Save
-        </button>
-        <button
-          onClick={resetProgress}
-          className="bg-zinc-700 px-4 py-2 rounded"
-        >
-          Reset
-        </button>
+      {/* CLASS SELECTOR */}
+      <div className="flex gap-2 flex-wrap">
+        {CLASSES.map((c) => (
+          <button
+            key={c}
+            onClick={() => setSelectedClass(c)}
+            className={`px-4 py-1 rounded ${
+              selectedClass === c
+                ? "bg-blue-600"
+                : "bg-zinc-800"
+            }`}
+          >
+            {c}
+          </button>
+        ))}
       </div>
 
+      {/* PROGRESS BAR */}
       <div>
         <div className="mb-1 text-sm">
-          Progress: {progress}%
+          Overall Progress — {progressPercent}%
         </div>
-        <div className="h-2 bg-zinc-800 rounded">
+        <div className="h-3 rounded bg-zinc-800 overflow-hidden">
           <div
-            className="h-2 bg-blue-600 rounded"
-            style={{ width: `${progress}%` }}
+            className="h-full bg-green-500 transition-all"
+            style={{ width: `${progressPercent}%` }}
           />
         </div>
+      </div>
+
+      <div className="flex gap-3">
+        <button onClick={saveProgress} className="bg-green-600 px-4 py-2 rounded">
+          Save
+        </button>
+        <button onClick={resetProgress} className="bg-zinc-700 px-4 py-2 rounded">
+          Reset
+        </button>
       </div>
 
       <input
@@ -244,8 +246,8 @@ export default function Dashboard() {
         className="w-full rounded-xl bg-zinc-900 px-4 py-3 outline-none"
       />
 
-      {Object.entries(syllabus).map(([n, d]) =>
-        renderSubject(n, d)
+      {Object.entries(syllabus).map(([n, c]) =>
+        renderSubject(n, c)
       )}
     </main>
   );
