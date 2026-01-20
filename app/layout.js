@@ -1,4 +1,10 @@
 import "./globals.css";
+import { Inter } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 export const metadata = {
   title: "Study Tracker",
@@ -8,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-black text-white">
+      <body className={`${inter.className} bg-black text-white`}>
         {children}
 
         <footer className="mt-20 py-6 text-center text-gray-400 text-sm">
@@ -23,6 +29,7 @@ export default function RootLayout({ children }) {
             <a
               href="https://discord.com/users/i_love_zandu_bam"
               target="_blank"
+              rel="noreferrer"
               className="text-blue-400 hover:underline"
             >
               i_love_zandu_bam
