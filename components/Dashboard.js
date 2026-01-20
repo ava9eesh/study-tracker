@@ -3,8 +3,8 @@
 import { useState } from "react";
 import { syllabus } from "../data/syllabus";
 
-const STATUS_COLORS = {
-  todo: "",
+const STATUS_STYLES = {
+  todo: "bg-zinc-800 text-gray-300",
   doing: "bg-yellow-500/20 text-yellow-400",
   done: "bg-green-500/20 text-green-400",
   mastered: "bg-purple-500/20 text-purple-400",
@@ -12,63 +12,74 @@ const STATUS_COLORS = {
 
 export default function Dashboard() {
   const [search, setSearch] = useState("");
-  const [open, setOpen] = useState({});
+  const [openSubjects, setOpenSubjects] = useState({});
+  const [openLessons, setOpenLessons] = useState({});
   const [lessonData, setLessonData] = useState({});
 
-  const toggle = (key) =>
-    setOpen((p) => ({ ...p, [key]: !p[key] }));
+  /* ---------------- helpers ---------------- */
 
-  const updateLesson = (id, patch) => {
+  const toggleSubject = (name) => {
+    setOpenSubjects((p) => ({ ...p, [name]: !p[name] }));
+  };
+
+  const toggleLesson = (name) => {
+    setOpenLessons((p) => ({ ...p, [name]: !p[name] }));
+  };
+
+  const updateLesson = (lesson, patch) => {
     setLessonData((prev) => ({
       ...prev,
-      [id]: {
+      [lesson]: {
         status: "todo",
         revisions: 0,
         pyqs: 0,
-        ...prev[id],
+        ...prev[lesson],
         ...patch,
       },
     }));
   };
 
+  const matchesSearch = (text) =>
+    text.toLowerCase().includes(search.toLowerCase());
+
+  /* ---------------- render lesson ---------------- */
+
   const renderLesson = (lesson) => {
-    const title = lesson.title;
-    const id = title;
+    if (search && !matchesSearch(lesson)) return null;
 
-    if (
-      search &&
-      !title.toLowerCase().includes(search.toLowerCase())
-    )
-      return null;
-
-    const data = lessonData[id] || {
+    const data = lessonData[lesson] || {
       status: "todo",
       revisions: 0,
       pyqs: 0,
     };
 
-    const key = `lesson-${id}`;
-
     return (
-      <div key={id} className="ml-6 mt-3 rounded-xl bg-zinc-900 p-4">
+      <div
+        key={lesson}
+        className="ml-6 mt-3 rounded-xl bg-zinc-900/70 p-4"
+      >
         <button
-          onClick={() => toggle(key)}
-          className="w-full text-left font-medium"
+          onClick={() => toggleLesson(lesson)}
+          className="
+            w-full text-left font-medium
+            focus:outline-none
+          "
         >
-          {title}
+          {lesson}
         </button>
 
-        {open[key] && (
+        {openLessons[lesson] && (
           <div className="mt-3 space-y-3 text-sm">
+            {/* STATUS */}
             <div className="flex gap-2 flex-wrap">
               {["todo", "doing", "done", "mastered"].map((s) => (
                 <button
                   key={s}
-                  onClick={() => updateLesson(id, { status: s })}
-                  className={`px-3 py-1 rounded ${
+                  onClick={() => updateLesson(lesson, { status: s })}
+                  className={`px-3 py-1 rounded-md ${
                     data.status === s
-                      ? STATUS_COLORS[s]
-                      : "bg-zinc-800"
+                      ? STATUS_STYLES[s]
+                      : "bg-zinc-800 text-gray-400"
                   }`}
                 >
                   {s.toUpperCase()}
@@ -76,97 +87,123 @@ export default function Dashboard() {
               ))}
             </div>
 
-            <div className="flex gap-6">
+            {/* COUNTERS */}
+            <div className="flex gap-6 text-sm">
               <button
                 onClick={() =>
-                  updateLesson(id, { revisions: data.revisions + 1 })
+                  updateLesson(lesson, {
+                    revisions: data.revisions + 1,
+                  })
                 }
-                className="text-blue-400"
+                className="text-blue-400 hover:underline"
               >
                 Revisions: {data.revisions} +
               </button>
 
               <button
                 onClick={() =>
-                  updateLesson(id, { pyqs: data.pyqs + 1 })
+                  updateLesson(lesson, {
+                    pyqs: data.pyqs + 1,
+                  })
                 }
-                className="text-pink-400"
+                className="text-pink-400 hover:underline"
               >
                 PYQs: {data.pyqs} +
               </button>
             </div>
-
-            <div className="flex gap-6 text-blue-400">
-              {lesson.video && (
-                <a href={lesson.video} target="_blank">
-                  Lesson Video
-                </a>
-              )}
-              {lesson.pyq && (
-                <a href={lesson.pyq} target="_blank">
-                  PYQs
-                </a>
-              )}
-            </div>
           </div>
         )}
       </div>
     );
   };
 
-  const renderSubject = (name, content) => {
-    const key = `subject-${name}`;
+  /* ---------------- render subject ---------------- */
 
+  const renderSubject = (name, data) => {
     return (
-      <div key={name} className="rounded-2xl bg-zinc-900 p-5">
+      <div
+        key={name}
+        className="rounded-2xl bg-zinc-900 p-5"
+      >
         <button
-          onClick={() => toggle(key)}
-          className="w-full text-left text-lg font-semibold"
+          onClick={() => toggleSubject(name)}
+          className="
+            w-full text-left text-lg font-semibold
+            focus:outline-none
+          "
         >
           {name}
         </button>
 
-        {open[key] && (
-          <div className="mt-4">
-            {Array.isArray(content) &&
-              content.map(renderLesson)}
+        {openSubjects[name] && (
+          <div className="mt-4 space-y-3">
+            {Array.isArray(data) &&
+              data.map(renderLesson)}
 
-            {!Array.isArray(content) &&
-              Object.entries(content).map(
-                ([sub, lessons]) => (
-                  <div key={sub} className="ml-4 mt-4">
-                    <div className="font-medium text-gray-300">
-                      {sub}
-                    </div>
-                    {lessons.map(renderLesson)}
+            {!Array.isArray(data) &&
+              Object.entries(data).map(([sub, lessons]) => (
+                <div key={sub} className="ml-4">
+                  <div className="text-gray-400 font-medium mb-2">
+                    {sub}
                   </div>
-                )
-              )}
+                  {lessons.map(renderLesson)}
+                </div>
+              ))}
           </div>
         )}
       </div>
     );
   };
 
+  /* ---------------- UI ---------------- */
+
   return (
     <main className="max-w-5xl mx-auto p-6 space-y-6">
+      {/* HEADER */}
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-semibold">
           Dashboard – Class 9
         </h1>
-        <button className="text-red-500">Logout</button>
+        <button className="text-red-500 text-sm hover:underline">
+          Logout
+        </button>
       </div>
 
+      {/* SEARCH */}
       <input
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         placeholder="Search lessons..."
-        className="w-full rounded-xl bg-zinc-900 px-4 py-3 outline-none"
+        className="
+          w-full rounded-xl bg-zinc-900 px-4 py-3
+          outline-none focus:ring-2 focus:ring-blue-500/30
+        "
       />
 
-      {Object.entries(syllabus).map(([n, c]) =>
-        renderSubject(n, c)
+      {/* SUBJECTS */}
+      {Object.entries(syllabus).map(([name, data]) =>
+        renderSubject(name, data)
       )}
+
+      {/* FOOTER */}
+      <footer className="mt-16 text-center text-gray-500 text-sm">
+        <p>
+          Built by{" "}
+          <span className="text-white font-medium">
+            Avaneesh Shinde
+          </span>
+        </p>
+        <p className="mt-1">
+          Contact:{" "}
+          <a
+            href="https://discord.com/users/i_love_zandu_bam"
+            target="_blank"
+            className="text-blue-400 hover:underline"
+          >
+            i_love_zandu_bam
+          </a>
+        </p>
+      </footer>
     </main>
   );
 }
