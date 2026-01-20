@@ -1,158 +1,197 @@
 "use client";
 
-import { useState } from "react";
-import { syllabus } from "../data/syllabus";
+import { useEffect, useState } from "react";
+import { loadUserData, saveUserData } from "@/utils/firestore";
+import { syllabus } from "@/data/syllabus";
 
-const STATUS_STYLES = {
-  todo: "bg-gray-700 text-gray-200",
-  doing: "bg-yellow-400 text-black",
-  done: "bg-green-600 text-white",
-  mastered: "bg-purple-600 text-white",
+const STATUS_COLORS = {
+  todo: "",
+  doing: "bg-yellow-500 text-black",
+  done: "bg-green-600",
+  mastered: "bg-purple-600",
 };
 
-export default function Dashboard({ logout }) {
-  const [progress, setProgress] = useState({});
-  const [open, setOpen] = useState({});
-  const [search, setSearch] = useState("");
+export default function Dashboard({ user }) {
+  const uid = user.uid;
 
-  const setStatus = (lesson, status) => {
-    setProgress((prev) => ({
-      ...prev,
+  const [data, setData] = useState({});
+  const [search, setSearch] = useState("");
+  const [collapsed, setCollapsed] = useState({});
+
+  // 🔹 Load data from Firestore
+  useEffect(() => {
+    async function load() {
+      const userData = await loadUserData(uid);
+      if (userData?.progress) {
+        setData(userData.progress);
+      }
+    }
+    load();
+  }, [uid]);
+
+  // 🔹 Save helper
+  const updateLesson = async (lesson, updates) => {
+    const newData = {
+      ...data,
       [lesson]: {
-        ...(prev[lesson] || {}),
-        status,
+        status: "todo",
+        revisions: 0,
+        pyqs: 0,
+        ...data[lesson],
+        ...updates,
       },
-    }));
+    };
+    setData(newData);
+    await saveUserData(uid, { progress: newData });
   };
 
-  /* -------- PROGRESS BAR LOGIC -------- */
-  const allLessons = Object.values(syllabus)
-    .flat()
-    .map((l) => l.name);
-
-  const completedCount = allLessons.filter((l) => {
-    const s = progress[l]?.status;
-    return s === "done" || s === "mastered";
-  }).length;
-
-  const progressPercent = allLessons.length
-    ? Math.round((completedCount / allLessons.length) * 100)
-    : 0;
+  // 🔹 Progress %
+  const lessons = Object.values(syllabus).flat();
+  const completed = Object.values(data).filter(
+    (l) => l.status === "done" || l.status === "mastered"
+  ).length;
+  const percent = Math.round((completed / lessons.length) * 100);
 
   return (
-    <div className="min-h-screen bg-black text-white p-6 max-w-6xl mx-auto">
-      {/* HEADER */}
-      <div className="flex justify-between items-center mb-6">
-        <h1 className="text-3xl font-semibold">Class 9 Dashboard</h1>
+    <div className="p-6 max-w-5xl mx-auto text-white">
+      <h1 className="text-2xl font-bold mb-4">
+        Dashboard — Class 9th
+      </h1>
 
-        <button
-          onClick={() => logout && logout()}
-          className="px-4 py-2 rounded bg-zinc-800 hover:bg-zinc-700 text-sm"
-        >
-          Logout
-        </button>
-      </div>
-
-      {/* PROGRESS BAR */}
-      <div className="mb-6">
-        <div className="flex justify-between text-sm mb-1 opacity-80">
-          <span>Overall Progress</span>
-          <span>{progressPercent}%</span>
-        </div>
-        <div className="w-full h-2 bg-zinc-800 rounded">
-          <div
-            className="h-2 bg-green-500 rounded transition-all"
-            style={{ width: `${progressPercent}%` }}
-          />
-        </div>
-      </div>
-
-      {/* SEARCH */}
+      {/* Search */}
       <input
+        className="w-full mb-6 p-2 rounded bg-zinc-800"
         placeholder="Search lessons..."
-        className="w-full mb-6 p-2 rounded bg-zinc-900 outline-none"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
 
-      {/* SUBJECTS */}
+      {/* Progress bar */}
+      <div className="mb-8">
+        <div className="text-sm mb-1">Overall Progress — {percent}%</div>
+        <div className="w-full h-2 bg-zinc-700 rounded">
+          <div
+            className="h-2 bg-blue-500 rounded"
+            style={{ width: `${percent}%` }}
+          />
+        </div>
+      </div>
+
+      {/* Subjects */}
       {Object.entries(syllabus).map(([subject, lessons]) => (
-        <div key={subject} className="mb-8">
-          {/* SUBJECT HEADER */}
+        <div key={subject} className="mb-6">
           <button
-            onClick={() => setOpen({ ...open, [subject]: !open[subject] })}
-            className="text-xl font-medium mb-3 flex items-center gap-2"
+            onClick={() =>
+              setCollapsed((c) => ({ ...c, [subject]: !c[subject] }))
+            }
+            className="w-full text-left font-semibold text-lg mb-2"
           >
             {subject}
-            <span className="text-sm opacity-60">
-              {open[subject] ? "▾" : "▸"}
-            </span>
           </button>
 
-          {/* LESSONS */}
-          {open[subject] &&
+          {!collapsed[subject] &&
             lessons
               .filter((l) =>
-                l.name.toLowerCase().includes(search.toLowerCase())
+                l.toLowerCase().includes(search.toLowerCase())
               )
               .map((lesson) => {
-                const current = progress[lesson.name]?.status || "todo";
+                const l = data[lesson] || {
+                  status: "todo",
+                  revisions: 0,
+                  pyqs: 0,
+                };
 
                 return (
                   <div
-                    key={lesson.name}
-                    className="bg-zinc-900 p-4 rounded-lg mb-3 border border-zinc-800"
+                    key={lesson}
+                    className="bg-zinc-900 p-4 rounded mb-3"
                   >
-                    <div className="font-medium mb-3">
-                      {lesson.name}
-                    </div>
+                    <div className="font-medium mb-3">{lesson}</div>
 
-                    {/* STATUS BUTTONS */}
+                    {/* Status buttons */}
                     <div className="flex gap-2 mb-3">
                       {["todo", "doing", "done", "mastered"].map((s) => (
                         <button
                           key={s}
-                          onClick={() => setStatus(lesson.name, s)}
-                          className={`px-3 py-1 rounded text-sm border transition
-                            ${
-                              current === s
-                                ? STATUS_STYLES[s]
-                                : "border-zinc-700 text-zinc-400 hover:border-zinc-500"
-                            }
-                          `}
+                          onClick={() =>
+                            updateLesson(lesson, { status: s })
+                          }
+                          className={`px-3 py-1 rounded border border-zinc-700 ${
+                            l.status === s ? STATUS_COLORS[s] : ""
+                          }`}
                         >
                           {s.toUpperCase()}
                         </button>
                       ))}
                     </div>
 
-                    {/* LINKS */}
-                    <div className="flex gap-4 text-sm">
-                      {lesson.video && (
-                        <a
-                          href={lesson.video}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-blue-400 hover:underline"
+                    {/* Revisions + PYQs */}
+                    <div className="flex gap-6 text-sm mb-2">
+                      <div>
+                        Revisions:
+                        <button
+                          className="mx-2"
+                          onClick={() =>
+                            updateLesson(lesson, {
+                              revisions: Math.max(0, l.revisions - 1),
+                            })
+                          }
                         >
-                          Lesson Video
-                        </a>
-                      )}
+                          −
+                        </button>
+                        {l.revisions}
+                        <button
+                          className="mx-2"
+                          onClick={() =>
+                            updateLesson(lesson, {
+                              revisions: l.revisions + 1,
+                            })
+                          }
+                        >
+                          +
+                        </button>
+                      </div>
 
-                      {lesson.pyq ? (
-                        <a
-                          href={lesson.pyq}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-purple-400 hover:underline"
+                      <div>
+                        PYQs:
+                        <button
+                          className="mx-2"
+                          onClick={() =>
+                            updateLesson(lesson, {
+                              pyqs: Math.max(0, l.pyqs - 1),
+                            })
+                          }
                         >
-                          PYQs
-                        </a>
-                      ) : (
-                        <span className="text-purple-400 opacity-40 cursor-not-allowed">
-                          PYQs
-                        </span>
-                      )}
+                          −
+                        </button>
+                        {l.pyqs}
+                        <button
+                          className="mx-2"
+                          onClick={() =>
+                            updateLesson(lesson, { pyqs: l.pyqs + 1 })
+                          }
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+
+                    {/* Links */}
+                    <div className="text-sm text-blue-400 flex gap-4">
+                      <a
+                        href="#"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Lesson Video
+                      </a>
+                      <a
+                        href="#"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        PYQs
+                      </a>
                     </div>
                   </div>
                 );
