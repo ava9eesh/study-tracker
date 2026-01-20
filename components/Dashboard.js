@@ -3,50 +3,57 @@
 import { useEffect, useState } from "react";
 import { syllabus } from "../data/syllabus";
 
+const CLASSES = ["9th", "10th", "11th", "12th", "JEE/NEET"];
+
 export default function Dashboard({ user }) {
+  const [selectedClass, setSelectedClass] = useState("9th");
   const [search, setSearch] = useState("");
-  const [collapsed, setCollapsed] = useState({});
+  const [collapsedSubjects, setCollapsedSubjects] = useState({});
+  const [collapsedSections, setCollapsedSections] = useState({});
+  const [collapsedLessons, setCollapsedLessons] = useState({});
   const [progress, setProgress] = useState({});
 
-  /* ---------------- LOAD FROM LOCALSTORAGE ---------------- */
+  /* ---------- localStorage ---------- */
   useEffect(() => {
     const saved = localStorage.getItem("study-progress");
     if (saved) {
       try {
         setProgress(JSON.parse(saved));
-      } catch {
-        console.error("Failed to load saved progress");
-      }
+      } catch {}
     }
   }, []);
 
-  /* ---------------- SAVE FUNCTION ---------------- */
   const saveProgress = () => {
     localStorage.setItem("study-progress", JSON.stringify(progress));
     alert("Progress saved ✅");
   };
 
-  const resetProgress = () => {
-    localStorage.removeItem("study-progress");
-    setProgress({});
+  /* ---------- helpers ---------- */
+  const toggle = (setter, key) => {
+    setter((p) => ({ ...p, [key]: !p[key] }));
   };
 
-  /* ---------------- HELPERS ---------------- */
-  const toggleSubject = (subject) => {
-    setCollapsed((p) => ({ ...p, [subject]: !p[subject] }));
-  };
-
-  const updateLesson = (lessonName, field, value) => {
-    setProgress((p) => ({
-      ...p,
-      [lessonName]: {
+  const updateLesson = (lesson, field, delta) => {
+    setProgress((p) => {
+      const curr = p[lesson] || {
         status: "To Do",
         revisions: 0,
         pyqs: 0,
-        ...p[lessonName],
-        [field]: value,
-      },
-    }));
+      };
+
+      let value = curr[field];
+
+      if (field === "revisions" || field === "pyqs") {
+        value = Math.min(100, Math.max(0, curr[field] + delta));
+      } else {
+        value = delta;
+      }
+
+      return {
+        ...p,
+        [lesson]: { ...curr, [field]: value },
+      };
+    });
   };
 
   const statusClass = (active, label) => {
@@ -57,58 +64,60 @@ export default function Dashboard({ user }) {
     return "bg-zinc-600 text-white";
   };
 
-  /* ---------------- PROGRESS BAR ---------------- */
+  /* ---------- progress bar ---------- */
   const allLessons = [];
-
-  const collectLessons = (block) => {
-    if (Array.isArray(block)) {
-      block.forEach((l) => l?.name && allLessons.push(l.name));
-    } else {
-      Object.values(block).forEach(collectLessons);
-    }
+  const collect = (block) => {
+    if (Array.isArray(block)) block.forEach((l) => l?.name && allLessons.push(l.name));
+    else Object.values(block).forEach(collect);
   };
-
-  Object.values(syllabus).forEach(collectLessons);
+  collect(syllabus);
 
   const completed = allLessons.filter(
-    (l) =>
-      progress[l]?.status === "Done" ||
-      progress[l]?.status === "Mastered"
+    (l) => progress[l]?.status === "Done" || progress[l]?.status === "Mastered"
   ).length;
 
-  const percent =
-    allLessons.length > 0
-      ? Math.round((completed / allLessons.length) * 100)
-      : 0;
+  const percent = allLessons.length
+    ? Math.round((completed / allLessons.length) * 100)
+    : 0;
 
-  /* ---------------- RENDER ---------------- */
   return (
     <div className="min-h-screen bg-black text-white p-6">
-      <h1 className="text-2xl font-bold mb-2">
+      <h1 className="text-2xl font-bold mb-3">
         Welcome, {user?.displayName}
       </h1>
 
-      {/* SAVE / RESET */}
-      <div className="flex gap-3 mb-4">
-        <button
-          onClick={saveProgress}
-          className="px-4 py-2 rounded bg-green-600 text-black"
-        >
-          Save Progress
-        </button>
-        <button
-          onClick={resetProgress}
-          className="px-4 py-2 rounded bg-red-600 text-black"
-        >
-          Reset
-        </button>
+      {/* CLASS SELECTOR */}
+      <div className="flex gap-2 mb-4 flex-wrap">
+        {CLASSES.map((cls) => (
+          <button
+            key={cls}
+            disabled={cls !== "9th"}
+            onClick={() => setSelectedClass(cls)}
+            className={`px-3 py-1 rounded text-sm ${
+              cls === "9th"
+                ? selectedClass === "9th"
+                  ? "bg-blue-600"
+                  : "bg-zinc-800"
+                : "bg-zinc-900 text-zinc-500 cursor-not-allowed"
+            }`}
+          >
+            {cls}
+            {cls !== "9th" && " 🚧"}
+          </button>
+        ))}
       </div>
+
+      {/* SAVE */}
+      <button
+        onClick={saveProgress}
+        className="mb-4 px-4 py-2 rounded bg-green-600 text-black"
+      >
+        Save Progress
+      </button>
 
       {/* PROGRESS BAR */}
       <div className="mb-6">
-        <div className="text-sm mb-1">
-          Overall Progress — {percent}%
-        </div>
+        <div className="text-sm mb-1">Overall Progress — {percent}%</div>
         <div className="h-2 bg-zinc-800 rounded">
           <div
             className="h-2 bg-green-500 rounded"
@@ -119,7 +128,7 @@ export default function Dashboard({ user }) {
 
       {/* SEARCH */}
       <input
-        className="w-full mb-6 p-2 rounded bg-zinc-900 outline-none"
+        className="w-full mb-6 p-2 rounded bg-zinc-900"
         placeholder="Search lessons..."
         value={search}
         onChange={(e) => setSearch(e.target.value)}
@@ -129,82 +138,117 @@ export default function Dashboard({ user }) {
       {Object.entries(syllabus).map(([subject, content]) => (
         <div key={subject} className="mb-6 bg-zinc-900 rounded-xl p-4">
           <button
-            onClick={() => toggleSubject(subject)}
+            onClick={() => toggle(setCollapsedSubjects, subject)}
             className="w-full text-left text-lg font-semibold"
           >
             {subject}
           </button>
 
-          {!collapsed[subject] && (
-            <div className="mt-4 space-y-4">
+          {!collapsedSubjects[subject] && (
+            <div className="mt-4">
               {renderBlock(
                 content,
+                subject,
                 search,
                 progress,
                 updateLesson,
-                statusClass
+                statusClass,
+                collapsedSections,
+                setCollapsedSections,
+                collapsedLessons,
+                setCollapsedLessons
               )}
             </div>
           )}
         </div>
       ))}
-
-      <footer className="text-center text-sm text-zinc-500 mt-10">
-        Built by Avaneesh Shinde · Contact{" "}
-        <span className="text-blue-400">i_love_zandu_bam</span>
-      </footer>
     </div>
   );
 }
 
-/* ---------------- RECURSIVE RENDER ---------------- */
+/* ---------- recursive render ---------- */
 
 function renderBlock(
   block,
+  keyBase,
   search,
   progress,
   updateLesson,
-  statusClass
+  statusClass,
+  collapsedSections,
+  setCollapsedSections,
+  collapsedLessons,
+  setCollapsedLessons
 ) {
   if (Array.isArray(block)) {
     return block
       .filter(
-        (lesson) =>
-          typeof lesson?.name === "string" &&
-          lesson.name.toLowerCase().includes(search.toLowerCase())
+        (l) =>
+          typeof l?.name === "string" &&
+          l.name.toLowerCase().includes(search.toLowerCase())
       )
       .map((lesson) => (
-        <LessonCard
-          key={lesson.name}
-          lesson={lesson}
-          data={progress[lesson.name] || {}}
-          updateLesson={updateLesson}
-          statusClass={statusClass}
-        />
+        <div key={lesson.name} className="mb-3">
+          <button
+            onClick={() =>
+              setCollapsedLessons((p) => ({
+                ...p,
+                [lesson.name]: !p[lesson.name],
+              }))
+            }
+            className="w-full text-left font-medium"
+          >
+            {lesson.name}
+          </button>
+
+          {!collapsedLessons[lesson.name] && (
+            <LessonCard
+              lesson={lesson}
+              data={progress[lesson.name] || {}}
+              updateLesson={updateLesson}
+              statusClass={statusClass}
+            />
+          )}
+        </div>
       ));
   }
 
-  return Object.entries(block).map(([sub, lessons]) => (
-    <div key={sub} className="ml-2">
-      <h3 className="font-semibold mt-2">{sub}</h3>
-      {renderBlock(
-        lessons,
-        search,
-        progress,
-        updateLesson,
-        statusClass
-      )}
+  return Object.entries(block).map(([section, lessons]) => (
+    <div key={section} className="ml-2 mt-2">
+      <button
+        onClick={() =>
+          setCollapsedSections((p) => ({
+            ...p,
+            [section]: !p[section],
+          }))
+        }
+        className="font-semibold"
+      >
+        {section}
+      </button>
+
+      {!collapsedSections[section] &&
+        renderBlock(
+          lessons,
+          section,
+          search,
+          progress,
+          updateLesson,
+          statusClass,
+          collapsedSections,
+          setCollapsedSections,
+          collapsedLessons,
+          setCollapsedLessons
+        )}
     </div>
   ));
 }
 
-/* ---------------- LESSON CARD ---------------- */
+/* ---------- lesson card ---------- */
 
 function LessonCard({ lesson, data, updateLesson, statusClass }) {
   return (
-    <div className="bg-zinc-800 rounded p-3">
-      <div className="font-medium mb-2">{lesson.name}</div>
-
+    <div className="bg-zinc-800 rounded p-3 mt-2">
       {/* STATUS */}
       <div className="flex gap-2 mb-2">
         {["To Do", "Doing", "Done", "Mastered"].map((s) => (
@@ -222,34 +266,36 @@ function LessonCard({ lesson, data, updateLesson, statusClass }) {
       </div>
 
       {/* COUNTERS */}
-      <div className="flex gap-4 text-sm mb-2">
+      <div className="flex gap-6 text-sm mb-2">
         <div>
-          Revisions: {data.revisions || 0}
+          Revisions:
           <button
-            className="ml-2"
-            onClick={() =>
-              updateLesson(
-                lesson.name,
-                "revisions",
-                Math.min(100, (data.revisions || 0) + 1)
-              )
-            }
+            className="mx-2"
+            onClick={() => updateLesson(lesson.name, "revisions", -1)}
+          >
+            −
+          </button>
+          {data.revisions || 0}
+          <button
+            className="mx-2"
+            onClick={() => updateLesson(lesson.name, "revisions", +1)}
           >
             +
           </button>
         </div>
 
         <div>
-          PYQs: {data.pyqs || 0}
+          PYQs:
           <button
-            className="ml-2"
-            onClick={() =>
-              updateLesson(
-                lesson.name,
-                "pyqs",
-                Math.min(100, (data.pyqs || 0) + 1)
-              )
-            }
+            className="mx-2"
+            onClick={() => updateLesson(lesson.name, "pyqs", -1)}
+          >
+            −
+          </button>
+          {data.pyqs || 0}
+          <button
+            className="mx-2"
+            onClick={() => updateLesson(lesson.name, "pyqs", +1)}
           >
             +
           </button>
