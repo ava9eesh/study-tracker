@@ -4,7 +4,7 @@ import { db } from "./firebase";
 export async function loadUserData(uid) {
   const ref = doc(db, "users", uid);
   const snap = await getDoc(ref);
-  return snap.exists() ? snap.data() : null;
+  return snap.exists() ? snap.data() : {};
 }
 
 export async function saveUserData(uid, data) {
