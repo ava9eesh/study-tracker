@@ -8,23 +8,42 @@ export default function Dashboard({ user }) {
   const [collapsed, setCollapsed] = useState({});
   const [progress, setProgress] = useState({});
 
-  /* ---------- helpers ---------- */
+  /* ---------------- LOAD FROM LOCALSTORAGE ---------------- */
+  useEffect(() => {
+    const saved = localStorage.getItem("study-progress");
+    if (saved) {
+      try {
+        setProgress(JSON.parse(saved));
+      } catch {
+        console.error("Failed to load saved progress");
+      }
+    }
+  }, []);
 
+  /* ---------------- SAVE FUNCTION ---------------- */
+  const saveProgress = () => {
+    localStorage.setItem("study-progress", JSON.stringify(progress));
+    alert("Progress saved ✅");
+  };
+
+  const resetProgress = () => {
+    localStorage.removeItem("study-progress");
+    setProgress({});
+  };
+
+  /* ---------------- HELPERS ---------------- */
   const toggleSubject = (subject) => {
-    setCollapsed((prev) => ({
-      ...prev,
-      [subject]: !prev[subject],
-    }));
+    setCollapsed((p) => ({ ...p, [subject]: !p[subject] }));
   };
 
   const updateLesson = (lessonName, field, value) => {
-    setProgress((prev) => ({
-      ...prev,
+    setProgress((p) => ({
+      ...p,
       [lessonName]: {
         status: "To Do",
         revisions: 0,
         pyqs: 0,
-        ...prev[lessonName],
+        ...p[lessonName],
         [field]: value,
       },
     }));
@@ -38,8 +57,7 @@ export default function Dashboard({ user }) {
     return "bg-zinc-600 text-white";
   };
 
-  /* ---------- progress bar ---------- */
-
+  /* ---------------- PROGRESS BAR ---------------- */
   const allLessons = [];
 
   const collectLessons = (block) => {
@@ -63,17 +81,34 @@ export default function Dashboard({ user }) {
       ? Math.round((completed / allLessons.length) * 100)
       : 0;
 
-  /* ---------- render ---------- */
-
+  /* ---------------- RENDER ---------------- */
   return (
     <div className="min-h-screen bg-black text-white p-6">
       <h1 className="text-2xl font-bold mb-2">
         Welcome, {user?.displayName}
       </h1>
 
-      {/* progress */}
+      {/* SAVE / RESET */}
+      <div className="flex gap-3 mb-4">
+        <button
+          onClick={saveProgress}
+          className="px-4 py-2 rounded bg-green-600 text-black"
+        >
+          Save Progress
+        </button>
+        <button
+          onClick={resetProgress}
+          className="px-4 py-2 rounded bg-red-600 text-black"
+        >
+          Reset
+        </button>
+      </div>
+
+      {/* PROGRESS BAR */}
       <div className="mb-6">
-        <div className="text-sm mb-1">Overall Progress — {percent}%</div>
+        <div className="text-sm mb-1">
+          Overall Progress — {percent}%
+        </div>
         <div className="h-2 bg-zinc-800 rounded">
           <div
             className="h-2 bg-green-500 rounded"
@@ -82,7 +117,7 @@ export default function Dashboard({ user }) {
         </div>
       </div>
 
-      {/* search */}
+      {/* SEARCH */}
       <input
         className="w-full mb-6 p-2 rounded bg-zinc-900 outline-none"
         placeholder="Search lessons..."
@@ -90,7 +125,7 @@ export default function Dashboard({ user }) {
         onChange={(e) => setSearch(e.target.value)}
       />
 
-      {/* subjects */}
+      {/* SUBJECTS */}
       {Object.entries(syllabus).map(([subject, content]) => (
         <div key={subject} className="mb-6 bg-zinc-900 rounded-xl p-4">
           <button
@@ -122,7 +157,7 @@ export default function Dashboard({ user }) {
   );
 }
 
-/* ---------- recursive renderer ---------- */
+/* ---------------- RECURSIVE RENDER ---------------- */
 
 function renderBlock(
   block,
@@ -163,14 +198,14 @@ function renderBlock(
   ));
 }
 
-/* ---------- lesson card ---------- */
+/* ---------------- LESSON CARD ---------------- */
 
 function LessonCard({ lesson, data, updateLesson, statusClass }) {
   return (
     <div className="bg-zinc-800 rounded p-3">
       <div className="font-medium mb-2">{lesson.name}</div>
 
-      {/* status */}
+      {/* STATUS */}
       <div className="flex gap-2 mb-2">
         {["To Do", "Doing", "Done", "Mastered"].map((s) => (
           <button
@@ -186,7 +221,7 @@ function LessonCard({ lesson, data, updateLesson, statusClass }) {
         ))}
       </div>
 
-      {/* counters */}
+      {/* COUNTERS */}
       <div className="flex gap-4 text-sm mb-2">
         <div>
           Revisions: {data.revisions || 0}
@@ -221,7 +256,7 @@ function LessonCard({ lesson, data, updateLesson, statusClass }) {
         </div>
       </div>
 
-      {/* links */}
+      {/* LINKS */}
       <div className="flex gap-4 text-sm text-blue-400">
         {lesson.video && (
           <a href={lesson.video} target="_blank" rel="noreferrer">
