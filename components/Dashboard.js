@@ -43,35 +43,6 @@ export default function Dashboard() {
       },
     }));
   };
-  /* -------------------- PROGRESS CALCULATION -------------------- */
-// Count TOTAL lessons from syllabus (number only, no IDs)
-const countLessons = (node) => {
-  if (Array.isArray(node)) {
-    return node.filter((l) => typeof l === "string").length;
-  }
-  if (typeof node === "object" && node !== null) {
-    return Object.values(node).reduce(
-      (sum, v) => sum + countLessons(v),
-      0
-    );
-  }
-  return 0;
-};
-
-const totalLessons = countLessons(syllabus);
-
-// Count COMPLETED lessons from lessonData (real data)
-const completedLessons = Object.values(lessonData).filter(
-  (l) => l.status === "done" || l.status === "mastered"
-).length;
-
-// Final progress = (1 / x) * 100
-const progress =
-  totalLessons === 0
-    ? 0
-    : Math.round((completedLessons / totalLessons) * 100);
-
-
   /* -------------------- RENDER LESSON -------------------- */
   const renderLesson = (lesson, meta, path) => {
     if (
@@ -96,11 +67,9 @@ const progress =
             <button
               key={s}
               onClick={() => updateLesson(id, { status: s })}
-              className={`px-3 py-1 rounded text-sm ${
-                data.status === s
+              className={`px-3 py-1 rounded text-sm ${data.status === s
                   ? "bg-blue-600"
-                  : "bg-zinc-800"
-              }`}
+                  : "bg-zinc-800"}`}
             >
               {s.toUpperCase()}
             </button>
@@ -109,42 +78,33 @@ const progress =
 
         <div className="mt-2 flex gap-6 text-sm">
           <button
-            onClick={() =>
-              updateLesson(id, {
-                revisions: Math.max(0, data.revisions - 1),
-              })
-            }
+            onClick={() => updateLesson(id, {
+              revisions: Math.max(0, data.revisions - 1),
+            })}
           >
             −
           </button>
           <span>Revisions: {data.revisions}</span>
           <button
-            onClick={() =>
-              updateLesson(id, { revisions: data.revisions + 1 })
-            }
+            onClick={() => updateLesson(id, { revisions: data.revisions + 1 })}
           >
             +
           </button>
 
           <button
-            onClick={() =>
-              updateLesson(id, {
-                pyqs: Math.max(0, data.pyqs - 1),
-              })
-            }
+            onClick={() => updateLesson(id, {
+              pyqs: Math.max(0, data.pyqs - 1),
+            })}
           >
             −
           </button>
           <span>PYQs: {data.pyqs}</span>
           <button
-            onClick={() =>
-              updateLesson(id, { pyqs: data.pyqs + 1 })
-            }
+            onClick={() => updateLesson(id, { pyqs: data.pyqs + 1 })}
           >
             +
           </button>
         </div>
-
         <div className="mt-2 flex gap-4 text-sm text-blue-400">
           {meta?.video && (
             <a href={meta.video} target="_blank">
@@ -194,9 +154,50 @@ const progress =
     });
   };
 
+  // Count total lessons inside a node
+const countLessons = (node) => {
+  if (Array.isArray(node)) {
+    return node.filter((l) => typeof l === "string").length;
+  }
+  if (typeof node === "object" && node !== null) {
+    return Object.values(node).reduce(
+      (sum, v) => sum + countLessons(v),
+      0
+    );
+  }
+  return 0;
+};
+
+// Count completed lessons inside a node
+const countCompletedLessons = (node, path = []) => {
+  if (Array.isArray(node)) {
+    return node.filter((lesson) => {
+      if (typeof lesson !== "string") return false;
+      const id = [...path, lesson].join("::");
+      return (
+        lessonData[id]?.status === "done" ||
+        lessonData[id]?.status === "mastered"
+      );
+    }).length;
+  }
+
+  if (typeof node === "object" && node !== null) {
+    return Object.entries(node).reduce(
+      (sum, [key, value]) =>
+        sum +
+        countCompletedLessons(value, [...path, key]),
+      0
+    );
+  }
+
+  return 0;
+};
+
+
   /* -------------------- SUBJECT -------------------- */
-  const renderSubject = (name, data) => {
-    const key = `subject-${name}`;
+  const total = countLessons(data);
+const completed = countCompletedLessons(data, [name]);
+
 
     return (
       <div
@@ -204,12 +205,18 @@ const progress =
         className="rounded-2xl bg-zinc-900 p-5"
       >
         <button
-          onClick={() => toggle(key)}
-          className="flex w-full items-center justify-between text-lg font-semibold"
-        >
-          {name}
-          <span>{open[key] ? "▼" : "▶"}</span>
-        </button>
+  onClick={() => toggle(key)}
+  className="flex w-full items-center justify-between text-lg font-semibold"
+>
+  <div className="flex items-center gap-3">
+    <span>{name}</span>
+    <span className="text-sm text-gray-400">
+      {completed}/{total} completed
+    </span>
+  </div>
+  <span>{open[key] ? "▼" : "▶"}</span>
+</button>
+
 
         {open[key] && (
           <div className="mt-4">
@@ -245,18 +252,6 @@ const progress =
         </button>
       </div>
 
-      <div>
-        <div className="mb-1 text-sm">
-          Progress: {progress}%
-        </div>
-        <div className="h-2 bg-zinc-800 rounded">
-          <div
-            className="h-2 bg-blue-600 rounded"
-            style={{ width: `${progress}%` }}
-          />
-        </div>
-      </div>
-
       <input
         value={search}
         onChange={(e) => setSearch(e.target.value)}
@@ -269,4 +264,3 @@ const progress =
       )}
     </main>
   );
-}
