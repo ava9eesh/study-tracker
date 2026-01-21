@@ -43,42 +43,33 @@ export default function Dashboard() {
       },
     }));
   };
-
-/* -------------------- PROGRESS (FINAL & SAFE) -------------------- */
-/* -------------------- PROGRESS (SYLLABUS BASED) -------------------- */
-const collectLessonIds = (node, path = [], out = []) => {
+  /* -------------------- PROGRESS CALCULATION -------------------- */
+// Count TOTAL lessons from syllabus (number only, no IDs)
+const countLessons = (node) => {
   if (Array.isArray(node)) {
-    node.forEach((lesson) => {
-      if (typeof lesson === "string") {
-        out.push([...path, lesson].join("::"));
-      }
-    });
-  } else if (typeof node === "object" && node !== null) {
-    Object.entries(node).forEach(([key, value]) => {
-      collectLessonIds(value, [...path, key], out);
-    });
+    return node.filter((l) => typeof l === "string").length;
   }
-  return out;
+  if (typeof node === "object" && node !== null) {
+    return Object.values(node).reduce(
+      (sum, v) => sum + countLessons(v),
+      0
+    );
+  }
+  return 0;
 };
 
-// x = total lessons
-const totalLessonIds = collectLessonIds(syllabus);
+const totalLessons = countLessons(syllabus);
 
-// completed lessons
-const completedLessons = totalLessonIds.filter((id) => {
-  return (
-    lessonData[id]?.status === "done" ||
-    lessonData[id]?.status === "mastered"
-  );
-}).length;
+// Count COMPLETED lessons from lessonData (real data)
+const completedLessons = Object.values(lessonData).filter(
+  (l) => l.status === "done" || l.status === "mastered"
+).length;
 
-// (1 / x) * 100
+// Final progress = (1 / x) * 100
 const progress =
-  totalLessonIds.length === 0
+  totalLessons === 0
     ? 0
-    : Math.round(
-        (completedLessons / totalLessonIds.length) * 100
-      );
+    : Math.round((completedLessons / totalLessons) * 100);
 
 
   /* -------------------- RENDER LESSON -------------------- */
