@@ -23,6 +23,10 @@ const SUBJECT_TOTALS = {
   Sanchayan: 4,
 };
 
+const CLASSES = ["9", "10", "11", "12", "JEE"];
+
+const [currentClass, setCurrentClass] = useState("9");
+
 
 
 export default function Dashboard() {
@@ -32,20 +36,24 @@ export default function Dashboard() {
 
   /* -------------------- PERSISTENCE -------------------- */
   useEffect(() => {
-    const saved = localStorage.getItem("lessonData");
-    if (saved) setLessonData(JSON.parse(saved));
-  }, []);
+  const saved = localStorage.getItem(`lessonData_class${currentClass}`);
+  if (saved) setLessonData(JSON.parse(saved));
+  else setLessonData({});
+}, [currentClass]);
 
-  const saveProgress = () => {
-    localStorage.setItem("lessonData", JSON.stringify(lessonData));
-    alert("Progress saved");
-  };
+const saveProgress = () => {
+  localStorage.setItem(
+    `lessonData_class${currentClass}`,
+    JSON.stringify(lessonData)
+  );
+  alert(`Class ${currentClass} progress saved`);
+};
 
-  const resetProgress = () => {
-    if (!confirm("Reset all progress?")) return;
-    setLessonData({});
-    localStorage.removeItem("lessonData");
-  };
+const resetProgress = () => {
+  if (!confirm("Reset progress for this class?")) return;
+  setLessonData({});
+  localStorage.removeItem(`lessonData_class${currentClass}`);
+};
 
   /* -------------------- HELPERS -------------------- */
   const toggle = (key) =>
@@ -261,10 +269,34 @@ const total = SUBJECT_TOTALS[name] ?? 0;
     <main className="max-w-5xl mx-auto p-6 space-y-6">
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-semibold">
-          Dashboard – Class 9
+          Dashboard – Class {currentClass}
         </h1>
         <button className="text-red-500">Logout</button>
       </div>
+
+      <div className="flex gap-2 flex-wrap">
+  {CLASSES.map((cls) => {
+    const disabled = cls !== "9";
+
+    return (
+      <button
+        key={cls}
+        disabled={disabled}
+        onClick={() => setCurrentClass(cls)}
+        className={`px-4 py-1 rounded text-sm transition
+          ${currentClass === cls
+            ? "bg-blue-600"
+            : "bg-zinc-800"}
+          ${disabled ? "opacity-50 cursor-not-allowed" : ""}
+        `}
+      >
+        {cls === "JEE" ? "JEE / NEET" : `Class ${cls}`}
+        {disabled && " 🚧"}
+      </button>
+    );
+  })}
+</div>
+
 
       <div className="flex gap-3">
         <button
