@@ -157,7 +157,6 @@ export default function Dashboard() {
       return (
         <div key={openKey} className="ml-4 mt-4">
           const completed = countCompletedLessons(value, [...path, key]);
-const total = TOTALS[key] ?? 0;
 
 <button
   onClick={() => toggle(openKey)}
@@ -165,11 +164,6 @@ const total = TOTALS[key] ?? 0;
 >
   <span>{open[openKey] ? "▼" : "▶"}</span>
   <span>{key}</span>
-  {total > 0 && (
-    <span className="text-sm text-gray-400">
-      {completed}/{total}
-    </span>
-  )}
 </button>
 
 
