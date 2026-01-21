@@ -143,39 +143,47 @@ export default function Dashboard() {
 
   /* -------------------- RECURSIVE RENDER -------------------- */
   const renderNode = (node, path = []) => {
-    if (Array.isArray(node)) {
-      return node.map((item) =>
-        typeof item === "string"
-          ? renderLesson(item, {}, path)
-          : renderLesson(item.name, item, path)
-      );
-    }
+  if (Array.isArray(node)) {
+    return node.map((lesson) => {
+      const name =
+        typeof lesson === "string" ? lesson : lesson.name;
+      const meta = typeof lesson === "string" ? {} : lesson;
 
-    return Object.entries(node).map(([key, value]) => {
-      const openKey = [...path, key].join("::");
-
-      return (
-        <div key={openKey} className="ml-4 mt-4">
-          const completed = countCompletedLessons(value, [...path, key]);
-
-<button
-  onClick={() => toggle(openKey)}
-  className="flex items-center gap-3 font-medium"
->
-  <span>{open[openKey] ? "▼" : "▶"}</span>
-  <span>{key}</span>
-</button>
-
-
-          {open[openKey] && (
-            <div className="mt-2">
-              {renderNode(value, [...path, key])}
-            </div>
-          )}
-        </div>
-      );
+      return renderLesson(name, meta, path);
     });
-  };
+  }
+
+  return Object.entries(node).map(([key, value]) => {
+    const openKey = [...path, key].join("::");
+
+    const completed = countCompletedLessons(value);
+    const total = SUBJECT_TOTALS[key] ?? 0;
+
+    return (
+      <div key={openKey} className="ml-4 mt-4">
+        <button
+          onClick={() => toggle(openKey)}
+          className="flex items-center gap-3 font-medium"
+        >
+          <span>{open[openKey] ? "▼" : "▶"}</span>
+
+          <span>{key}</span>
+
+          <span className="text-sm text-gray-400">
+            {completed}/{total} completed
+          </span>
+        </button>
+
+        {open[openKey] && (
+          <div className="mt-2">
+            {renderNode(value, [...path, key])}
+          </div>
+        )}
+      </div>
+    );
+  });
+};
+
 
   // Count total lessons inside a node
 const countLessons = (node) => {
