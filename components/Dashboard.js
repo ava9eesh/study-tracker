@@ -195,37 +195,36 @@ const countCompletedLessons = (node, path = []) => {
 
 
   /* -------------------- SUBJECT -------------------- */
+ const renderSubject = (name, data) => {
+  const key = `subject-${name}`;
+
   const total = countLessons(data);
-const completed = countCompletedLessons(data, [name]);
+  const completed = countCompletedLessons(data, [name]);
 
-
-    return (
-      <div
-        key={key}
-        className="rounded-2xl bg-zinc-900 p-5"
+  return (
+    <div key={key} className="rounded-2xl bg-zinc-900 p-5">
+      <button
+        onClick={() => toggle(key)}
+        className="flex w-full items-center justify-between text-lg font-semibold"
       >
-        <button
-  onClick={() => toggle(key)}
-  className="flex w-full items-center justify-between text-lg font-semibold"
->
-  <div className="flex items-center gap-3">
-    <span>{name}</span>
-    <span className="text-sm text-gray-400">
-      {completed}/{total} completed
-    </span>
-  </div>
-  <span>{open[key] ? "▼" : "▶"}</span>
-</button>
+        <div className="flex items-center gap-3">
+          <span>{name}</span>
+          <span className="text-sm text-gray-400">
+            {completed}/{total} completed
+          </span>
+        </div>
+        <span>{open[key] ? "▼" : "▶"}</span>
+      </button>
 
+      {open[key] && (
+        <div className="mt-4">
+          {renderNode(data, [name])}
+        </div>
+      )}
+    </div>
+  );
+};
 
-        {open[key] && (
-          <div className="mt-4">
-            {renderNode(data, [name])}
-          </div>
-        )}
-      </div>
-    );
-  };
 
   /* -------------------- UI -------------------- */
   return (
@@ -264,3 +263,4 @@ const completed = countCompletedLessons(data, [name]);
       )}
     </main>
   );
+}
