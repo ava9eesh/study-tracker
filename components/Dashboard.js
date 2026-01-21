@@ -23,13 +23,11 @@ const SUBJECT_TOTALS = {
   Sanchayan: 4,
 };
 
-const CLASSES = ["9", "10", "11", "12", "JEE"];
-
-const [currentClass, setCurrentClass] = useState("9");
-
 
 
 export default function Dashboard() {
+  const CLASSES = ["9", "10", "11", "12", "JEE"];
+  const [currentClass, setCurrentClass] = useState("9");
   const [open, setOpen] = useState({});
   const [search, setSearch] = useState("");
   const [lessonData, setLessonData] = useState({});
@@ -268,11 +266,13 @@ const total = SUBJECT_TOTALS[name] ?? 0;
   return (
     <main className="max-w-5xl mx-auto p-6 space-y-6">
       <div className="flex justify-between items-center">
-        <h1 className="text-2xl font-semibold">
-          Dashboard – Class {currentClass}
-        </h1>
-        <button className="text-red-500">Logout</button>
-      </div>
+  <h1 className="text-2xl font-semibold">
+    Dashboard – Class {currentClass === "JEE" ? "JEE / NEET" : currentClass}
+  </h1>
+
+  <button className="text-red-500">Logout</button>
+</div>
+
 
       <div className="flex gap-2 flex-wrap">
   {CLASSES.map((cls) => {
