@@ -45,16 +45,40 @@ export default function Dashboard() {
   };
 
 /* -------------------- PROGRESS (FINAL & SAFE) -------------------- */
-const totalLessons = Object.keys(lessonData).length;
+/* -------------------- PROGRESS (SYLLABUS BASED) -------------------- */
+const collectLessonIds = (node, path = [], out = []) => {
+  if (Array.isArray(node)) {
+    node.forEach((lesson) => {
+      if (typeof lesson === "string") {
+        out.push([...path, lesson].join("::"));
+      }
+    });
+  } else if (typeof node === "object" && node !== null) {
+    Object.entries(node).forEach(([key, value]) => {
+      collectLessonIds(value, [...path, key], out);
+    });
+  }
+  return out;
+};
 
-const doneLessons = Object.values(lessonData).filter(
-  (l) => l.status === "done" || l.status === "mastered"
-).length;
+// x = total lessons
+const totalLessonIds = collectLessonIds(syllabus);
 
+// completed lessons
+const completedLessons = totalLessonIds.filter((id) => {
+  return (
+    lessonData[id]?.status === "done" ||
+    lessonData[id]?.status === "mastered"
+  );
+}).length;
+
+// (1 / x) * 100
 const progress =
-  totalLessons === 0
+  totalLessonIds.length === 0
     ? 0
-    : Math.round((doneLessons / totalLessons) * 100);
+    : Math.round(
+        (completedLessons / totalLessonIds.length) * 100
+      );
 
 
   /* -------------------- RENDER LESSON -------------------- */
