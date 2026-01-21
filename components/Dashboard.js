@@ -195,10 +195,11 @@ const countLessons = (node) => {
 const countCompletedLessons = (node) => {
   if (Array.isArray(node)) {
     return node.filter((lesson) => {
-      if (typeof lesson !== "string") return false;
+      const name =
+        typeof lesson === "string" ? lesson : lesson.name;
       return (
-        lessonData[lesson]?.status === "done" ||
-        lessonData[lesson]?.status === "mastered"
+        lessonData[name]?.status === "done" ||
+        lessonData[name]?.status === "mastered"
       );
     }).length;
   }
@@ -213,14 +214,13 @@ const countCompletedLessons = (node) => {
   return 0;
 };
 
-
-
   /* -------------------- SUBJECT -------------------- */
 const renderSubject = (name, data) => {
   const key = `subject-${name}`;
 
-  const total = SUBJECT_TOTALS[name] ?? countLessons(data);
-  const completed = countCompletedLessons(data, [name]);
+  const completed = countCompletedLessons(data);
+const total = SUBJECT_TOTALS[name] ?? 0;
+
 
   return (
     <div key={key} className="rounded-2xl bg-zinc-900 p-5">
