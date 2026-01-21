@@ -5,6 +5,26 @@ import { syllabus } from "../data/syllabus";
 
 const STATUS = ["todo", "doing", "done", "mastered"];
 
+const TOTALS = {
+  Science: 12,
+  Mathematics: 12,
+
+  SST: 20,
+  History: 5,
+  Civics: 5,
+  Geography: 6,
+  Economics: 4,
+
+  English: 25,
+  Beehive: 17,
+  Moments: 8,
+
+  Hindi: 14,
+  Sparsh: 10,
+  Sanchayan: 4,
+};
+
+
 export default function Dashboard() {
   const [open, setOpen] = useState({});
   const [search, setSearch] = useState("");
@@ -136,13 +156,22 @@ export default function Dashboard() {
 
       return (
         <div key={openKey} className="ml-4 mt-4">
-          <button
-            onClick={() => toggle(openKey)}
-            className="flex items-center gap-2 font-medium"
-          >
-            <span>{open[openKey] ? "▼" : "▶"}</span>
-            {key}
-          </button>
+          const completed = countCompletedLessons(value, [...path, key]);
+const total = TOTALS[key] ?? 0;
+
+<button
+  onClick={() => toggle(openKey)}
+  className="flex items-center gap-3 font-medium"
+>
+  <span>{open[openKey] ? "▼" : "▶"}</span>
+  <span>{key}</span>
+  {total > 0 && (
+    <span className="text-sm text-gray-400">
+      {completed}/{total}
+    </span>
+  )}
+</button>
+
 
           {open[openKey] && (
             <div className="mt-2">
@@ -195,11 +224,10 @@ const countCompletedLessons = (node, path = []) => {
 
 
   /* -------------------- SUBJECT -------------------- */
- const renderSubject = (name, data) => {
+const renderSubject = (name, data) => {
   const key = `subject-${name}`;
-
-  const total = countLessons(data);
   const completed = countCompletedLessons(data, [name]);
+  const total = TOTALS[name] ?? 0;
 
   return (
     <div key={key} className="rounded-2xl bg-zinc-900 p-5">
