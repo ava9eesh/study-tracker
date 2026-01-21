@@ -5,24 +5,24 @@ import { syllabus } from "../data/syllabus";
 
 const STATUS = ["todo", "doing", "done", "mastered"];
 
-const TOTALS = {
+const SUBJECT_TOTALS = {
   Science: 12,
   Mathematics: 12,
-
   SST: 20,
+  English: 25,
+  Hindi: 14,
+
   History: 5,
   Civics: 5,
   Geography: 6,
   Economics: 4,
 
-  English: 25,
   Beehive: 17,
   Moments: 8,
-
-  Hindi: 14,
   Sparsh: 10,
   Sanchayan: 4,
 };
+
 
 
 export default function Dashboard() {
@@ -226,8 +226,9 @@ const countCompletedLessons = (node, path = []) => {
   /* -------------------- SUBJECT -------------------- */
 const renderSubject = (name, data) => {
   const key = `subject-${name}`;
+
+  const total = SUBJECT_TOTALS[name] ?? countLessons(data);
   const completed = countCompletedLessons(data, [name]);
-  const total = TOTALS[name] ?? 0;
 
   return (
     <div key={key} className="rounded-2xl bg-zinc-900 p-5">
@@ -252,6 +253,7 @@ const renderSubject = (name, data) => {
     </div>
   );
 };
+
 
 
   /* -------------------- UI -------------------- */
