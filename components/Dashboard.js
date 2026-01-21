@@ -71,7 +71,7 @@ export default function Dashboard() {
     )
       return null;
 
-    const id = [...path, lesson].join("::");
+    const id = lesson;
     const data = lessonData[id] || {
       status: "todo",
       revisions: 0,
@@ -192,29 +192,27 @@ const countLessons = (node) => {
 };
 
 // Count completed lessons inside a node
-const countCompletedLessons = (node, path = []) => {
+const countCompletedLessons = (node) => {
   if (Array.isArray(node)) {
     return node.filter((lesson) => {
       if (typeof lesson !== "string") return false;
-      const id = [...path, lesson].join("::");
       return (
-        lessonData[id]?.status === "done" ||
-        lessonData[id]?.status === "mastered"
+        lessonData[lesson]?.status === "done" ||
+        lessonData[lesson]?.status === "mastered"
       );
     }).length;
   }
 
   if (typeof node === "object" && node !== null) {
-    return Object.entries(node).reduce(
-      (sum, [key, value]) =>
-        sum +
-        countCompletedLessons(value, [...path, key]),
+    return Object.values(node).reduce(
+      (sum, v) => sum + countCompletedLessons(v),
       0
     );
   }
 
   return 0;
 };
+
 
 
   /* -------------------- SUBJECT -------------------- */
