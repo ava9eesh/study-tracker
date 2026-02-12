@@ -6,6 +6,12 @@ export default function LessonCard({ lesson, data, onChange }) {
     });
   };
 
+  // 🔹 NEW: make lesson URL-safe
+  const lessonId = lesson
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^\w-]/g, "");
+
   return (
     <div className="bg-zinc-900 p-4 rounded-lg mb-3">
       <h3 className="font-semibold mb-2">{lesson}</h3>
@@ -20,7 +26,7 @@ export default function LessonCard({ lesson, data, onChange }) {
               data.status === s ? "bg-blue-600" : "bg-zinc-700"
             }`}
           >
-            {s}
+            {s.toUpperCase()}
           </button>
         ))}
       </div>
@@ -57,15 +63,49 @@ export default function LessonCard({ lesson, data, onChange }) {
         <input
           placeholder="Lesson video link"
           value={data.links.video}
-          onChange={e => update("links", { ...data.links, video: e.target.value })}
+          onChange={e =>
+            update("links", { ...data.links, video: e.target.value })
+          }
           className="w-full bg-black p-1"
         />
         <input
           placeholder="PYQs link"
           value={data.links.pyqs}
-          onChange={e => update("links", { ...data.links, pyqs: e.target.value })}
+          onChange={e =>
+            update("links", { ...data.links, pyqs: e.target.value })
+          }
           className="w-full bg-black p-1"
         />
+      </div>
+
+      {/* 🔹 NEW: STATUS-BASED ACTION LINK */}
+      <div className="mt-2 text-sm">
+        {data.status === "todo" && (
+          <a
+            href={`/lesson/${lessonId}/prerequisites`}
+            className="text-blue-400 hover:underline"
+          >
+            Previous Knowledge Required
+          </a>
+        )}
+
+        {data.status === "done" && (
+          <a
+            href={`/quiz/${lessonId}?marks=40`}
+            className="text-green-400 hover:underline"
+          >
+            Done? Let’s test
+          </a>
+        )}
+
+        {data.status === "mastered" && (
+          <a
+            href={`/quiz/${lessonId}?marks=80`}
+            className="text-purple-400 hover:underline"
+          >
+            Mastered? Let’s see
+          </a>
+        )}
       </div>
     </div>
   );
