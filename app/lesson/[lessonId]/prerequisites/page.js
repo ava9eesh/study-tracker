@@ -1,36 +1,30 @@
 import { syllabus } from "@/data/syllabus";
 
-function flattenSyllabus(node) {
+function flatten(node) {
   if (Array.isArray(node)) return node;
-  if (typeof node === "object" && node !== null) {
-    return Object.values(node).flatMap(flattenSyllabus);
-  }
+  if (typeof node === "object" && node !== null)
+    return Object.values(node).flatMap(flatten);
   return [];
 }
 
 export default function PrerequisitesPage({ params }) {
-  const lessonId = params?.lessonId || "";
+  const lessonId = params?.lessonId ?? "";
 
-  const allLessons = flattenSyllabus(syllabus);
+  const lessons = flatten(syllabus);
 
-  const lessonObj = allLessons.find((l) => {
-    if (typeof l === "string") return false;
-    if (!l.name) return false;
-
-    return (
+  const lesson = lessons.find(
+    (l) =>
+      typeof l === "object" &&
+      l.name &&
       l.name
         .toLowerCase()
         .replace(/\s+/g, "-")
         .replace(/[^\w-]/g, "") === lessonId
-    );
-  });
+  );
 
   const prerequisites =
-    lessonObj?.prerequisites ??
-    [
-      "Revise previous chapters",
-      "Understand basic definitions",
-      "Know important keywords",
+    lesson?.prerequisites ?? [
+      "No prerequisites added for this lesson yet.",
     ];
 
   return (
@@ -40,8 +34,8 @@ export default function PrerequisitesPage({ params }) {
       </h1>
 
       <ul className="list-disc ml-6 space-y-2 text-gray-200">
-        {prerequisites.map((item, i) => (
-          <li key={i}>{item}</li>
+        {prerequisites.map((p, i) => (
+          <li key={i}>{p}</li>
         ))}
       </ul>
 
