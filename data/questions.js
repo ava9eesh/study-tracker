@@ -1,5 +1,5 @@
 export const questions = {
-  "Matter In Our Surroundings": {
+  "matter-in-our-surroundings": {
     mcq40: [
       {
         question: "What is the SI unit of temperature?",
