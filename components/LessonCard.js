@@ -6,11 +6,13 @@ export default function LessonCard({ lesson, data, onChange }) {
     });
   };
 
-  // 🔹 NEW: make lesson URL-safe
+  // Make lesson URL-safe (for future routing)
   const lessonId = lesson
     .toLowerCase()
     .replace(/\s+/g, "-")
     .replace(/[^\w-]/g, "");
+
+  const status = data?.status;
 
   return (
     <div className="bg-zinc-900 p-4 rounded-lg mb-3">
@@ -23,7 +25,7 @@ export default function LessonCard({ lesson, data, onChange }) {
             key={s}
             onClick={() => update("status", s)}
             className={`px-2 py-1 rounded text-sm ${
-              data.status === s ? "bg-blue-600" : "bg-zinc-700"
+              status === s ? "bg-blue-600" : "bg-zinc-700"
             }`}
           >
             {s.toUpperCase()}
@@ -78,35 +80,28 @@ export default function LessonCard({ lesson, data, onChange }) {
         />
       </div>
 
-      {/* 🔹 NEW: STATUS-BASED ACTION LINK */}
-      <div className="mt-2 text-sm">
-        {data.status === "todo" && (
-          <a
-            href={`/lesson/${lessonId}/prerequisites`}
-            className="text-blue-400 hover:underline"
-          >
-            Previous Knowledge Required
-          </a>
-        )}
+      {/* STATUS ACTION TEXT (respects saved status) */}
+      {status && (
+        <div className="mt-2 text-sm">
+          {status === "todo" && (
+            <span className="text-blue-400">
+              Previous Knowledge Required
+            </span>
+          )}
 
-        {data.status === "done" && (
-          <a
-            href={`/quiz/${lessonId}?marks=40`}
-            className="text-green-400 hover:underline"
-          >
-            Done? Let’s test
-          </a>
-        )}
+          {status === "done" && (
+            <span className="text-green-400">
+              Done? Let’s test
+            </span>
+          )}
 
-        {data.status === "mastered" && (
-          <a
-            href={`/quiz/${lessonId}?marks=80`}
-            className="text-purple-400 hover:underline"
-          >
-            Mastered? Let’s see
-          </a>
-        )}
-      </div>
+          {status === "mastered" && (
+            <span className="text-purple-400">
+              Mastered? Let’s see
+            </span>
+          )}
+        </div>
+      )}
     </div>
   );
 }
