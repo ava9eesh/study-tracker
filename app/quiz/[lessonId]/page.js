@@ -2,46 +2,49 @@
 
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
-import { questions as QUESTION_BANK } from "@/data/questions";
+import { questions as QUESTION_BANK } from "../../../data/questions";
 
 export default function QuizPage({ params }) {
-  const lessonId = params?.lessonId;
+  const lessonId = params.lessonId;
   const searchParams = useSearchParams();
   const marks = Number(searchParams.get("marks")) || 40;
 
-  const lessonQuestions =
-    QUESTION_BANK?.[lessonId]?.[marks === 80 ? "mcq80" : "mcq40"] ?? [];
+  const mode = marks === 80 ? "mcq80" : "mcq40";
+  const lessonBlock = QUESTION_BANK[lessonId];
 
-  // 🛑 IMPORTANT GUARD (prevents crash)
-  if (!lessonQuestions.length) {
+  // 🔴 HARD PROOF LOG (you can remove later)
+  console.log("lessonId:", lessonId);
+  console.log("QUESTION_BANK keys:", Object.keys(QUESTION_BANK));
+  console.log("lessonBlock:", lessonBlock);
+
+  if (!lessonBlock || !lessonBlock[mode]) {
     return (
       <main className="max-w-xl mx-auto p-6 text-white text-center">
         <h1 className="text-xl font-bold mb-2">
-          No questions added yet 😭
+          Quiz data not found
         </h1>
         <p className="text-gray-400">
-          Add questions for this lesson in <code>data/questions.js</code>
+          lessonId: <code>{lessonId}</code>
+        </p>
+        <p className="text-gray-400 mt-2">
+          Expected key in questions.js
         </p>
       </main>
     );
   }
 
+  const questions = lessonBlock[mode];
+
   const [index, setIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [finished, setFinished] = useState(false);
 
-  const current = lessonQuestions[index];
+  const current = questions[index];
 
   const answer = (i) => {
-    if (i === current.correct) {
-      setScore((s) => s + 1);
-    }
-
-    if (index + 1 === lessonQuestions.length) {
-      setFinished(true);
-    } else {
-      setIndex((i) => i + 1);
-    }
+    if (i === current.correct) setScore((s) => s + 1);
+    if (index + 1 === questions.length) setFinished(true);
+    else setIndex((i) => i + 1);
   };
 
   if (finished) {
@@ -50,8 +53,8 @@ export default function QuizPage({ params }) {
         <h1 className="text-2xl font-bold mb-4">
           Quiz Completed 🎉
         </h1>
-        <p className="text-lg">
-          Score: {score} / {lessonQuestions.length}
+        <p>
+          Score: {score} / {questions.length}
         </p>
       </main>
     );
@@ -76,7 +79,7 @@ export default function QuizPage({ params }) {
       </div>
 
       <p className="mt-4 text-sm text-gray-400">
-        Question {index + 1} / {lessonQuestions.length}
+        Question {index + 1} / {questions.length}
       </p>
     </main>
   );
