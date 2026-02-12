@@ -37,7 +37,7 @@ export default function PrerequisitesPage({ params }) {
       </ul>
 
       <p className="mt-6 text-sm text-gray-400">
-        Lesson: {lessonId.replaceAll("-", " ")}
+        Lesson: {(lessonId || "this lesson").replaceAll("-", " ")}
       </p>
     </main>
   );

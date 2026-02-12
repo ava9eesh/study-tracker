@@ -11,7 +11,7 @@ export default function QuizPage({ params }) {
   const totalQuestions = marks === 80 ? 40 : 20;
 
   const questions = Array.from({ length: totalQuestions }, (_, i) => ({
-    question: `Question ${i + 1} from ${lessonId.replaceAll("-", " ")}`,
+   question: `Question ${i + 1} from ${(lessonId || "this lesson").replaceAll("-", " ")}`,
     options: ["Option A", "Option B", "Option C", "Option D"],
     correct: 0,
   }));
