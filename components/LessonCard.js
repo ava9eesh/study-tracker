@@ -6,7 +6,6 @@ export default function LessonCard({ lesson, data, onChange }) {
     });
   };
 
-  // Make lesson URL-safe (for future routing)
   const lessonId = lesson
     .toLowerCase()
     .replace(/\s+/g, "-")
@@ -80,27 +79,32 @@ export default function LessonCard({ lesson, data, onChange }) {
         />
       </div>
 
-      {/* STATUS ACTION TEXT (respects saved status) */}
-      {status && (
-        <div className="mt-2 text-sm">
-          {status === "todo" && (
-            <span className="text-blue-400">
-              Previous Knowledge Required
-            </span>
-          )}
+      {/* 🔥 STATUS ACTION (CLEAR + VISIBLE) */}
+      {status === "todo" && (
+        <a
+          href={`/lesson/${lessonId}/prerequisites`}
+          className="block mt-3 text-blue-400 font-medium hover:underline"
+        >
+          → Previous Knowledge Required
+        </a>
+      )}
 
-          {status === "done" && (
-            <span className="text-green-400">
-              Done? Let’s test
-            </span>
-          )}
+      {status === "done" && (
+        <a
+          href={`/quiz/${lessonId}?marks=40`}
+          className="block mt-3 text-green-400 font-medium hover:underline"
+        >
+          → Done? Let’s test (40 marks)
+        </a>
+      )}
 
-          {status === "mastered" && (
-            <span className="text-purple-400">
-              Mastered? Let’s see
-            </span>
-          )}
-        </div>
+      {status === "mastered" && (
+        <a
+          href={`/quiz/${lessonId}?marks=80`}
+          className="block mt-3 text-purple-400 font-medium hover:underline"
+        >
+          → Mastered? Let’s see (80 marks)
+        </a>
       )}
     </div>
   );
