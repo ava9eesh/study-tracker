@@ -4,7 +4,7 @@ import { GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import Dashboard from "./Dashboard";
 import { useEffect, useState } from "react";
-import { GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
+import { signInWithRedirect } from "firebase/auth";
 
 
 export default function LoginGate() {
