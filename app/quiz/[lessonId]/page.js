@@ -1,18 +1,18 @@
 "use client";
 
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useParams } from "next/navigation";
 import { useState } from "react";
 import { questions as QUESTION_BANK } from "../../../data/questions";
 
-export default function QuizPage({ params }) {
-  const lessonId = params.lessonId;
+export default function QuizPage() {
+  const { lessonId } = useParams(); // ✅ THIS IS THE FIX
   const searchParams = useSearchParams();
   const marks = Number(searchParams.get("marks")) || 40;
 
   const mode = marks === 80 ? "mcq80" : "mcq40";
   const lessonBlock = QUESTION_BANK[lessonId];
 
-  // 🔴 HARD PROOF LOG (you can remove later)
+  // 🔍 DEBUG (keep once, then remove later)
   console.log("lessonId:", lessonId);
   console.log("QUESTION_BANK keys:", Object.keys(QUESTION_BANK));
   console.log("lessonBlock:", lessonBlock);
@@ -25,9 +25,6 @@ export default function QuizPage({ params }) {
         </h1>
         <p className="text-gray-400">
           lessonId: <code>{lessonId}</code>
-        </p>
-        <p className="text-gray-400 mt-2">
-          Expected key in questions.js
         </p>
       </main>
     );
