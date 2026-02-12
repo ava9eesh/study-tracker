@@ -131,18 +131,25 @@ const resetProgress = () => {
             +
           </button>
         </div>
-        <div className="mt-2 flex gap-4 text-sm text-blue-400">
-          {meta?.video && (
-            <a href={meta.video} target="_blank">
-              Lesson Video
-            </a>
-          )}
-          {meta?.pyq && (
-            <a href={meta.pyq} target="_blank">
-              PYQs
-            </a>
-          )}
-        </div>
+        {/* STATUS ACTION LINK */}
+{data.status === "todo" && (
+  <div className="mt-2 text-sm text-blue-400 font-medium">
+    → Previous Knowledge Required
+  </div>
+)}
+
+{data.status === "done" && (
+  <div className="mt-2 text-sm text-green-400 font-medium">
+    → Done? Let’s test (40 marks)
+  </div>
+)}
+
+{data.status === "mastered" && (
+  <div className="mt-2 text-sm text-purple-400 font-medium">
+    → Mastered? Let’s see (80 marks)
+  </div>
+)}
+
       </div>
     );
   };
