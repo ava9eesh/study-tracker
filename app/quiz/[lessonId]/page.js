@@ -1,35 +1,46 @@
 "use client";
 
-import { questions as QUESTION_BANK } from "@/data/questions";
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
+import { questions as QUESTION_BANK } from "@/data/questions";
 
 export default function QuizPage({ params }) {
-  const { lessonId } = params;
+  const lessonId = params?.lessonId;
   const searchParams = useSearchParams();
   const marks = Number(searchParams.get("marks")) || 40;
 
-  const totalQuestions = marks === 80 ? 40 : 20;
+  const lessonQuestions =
+    QUESTION_BANK?.[lessonId]?.[marks === 80 ? "mcq80" : "mcq40"] ?? [];
 
-const lessonQuestions =
-  QUESTION_BANK[lessonId]?.[marks === 80 ? "mcq80" : "mcq40"] ?? [];
-
-const questions = lessonQuestions;
-
+  // 🛑 IMPORTANT GUARD (prevents crash)
+  if (!lessonQuestions.length) {
+    return (
+      <main className="max-w-xl mx-auto p-6 text-white text-center">
+        <h1 className="text-xl font-bold mb-2">
+          No questions added yet 😭
+        </h1>
+        <p className="text-gray-400">
+          Add questions for this lesson in <code>data/questions.js</code>
+        </p>
+      </main>
+    );
+  }
 
   const [index, setIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [finished, setFinished] = useState(false);
 
+  const current = lessonQuestions[index];
+
   const answer = (i) => {
-    if (i === questions[index].correct) {
-      setScore(score + 1);
+    if (i === current.correct) {
+      setScore((s) => s + 1);
     }
 
-    if (index + 1 === questions.length) {
+    if (index + 1 === lessonQuestions.length) {
       setFinished(true);
     } else {
-      setIndex(index + 1);
+      setIndex((i) => i + 1);
     }
   };
 
@@ -40,7 +51,7 @@ const questions = lessonQuestions;
           Quiz Completed 🎉
         </h1>
         <p className="text-lg">
-          Score: {score} / {questions.length}
+          Score: {score} / {lessonQuestions.length}
         </p>
       </main>
     );
@@ -49,11 +60,11 @@ const questions = lessonQuestions;
   return (
     <main className="max-w-xl mx-auto p-6 text-white">
       <h2 className="mb-4 font-semibold">
-        {questions[index].question}
+        {current.question}
       </h2>
 
       <div className="space-y-2">
-        {questions[index].options.map((opt, i) => (
+        {current.options.map((opt, i) => (
           <button
             key={i}
             onClick={() => answer(i)}
@@ -65,7 +76,7 @@ const questions = lessonQuestions;
       </div>
 
       <p className="mt-4 text-sm text-gray-400">
-        Question {index + 1} / {questions.length}
+        Question {index + 1} / {lessonQuestions.length}
       </p>
     </main>
   );
