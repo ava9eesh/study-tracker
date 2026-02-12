@@ -1,11 +1,6 @@
 "use client";
 
-import {
-  GoogleAuthProvider,
-  signInWithRedirect,
-  getRedirectResult,
-  signOut
-} from "firebase/auth";
+import { GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import Dashboard from "./Dashboard";
 import { useEffect, useState } from "react";
@@ -14,29 +9,37 @@ export default function LoginGate() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    // 🔥 THIS FINALIZES REDIRECT LOGIN
-    getRedirectResult(auth)
-      .then(() => {})
-      .catch((err) => console.error(err));
-
     const unsub = auth.onAuthStateChanged(setUser);
     return () => unsub();
   }, []);
 
-  if (!user) {
-    return (
-      <div className="h-screen flex items-center justify-center bg-black">
+if (!user) {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-black">
+      <div className="w-full max-w-sm text-center space-y-6 px-6">
+
+        <h1 className="text-2xl font-semibold text-white">
+          Study Tracker
+        </h1>
+
         <button
-          onClick={() =>
-            signInWithRedirect(auth, new GoogleAuthProvider())
-          }
-          className="px-6 py-3 bg-blue-600 rounded text-white"
+          onClick={() => signInWithPopup(auth, new GoogleAuthProvider())}
+          className="w-full bg-blue-600 py-3 rounded-xl text-white font-medium hover:bg-blue-500 transition"
         >
           Continue with Google
         </button>
+
+        <p className="text-sm text-gray-400">
+          Built by Avaneesh Shinde
+          <br />
+          Contact: <span className="text-blue-400">i_love_zandu_bam</span>
+        </p>
+
       </div>
-    );
-  }
+    </div>
+  );
+}
+
 
   return (
     <>
