@@ -4,7 +4,9 @@ export const syllabus = {
       name: "Matter in Our Surroundings",
       video: "https://www.youtube.com/results?search_query=matter+in+our+surroundings+class+9",
       pyq: "https://www.google.com/search?q=matter+in+our+surroundings+class+9+pyqs",
-      prequisites: []
+      prequisites: [
+        "hi hello wbu ngaaaa",
+      ]
     },
     {
       name: "Is Matter Around Us Pure?",
