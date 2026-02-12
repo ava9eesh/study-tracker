@@ -1,5 +1,6 @@
 "use client";
 
+import { questions as QUESTION_BANK } from "@/data/questions";
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 
@@ -10,11 +11,11 @@ export default function QuizPage({ params }) {
 
   const totalQuestions = marks === 80 ? 40 : 20;
 
-  const questions = Array.from({ length: totalQuestions }, (_, i) => ({
-   question: `Question ${i + 1} from ${(lessonId || "this lesson").replaceAll("-", " ")}`,
-    options: ["Option A", "Option B", "Option C", "Option D"],
-    correct: 0,
-  }));
+const lessonQuestions =
+  QUESTION_BANK[lessonId]?.[marks === 80 ? "mcq80" : "mcq40"] ?? [];
+
+const questions = lessonQuestions;
+
 
   const [index, setIndex] = useState(0);
   const [score, setScore] = useState(0);

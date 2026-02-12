@@ -1,28 +1,37 @@
 import { syllabus } from "@/data/syllabus";
 
-export default function PrerequisitesPage({ params }) {
-  const { lessonId } = params;
+function flattenSyllabus(node) {
+  if (Array.isArray(node)) return node;
+  if (typeof node === "object" && node !== null) {
+    return Object.values(node).flatMap(flattenSyllabus);
+  }
+  return [];
+}
 
-  const lesson = Object.values(syllabus)
-    .flat()
-    .find((l) => {
-      const name = typeof l === "string" ? l : l.name;
-      return (
-        name
-          .toLowerCase()
-          .replace(/\s+/g, "-")
-          .replace(/[^\w-]/g, "") === lessonId
-      );
-    });
+export default function PrerequisitesPage({ params }) {
+  const lessonId = params?.lessonId || "";
+
+  const allLessons = flattenSyllabus(syllabus);
+
+  const lessonObj = allLessons.find((l) => {
+    if (typeof l === "string") return false;
+    if (!l.name) return false;
+
+    return (
+      l.name
+        .toLowerCase()
+        .replace(/\s+/g, "-")
+        .replace(/[^\w-]/g, "") === lessonId
+    );
+  });
 
   const prerequisites =
-    typeof lesson === "object" && lesson.prerequisites
-      ? lesson.prerequisites
-      : [
-          "Revise previous chapters",
-          "Understand basic definitions",
-          "Know important keywords",
-        ];
+    lessonObj?.prerequisites ??
+    [
+      "Revise previous chapters",
+      "Understand basic definitions",
+      "Know important keywords",
+    ];
 
   return (
     <main className="max-w-2xl mx-auto p-6 text-white">
@@ -37,7 +46,7 @@ export default function PrerequisitesPage({ params }) {
       </ul>
 
       <p className="mt-6 text-sm text-gray-400">
-        Lesson: {(lessonId || "this lesson").replaceAll("-", " ")}
+        Lesson: {lessonId.replaceAll("-", " ")}
       </p>
     </main>
   );
