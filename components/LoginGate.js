@@ -4,6 +4,8 @@ import { GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import Dashboard from "./Dashboard";
 import { useEffect, useState } from "react";
+import { GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
+
 
 export default function LoginGate() {
   const [user, setUser] = useState(null);
@@ -23,7 +25,7 @@ if (!user) {
         </h1>
 
         <button
-          onClick={() => signInWithPopup(auth, new GoogleAuthProvider())}
+          onClick={() => signInWithRedirect(auth, new GoogleAuthProvider())}
           className="w-full bg-blue-600 py-3 rounded-xl text-white font-medium hover:bg-blue-500 transition"
         >
           Continue with Google
