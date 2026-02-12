@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
+import { getAuth, setPersistence, browserLocalPersistence } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -10,11 +10,11 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 
-
-export const db = getFirestore(app);
-
-import { getAuth, setPersistence, browserLocalPersistence } from "firebase/auth";
-
+// Auth
 export const auth = getAuth(app);
 
+// Force LOCAL persistence (fixes missing initial state error)
 setPersistence(auth, browserLocalPersistence);
+
+// Firestore
+export const db = getFirestore(app);
