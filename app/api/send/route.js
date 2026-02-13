@@ -1,5 +1,7 @@
 import webpush from "web-push";
 import { NextResponse } from "next/server";
+import { db } from "@/utils/firebase";
+import { collection, getDocs } from "firebase/firestore";
 
 function setupVapid() {
   webpush.setVapidDetails(
@@ -9,27 +11,30 @@ function setupVapid() {
   );
 }
 
+const messages = [
+  "Did you study enough? Nothing is enough.",
+  "3 hours passed. Go again.",
+  "Your goals are watching.",
+  "Future you is waiting.",
+  "No excuses. Open a book."
+];
+
 export async function GET() {
   setupVapid();
 
-  const subscription = {
-  endpoint: "https://fcm.googleapis.com/fcm/send/dZBpOcuUcwE:APA91bHll86x1v4Rugx3wuUqgkXOTNpPvHdx-Gk4OShdsxIV6Ksst2V04OHVywlbBvyZNM7vueTDxkfxsxLofasH6E3p-zCOk67jk2tu0qq_JpmOLYiXiCmduoB4XeJdpDwAtSD5BxBi",
-  keys: {
-    p256dh: "BHjt-DIVhPuBl9wD_AtDfaaUscy4oLXIT60MoU36mdPJI-JPyaCM3n043ItgjRjhOZbqiCkEVJ9gVF1jmHang_Q",
-    auth: "H6hgH-zEzFEln7z0M5pbhg",
-  }
-};
-
+  const snapshot = await getDocs(collection(db, "subscriptions"));
 
   const payload = JSON.stringify({
-    title: "Did you study enough?",
-    body: "Nothing is enough. Go again.",
+    title: "Study Reminder 🔥",
+    body: messages[Math.floor(Math.random() * messages.length)],
   });
 
-  try {
-    await webpush.sendNotification(subscription, payload);
-  } catch (err) {
-    console.error(err);
+  for (const doc of snapshot.docs) {
+    try {
+      await webpush.sendNotification(doc.data(), payload);
+    } catch (err) {
+      console.error("Push failed:", err);
+    }
   }
 
   return NextResponse.json({ success: true });

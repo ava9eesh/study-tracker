@@ -1,17 +1,16 @@
 import { NextResponse } from "next/server";
-import webpush from "web-push";
-
-webpush.setVapidDetails(
-  "mailto:your@email.com",
-  process.env.VAPID_PUBLIC_KEY,
-  process.env.VAPID_PRIVATE_KEY
-);
+import { db } from "@/utils/firebase"; // adjust if needed
+import { collection, addDoc } from "firebase/firestore";
 
 export async function POST(req) {
   const subscription = await req.json();
 
-  // Save to database (for now just log)
-  console.log("Subscription received:", subscription);
+  try {
+    await addDoc(collection(db, "subscriptions"), subscription);
+    console.log("Subscription saved");
+  } catch (err) {
+    console.error(err);
+  }
 
   return NextResponse.json({ success: true });
 }
