@@ -1,16 +1,12 @@
 import { NextResponse } from "next/server";
-import { db } from "@/utils/firebase"; // adjust if needed
-import { collection, addDoc } from "firebase/firestore";
+import { adminDb } from "@/utils/firebaseAdmin";
 
 export async function POST(req) {
   const subscription = await req.json();
 
-  try {
-    await addDoc(collection(db, "subscriptions"), subscription);
-    console.log("Subscription saved");
-  } catch (err) {
-    console.error(err);
-  }
+  await adminDb.collection("subscriptions").add(subscription);
+
+  console.log("Subscription saved to Firestore");
 
   return NextResponse.json({ success: true });
 }
