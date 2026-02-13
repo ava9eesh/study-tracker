@@ -19,7 +19,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.className} bg-black text-white`}>
-        {children}
         <ServiceWorkerRegister />
         <NotificationManager />
         {children}
@@ -27,3 +26,4 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
