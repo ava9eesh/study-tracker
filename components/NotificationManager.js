@@ -4,24 +4,30 @@ import { useEffect } from "react";
 export default function NotificationManager() {
   useEffect(() => {
     async function subscribeUser() {
-      if ("serviceWorker" in navigator) {
-        const registration = await navigator.serviceWorker.ready;
+      if (!("serviceWorker" in navigator)) return;
 
-        const permission = await Notification.requestPermission();
-        if (permission !== "granted") return;
+      const registration = await navigator.serviceWorker.ready;
 
-        const subscription = await registration.pushManager.subscribe({
-          userVisibleOnly: true,
-          applicationServerKey: urlBase64ToUint8Array(
-            process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY
-          ),
-        });
-
-        await fetch("/api/subscribe", {
-          method: "POST",
-          body: JSON.stringify(subscription),
-        });
+      const permission = await Notification.requestPermission();
+      if (permission !== "granted") {
+        console.log("Permission denied");
+        return;
       }
+
+      const subscription = await registration.pushManager.subscribe({
+        userVisibleOnly: true,
+        applicationServerKey: urlBase64ToUint8Array(
+          process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY
+        ),
+      });
+
+      console.log("Subscription:", subscription);
+
+      await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(subscription),
+      });
     }
 
     subscribeUser();
