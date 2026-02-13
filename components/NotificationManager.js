@@ -1,37 +1,41 @@
 "use client";
 import { useEffect } from "react";
 
-const messages = [
-  "Did you study enough? Because nothing is enough.",
-  "Your goals don't care about your mood.",
-  "3 hours passed. What did you learn?",
-  "Small progress is still progress.",
-  "Future you is watching.",
-  "One more session. No excuses.",
-];
-
 export default function NotificationManager() {
   useEffect(() => {
-    if ("Notification" in window) {
-      Notification.requestPermission().then((permission) => {
-        if (permission === "granted") {
-          startReminders();
-        }
-      });
+    async function subscribeUser() {
+      if ("serviceWorker" in navigator) {
+        const registration = await navigator.serviceWorker.ready;
+
+        const permission = await Notification.requestPermission();
+        if (permission !== "granted") return;
+
+        const subscription = await registration.pushManager.subscribe({
+          userVisibleOnly: true,
+          applicationServerKey: urlBase64ToUint8Array(
+            process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY
+          ),
+        });
+
+        await fetch("/api/subscribe", {
+          method: "POST",
+          body: JSON.stringify(subscription),
+        });
+      }
     }
+
+    subscribeUser();
   }, []);
 
-  function startReminders() {
-    setInterval(() => {
-      const randomMessage =
-        messages[Math.floor(Math.random() * messages.length)];
-
-      new Notification("Study Reminder 🔥", {
-        body: randomMessage,
-        icon: "/icon-192.png",
-      });
-    }, 10000); // 10 seconds
-  }
-
   return null;
+}
+
+function urlBase64ToUint8Array(base64String) {
+  const padding = "=".repeat((4 - (base64String.length % 4)) % 4);
+  const base64 = (base64String + padding)
+    .replace(/-/g, "+")
+    .replace(/_/g, "/");
+
+  const rawData = window.atob(base64);
+  return Uint8Array.from([...rawData].map((char) => char.charCodeAt(0)));
 }
