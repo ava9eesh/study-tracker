@@ -1,15 +1,17 @@
 import webpush from "web-push";
 import { NextResponse } from "next/server";
 
-webpush.setVapidDetails(
-  "mailto:your@email.com",
-  process.env.VAPID_PUBLIC_KEY,
-  process.env.VAPID_PRIVATE_KEY
-);
+function setupVapid() {
+  webpush.setVapidDetails(
+    "mailto:your@email.com",
+    process.env.VAPID_PUBLIC_KEY,
+    process.env.VAPID_PRIVATE_KEY
+  );
+}
 
 export async function GET() {
-    setupVapid();
-    
+  setupVapid();
+
   const subscription = {
   endpoint: "https://fcm.googleapis.com/fcm/send/dZBpOcuUcwE:APA91bHll86x1v4Rugx3wuUqgkXOTNpPvHdx-Gk4OShdsxIV6Ksst2V04OHVywlbBvyZNM7vueTDxkfxsxLofasH6E3p-zCOk67jk2tu0qq_JpmOLYiXiCmduoB4XeJdpDwAtSD5BxBi",
   keys: {
