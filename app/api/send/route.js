@@ -1,4 +1,15 @@
+import webpush from "web-push";
+import { NextResponse } from "next/server";
 import { adminDb } from "@/utils/firebaseAdmin";
+
+function setupVapid() {
+  webpush.setVapidDetails(
+    "mailto:your@email.com",
+    process.env.VAPID_PUBLIC_KEY,
+    process.env.VAPID_PRIVATE_KEY
+  );
+}
+
 
 export async function GET() {
   setupVapid();
