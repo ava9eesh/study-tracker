@@ -9,6 +9,7 @@ const inter = Inter({
 export const metadata = {
   title: "Study Tracker",
   description: "Track your study progress",
+  manifest: "/manifest.json"
 };
 
 export default function RootLayout({ children }) {
