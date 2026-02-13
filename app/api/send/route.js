@@ -1,6 +1,7 @@
 import webpush from "web-push";
 import { adminDb } from "@/utils/firebaseAdmin";
 import { verifySignature } from "@upstash/qstash/nextjs";
+import { NextResponse } from "next/server";
 
 function setupVapid() {
   webpush.setVapidDetails(
@@ -17,7 +18,7 @@ const messages = [
   "No excuses.",
 ];
 
-export const GET = verifySignature(async (req) => {
+export const GET = verifySignature(async () => {
   setupVapid();
 
   const snapshot = await adminDb.collection("subscriptions").get();
@@ -35,5 +36,5 @@ export const GET = verifySignature(async (req) => {
     }
   }
 
-  return new Response(JSON.stringify({ success: true }), { status: 200 });
+  return NextResponse.json({ success: true });
 });
