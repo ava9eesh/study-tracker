@@ -1,7 +1,12 @@
 import webpush from "web-push";
 import { adminDb } from "@/utils/firebaseAdmin";
 import { NextResponse } from "next/server";
-import crypto from "crypto";
+import { Receiver } from "@upstash/qstash";
+
+const receiver = new Receiver({
+  currentSigningKey: process.env.QSTASH_CURRENT_SIGNING_KEY,
+  nextSigningKey: process.env.QSTASH_NEXT_SIGNING_KEY,
+});
 
 function setupVapid() {
   webpush.setVapidDetails(
@@ -9,22 +14,6 @@ function setupVapid() {
     process.env.VAPID_PUBLIC_KEY,
     process.env.VAPID_PRIVATE_KEY
   );
-}
-
-function verifyUpstashSignature(req) {
-  const signature = req.headers.get("upstash-signature");
-  const body = ""; // GET request has empty body
-
-  const key = process.env.QSTASH_CURRENT_SIGNING_KEY;
-
-  if (!signature || !key) return false;
-
-  const hash = crypto
-    .createHmac("sha256", key)
-    .update(body)
-    .digest("base64");
-
-  return signature === hash;
 }
 
 const messages = [
@@ -35,7 +24,12 @@ const messages = [
 ];
 
 export async function GET(req) {
-  if (!verifyUpstashSignature(req)) {
+  try {
+    await receiver.verify({
+      signature: req.headers.get("upstash-signature"),
+      body: "",
+    });
+  } catch (err) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
