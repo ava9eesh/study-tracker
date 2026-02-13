@@ -8,7 +8,16 @@ webpush.setVapidDetails(
 );
 
 export async function GET() {
-  const fakeSubscription = {}; // replace with real DB
+    setupVapid();
+    
+  const subscription = {
+  endpoint: "https://fcm.googleapis.com/fcm/send/dZBpOcuUcwE:APA91bHll86x1v4Rugx3wuUqgkXOTNpPvHdx-Gk4OShdsxIV6Ksst2V04OHVywlbBvyZNM7vueTDxkfxsxLofasH6E3p-zCOk67jk2tu0qq_JpmOLYiXiCmduoB4XeJdpDwAtSD5BxBi",
+  keys: {
+    p256dh: "BHjt-DIVhPuBl9wD_AtDfaaUscy4oLXIT60MoU36mdPJI-JPyaCM3n043ItgjRjhOZbqiCkEVJ9gVF1jmHang_Q",
+    auth: "H6hgH-zEzFEln7z0M5pbhg",
+  }
+};
+
 
   const payload = JSON.stringify({
     title: "Did you study enough?",
@@ -16,7 +25,7 @@ export async function GET() {
   });
 
   try {
-    await webpush.sendNotification(fakeSubscription, payload);
+    await webpush.sendNotification(subscription, payload);
   } catch (err) {
     console.error(err);
   }
