@@ -1,7 +1,8 @@
 "use client";
 
 import { useParams } from "next/navigation";
-import { syllabus } from "@/data/syllabus";
+import { syllabus } from "../../../../data/syllabus";
+
 
 // slug helper — SAME LOGIC EVERYWHERE
 const slugify = (s) =>
