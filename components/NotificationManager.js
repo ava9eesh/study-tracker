@@ -21,7 +21,8 @@ export default function NotificationManager() {
         ),
       });
 
-      console.log("Subscription:", subscription);
+      console.log("Subscription JSON:", subscription.toJSON());
+
 
       await fetch("/api/subscribe", {
         method: "POST",
