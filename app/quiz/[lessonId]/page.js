@@ -4,6 +4,9 @@ import { useSearchParams, useParams } from "next/navigation";
 import { useState, useMemo } from "react";
 import { questions as QUESTION_BANK } from "@/data/questions";
 
+console.log("LESSON:", lessonId);
+console.log("AVAILABLE:", Object.keys(QUESTION_BANK));
+
 /* 🔥 SHUFFLE FUNCTION */
 function shuffleQuestion(q) {
   const arr = q.options.map((opt, i) => ({
@@ -29,7 +32,13 @@ export default function QuizPage() {
   const marks = Number(searchParams.get("marks")) || 40;
 
   const mode = marks === 80 ? "mcq80" : "mcq40";
-  const lessonBlock = QUESTION_BANK[lessonId];
+  const fixedLessonId = lessonId
+  .toLowerCase()
+  .replace(/-/g, "_");
+
+const lessonBlock =
+  QUESTION_BANK[lessonId] ||
+  QUESTION_BANK[fixedLessonId];
 
   if (!lessonBlock || !lessonBlock[mode]) {
     return (
