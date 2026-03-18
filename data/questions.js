@@ -1158,3 +1158,1169 @@ mcq80: [
 { question: "Assertion: Carbon shows catenation\nReason: Strong C-C bonds", options: ["Both true & R explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //79
 { question: "Assertion: Organic compounds have low MP\nReason: Weak intermolecular forces", options: ["Both true & R explains","Both true not explain","A true R false","A false R true"], correct: 0 } //80
   ],
+
+  "control-and-coordination": {
+  mcq40: [
+    // 1–40
+    { question: "Control and coordination in animals is done by:", options: ["Nervous system", "Digestive", "Respiratory", "None"], correct: 0 }, //1
+    { question: "Basic unit of nervous system:", options: ["Neuron", "Cell", "Tissue", "None"], correct: 0 }, //2
+    { question: "Neuron transmits:", options: ["Impulses", "Blood", "Food", "None"], correct: 0 }, //3
+    { question: "Brain is part of:", options: ["Central nervous system", "Peripheral", "None", "All"], correct: 0 }, //4
+    { question: "Spinal cord is part of:", options: ["CNS", "PNS", "None", "All"], correct: 0 }, //5
+    { question: "Nerves form:", options: ["PNS", "CNS", "None", "All"], correct: 0 }, //6
+    { question: "Reflex action is:", options: ["Quick response", "Slow", "Voluntary", "None"], correct: 0 }, //7
+    { question: "Reflex arc involves:", options: ["Spinal cord", "Brain", "Heart", "None"], correct: 0 }, //8
+    { question: "Brain controls:", options: ["Body activities", "Digestion only", "None", "All"], correct: 0 }, //9
+    { question: "Cerebrum controls:", options: ["Thinking", "Breathing", "Heartbeat", "None"], correct: 0 }, //10
+
+    { question: "Cerebellum controls:", options: ["Balance", "Thinking", "Digestion", "None"], correct: 0 }, //11
+    { question: "Medulla controls:", options: ["Involuntary actions", "Thinking", "Movement", "None"], correct: 0 }, //12
+    { question: "Involuntary actions:", options: ["Heartbeat", "Walking", "Writing", "None"], correct: 0 }, //13
+    { question: "Voluntary actions:", options: ["Walking", "Heartbeat", "Digestion", "None"], correct: 0 }, //14
+    { question: "Receptors detect:", options: ["Stimuli", "Food", "Water", "None"], correct: 0 }, //15
+    { question: "Coordination in plants by:", options: ["Hormones", "Nerves", "Blood", "None"], correct: 0 }, //16
+    { question: "Plant hormone example:", options: ["Auxin", "Insulin", "Adrenaline", "None"], correct: 0 }, //17
+    { question: "Auxin promotes:", options: ["Growth", "Death", "Sleep", "None"], correct: 0 }, //18
+    { question: "Phototropism response to:", options: ["Light", "Gravity", "Water", "None"], correct: 0 }, //19
+    { question: "Geotropism response to:", options: ["Gravity", "Light", "Water", "None"], correct: 0 }, //20
+
+    { question: "Hydrotropism response to:", options: ["Water", "Light", "Gravity", "None"], correct: 0 }, //21
+    { question: "Thigmotropism response to:", options: ["Touch", "Light", "Water", "None"], correct: 0 }, //22
+    { question: "Mimosa plant shows:", options: ["Nastic movement", "Tropism", "None", "All"], correct: 0 }, //23
+    { question: "Nastic movement is:", options: ["Non-directional", "Directional", "None", "All"], correct: 0 }, //24
+    { question: "Endocrine system secretes:", options: ["Hormones", "Enzymes", "Blood", "None"], correct: 0 }, //25
+    { question: "Hormones act slowly:", options: ["True", "False", "None", "All"], correct: 0 }, //26
+    { question: "Nervous system acts:", options: ["Fast", "Slow", "None", "All"], correct: 0 }, //27
+    { question: "Adrenaline is released in:", options: ["Emergency", "Sleep", "None", "All"], correct: 0 }, //28
+    { question: "Adrenaline increases:", options: ["Heart rate", "Sleep", "Digestion", "None"], correct: 0 }, //29
+    { question: "Insulin controls:", options: ["Blood sugar", "Water", "Air", "None"], correct: 0 }, //30
+
+    { question: "Pituitary gland is:", options: ["Master gland", "Small gland", "None", "All"], correct: 0 }, //31
+    { question: "Thyroxine needs:", options: ["Iodine", "Iron", "Calcium", "None"], correct: 0 }, //32
+    { question: "Deficiency of iodine causes:", options: ["Goitre", "Diabetes", "Cancer", "None"], correct: 0 }, //33
+    { question: "Growth hormone controls:", options: ["Growth", "Sleep", "Breathing", "None"], correct: 0 }, //34
+    { question: "Hormones transported by:", options: ["Blood", "Air", "Water", "None"], correct: 0 }, //35
+    { question: "Synapse is gap between:", options: ["Neurons", "Cells", "Tissues", "None"], correct: 0 }, //36
+    { question: "Impulse travels as:", options: ["Electrical signal", "Chemical", "None", "All"], correct: 0 }, //37
+    { question: "Reflex action is controlled by:", options: ["Spinal cord", "Brain", "Heart", "None"], correct: 0 }, //38
+    { question: "Coordination ensures:", options: ["Proper response", "No response", "None", "All"], correct: 0 }, //39
+    { question: "Nervous system includes:", options: ["Brain + spinal cord", "Heart", "None", "All"], correct: 0 } //40
+  ],
+
+  mcq80: [
+{ question: "Basic unit of nervous system:", options: ["Neuron","Cell","Tissue","None"], correct: 0 }, //1
+{ question: "Neuron transmits:", options: ["Impulse","Blood","Food","None"], correct: 0 }, //2
+{ question: "Brain is part of:", options: ["CNS","PNS","None","All"], correct: 0 }, //3
+{ question: "Spinal cord belongs to:", options: ["CNS","PNS","None","All"], correct: 0 }, //4
+{ question: "Nerves belong to:", options: ["PNS","CNS","None","All"], correct: 0 }, //5
+{ question: "Reflex action is:", options: ["Quick response","Slow","None","All"], correct: 0 }, //6
+{ question: "Reflex arc controlled by:", options: ["Spinal cord","Brain","Heart","None"], correct: 0 }, //7
+{ question: "Cerebrum controls:", options: ["Thinking","Balance","Breathing","None"], correct: 0 }, //8
+{ question: "Cerebellum controls:", options: ["Balance","Thinking","None","All"], correct: 0 }, //9
+{ question: "Medulla controls:", options: ["Involuntary actions","Thinking","None","All"], correct: 0 }, //10
+
+{ question: "Receptors detect:", options: ["Stimuli","Food","Water","None"], correct: 0 }, //11
+{ question: "Impulse is:", options: ["Electrical signal","Chemical","None","All"], correct: 0 }, //12
+{ question: "Synapse is gap between:", options: ["Neurons","Cells","None","All"], correct: 0 }, //13
+{ question: "Hormones are:", options: ["Chemical messengers","Cells","None","All"], correct: 0 }, //14
+{ question: "Hormones travel via:", options: ["Blood","Air","Water","None"], correct: 0 }, //15
+{ question: "Adrenaline released during:", options: ["Emergency","Sleep","None","All"], correct: 0 }, //16
+{ question: "Adrenaline increases:", options: ["Heart rate","Sleep","None","All"], correct: 0 }, //17
+{ question: "Insulin controls:", options: ["Blood sugar","Water","None","All"], correct: 0 }, //18
+{ question: "Thyroxine needs:", options: ["Iodine","Iron","None","All"], correct: 0 }, //19
+{ question: "Pituitary is:", options: ["Master gland","Minor gland","None","All"], correct: 0 }, //20
+
+{ question: "Auxin is:", options: ["Plant hormone","Animal hormone","None","All"], correct: 0 }, //21
+{ question: "Auxin promotes:", options: ["Growth","Death","None","All"], correct: 0 }, //22
+{ question: "Phototropism response to:", options: ["Light","Water","None","All"], correct: 0 }, //23
+{ question: "Geotropism response to:", options: ["Gravity","Light","None","All"], correct: 0 }, //24
+{ question: "Hydrotropism response to:", options: ["Water","Light","None","All"], correct: 0 }, //25
+{ question: "Thigmotropism response to:", options: ["Touch","Light","None","All"], correct: 0 }, //26
+{ question: "Nastic movement is:", options: ["Non-directional","Directional","None","All"], correct: 0 }, //27
+{ question: "Mimosa shows:", options: ["Nastic movement","Tropism","None","All"], correct: 0 }, //28
+{ question: "Nervous system is:", options: ["Fast","Slow","None","All"], correct: 0 }, //29
+{ question: "Hormonal system is:", options: ["Slow","Fast","None","All"], correct: 0 }, //30
+
+{ question: "Voluntary actions:", options: ["Controlled by will","Automatic","None","All"], correct: 0 }, //31
+{ question: "Involuntary actions:", options: ["Automatic","Controlled","None","All"], correct: 0 }, //32
+{ question: "Coordination ensures:", options: ["Proper response","No response","None","All"], correct: 0 }, //33
+{ question: "Neuron parts:", options: ["Dendrite, axon","Leaf","Root","None"], correct: 0 }, //34
+{ question: "Impulse direction:", options: ["Dendrite → axon","Reverse","None","All"], correct: 0 }, //35
+{ question: "Brain protected by:", options: ["Skull","Skin","None","All"], correct: 0 }, //36
+{ question: "Spinal cord protected by:", options: ["Vertebral column","Skull","None","All"], correct: 0 }, //37
+{ question: "Neuron types:", options: ["Sensory & motor","Only one","None","All"], correct: 0 }, //38
+{ question: "Sensory neuron carries:", options: ["Stimulus","Response","None","All"], correct: 0 }, //39
+{ question: "Motor neuron carries:", options: ["Response","Stimulus","None","All"], correct: 0 }, //40
+
+{ question: "Endocrine glands are:", options: ["Ductless","With ducts","None","All"], correct: 0 }, //41
+{ question: "Growth hormone secreted by:", options: ["Pituitary","Thyroid","None","All"], correct: 0 }, //42
+{ question: "Thyroxine secreted by:", options: ["Thyroid","Pancreas","None","All"], correct: 0 }, //43
+{ question: "Insulin secreted by:", options: ["Pancreas","Liver","None","All"], correct: 0 }, //44
+{ question: "Adrenaline secreted by:", options: ["Adrenal gland","Pituitary","None","All"], correct: 0 }, //45
+{ question: "Plant movement due to:", options: ["Growth","Muscles","None","All"], correct: 0 }, //46
+{ question: "Tropism is:", options: ["Directional","Non-directional","None","All"], correct: 0 }, //47
+{ question: "Auxin accumulates on:", options: ["Dark side","Light side","None","All"], correct: 0 }, //48
+{ question: "Shoot grows:", options: ["Towards light","Away","None","All"], correct: 0 }, //49
+{ question: "Root grows:", options: ["Towards gravity","Away","None","All"], correct: 0 }, //50
+
+{ question: "Hormonal effect:", options: ["Slow","Fast","None","All"], correct: 0 }, //51
+{ question: "Nervous effect:", options: ["Fast","Slow","None","All"], correct: 0 }, //52
+{ question: "Impulse crosses synapse via:", options: ["Chemical","Electrical","None","All"], correct: 0 }, //53
+{ question: "Reflex protects body:", options: ["Yes","No","None","All"], correct: 0 }, //54
+{ question: "Coordination in plants:", options: ["Hormones","Nerves","None","All"], correct: 0 }, //55
+{ question: "Plants respond slowly:", options: ["Yes","No","None","All"], correct: 0 }, //56
+{ question: "Animals respond quickly:", options: ["Yes","No","None","All"], correct: 0 }, //57
+{ question: "Synapse connects:", options: ["Neurons","Cells","None","All"], correct: 0 }, //58
+{ question: "Impulse type:", options: ["Electrical","Mechanical","None","All"], correct: 0 }, //59
+{ question: "Reflex arc includes:", options: ["Spinal cord","Brain","None","All"], correct: 0 }, //60
+
+{ question: "Assertion: Reflex action is fast\nReason: Controlled by spinal cord", options: ["Both true & R explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //61
+{ question: "Assertion: Hormones act slowly\nReason: Travel in blood", options: ["Both true & R explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //62
+{ question: "Assertion: Auxin promotes growth\nReason: It is hormone", options: ["Both true & R explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //63
+{ question: "Assertion: Cerebellum controls balance\nReason: Coordinates muscles", options: ["Both true & R explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //64
+{ question: "Assertion: Adrenaline increases heart rate\nReason: Emergency hormone", options: ["Both true & R explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //65
+{ question: "Assertion: Insulin controls sugar\nReason: Secreted by pancreas", options: ["Both true & R explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //66
+{ question: "Assertion: Thyroxine needs iodine\nReason: Thyroid uses iodine", options: ["Both true & R explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //67
+{ question: "Assertion: Plants lack nerves\nReason: Use hormones", options: ["Both true & R explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //68
+{ question: "Assertion: Nervous system is fast\nReason: Electrical signals", options: ["Both true & R explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //69
+{ question: "Assertion: Synapse transmits signal\nReason: Chemical transfer", options: ["Both true & R explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //70
+
+{ question: "Brain largest part:", options: ["Cerebrum","Cerebellum","None","All"], correct: 0 }, //71
+{ question: "Balance organ:", options: ["Cerebellum","Cerebrum","None","All"], correct: 0 }, //72
+{ question: "Reflex path:", options: ["Reflex arc","Neuron","None","All"], correct: 0 }, //73
+{ question: "Hormones regulate:", options: ["Body functions","Nothing","None","All"], correct: 0 }, //74
+{ question: "Control ensures:", options: ["Coordination","Chaos","None","All"], correct: 0 }, //75
+{ question: "Neuron carries signal:", options: ["Yes","No","None","All"], correct: 0 }, //76
+{ question: "Hormones affect target organs:", options: ["Yes","No","None","All"], correct: 0 }, //77
+{ question: "Plants respond slowly:", options: ["Yes","No","None","All"], correct: 0 }, //78
+{ question: "Animals respond fast:", options: ["Yes","No","None","All"], correct: 0 }, //79
+{ question: "Coordination is essential:", options: ["Yes","No","None","All"], correct: 0 } //80
+],
+
+"how-do-organisms-reproduce": {
+  mcq40: [
+    // 1–40
+    { question: "Reproduction ensures:", options: ["Continuation of species","Growth","Digestion","None"], correct: 0 }, //1
+    { question: "Asexual reproduction involves:", options: ["One parent","Two parents","Many parents","None"], correct: 0 }, //2
+    { question: "Sexual reproduction involves:", options: ["Two parents","One parent","None","All"], correct: 0 }, //3
+    { question: "Binary fission occurs in:", options: ["Amoeba","Human","Dog","None"], correct: 0 }, //4
+    { question: "Multiple fission occurs in:", options: ["Plasmodium","Amoeba","Human","None"], correct: 0 }, //5
+    { question: "Budding occurs in:", options: ["Yeast","Amoeba","Dog","None"], correct: 0 }, //6
+    { question: "Regeneration seen in:", options: ["Planaria","Human","Dog","None"], correct: 0 }, //7
+    { question: "Vegetative propagation in:", options: ["Plants","Animals","Both","None"], correct: 0 }, //8
+    { question: "Cutting method example:", options: ["Rose","Dog","Human","None"], correct: 0 }, //9
+    { question: "Layering used in:", options: ["Jasmine","Human","Dog","None"], correct: 0 }, //10
+
+    { question: "Grafting joins:", options: ["Two plants","Two animals","None","All"], correct: 0 }, //11
+    { question: "Spore formation occurs in:", options: ["Fungi","Plants","Animals","None"], correct: 0 }, //12
+    { question: "Sexual reproduction produces:", options: ["Variation","Clones","None","All"], correct: 0 }, //13
+    { question: "Male gamete is:", options: ["Sperm","Ovum","Zygote","None"], correct: 0 }, //14
+    { question: "Female gamete is:", options: ["Ovum","Sperm","Zygote","None"], correct: 0 }, //15
+    { question: "Fusion of gametes:", options: ["Fertilization","Digestion","None","All"], correct: 0 }, //16
+    { question: "Zygote forms after:", options: ["Fertilization","Digestion","None","All"], correct: 0 }, //17
+    { question: "DNA copying occurs in:", options: ["Reproduction","Respiration","None","All"], correct: 0 }, //18
+    { question: "Variation helps in:", options: ["Survival","Death","None","All"], correct: 0 }, //19
+    { question: "Reproductive organs develop at:", options: ["Puberty","Birth","Old age","None"], correct: 0 }, //20
+
+    { question: "Male reproductive organ:", options: ["Testes","Ovary","None","All"], correct: 0 }, //21
+    { question: "Testes produce:", options: ["Sperm","Ovum","None","All"], correct: 0 }, //22
+    { question: "Female reproductive organ:", options: ["Ovary","Testes","None","All"], correct: 0 }, //23
+    { question: "Ovary produces:", options: ["Ova","Sperm","None","All"], correct: 0 }, //24
+    { question: "Fertilization occurs in:", options: ["Fallopian tube","Uterus","None","All"], correct: 0 }, //25
+    { question: "Embryo develops in:", options: ["Uterus","Ovary","None","All"], correct: 0 }, //26
+    { question: "Placenta provides:", options: ["Nutrition","Oxygen","Both","None"], correct: 2 }, //27
+    { question: "Menstruation cycle:", options: ["28 days approx","10 days","None","All"], correct: 0 }, //28
+    { question: "Internal fertilization in:", options: ["Humans","Plants","None","All"], correct: 0 }, //29
+    { question: "External fertilization in:", options: ["Fish","Human","Dog","None"], correct: 0 }, //30
+
+    { question: "Pollination is:", options: ["Transfer of pollen","Fertilization","None","All"], correct: 0 }, //31
+    { question: "Self pollination:", options: ["Same flower","Different plant","None","All"], correct: 0 }, //32
+    { question: "Cross pollination:", options: ["Different plants","Same plant","None","All"], correct: 0 }, //33
+    { question: "Fertilization in plants:", options: ["Fusion of gametes","Pollination","None","All"], correct: 0 }, //34
+    { question: "Seed forms from:", options: ["Ovule","Ovary","None","All"], correct: 0 }, //35
+    { question: "Fruit forms from:", options: ["Ovary","Ovule","None","All"], correct: 0 }, //36
+    { question: "Asexual reproduction produces:", options: ["Identical offspring","Variation","None","All"], correct: 0 }, //37
+    { question: "Sexual reproduction produces:", options: ["Variation","Clones","None","All"], correct: 0 }, //38
+    { question: "Reproduction is essential for:", options: ["Species survival","Individual survival","None","All"], correct: 0 }, //39
+    { question: "Cloning produces:", options: ["Identical copy","Variation","None","All"], correct: 0 } //40
+  ],
+
+mcq80: [
+{ question: "Reproduction ensures:", options: ["Continuation of species","Growth","Digestion","None"], correct: 0 }, //1
+{ question: "Asexual reproduction involves:", options: ["One parent","Two parents","None","All"], correct: 0 }, //2
+{ question: "Sexual reproduction involves:", options: ["Two parents","One parent","None","All"], correct: 0 }, //3
+{ question: "Binary fission occurs in:", options: ["Amoeba","Human","Dog","None"], correct: 0 }, //4
+{ question: "Multiple fission occurs in:", options: ["Plasmodium","Amoeba","Dog","None"], correct: 0 }, //5
+{ question: "Budding occurs in:", options: ["Yeast","Amoeba","Human","None"], correct: 0 }, //6
+{ question: "Regeneration occurs in:", options: ["Planaria","Human","Dog","None"], correct: 0 }, //7
+{ question: "Vegetative propagation occurs in:", options: ["Plants","Animals","Both","None"], correct: 0 }, //8
+{ question: "Cutting method example:", options: ["Rose","Dog","Human","None"], correct: 0 }, //9
+{ question: "Layering used in:", options: ["Jasmine","Human","Dog","None"], correct: 0 }, //10
+
+{ question: "Grafting joins:", options: ["Two plants","Two animals","None","All"], correct: 0 }, //11
+{ question: "Spore formation occurs in:", options: ["Fungi","Animals","Human","None"], correct: 0 }, //12
+{ question: "Sexual reproduction produces:", options: ["Variation","Clones","None","All"], correct: 0 }, //13
+{ question: "Male gamete is:", options: ["Sperm","Ovum","Zygote","None"], correct: 0 }, //14
+{ question: "Female gamete is:", options: ["Ovum","Sperm","Zygote","None"], correct: 0 }, //15
+{ question: "Fusion of gametes is:", options: ["Fertilization","Digestion","None","All"], correct: 0 }, //16
+{ question: "Zygote forms after:", options: ["Fertilization","Digestion","None","All"], correct: 0 }, //17
+{ question: "DNA copying occurs in:", options: ["Reproduction","Respiration","None","All"], correct: 0 }, //18
+{ question: "Variation helps in:", options: ["Survival","Death","None","All"], correct: 0 }, //19
+{ question: "Puberty leads to:", options: ["Maturity","Death","None","All"], correct: 0 }, //20
+
+{ question: "Testes produce:", options: ["Sperm","Ovum","None","All"], correct: 0 }, //21
+{ question: "Ovary produces:", options: ["Ovum","Sperm","None","All"], correct: 0 }, //22
+{ question: "Fertilization occurs in:", options: ["Fallopian tube","Uterus","None","All"], correct: 0 }, //23
+{ question: "Embryo develops in:", options: ["Uterus","Ovary","None","All"], correct: 0 }, //24
+{ question: "Placenta provides:", options: ["Nutrition","Oxygen","Both","None"], correct: 2 }, //25
+{ question: "Menstrual cycle approx:", options: ["28 days","10 days","None","All"], correct: 0 }, //26
+{ question: "Internal fertilization in:", options: ["Humans","Plants","None","All"], correct: 0 }, //27
+{ question: "External fertilization in:", options: ["Fish","Human","Dog","None"], correct: 0 }, //28
+{ question: "Pollination is:", options: ["Transfer of pollen","Fertilization","None","All"], correct: 0 }, //29
+{ question: "Self pollination:", options: ["Same flower","Different plant","None","All"], correct: 0 }, //30
+
+{ question: "Cross pollination:", options: ["Different plants","Same plant","None","All"], correct: 0 }, //31
+{ question: "Seed forms from:", options: ["Ovule","Ovary","None","All"], correct: 0 }, //32
+{ question: "Fruit forms from:", options: ["Ovary","Ovule","None","All"], correct: 0 }, //33
+{ question: "Asexual reproduction gives:", options: ["Identical offspring","Variation","None","All"], correct: 0 }, //34
+{ question: "Sexual reproduction gives:", options: ["Variation","Clones","None","All"], correct: 0 }, //35
+{ question: "Cloning produces:", options: ["Identical copy","Variation","None","All"], correct: 0 }, //36
+{ question: "Zygote divides by:", options: ["Mitosis","Meiosis","None","All"], correct: 0 }, //37
+{ question: "Gametes formed by:", options: ["Meiosis","Mitosis","None","All"], correct: 0 }, //38
+{ question: "Embryo stage after:", options: ["Zygote","Foetus","None","All"], correct: 0 }, //39
+{ question: "Foetus develops into:", options: ["Baby","Zygote","None","All"], correct: 0 }, //40
+
+{ question: "Asexual reproduction is:", options: ["Fast","Slow","None","All"], correct: 0 }, //41
+{ question: "Sexual reproduction is:", options: ["Slow","Fast","None","All"], correct: 0 }, //42
+{ question: "DNA carries:", options: ["Genetic info","Energy","None","All"], correct: 0 }, //43
+{ question: "Variation arises due to:", options: ["DNA copying","No copying","None","All"], correct: 0 }, //44
+{ question: "Pollination leads to:", options: ["Fertilization","Digestion","None","All"], correct: 0 }, //45
+{ question: "Seed germination needs:", options: ["Water","Air","Both","None"], correct: 2 }, //46
+{ question: "Embryo gets nutrition from:", options: ["Placenta","Heart","None","All"], correct: 0 }, //47
+{ question: "Reproductive health means:", options: ["Healthy system","Disease","None","All"], correct: 0 }, //48
+{ question: "STD spreads by:", options: ["Sexual contact","Air","Water","None"], correct: 0 }, //49
+{ question: "HIV causes:", options: ["AIDS","Cancer","None","All"], correct: 0 }, //50
+
+{ question: "Binary fission type:", options: ["Asexual","Sexual","None","All"], correct: 0 }, //51
+{ question: "Budding type:", options: ["Asexual","Sexual","None","All"], correct: 0 }, //52
+{ question: "Vegetative propagation is:", options: ["Asexual","Sexual","None","All"], correct: 0 }, //53
+{ question: "Gametes are:", options: ["Reproductive cells","Body cells","None","All"], correct: 0 }, //54
+{ question: "Fertilization forms:", options: ["Zygote","Gamete","None","All"], correct: 0 }, //55
+{ question: "Zygote develops into:", options: ["Embryo","Gamete","None","All"], correct: 0 }, //56
+{ question: "Embryo develops into:", options: ["Foetus","Zygote","None","All"], correct: 0 }, //57
+{ question: "Placenta connects:", options: ["Mother & embryo","Father","None","All"], correct: 0 }, //58
+{ question: "Seeds grow into:", options: ["Plants","Animals","None","All"], correct: 0 }, //59
+{ question: "Reproduction is essential for:", options: ["Species survival","Individual","None","All"], correct: 0 }, //60
+
+{ question: "Assertion: Asexual reproduction produces clones\nReason: One parent involved", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //61
+{ question: "Assertion: Sexual reproduction causes variation\nReason: Gametes fuse", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //62
+{ question: "Assertion: Fertilization forms zygote\nReason: Gametes fuse", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //63
+{ question: "Assertion: Placenta nourishes embryo\nReason: Connects mother", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //64
+{ question: "Assertion: DNA copying causes variation\nReason: Errors occur", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //65
+
+{ question: "Assertion: Pollination needed before fertilization\nReason: Transfers pollen", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //66
+{ question: "Assertion: Binary fission is asexual\nReason: No gametes", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //67
+{ question: "Assertion: Budding forms new organism\nReason: Outgrowth develops", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //68
+{ question: "Assertion: Meiosis forms gametes\nReason: Reduces chromosome number", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //69
+{ question: "Assertion: Mitosis forms identical cells\nReason: No variation", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //70
+
+{ question: "Assertion: Sexual reproduction slower\nReason: Complex process", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //71
+{ question: "Assertion: Asexual reproduction faster\nReason: One parent", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //72
+{ question: "Assertion: Ovary produces ova\nReason: Female organ", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //73
+{ question: "Assertion: Testes produce sperm\nReason: Male organ", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //74
+{ question: "Assertion: Foetus develops in uterus\nReason: Protected environment", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //75
+
+{ question: "Assertion: Seeds form after fertilization\nReason: Ovule develops", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //76
+{ question: "Assertion: Fruits protect seeds\nReason: Ovary develops", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //77
+{ question: "Assertion: Variation important\nReason: Helps survival", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //78
+{ question: "Assertion: Reproduction maintains species\nReason: Produces offspring", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //79
+{ question: "Assertion: STD spread by contact\nReason: Pathogens transmitted", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 } //80
+],
+
+"heredity-and-evolution": {
+  mcq40: [
+    // 1–40
+    { question: "Heredity is:", options: ["Transmission of traits","Variation","Evolution","None"], correct: 0 }, //1
+    { question: "Father of genetics:", options: ["Mendel","Darwin","Lamarck","None"], correct: 0 }, //2
+    { question: "Mendel worked on:", options: ["Pea plants","Humans","Dogs","None"], correct: 0 }, //3
+    { question: "Trait is:", options: ["Characteristic","Cell","Organ","None"], correct: 0 }, //4
+    { question: "Gene is unit of:", options: ["Heredity","Life","Cell","None"], correct: 0 }, //5
+    { question: "Genes are located on:", options: ["Chromosomes","Cells","Organs","None"], correct: 0 }, //6
+    { question: "Chromosomes are made of:", options: ["DNA","Protein","Fat","None"], correct: 0 }, //7
+    { question: "Pair of genes is called:", options: ["Alleles","Traits","Cells","None"], correct: 0 }, //8
+    { question: "Dominant trait expresses in:", options: ["Heterozygous","Homozygous recessive","None","All"], correct: 0 }, //9
+    { question: "Recessive trait expresses in:", options: ["Homozygous","Heterozygous","None","All"], correct: 0 }, //10
+
+    { question: "Genotype is:", options: ["Genetic makeup","Appearance","Trait","None"], correct: 0 }, //11
+    { question: "Phenotype is:", options: ["Appearance","Genetic makeup","Gene","None"], correct: 0 }, //12
+    { question: "TT is:", options: ["Homozygous dominant","Heterozygous","None","All"], correct: 0 }, //13
+    { question: "Tt is:", options: ["Heterozygous","Homozygous","None","All"], correct: 0 }, //14
+    { question: "tt is:", options: ["Homozygous recessive","Dominant","None","All"], correct: 0 }, //15
+    { question: "Monohybrid cross ratio:", options: ["3:1","1:1","9:3:3:1","None"], correct: 0 }, //16
+    { question: "Dihybrid cross ratio:", options: ["9:3:3:1","3:1","1:1","None"], correct: 0 }, //17
+    { question: "Sex determination in humans:", options: ["XY system","ZW","None","All"], correct: 0 }, //18
+    { question: "Male chromosome:", options: ["XY","XX","YY","None"], correct: 0 }, //19
+    { question: "Female chromosome:", options: ["XX","XY","YY","None"], correct: 0 }, //20
+
+    { question: "Variation arises due to:", options: ["DNA changes","No change","None","All"], correct: 0 }, //21
+    { question: "Evolution means:", options: ["Gradual change","Sudden","None","All"], correct: 0 }, //22
+    { question: "Darwin proposed:", options: ["Natural selection","Mutation","None","All"], correct: 0 }, //23
+    { question: "Survival of fittest:", options: ["Natural selection","Mutation","None","All"], correct: 0 }, //24
+    { question: "Adaptation helps:", options: ["Survival","Death","None","All"], correct: 0 }, //25
+    { question: "Fossils are:", options: ["Remains of organisms","Cells","None","All"], correct: 0 }, //26
+    { question: "Homologous organs:", options: ["Same origin","Different origin","None","All"], correct: 0 }, //27
+    { question: "Analogous organs:", options: ["Different origin","Same origin","None","All"], correct: 0 }, //28
+    { question: "Speciation means:", options: ["New species formation","Death","None","All"], correct: 0 }, //29
+    { question: "Evolution evidence:", options: ["Fossils","DNA","Both","None"], correct: 2 }, //30
+
+    { question: "DNA full form:", options: ["Deoxyribonucleic acid","None","All","RNA"], correct: 0 }, //31
+    { question: "Mutation is:", options: ["DNA change","No change","None","All"], correct: 0 }, //32
+    { question: "Acquired traits:", options: ["Not inherited","Inherited","None","All"], correct: 0 }, //33
+    { question: "Inherited traits:", options: ["Passed to offspring","Not passed","None","All"], correct: 0 }, //34
+    { question: "Human evolution from:", options: ["Primates","Fish","None","All"], correct: 0 }, //35
+    { question: "Vestigial organs:", options: ["Reduced function","Full function","None","All"], correct: 0 }, //36
+    { question: "Examples vestigial:", options: ["Appendix","Heart","None","All"], correct: 0 }, //37
+    { question: "Evolution takes:", options: ["Millions of years","Days","None","All"], correct: 0 }, //38
+    { question: "Genes control:", options: ["Traits","Food","None","All"], correct: 0 }, //39
+    { question: "Chromosomes carry:", options: ["Genes","Food","None","All"], correct: 0 } //40
+  ],
+
+  mcq80: [
+{ question: "Heredity refers to:", options: ["Transmission of traits","Evolution","Mutation","None"], correct: 0 }, //1
+{ question: "Father of genetics:", options: ["Mendel","Darwin","Lamarck","None"], correct: 0 }, //2
+{ question: "Mendel experimented on:", options: ["Pea plants","Humans","Dogs","None"], correct: 0 }, //3
+{ question: "Gene is unit of:", options: ["Heredity","Cell","Organ","None"], correct: 0 }, //4
+{ question: "Genes are located on:", options: ["Chromosomes","Cells","Organs","None"], correct: 0 }, //5
+{ question: "Chromosomes are made of:", options: ["DNA","Protein","Fat","None"], correct: 0 }, //6
+{ question: "Alleles are:", options: ["Pair of genes","Cells","Organs","None"], correct: 0 }, //7
+{ question: "Dominant trait appears in:", options: ["Heterozygous","Recessive","None","All"], correct: 0 }, //8
+{ question: "Recessive trait appears in:", options: ["Homozygous","Heterozygous","None","All"], correct: 0 }, //9
+{ question: "Genotype means:", options: ["Genetic makeup","Appearance","Trait","None"], correct: 0 }, //10
+
+{ question: "Phenotype means:", options: ["Appearance","Genes","DNA","None"], correct: 0 }, //11
+{ question: "TT genotype is:", options: ["Homozygous dominant","Heterozygous","None","All"], correct: 0 }, //12
+{ question: "Tt genotype is:", options: ["Heterozygous","Homozygous","None","All"], correct: 0 }, //13
+{ question: "tt genotype is:", options: ["Homozygous recessive","Dominant","None","All"], correct: 0 }, //14
+{ question: "Monohybrid ratio:", options: ["3:1","1:1","9:3:3:1","None"], correct: 0 }, //15
+{ question: "Dihybrid ratio:", options: ["9:3:3:1","3:1","1:1","None"], correct: 0 }, //16
+{ question: "Sex determination system:", options: ["XY","ZW","None","All"], correct: 0 }, //17
+{ question: "Male genotype:", options: ["XY","XX","YY","None"], correct: 0 }, //18
+{ question: "Female genotype:", options: ["XX","XY","YY","None"], correct: 0 }, //19
+{ question: "Variation arises due to:", options: ["DNA changes","No change","None","All"], correct: 0 }, //20
+
+{ question: "Evolution means:", options: ["Gradual change","Sudden","None","All"], correct: 0 }, //21
+{ question: "Darwin proposed:", options: ["Natural selection","Mutation","None","All"], correct: 0 }, //22
+{ question: "Survival of fittest:", options: ["Natural selection","Mutation","None","All"], correct: 0 }, //23
+{ question: "Adaptation helps:", options: ["Survival","Death","None","All"], correct: 0 }, //24
+{ question: "Fossils are:", options: ["Remains of organisms","Cells","None","All"], correct: 0 }, //25
+{ question: "Homologous organs:", options: ["Same origin","Different origin","None","All"], correct: 0 }, //26
+{ question: "Analogous organs:", options: ["Different origin","Same origin","None","All"], correct: 0 }, //27
+{ question: "Speciation means:", options: ["New species formation","Death","None","All"], correct: 0 }, //28
+{ question: "DNA full form:", options: ["Deoxyribonucleic acid","None","All","RNA"], correct: 0 }, //29
+{ question: "Mutation is:", options: ["DNA change","No change","None","All"], correct: 0 }, //30
+
+{ question: "Acquired traits:", options: ["Not inherited","Inherited","None","All"], correct: 0 }, //31
+{ question: "Inherited traits:", options: ["Passed to offspring","Not passed","None","All"], correct: 0 }, //32
+{ question: "Vestigial organs:", options: ["Reduced function","Full function","None","All"], correct: 0 }, //33
+{ question: "Appendix is:", options: ["Vestigial","Functional","None","All"], correct: 0 }, //34
+{ question: "Evolution takes:", options: ["Millions of years","Days","None","All"], correct: 0 }, //35
+{ question: "Genes control:", options: ["Traits","Food","None","All"], correct: 0 }, //36
+{ question: "Chromosomes carry:", options: ["Genes","Food","None","All"], correct: 0 }, //37
+{ question: "Natural selection favors:", options: ["Fit organisms","Weak","None","All"], correct: 0 }, //38
+{ question: "Isolation leads to:", options: ["Speciation","Death","None","All"], correct: 0 }, //39
+{ question: "Fossils found in:", options: ["Rocks","Air","Water","None"], correct: 0 }, //40
+
+{ question: "Genes made of:", options: ["DNA","Protein","None","All"], correct: 0 }, //41
+{ question: "Alleles control:", options: ["Traits","Food","None","All"], correct: 0 }, //42
+{ question: "Evolution is:", options: ["Gradual","Sudden","None","All"], correct: 0 }, //43
+{ question: "Darwin theory:", options: ["Natural selection","Mutation","None","All"], correct: 0 }, //44
+{ question: "Adaptation improves:", options: ["Survival","Death","None","All"], correct: 0 }, //45
+{ question: "Vestigial means:", options: ["Reduced","Full","None","All"], correct: 0 }, //46
+{ question: "Human evolution from:", options: ["Primates","Fish","None","All"], correct: 0 }, //47
+{ question: "Genetic variation is:", options: ["Important","Useless","None","All"], correct: 0 }, //48
+{ question: "Evolution evidence:", options: ["Fossils","DNA","Both","None"], correct: 2 }, //49
+{ question: "Mutation leads to:", options: ["Variation","No change","None","All"], correct: 0 }, //50
+
+{ question: "Assertion: Dominant trait expressed\nReason: Masks recessive", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //51
+{ question: "Assertion: Variation needed for evolution\nReason: Natural selection acts", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //52
+{ question: "Assertion: Fossils show evolution\nReason: Remains preserved", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //53
+{ question: "Assertion: Mutation causes variation\nReason: DNA changes", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //54
+{ question: "Assertion: Homologous organs show evolution\nReason: Same origin", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //55
+
+{ question: "Assertion: Analogous organs differ\nReason: Different origin", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //56
+{ question: "Assertion: Speciation forms new species\nReason: Isolation", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //57
+{ question: "Assertion: DNA carries genes\nReason: Controls traits", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //58
+{ question: "Assertion: Evolution is gradual\nReason: Changes accumulate", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //59
+{ question: "Assertion: Adaptation aids survival\nReason: Better suited", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //60
+
+{ question: "Assertion: Mendel father genetics\nReason: Studied peas", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //61
+{ question: "Assertion: XX female\nReason: XY male", options: ["Both true not explain","Both true & explains","A true R false","A false R true"], correct: 0 }, //62
+{ question: "Assertion: Genes control traits\nReason: Located on chromosomes", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //63
+{ question: "Assertion: Evolution linked heredity\nReason: Traits inherited", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //64
+{ question: "Assertion: Mutation random\nReason: DNA errors", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //65
+
+{ question: "Assertion: Fossils evidence\nReason: Show past life", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //66
+{ question: "Assertion: Variation beneficial\nReason: Survival advantage", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //67
+{ question: "Assertion: Evolution continuous\nReason: Gradual changes", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //68
+{ question: "Assertion: Homologous same origin\nReason: Different function", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //69
+{ question: "Assertion: Analogous different origin\nReason: Same function", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //70
+
+{ question: "Genes inherited from:", options: ["Parents","Friends","None","All"], correct: 0 }, //71
+{ question: "Chromosomes in humans:", options: ["46","23","None","All"], correct: 0 }, //72
+{ question: "Gametes have:", options: ["23 chromosomes","46","None","All"], correct: 0 }, //73
+{ question: "Fertilization restores:", options: ["46 chromosomes","23","None","All"], correct: 0 }, //74
+{ question: "Mutation source:", options: ["DNA errors","Food","None","All"], correct: 0 }, //75
+{ question: "Evolution studied by:", options: ["Paleontology","Physics","None","All"], correct: 0 }, //76
+{ question: "Speciation requires:", options: ["Isolation","Mixing","None","All"], correct: 0 }, //77
+{ question: "Adaptation occurs due to:", options: ["Environment","Luck","None","All"], correct: 0 }, //78
+{ question: "Traits passed via:", options: ["Genes","Food","None","All"], correct: 0 }, //79
+{ question: "Evolution depends on:", options: ["Variation","No variation","None","All"], correct: 0 } //80
+],
+
+"light-reflection-and-refraction": {
+  mcq40: [
+    // 1–40
+    { question: "Light travels in:", options: ["Straight line","Curve","Circle","None"], correct: 0 }, //1
+    { question: "Reflection occurs when:", options: ["Light bounces","Absorbed","Refracted","None"], correct: 0 }, //2
+    { question: "Angle of incidence equals:", options: ["Angle of reflection","Refraction","None","All"], correct: 0 }, //3
+    { question: "Mirror used in cars:", options: ["Convex","Concave","Plane","None"], correct: 0 }, //4
+    { question: "Concave mirror forms:", options: ["Real image","Virtual image","None","All"], correct: 0 }, //5
+    { question: "Convex mirror forms:", options: ["Virtual image","Real","None","All"], correct: 0 }, //6
+    { question: "Plane mirror forms:", options: ["Virtual image","Real","None","All"], correct: 0 }, //7
+    { question: "Focal length is distance from:", options: ["Pole to focus","Centre","None","All"], correct: 0 }, //8
+    { question: "Radius of curvature:", options: ["2f","f/2","None","All"], correct: 0 }, //9
+    { question: "Image in plane mirror:", options: ["Same size","Larger","None","All"], correct: 0 }, //10
+
+    { question: "Lateral inversion means:", options: ["Left-right reversed","Up-down","None","All"], correct: 0 }, //11
+    { question: "Refraction is:", options: ["Bending of light","Reflection","None","All"], correct: 0 }, //12
+    { question: "Speed of light highest in:", options: ["Vacuum","Water","Glass","None"], correct: 0 }, //13
+    { question: "Refractive index is:", options: ["c/v","v/c","None","All"], correct: 0 }, //14
+    { question: "Denser medium:", options: ["Lower speed","Higher speed","None","All"], correct: 0 }, //15
+    { question: "Light bends towards normal:", options: ["Denser medium","Rarer","None","All"], correct: 0 }, //16
+    { question: "Light bends away:", options: ["Rarer medium","Denser","None","All"], correct: 0 }, //17
+    { question: "Lens used in eye:", options: ["Convex","Concave","None","All"], correct: 0 }, //18
+    { question: "Convex lens forms:", options: ["Real image","Virtual","None","All"], correct: 0 }, //19
+    { question: "Concave lens forms:", options: ["Virtual image","Real","None","All"], correct: 0 }, //20
+
+    { question: "Power of lens unit:", options: ["Dioptre","Watt","Joule","None"], correct: 0 }, //21
+    { question: "1/f formula:", options: ["Lens formula","Energy","None","All"], correct: 0 }, //22
+    { question: "Image distance:", options: ["v","u","f","None"], correct: 0 }, //23
+    { question: "Object distance:", options: ["u","v","f","None"], correct: 0 }, //24
+    { question: "Magnification:", options: ["h'/h","v/u","None","All"], correct: 2 }, //25
+    { question: "Convex lens converges:", options: ["Light rays","Water","None","All"], correct: 0 }, //26
+    { question: "Concave lens diverges:", options: ["Light rays","Water","None","All"], correct: 0 }, //27
+    { question: "Real image can be:", options: ["Caught on screen","Not","None","All"], correct: 0 }, //28
+    { question: "Virtual image:", options: ["Cannot be caught","Can","None","All"], correct: 0 }, //29
+    { question: "Mirror formula:", options: ["1/f = 1/v + 1/u","None","All","v=u"], correct: 0 }, //30
+
+    { question: "Convex mirror always:", options: ["Virtual","Real","None","All"], correct: 0 }, //31
+    { question: "Concave mirror can be:", options: ["Real/Virtual","Only real","None","All"], correct: 0 }, //32
+    { question: "Refraction depends on:", options: ["Medium","Colour","Both","None"], correct: 2 }, //33
+    { question: "Optical density relates to:", options: ["Speed","Mass","None","All"], correct: 0 }, //34
+    { question: "Glass has:", options: ["High refractive index","Low","None","All"], correct: 0 }, //35
+    { question: "Water has:", options: ["Medium index","High","None","All"], correct: 0 }, //36
+    { question: "Air has:", options: ["Low index","High","None","All"], correct: 0 }, //37
+    { question: "Principal axis:", options: ["Main axis","Side","None","All"], correct: 0 }, //38
+    { question: "Focus is point where:", options: ["Rays meet","Scatter","None","All"], correct: 0 }, //39
+    { question: "Pole is:", options: ["Centre of mirror","Edge","None","All"], correct: 0 } //40
+  ],
+
+  mcq80: [
+{ question: "Light travels in:", options: ["Straight line","Curve","Circle","None"], correct: 0 }, //1
+{ question: "Law of reflection states:", options: ["i = r","i ≠ r","None","All"], correct: 0 }, //2
+{ question: "Angle of incidence equals:", options: ["Angle of reflection","Angle of refraction","None","All"], correct: 0 }, //3
+{ question: "Mirror used as rear view:", options: ["Convex","Concave","Plane","None"], correct: 0 }, //4
+{ question: "Plane mirror forms:", options: ["Virtual image","Real","None","All"], correct: 0 }, //5
+{ question: "Concave mirror can form:", options: ["Real and virtual","Only real","None","All"], correct: 0 }, //6
+{ question: "Convex mirror forms:", options: ["Virtual","Real","None","All"], correct: 0 }, //7
+{ question: "Focal length is:", options: ["Distance pole to focus","Pole to center","None","All"], correct: 0 }, //8
+{ question: "Radius of curvature:", options: ["2f","f/2","None","All"], correct: 0 }, //9
+{ question: "Image in plane mirror:", options: ["Same size","Smaller","None","All"], correct: 0 }, //10
+
+{ question: "Lateral inversion:", options: ["Left-right reversed","Up-down","None","All"], correct: 0 }, //11
+{ question: "Refraction is:", options: ["Bending of light","Reflection","None","All"], correct: 0 }, //12
+{ question: "Speed of light highest in:", options: ["Vacuum","Water","Glass","None"], correct: 0 }, //13
+{ question: "Refractive index:", options: ["c/v","v/c","None","All"], correct: 0 }, //14
+{ question: "Light bends towards normal in:", options: ["Denser medium","Rarer","None","All"], correct: 0 }, //15
+{ question: "Light bends away in:", options: ["Rarer medium","Denser","None","All"], correct: 0 }, //16
+{ question: "Convex lens is:", options: ["Converging","Diverging","None","All"], correct: 0 }, //17
+{ question: "Concave lens is:", options: ["Diverging","Converging","None","All"], correct: 0 }, //18
+{ question: "Real image is:", options: ["Can be obtained on screen","Cannot","None","All"], correct: 0 }, //19
+{ question: "Virtual image is:", options: ["Cannot be obtained","Can","None","All"], correct: 0 }, //20
+
+{ question: "Power of lens unit:", options: ["Dioptre","Watt","None","All"], correct: 0 }, //21
+{ question: "Lens formula:", options: ["1/f = 1/v + 1/u","None","All","v=u"], correct: 0 }, //22
+{ question: "Magnification formula:", options: ["v/u","u/v","None","All"], correct: 0 }, //23
+{ question: "Object distance:", options: ["u","v","f","None"], correct: 0 }, //24
+{ question: "Image distance:", options: ["v","u","f","None"], correct: 0 }, //25
+{ question: "Convex lens forms real image when:", options: ["Object beyond F","At F","None","All"], correct: 0 }, //26
+{ question: "Concave lens image:", options: ["Always virtual","Real","None","All"], correct: 0 }, //27
+{ question: "Mirror formula:", options: ["1/f = 1/v + 1/u","None","All","u=v"], correct: 0 }, //28
+{ question: "Convex mirror image:", options: ["Always virtual","Real","None","All"], correct: 0 }, //29
+{ question: "Concave mirror can give:", options: ["Real/virtual","Only real","None","All"], correct: 0 }, //30
+
+{ question: "Principal axis:", options: ["Main axis","Side axis","None","All"], correct: 0 }, //31
+{ question: "Focus is:", options: ["Point where rays meet","Scatter","None","All"], correct: 0 }, //32
+{ question: "Pole is:", options: ["Centre of mirror","Edge","None","All"], correct: 0 }, //33
+{ question: "Refraction depends on:", options: ["Medium","Colour","Both","None"], correct: 2 }, //34
+{ question: "Glass has:", options: ["High refractive index","Low","None","All"], correct: 0 }, //35
+{ question: "Air has:", options: ["Low refractive index","High","None","All"], correct: 0 }, //36
+{ question: "Water has:", options: ["Medium index","High","None","All"], correct: 0 }, //37
+{ question: "Optical density depends on:", options: ["Speed","Mass","None","All"], correct: 0 }, //38
+{ question: "Light slows in:", options: ["Denser medium","Rarer","None","All"], correct: 0 }, //39
+{ question: "Light speeds up in:", options: ["Rarer medium","Denser","None","All"], correct: 0 }, //40
+
+{ question: "Convex lens focal length:", options: ["Positive","Negative","None","All"], correct: 0 }, //41
+{ question: "Concave lens focal length:", options: ["Negative","Positive","None","All"], correct: 0 }, //42
+{ question: "Real image is:", options: ["Inverted","Upright","None","All"], correct: 0 }, //43
+{ question: "Virtual image is:", options: ["Upright","Inverted","None","All"], correct: 0 }, //44
+{ question: "Magnification positive:", options: ["Virtual image","Real","None","All"], correct: 0 }, //45
+{ question: "Magnification negative:", options: ["Real image","Virtual","None","All"], correct: 0 }, //46
+{ question: "Convex mirror field of view:", options: ["Wide","Narrow","None","All"], correct: 0 }, //47
+{ question: "Concave mirror used in:", options: ["Shaving mirror","Rear view","None","All"], correct: 0 }, //48
+{ question: "Refraction occurs due to:", options: ["Speed change","Direction","None","All"], correct: 0 }, //49
+{ question: "Light changes direction at:", options: ["Boundary","Centre","None","All"], correct: 0 }, //50
+
+{ question: "Assertion: i = r\nReason: Law of reflection", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //51
+{ question: "Assertion: Convex mirror always virtual\nReason: Diverges rays", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //52
+{ question: "Assertion: Concave mirror real image\nReason: Converges rays", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //53
+{ question: "Assertion: Refraction bends light\nReason: Speed changes", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //54
+{ question: "Assertion: Vacuum fastest\nReason: No medium", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //55
+
+{ question: "Assertion: Convex lens converges\nReason: Shape", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //56
+{ question: "Assertion: Concave lens diverges\nReason: Shape", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //57
+{ question: "Assertion: Real image forms on screen\nReason: Rays meet", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //58
+{ question: "Assertion: Virtual image cannot be caught\nReason: Rays appear", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //59
+{ question: "Assertion: Power = 1/f\nReason: Shorter f higher power", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //60
+
+{ question: "Assertion: Refractive index = c/v\nReason: Ratio of speeds", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //61
+{ question: "Assertion: Plane mirror same size\nReason: Distance equal", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //62
+{ question: "Assertion: Lens bends light\nReason: Refraction", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //63
+{ question: "Assertion: Glass denser\nReason: Slows light", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //64
+{ question: "Assertion: Air rarer\nReason: Faster speed", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //65
+
+{ question: "Assertion: Convex lens used in eye\nReason: Focus light", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //66
+{ question: "Assertion: Concave lens spreads rays\nReason: Divergence", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //67
+{ question: "Assertion: Real images inverted\nReason: Rays cross", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //68
+{ question: "Assertion: Virtual images upright\nReason: Rays don’t meet", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //69
+{ question: "Assertion: Refraction changes direction\nReason: Speed change", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //70
+
+{ question: "Convex mirror image size:", options: ["Smaller","Same","None","All"], correct: 0 }, //71
+{ question: "Concave mirror image size:", options: ["Varies","Fixed","None","All"], correct: 0 }, //72
+{ question: "Lens power sign convex:", options: ["Positive","Negative","None","All"], correct: 0 }, //73
+{ question: "Lens power sign concave:", options: ["Negative","Positive","None","All"], correct: 0 }, //74
+{ question: "Image distance sign convention:", options: ["Depends","Fixed","None","All"], correct: 0 }, //75
+{ question: "Object at infinity concave mirror:", options: ["Image at focus","Infinity","None","All"], correct: 0 }, //76
+{ question: "Object at focus concave mirror:", options: ["Image at infinity","Near","None","All"], correct: 0 }, //77
+{ question: "Convex lens at infinity:", options: ["Image at focus","Infinity","None","All"], correct: 0 }, //78
+{ question: "Refraction angle depends on:", options: ["Speed","Medium","Both","None"], correct: 2 }, //79
+{ question: "Optics studies:", options: ["Light","Sound","Heat","None"], correct: 0 } //80
+],
+
+"human-eye-and-colourful-world": {
+  mcq40: [
+    // 1–40
+    { question: "Human eye acts like:", options: ["Camera","Mirror","Lens","None"], correct: 0 }, //1
+    { question: "Image formed on:", options: ["Retina","Cornea","Lens","None"], correct: 0 }, //2
+    { question: "Retina contains:", options: ["Rods & cones","Blood","Muscles","None"], correct: 0 }, //3
+    { question: "Rods detect:", options: ["Dim light","Colour","None","All"], correct: 0 }, //4
+    { question: "Cones detect:", options: ["Colour","Dim light","None","All"], correct: 0 }, //5
+    { question: "Eye lens is:", options: ["Convex","Concave","Plane","None"], correct: 0 }, //6
+    { question: "Focal length changed by:", options: ["Ciliary muscles","Retina","None","All"], correct: 0 }, //7
+    { question: "Power of accommodation:", options: ["Adjust focal length","Fixed","None","All"], correct: 0 }, //8
+    { question: "Near point:", options: ["25 cm","Infinity","None","All"], correct: 0 }, //9
+    { question: "Far point:", options: ["Infinity","25 cm","None","All"], correct: 0 }, //10
+
+    { question: "Myopia means:", options: ["Near-sightedness","Far-sightedness","None","All"], correct: 0 }, //11
+    { question: "Myopia corrected by:", options: ["Concave lens","Convex","None","All"], correct: 0 }, //12
+    { question: "Hypermetropia means:", options: ["Far-sightedness","Near","None","All"], correct: 0 }, //13
+    { question: "Hypermetropia corrected by:", options: ["Convex lens","Concave","None","All"], correct: 0 }, //14
+    { question: "Presbyopia due to:", options: ["Age","Injury","None","All"], correct: 0 }, //15
+    { question: "Presbyopia corrected by:", options: ["Bifocal lens","Single","None","All"], correct: 0 }, //16
+    { question: "Refraction in eye occurs at:", options: ["Cornea","Retina","None","All"], correct: 0 }, //17
+    { question: "Cornea is:", options: ["Transparent","Opaque","None","All"], correct: 0 }, //18
+    { question: "Pupil controls:", options: ["Light entry","Focus","None","All"], correct: 0 }, //19
+    { question: "Iris controls:", options: ["Pupil size","Image","None","All"], correct: 0 }, //20
+
+    { question: "Blind spot:", options: ["No image formed","Image formed","None","All"], correct: 0 }, //21
+    { question: "Colour blindness:", options: ["Cone defect","Rod defect","None","All"], correct: 0 }, //22
+    { question: "Atmospheric refraction:", options: ["Bending in air","Reflection","None","All"], correct: 0 }, //23
+    { question: "Twinkling of stars due to:", options: ["Refraction","Reflection","None","All"], correct: 0 }, //24
+    { question: "Stars appear higher due to:", options: ["Refraction","Reflection","None","All"], correct: 0 }, //25
+    { question: "Sun appears earlier:", options: ["Refraction","Reflection","None","All"], correct: 0 }, //26
+    { question: "Scattering of light:", options: ["By particles","By mirror","None","All"], correct: 0 }, //27
+    { question: "Sky appears blue due to:", options: ["Scattering","Reflection","None","All"], correct: 0 }, //28
+    { question: "Red light least scattered:", options: ["Yes","No","None","All"], correct: 0 }, //29
+    { question: "Tyndall effect:", options: ["Scattering","Reflection","None","All"], correct: 0 }, //30
+
+    { question: "White light is:", options: ["Combination of colours","Single","None","All"], correct: 0 }, //31
+    { question: "Spectrum formed by:", options: ["Prism","Mirror","None","All"], correct: 0 }, //32
+    { question: "Rainbow formed by:", options: ["Refraction + reflection","Only reflection","None","All"], correct: 0 }, //33
+    { question: "Dispersion is:", options: ["Splitting of light","Reflection","None","All"], correct: 0 }, //34
+    { question: "VIBGYOR means:", options: ["Colours","Waves","None","All"], correct: 0 }, //35
+    { question: "Red has:", options: ["Longest wavelength","Shortest","None","All"], correct: 0 }, //36
+    { question: "Violet has:", options: ["Shortest wavelength","Longest","None","All"], correct: 0 }, //37
+    { question: "Danger signal red:", options: ["Least scattering","Most","None","All"], correct: 0 }, //38
+    { question: "Eye lens forms:", options: ["Real inverted image","Virtual","None","All"], correct: 0 }, //39
+    { question: "Brain interprets image:", options: ["Upright","Inverted","None","All"], correct: 0 } //40
+  ],
+
+  mcq80: [
+{ question: "Human eye works like:", options: ["Camera","Mirror","Prism","None"], correct: 0 }, //1
+{ question: "Image is formed on:", options: ["Retina","Cornea","Lens","Iris"], correct: 0 }, //2
+{ question: "Retina contains:", options: ["Rods and cones","Blood","Muscles","None"], correct: 0 }, //3
+{ question: "Rods help in:", options: ["Dim light vision","Colour vision","Both","None"], correct: 0 }, //4
+{ question: "Cones help in:", options: ["Colour vision","Night vision","Both","None"], correct: 0 }, //5
+{ question: "Eye lens is:", options: ["Convex","Concave","Plane","None"], correct: 0 }, //6
+{ question: "Image formed is:", options: ["Real inverted","Virtual","Upright","None"], correct: 0 }, //7
+{ question: "Brain sees image as:", options: ["Upright","Inverted","Same","None"], correct: 0 }, //8
+{ question: "Near point:", options: ["25 cm","50 cm","Infinity","None"], correct: 0 }, //9
+{ question: "Far point:", options: ["Infinity","25 cm","50 cm","None"], correct: 0 }, //10
+
+{ question: "Myopia is:", options: ["Near-sightedness","Far-sightedness","Blindness","None"], correct: 0 }, //11
+{ question: "Myopia corrected by:", options: ["Concave lens","Convex","Plane","None"], correct: 0 }, //12
+{ question: "Hypermetropia is:", options: ["Far-sightedness","Near","Blindness","None"], correct: 0 }, //13
+{ question: "Hypermetropia corrected by:", options: ["Convex lens","Concave","Plane","None"], correct: 0 }, //14
+{ question: "Presbyopia occurs due to:", options: ["Age","Injury","Infection","None"], correct: 0 }, //15
+{ question: "Presbyopia corrected by:", options: ["Bifocal lens","Concave","Convex","None"], correct: 0 }, //16
+{ question: "Ciliary muscles control:", options: ["Focal length","Retina","Pupil","None"], correct: 0 }, //17
+{ question: "Iris controls:", options: ["Pupil size","Retina","Lens","None"], correct: 0 }, //18
+{ question: "Pupil controls:", options: ["Light entry","Focus","Image","None"], correct: 0 }, //19
+{ question: "Blind spot has:", options: ["No rods/cones","Full vision","Extra light","None"], correct: 0 }, //20
+
+{ question: "Colour blindness due to:", options: ["Cone defect","Rod defect","Retina","None"], correct: 0 }, //21
+{ question: "Atmospheric refraction is:", options: ["Bending in air","Reflection","Absorption","None"], correct: 0 }, //22
+{ question: "Twinkling of stars due to:", options: ["Refraction","Reflection","Scattering","None"], correct: 0 }, //23
+{ question: "Stars appear higher due to:", options: ["Refraction","Reflection","Dispersion","None"], correct: 0 }, //24
+{ question: "Sun appears early due to:", options: ["Refraction","Reflection","None","All"], correct: 0 }, //25
+{ question: "Scattering occurs due to:", options: ["Particles","Mirrors","Lenses","None"], correct: 0 }, //26
+{ question: "Sky appears blue due to:", options: ["Scattering","Reflection","Refraction","None"], correct: 0 }, //27
+{ question: "Red light is:", options: ["Least scattered","Most scattered","Equal","None"], correct: 0 }, //28
+{ question: "Tyndall effect:", options: ["Scattering","Reflection","Absorption","None"], correct: 0 }, //29
+{ question: "White light is:", options: ["Combination of colours","Single","None","All"], correct: 0 }, //30
+
+{ question: "Prism forms:", options: ["Spectrum","Image","Reflection","None"], correct: 0 }, //31
+{ question: "Dispersion is:", options: ["Splitting of light","Reflection","Refraction","None"], correct: 0 }, //32
+{ question: "Rainbow formed by:", options: ["Refraction + reflection","Only reflection","None","All"], correct: 0 }, //33
+{ question: "VIBGYOR represents:", options: ["Colours","Waves","Rays","None"], correct: 0 }, //34
+{ question: "Red has:", options: ["Longest wavelength","Shortest","Equal","None"], correct: 0 }, //35
+{ question: "Violet has:", options: ["Shortest wavelength","Longest","Equal","None"], correct: 0 }, //36
+{ question: "Danger signals red:", options: ["Least scattering","Most","Equal","None"], correct: 0 }, //37
+{ question: "Refraction occurs at:", options: ["Cornea","Retina","Iris","None"], correct: 0 }, //38
+{ question: "Accommodation:", options: ["Adjust focus","Fixed","None","All"], correct: 0 }, //39
+{ question: "Lens changes shape due to:", options: ["Muscles","Retina","Iris","None"], correct: 0 }, //40
+
+// ASSERTION (41–80)
+{ question: "Assertion: Myopia near vision\nReason: Image forms before retina", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //41
+{ question: "Assertion: Hypermetropia far vision\nReason: Image forms behind retina", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //42
+{ question: "Assertion: Presbyopia age defect\nReason: Muscles weaken", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //43
+{ question: "Assertion: Twinkling due to refraction\nReason: Atmosphere varies", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //44
+{ question: "Assertion: Sky blue\nReason: Scattering", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //45
+
+{ question: "Assertion: Red least scattered\nReason: Long wavelength", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //46
+{ question: "Assertion: Prism splits light\nReason: Dispersion", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //47
+{ question: "Assertion: Retina forms image\nReason: Has rods/cones", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //48
+{ question: "Assertion: Iris controls pupil\nReason: Adjusts light", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //49
+{ question: "Assertion: Cornea refracts\nReason: Curved surface", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //50
+
+{ question: "Assertion: Eye lens convex\nReason: Converges rays", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //51
+{ question: "Assertion: Real image inverted\nReason: Rays cross", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //52
+{ question: "Assertion: Brain sees upright\nReason: Interprets signals", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //53
+{ question: "Assertion: Scattering causes colour\nReason: Wavelength differs", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //54
+{ question: "Assertion: Rainbow forms\nReason: Refraction & reflection", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //55
+
+{ question: "Assertion: White light many colours\nReason: Spectrum", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //56
+{ question: "Assertion: Tyndall effect scattering\nReason: Small particles", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //57
+{ question: "Assertion: Near point 25 cm\nReason: Normal eye", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //58
+{ question: "Assertion: Far point infinity\nReason: Relaxed eye", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //59
+{ question: "Assertion: Accommodation adjusts focus\nReason: Lens changes", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //60
+
+{ question: "Eye defect near point:", options: ["Myopia","Hypermetropia","None","All"], correct: 0 }, //61
+{ question: "Eye defect far point:", options: ["Hypermetropia","Myopia","None","All"], correct: 0 }, //62
+{ question: "Presbyopia affects:", options: ["Old people","Children","None","All"], correct: 0 }, //63
+{ question: "Retina rods function:", options: ["Night vision","Colour","None","All"], correct: 0 }, //64
+{ question: "Retina cones function:", options: ["Colour","Night","None","All"], correct: 0 }, //65
+
+{ question: "Blue light scattering:", options: ["More","Less","Equal","None"], correct: 0 }, //66
+{ question: "Red light scattering:", options: ["Least","Most","Equal","None"], correct: 0 }, //67
+{ question: "Atmosphere density varies:", options: ["Yes","No","None","All"], correct: 0 }, //68
+{ question: "Twinkling happens for:", options: ["Stars","Planets","None","All"], correct: 0 }, //69
+{ question: "Planets do not twinkle:", options: ["Yes","No","None","All"], correct: 0 }, //70
+
+{ question: "Sun appears red at sunset:", options: ["Scattering","Reflection","None","All"], correct: 0 }, //71
+{ question: "Rainbow has colours:", options: ["7","5","3","None"], correct: 0 }, //72
+{ question: "Prism disperses:", options: ["White light","Red","None","All"], correct: 0 }, //73
+{ question: "Eye lens forms:", options: ["Real image","Virtual","None","All"], correct: 0 }, //74
+{ question: "Brain makes image:", options: ["Upright","Inverted","None","All"], correct: 0 }, //75
+
+{ question: "Iris adjusts:", options: ["Light","Image","None","All"], correct: 0 }, //76
+{ question: "Pupil size changes:", options: ["Yes","No","None","All"], correct: 0 }, //77
+{ question: "Refraction in eye:", options: ["Cornea","Lens","Both","None"], correct: 2 }, //78
+{ question: "Human eye sensitive organ:", options: ["Yes","No","None","All"], correct: 0 }, //79
+{ question: "Optics deals with:", options: ["Light","Sound","Heat","None"], correct: 0 } //80
+],
+
+"electricity": {
+  mcq40: [
+    { question: "Electric current is flow of:", options: ["Charge","Energy","Mass","None"], correct: 0 },
+    { question: "SI unit of current:", options: ["Ampere","Volt","Ohm","None"], correct: 0 },
+    { question: "Current formula:", options: ["I = Q/t","V = IR","R = V/I","None"], correct: 0 },
+    { question: "Charge unit:", options: ["Coulomb","Ampere","Volt","None"], correct: 0 },
+    { question: "Potential difference unit:", options: ["Volt","Ampere","Ohm","None"], correct: 0 },
+
+    { question: "Ohm’s law is:", options: ["V = IR","I = V/R","R = V/I","All"], correct: 3 },
+    { question: "Resistance unit:", options: ["Ohm","Volt","Ampere","None"], correct: 0 },
+    { question: "Resistance depends on:", options: ["Length","Area","Material","All"], correct: 3 },
+    { question: "Resistance ∝ length:", options: ["Direct","Inverse","None","All"], correct: 0 },
+    { question: "Resistance ∝ area:", options: ["Inverse","Direct","None","All"], correct: 0 },
+
+    { question: "Resistivity depends on:", options: ["Material","Length","Area","None"], correct: 0 },
+    { question: "Resistivity unit:", options: ["Ohm m","Volt","Ampere","None"], correct: 0 },
+    { question: "Series circuit current:", options: ["Same","Different","Zero","None"], correct: 0 },
+    { question: "Parallel circuit voltage:", options: ["Same","Different","Zero","None"], correct: 0 },
+    { question: "Series resistance:", options: ["Add","Subtract","Multiply","None"], correct: 0 },
+
+    { question: "Parallel resistance formula:", options: ["1/R = sum","R add","None","All"], correct: 0 },
+    { question: "Ammeter measures:", options: ["Current","Voltage","Resistance","None"], correct: 0 },
+    { question: "Voltmeter measures:", options: ["Voltage","Current","Resistance","None"], correct: 0 },
+    { question: "Ammeter connected in:", options: ["Series","Parallel","None","All"], correct: 0 },
+    { question: "Voltmeter connected in:", options: ["Parallel","Series","None","All"], correct: 0 },
+
+    { question: "Electric power formula:", options: ["P = VI","V = IR","I = Q/t","None"], correct: 0 },
+    { question: "Power unit:", options: ["Watt","Volt","Ampere","None"], correct: 0 },
+    { question: "1 kW equals:", options: ["1000 W","100 W","10 W","None"], correct: 0 },
+    { question: "Electrical energy formula:", options: ["P × t","V × I","None","All"], correct: 0 },
+    { question: "Energy unit:", options: ["kWh","W","V","None"], correct: 0 },
+
+    { question: "1 kWh equals:", options: ["3.6 × 10^6 J","1000 J","3600 J","None"], correct: 0 },
+    { question: "Heating effect of current:", options: ["Joule heating","Cooling","None","All"], correct: 0 },
+    { question: "Heat formula:", options: ["H = I²Rt","VIt","None","All"], correct: 0 },
+    { question: "Fuse works on:", options: ["Heating effect","Cooling","None","All"], correct: 0 },
+    { question: "Fuse material:", options: ["Low melting point","High","None","All"], correct: 0 },
+
+    { question: "Domestic voltage in India:", options: ["220V","110V","440V","None"], correct: 0 },
+    { question: "Electric current direction:", options: ["+ to -","- to +","None","All"], correct: 0 },
+    { question: "Electron flow:", options: ["- to +","+ to -","None","All"], correct: 0 },
+    { question: "Short circuit means:", options: ["Low resistance path","High resistance","None","All"], correct: 0 },
+    { question: "Overloading means:", options: ["Excess current","Low current","None","All"], correct: 0 },
+
+    { question: "Conductor example:", options: ["Copper","Plastic","Rubber","None"], correct: 0 },
+    { question: "Insulator example:", options: ["Plastic","Copper","Iron","None"], correct: 0 },
+    { question: "Nichrome used in:", options: ["Heaters","Fans","None","All"], correct: 0 },
+    { question: "Switch connected in:", options: ["Series","Parallel","None","All"], correct: 0 },
+    { question: "Electric circuit is:", options: ["Closed path","Open path","None","All"], correct: 0 }
+  ],
+
+  mcq80: [
+{ question: "Electric current is flow of:", options: ["Charge","Energy","Mass","None"], correct: 0 }, //1
+{ question: "SI unit of current:", options: ["Ampere","Volt","Ohm","None"], correct: 0 }, //2
+{ question: "Current formula:", options: ["I = Q/t","V = IR","R = V/I","None"], correct: 0 }, //3
+{ question: "Charge unit:", options: ["Coulomb","Ampere","Volt","None"], correct: 0 }, //4
+{ question: "Potential difference unit:", options: ["Volt","Ampere","Ohm","None"], correct: 0 }, //5
+
+{ question: "Ohm’s law:", options: ["V = IR","I = V/R","R = V/I","All"], correct: 3 }, //6
+{ question: "Resistance unit:", options: ["Ohm","Volt","Ampere","None"], correct: 0 }, //7
+{ question: "Resistance depends on:", options: ["Length","Area","Material","All"], correct: 3 }, //8
+{ question: "Resistance ∝ length:", options: ["Direct","Inverse","None","All"], correct: 0 }, //9
+{ question: "Resistance ∝ area:", options: ["Inverse","Direct","None","All"], correct: 0 }, //10
+
+{ question: "Resistivity depends on:", options: ["Material","Length","Area","None"], correct: 0 }, //11
+{ question: "Resistivity unit:", options: ["Ohm m","Volt","Ampere","None"], correct: 0 }, //12
+{ question: "Series circuit current:", options: ["Same","Different","Zero","None"], correct: 0 }, //13
+{ question: "Parallel circuit voltage:", options: ["Same","Different","Zero","None"], correct: 0 }, //14
+{ question: "Series resistance:", options: ["Add","Subtract","Multiply","None"], correct: 0 }, //15
+
+{ question: "Parallel resistance:", options: ["1/R = sum","R add","None","All"], correct: 0 }, //16
+{ question: "Ammeter measures:", options: ["Current","Voltage","Resistance","None"], correct: 0 }, //17
+{ question: "Voltmeter measures:", options: ["Voltage","Current","Resistance","None"], correct: 0 }, //18
+{ question: "Ammeter connected:", options: ["Series","Parallel","None","All"], correct: 0 }, //19
+{ question: "Voltmeter connected:", options: ["Parallel","Series","None","All"], correct: 0 }, //20
+
+{ question: "Electric power formula:", options: ["P = VI","V = IR","I = Q/t","None"], correct: 0 }, //21
+{ question: "Power unit:", options: ["Watt","Volt","Ampere","None"], correct: 0 }, //22
+{ question: "1 kW =:", options: ["1000 W","100 W","10 W","None"], correct: 0 }, //23
+{ question: "Electrical energy:", options: ["P × t","V × I","None","All"], correct: 0 }, //24
+{ question: "Energy unit:", options: ["kWh","W","V","None"], correct: 0 }, //25
+
+{ question: "1 kWh =:", options: ["3.6 × 10^6 J","1000 J","3600 J","None"], correct: 0 }, //26
+{ question: "Heating effect:", options: ["Joule heating","Cooling","None","All"], correct: 0 }, //27
+{ question: "Heat formula:", options: ["H = I²Rt","VIt","None","All"], correct: 0 }, //28
+{ question: "Fuse works on:", options: ["Heating","Cooling","None","All"], correct: 0 }, //29
+{ question: "Fuse material:", options: ["Low melting point","High","None","All"], correct: 0 }, //30
+
+{ question: "Domestic voltage India:", options: ["220V","110V","440V","None"], correct: 0 }, //31
+{ question: "Electricity is dangerous due to:", options: ["High current","Low current","None","All"], correct: 0 }, //32
+{ question: "Switch connected in:", options: ["Series","Parallel","None","All"], correct: 0 }, //33
+{ question: "Electric current direction:", options: ["+ to -","- to +","None","All"], correct: 0 }, //34
+{ question: "Electron flow:", options: ["- to +","+ to -","None","All"], correct: 0 }, //35
+
+{ question: "Short circuit:", options: ["Low resistance path","High resistance","None","All"], correct: 0 }, //36
+{ question: "Overloading:", options: ["Too much current","Low current","None","All"], correct: 0 }, //37
+{ question: "Insulator example:", options: ["Plastic","Copper","Iron","None"], correct: 0 }, //38
+{ question: "Conductor example:", options: ["Copper","Plastic","Rubber","None"], correct: 0 }, //39
+{ question: "Nichrome used in:", options: ["Heaters","Fans","None","All"], correct: 0 }, //40
+
+// ASSERTION (41–80)
+{ question: "Assertion: Current = Q/t\nReason: Flow of charge", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //41
+{ question: "Assertion: V = IR\nReason: Ohm’s law", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //42
+{ question: "Assertion: Resistance ∝ length\nReason: Longer path", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //43
+{ question: "Assertion: Resistance ∝ 1/area\nReason: More area less resistance", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //44
+{ question: "Assertion: Series current same\nReason: One path", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //45
+
+{ question: "Assertion: Parallel voltage same\nReason: Same endpoints", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //46
+{ question: "Assertion: Ammeter series\nReason: Measures current", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //47
+{ question: "Assertion: Voltmeter parallel\nReason: Measures voltage", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //48
+{ question: "Assertion: P = VI\nReason: Power formula", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //49
+{ question: "Assertion: Energy = Pt\nReason: Work done", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //50
+
+{ question: "Assertion: Fuse melts\nReason: Heating effect", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //51
+{ question: "Assertion: Nichrome used heaters\nReason: High resistance", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //52
+{ question: "Assertion: Short circuit dangerous\nReason: High current", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //53
+{ question: "Assertion: Overloading dangerous\nReason: Excess current", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //54
+{ question: "Assertion: Copper good conductor\nReason: Low resistance", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //55
+
+{ question: "Assertion: Plastic insulator\nReason: High resistance", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //56
+{ question: "Assertion: Current needs circuit\nReason: Closed path", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //57
+{ question: "Assertion: Switch breaks circuit\nReason: Stops current", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //58
+{ question: "Assertion: Power unit watt\nReason: Energy rate", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //59
+{ question: "Assertion: 1 kWh large energy\nReason: 3.6×10^6 J", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //60
+
+{ question: "Series total resistance:", options: ["Increases","Decreases","Same","None"], correct: 0 }, //61
+{ question: "Parallel total resistance:", options: ["Decreases","Increases","Same","None"], correct: 0 }, //62
+{ question: "Thick wire resistance:", options: ["Less","More","Same","None"], correct: 0 }, //63
+{ question: "Long wire resistance:", options: ["More","Less","Same","None"], correct: 0 }, //64
+{ question: "High voltage dangerous:", options: ["Yes","No","None","All"], correct: 0 }, //65
+
+{ question: "Fuse in circuit:", options: ["Series","Parallel","None","All"], correct: 0 }, //66
+{ question: "Heating effect used in:", options: ["Heater","Fan","None","All"], correct: 0 }, //67
+{ question: "Electricity cost unit:", options: ["kWh","W","V","None"], correct: 0 }, //68
+{ question: "Power increases with:", options: ["Current","Resistance","None","All"], correct: 0 }, //69
+{ question: "Low resistance wire:", options: ["Good conductor","Insulator","None","All"], correct: 0 }, //70
+
+{ question: "Current measured by:", options: ["Ammeter","Voltmeter","None","All"], correct: 0 }, //71
+{ question: "Voltage measured by:", options: ["Voltmeter","Ammeter","None","All"], correct: 0 }, //72
+{ question: "Ohm’s law valid for:", options: ["Ohmic conductor","Non-ohmic","None","All"], correct: 0 }, //73
+{ question: "Electricity flow needs:", options: ["Closed circuit","Open","None","All"], correct: 0 }, //74
+{ question: "Battery provides:", options: ["Voltage","Current","None","All"], correct: 0 }, //75
+
+{ question: "Electric circuit is:", options: ["Path of current","Device","None","All"], correct: 0 }, //76
+{ question: "Current is scalar:", options: ["Yes","No","None","All"], correct: 0 }, //77
+{ question: "Resistance opposes:", options: ["Current","Voltage","None","All"], correct: 0 }, //78
+{ question: "Energy used depends on:", options: ["Power & time","Only power","None","All"], correct: 0 }, //79
+{ question: "Electricity chapter is:", options: ["Numerical heavy","Theory only","None","All"], correct: 0 } //80
+],
+
+"magnetic-effects-of-electric-current": {
+  mcq40: [
+    { question: "Magnetic field is produced by:", options: ["Current","Voltage","Resistance","None"], correct: 0 },
+    { question: "SI unit of magnetic field:", options: ["Tesla","Ampere","Volt","None"], correct: 0 },
+    { question: "Magnetic field around wire:", options: ["Circular","Straight","Random","None"], correct: 0 },
+    { question: "Right hand thumb rule gives:", options: ["Direction of field","Current","Voltage","None"], correct: 0 },
+    { question: "Field lines direction:", options: ["N to S outside","S to N","None","All"], correct: 0 },
+
+    { question: "Field lines form:", options: ["Closed loops","Open","None","All"], correct: 0 },
+    { question: "Stronger field means:", options: ["Closer lines","Far lines","None","All"], correct: 0 },
+    { question: "Solenoid produces:", options: ["Uniform field","Non-uniform","None","All"], correct: 0 },
+    { question: "Inside solenoid:", options: ["Strong field","Weak","None","All"], correct: 0 },
+    { question: "Solenoid behaves like:", options: ["Bar magnet","Wire","None","All"], correct: 0 },
+
+    { question: "Electromagnet core:", options: ["Soft iron","Steel","Plastic","None"], correct: 0 },
+    { question: "Electromagnet strength depends on:", options: ["Current","Turns","Core","All"], correct: 3 },
+    { question: "Permanent magnet made of:", options: ["Steel","Iron","Plastic","None"], correct: 0 },
+    { question: "Magnetic field lines never:", options: ["Intersect","Curve","Close","None"], correct: 0 },
+    { question: "Compass shows:", options: ["Field direction","Voltage","None","All"], correct: 0 },
+
+    { question: "Force on current conductor:", options: ["Magnetic force","Electric","None","All"], correct: 0 },
+    { question: "Fleming left hand rule:", options: ["Force direction","Current","None","All"], correct: 0 },
+    { question: "Motor converts:", options: ["Electrical to mechanical","Mechanical to electrical","None","All"], correct: 0 },
+    { question: "Electric motor uses:", options: ["Magnetic effect","Heating","None","All"], correct: 0 },
+    { question: "Split ring reverses:", options: ["Current direction","Voltage","None","All"], correct: 0 },
+
+    { question: "Generator converts:", options: ["Mechanical to electrical","Electrical to mechanical","None","All"], correct: 0 },
+    { question: "Fleming right hand rule:", options: ["Induced current","Force","None","All"], correct: 0 },
+    { question: "Electromagnetic induction:", options: ["Current induced","No current","None","All"], correct: 0 },
+    { question: "Induced current depends on:", options: ["Magnetic field change","No change","None","All"], correct: 0 },
+    { question: "AC current:", options: ["Changes direction","Constant","None","All"], correct: 0 },
+
+    { question: "DC current:", options: ["One direction","Alternating","None","All"], correct: 0 },
+    { question: "Domestic supply:", options: ["AC","DC","None","All"], correct: 0 },
+    { question: "Frequency India:", options: ["50 Hz","60 Hz","100 Hz","None"], correct: 0 },
+    { question: "Magnetic field stronger when:", options: ["More current","Less current","None","All"], correct: 0 },
+    { question: "Field around straight wire:", options: ["Circular","Linear","None","All"], correct: 0 },
+
+    { question: "Direction found by:", options: ["Right hand rule","Left hand","None","All"], correct: 0 },
+    { question: "Motor rule:", options: ["Left hand rule","Right hand","None","All"], correct: 0 },
+    { question: "Generator rule:", options: ["Right hand rule","Left hand","None","All"], correct: 0 },
+    { question: "Magnetic field lines density:", options: ["Strength","Voltage","None","All"], correct: 0 },
+    { question: "Field near wire:", options: ["Stronger","Weaker","None","All"], correct: 0 },
+
+    { question: "Solenoid polarity:", options: ["Like magnet","None","All","Different"], correct: 0 },
+    { question: "Electric fuse works on:", options: ["Heating","Magnetism","None","All"], correct: 0 },
+    { question: "Electromagnet used in:", options: ["Cranes","Fans","None","All"], correct: 0 },
+    { question: "Magnetic field around coil:", options: ["Like bar magnet","Random","None","All"], correct: 0 },
+    { question: "Magnetic field lines show:", options: ["Direction & strength","Only direction","None","All"], correct: 0 }
+  ],
+
+  mcq80: [
+{ question: "Magnetic field is produced by:", options: ["Electric current","Voltage","Resistance","None"], correct: 0 }, //1
+{ question: "SI unit of magnetic field:", options: ["Tesla","Ampere","Volt","None"], correct: 0 }, //2
+{ question: "Magnetic field lines around wire:", options: ["Circular","Straight","Random","None"], correct: 0 }, //3
+{ question: "Right hand thumb rule gives:", options: ["Direction of magnetic field","Current","Voltage","None"], correct: 0 }, //4
+{ question: "Magnetic field lines outside magnet:", options: ["N to S","S to N","None","All"], correct: 0 }, //5
+
+{ question: "Magnetic field lines form:", options: ["Closed loops","Open lines","None","All"], correct: 0 }, //6
+{ question: "Stronger field has:", options: ["Closer lines","Far lines","None","All"], correct: 0 }, //7
+{ question: "Solenoid produces:", options: ["Uniform magnetic field","Non-uniform","None","All"], correct: 0 }, //8
+{ question: "Inside solenoid field:", options: ["Strong","Weak","None","All"], correct: 0 }, //9
+{ question: "Solenoid behaves like:", options: ["Bar magnet","Wire","None","All"], correct: 0 }, //10
+
+{ question: "Core of electromagnet:", options: ["Soft iron","Steel","Plastic","None"], correct: 0 }, //11
+{ question: "Strength of electromagnet depends on:", options: ["Current","Turns","Core","All"], correct: 3 }, //12
+{ question: "Permanent magnet made of:", options: ["Steel","Iron","Plastic","None"], correct: 0 }, //13
+{ question: "Magnetic field lines never:", options: ["Intersect","Curve","Close","None"], correct: 0 }, //14
+{ question: "Compass shows:", options: ["Magnetic field direction","Voltage","None","All"], correct: 0 }, //15
+
+{ question: "Force on current-carrying conductor:", options: ["Magnetic force","Electric","None","All"], correct: 0 }, //16
+{ question: "Fleming’s left hand rule gives:", options: ["Force direction","Current","None","All"], correct: 0 }, //17
+{ question: "Electric motor converts:", options: ["Electrical to mechanical","Mechanical to electrical","None","All"], correct: 0 }, //18
+{ question: "Motor works on:", options: ["Magnetic effect","Heating","None","All"], correct: 0 }, //19
+{ question: "Split ring reverses:", options: ["Current direction","Voltage","None","All"], correct: 0 }, //20
+
+{ question: "Electric generator converts:", options: ["Mechanical to electrical","Electrical to mechanical","None","All"], correct: 0 }, //21
+{ question: "Fleming’s right hand rule gives:", options: ["Induced current direction","Force","None","All"], correct: 0 }, //22
+{ question: "Electromagnetic induction is:", options: ["Production of current","No current","None","All"], correct: 0 }, //23
+{ question: "Induced current depends on:", options: ["Change in magnetic field","Constant field","None","All"], correct: 0 }, //24
+{ question: "AC current:", options: ["Changes direction","Constant","None","All"], correct: 0 }, //25
+
+{ question: "DC current:", options: ["Single direction","Alternating","None","All"], correct: 0 }, //26
+{ question: "Domestic supply is:", options: ["AC","DC","None","All"], correct: 0 }, //27
+{ question: "Frequency in India:", options: ["50 Hz","60 Hz","100 Hz","None"], correct: 0 }, //28
+{ question: "Magnetic field strength increases with:", options: ["Current","Distance","None","All"], correct: 0 }, //29
+{ question: "Field near conductor is:", options: ["Strong","Weak","None","All"], correct: 0 }, //30
+
+{ question: "Direction of field found by:", options: ["Right hand thumb rule","Left hand","None","All"], correct: 0 }, //31
+{ question: "Motor rule:", options: ["Left hand rule","Right hand","None","All"], correct: 0 }, //32
+{ question: "Generator rule:", options: ["Right hand rule","Left hand","None","All"], correct: 0 }, //33
+{ question: "Magnetic field density shows:", options: ["Strength","Voltage","None","All"], correct: 0 }, //34
+{ question: "Field decreases with:", options: ["Distance","Current","None","All"], correct: 0 }, //35
+
+{ question: "Electromagnet used in:", options: ["Cranes","Fans","None","All"], correct: 0 }, //36
+{ question: "Magnetic field around coil:", options: ["Like bar magnet","Random","None","All"], correct: 0 }, //37
+{ question: "Magnetic field lines show:", options: ["Direction and strength","Only direction","None","All"], correct: 0 }, //38
+{ question: "Magnetic field is vector:", options: ["Yes","No","None","All"], correct: 0 }, //39
+{ question: "Electric current produces:", options: ["Magnetic field","Heat only","None","All"], correct: 0 }, //40
+
+// ASSERTION (41–80)
+{ question: "Assertion: Current produces magnetic field\nReason: Moving charges create field", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //41
+{ question: "Assertion: Field lines closed\nReason: No start or end", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //42
+{ question: "Assertion: Solenoid acts like magnet\nReason: Circular loops", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //43
+{ question: "Assertion: Motor rotates\nReason: Magnetic force", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //44
+{ question: "Assertion: Generator produces current\nReason: Induction", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //45
+
+{ question: "Assertion: AC changes direction\nReason: Alternating supply", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //46
+{ question: "Assertion: DC constant direction\nReason: Battery source", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //47
+{ question: "Assertion: Field stronger near wire\nReason: Distance effect", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //48
+{ question: "Assertion: Electromagnet strength increases\nReason: More current", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //49
+{ question: "Assertion: Field lines closer\nReason: Stronger field", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //50
+
+{ question: "Assertion: Right hand rule works\nReason: Direction relation", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //51
+{ question: "Assertion: Left hand rule used motor\nReason: Force direction", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //52
+{ question: "Assertion: Magnetic field vector\nReason: Has direction", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //53
+{ question: "Assertion: Compass aligns field\nReason: Magnetic needle", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //54
+{ question: "Assertion: Solenoid uniform field\nReason: Parallel lines", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //55
+
+{ question: "Assertion: Generator mechanical input\nReason: Induced current", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //56
+{ question: "Assertion: Motor electrical input\nReason: Force produced", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //57
+{ question: "Assertion: Magnetic lines never intersect\nReason: Unique direction", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //58
+{ question: "Assertion: Strong field closer lines\nReason: Density shows strength", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //59
+{ question: "Assertion: Induction needs change\nReason: Constant field no current", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //60
+
+{ question: "Electromagnet is:", options: ["Temporary magnet","Permanent","None","All"], correct: 0 }, //61
+{ question: "Permanent magnet:", options: ["Steel","Iron","None","All"], correct: 0 }, //62
+{ question: "Magnetic field unit:", options: ["Tesla","Volt","Ampere","None"], correct: 0 }, //63
+{ question: "Motor energy output:", options: ["Mechanical","Electrical","None","All"], correct: 0 }, //64
+{ question: "Generator output:", options: ["Electrical","Mechanical","None","All"], correct: 0 }, //65
+
+{ question: "Right hand rule used for:", options: ["Field direction","Force","None","All"], correct: 0 }, //66
+{ question: "Left hand rule used for:", options: ["Force direction","Field","None","All"], correct: 0 }, //67
+{ question: "Magnetic field lines never:", options: ["Intersect","Curve","None","All"], correct: 0 }, //68
+{ question: "Solenoid polarity:", options: ["Like bar magnet","Different","None","All"], correct: 0 }, //69
+{ question: "Electromagnet strength increases with:", options: ["Current","Turns","Core","All"], correct: 3 }, //70
+
+{ question: "Magnetic field due to current is:", options: ["Yes","No","None","All"], correct: 0 }, //71
+{ question: "Field stronger when current increases:", options: ["Yes","No","None","All"], correct: 0 }, //72
+{ question: "AC frequency India:", options: ["50 Hz","60 Hz","None","All"], correct: 0 }, //73
+{ question: "Electromagnetic induction discovered by:", options: ["Faraday","Newton","Ohm","None"], correct: 0 }, //74
+{ question: "Magnetic field around wire shape:", options: ["Circular","Linear","None","All"], correct: 0 }, //75
+
+{ question: "Electric motor uses:", options: ["Magnetic effect","Heating","None","All"], correct: 0 }, //76
+{ question: "Generator uses:", options: ["Induction","Heating","None","All"], correct: 0 }, //77
+{ question: "Magnetic field is strongest:", options: ["Near wire","Far","None","All"], correct: 0 }, //78
+{ question: "Compass needle aligns:", options: ["Field direction","Voltage","None","All"], correct: 0 }, //79
+{ question: "Magnetism chapter type:", options: ["Conceptual","Numerical","None","All"], correct: 0 } //80
+],
+
+"our-enviornment": {
+  mcq40: [
+{ question: "Environment includes:", options: ["Biotic & abiotic","Only plants","Only animals","None"], correct: 0 }, //1
+{ question: "Biotic components are:", options: ["Living","Non-living","Both","None"], correct: 0 }, //2
+{ question: "Abiotic components are:", options: ["Non-living","Living","Both","None"], correct: 0 }, //3
+{ question: "Ecosystem is:", options: ["Interaction of living & non-living","Only plants","None","All"], correct: 0 }, //4
+{ question: "Example of ecosystem:", options: ["Forest","Pond","Desert","All"], correct: 3 }, //5
+
+{ question: "Producers are:", options: ["Plants","Animals","Decomposers","None"], correct: 0 }, //6
+{ question: "Consumers are:", options: ["Animals","Plants","Bacteria","None"], correct: 0 }, //7
+{ question: "Decomposers are:", options: ["Bacteria & fungi","Plants","Animals","None"], correct: 0 }, //8
+{ question: "Food chain shows:", options: ["Energy flow","Water flow","None","All"], correct: 0 }, //9
+{ question: "Food web is:", options: ["Network of food chains","Single chain","None","All"], correct: 0 }, //10
+
+{ question: "Trophic level means:", options: ["Position in food chain","Type of food","None","All"], correct: 0 }, //11
+{ question: "First trophic level:", options: ["Producers","Consumers","Decomposers","None"], correct: 0 }, //12
+{ question: "Second trophic level:", options: ["Primary consumers","Producers","None","All"], correct: 0 }, //13
+{ question: "Top consumers are:", options: ["Tertiary consumers","Primary","None","All"], correct: 0 }, //14
+{ question: "Energy flow is:", options: ["Unidirectional","Bidirectional","None","All"], correct: 0 }, //15
+
+{ question: "10% law states:", options: ["Only 10% energy transferred","100% transferred","None","All"], correct: 0 }, //16
+{ question: "Energy pyramid is:", options: ["Always upright","Inverted","None","All"], correct: 0 }, //17
+{ question: "Food chain example:", options: ["Grass→Deer→Tiger","Tiger→Grass","None","All"], correct: 0 }, //18
+{ question: "More trophic levels means:", options: ["Less energy","More energy","None","All"], correct: 0 }, //19
+{ question: "Decomposers recycle:", options: ["Nutrients","Energy","None","All"], correct: 0 }, //20
+
+{ question: "Biodegradable waste:", options: ["Can decompose","Cannot","None","All"], correct: 0 }, //21
+{ question: "Non-biodegradable waste:", options: ["Cannot decompose","Can","None","All"], correct: 0 }, //22
+{ question: "Example biodegradable:", options: ["Vegetable waste","Plastic","Glass","None"], correct: 0 }, //23
+{ question: "Example non-biodegradable:", options: ["Plastic","Leaves","Food","None"], correct: 0 }, //24
+{ question: "Pollution is:", options: ["Environmental damage","Clean","None","All"], correct: 0 }, //25
+
+{ question: "Ozone layer protects from:", options: ["UV rays","IR rays","None","All"], correct: 0 }, //26
+{ question: "Ozone depletion caused by:", options: ["CFCs","Oxygen","None","All"], correct: 0 }, //27
+{ question: "Biological magnification:", options: ["Increase in toxins","Decrease","None","All"], correct: 0 }, //28
+{ question: "DDT accumulates in:", options: ["Food chain","Water","None","All"], correct: 0 }, //29
+{ question: "Top consumers have:", options: ["More toxins","Less","None","All"], correct: 0 }, //30
+
+{ question: "3Rs stand for:", options: ["Reduce Reuse Recycle","Run Read Rest","None","All"], correct: 0 }, //31
+{ question: "Waste management includes:", options: ["Proper disposal","Dumping","None","All"], correct: 0 }, //32
+{ question: "Landfills cause:", options: ["Pollution","Clean air","None","All"], correct: 0 }, //33
+{ question: "Burning waste causes:", options: ["Air pollution","Clean air","None","All"], correct: 0 }, //34
+{ question: "Green plants make food by:", options: ["Photosynthesis","Respiration","None","All"], correct: 0 }, //35
+
+{ question: "Sun is source of:", options: ["Energy","Water","None","All"], correct: 0 }, //36
+{ question: "Energy decreases along:", options: ["Food chain","Water cycle","None","All"], correct: 0 }, //37
+{ question: "Ecology studies:", options: ["Environment","Physics","None","All"], correct: 0 }, //38
+{ question: "Biotic example:", options: ["Animals","Water","Air","None"], correct: 0 }, //39
+{ question: "Abiotic example:", options: ["Water","Plants","Animals","None"], correct: 0 } //40
+],
+
+mcq80: [
+{ question: "Environment includes:", options: ["Biotic & abiotic","Only plants","Only animals","None"], correct: 0 }, //1
+{ question: "Biotic components:", options: ["Living","Non-living","Both","None"], correct: 0 }, //2
+{ question: "Abiotic components:", options: ["Non-living","Living","Both","None"], correct: 0 }, //3
+{ question: "Ecosystem is:", options: ["Interaction of living & non-living","Only plants","None","All"], correct: 0 }, //4
+{ question: "Examples of ecosystem:", options: ["Forest","Pond","Desert","All"], correct: 3 }, //5
+
+{ question: "Producers are:", options: ["Plants","Animals","Decomposers","None"], correct: 0 }, //6
+{ question: "Consumers are:", options: ["Animals","Plants","Bacteria","None"], correct: 0 }, //7
+{ question: "Decomposers are:", options: ["Bacteria & fungi","Plants","Animals","None"], correct: 0 }, //8
+{ question: "Food chain shows:", options: ["Energy flow","Water","None","All"], correct: 0 }, //9
+{ question: "Food web is:", options: ["Network of food chains","Single chain","None","All"], correct: 0 }, //10
+
+{ question: "Trophic level means:", options: ["Position in food chain","Type of food","None","All"], correct: 0 }, //11
+{ question: "First trophic level:", options: ["Producers","Consumers","Decomposers","None"], correct: 0 }, //12
+{ question: "Second trophic level:", options: ["Primary consumers","Producers","None","All"], correct: 0 }, //13
+{ question: "Top consumers:", options: ["Tertiary","Primary","None","All"], correct: 0 }, //14
+{ question: "Energy flow is:", options: ["Unidirectional","Bidirectional","None","All"], correct: 0 }, //15
+
+{ question: "10% law states:", options: ["Only 10% energy transferred","100% transferred","None","All"], correct: 0 }, //16
+{ question: "Energy pyramid is:", options: ["Always upright","Inverted","None","All"], correct: 0 }, //17
+{ question: "Food chain example:", options: ["Grass→Deer→Tiger","Tiger→Grass","None","All"], correct: 0 }, //18
+{ question: "More trophic levels means:", options: ["Less energy","More energy","None","All"], correct: 0 }, //19
+{ question: "Decomposers recycle:", options: ["Nutrients","Energy","None","All"], correct: 0 }, //20
+
+{ question: "Biodegradable waste:", options: ["Can decompose","Cannot","None","All"], correct: 0 }, //21
+{ question: "Non-biodegradable:", options: ["Cannot decompose","Can","None","All"], correct: 0 }, //22
+{ question: "Examples biodegradable:", options: ["Vegetable waste","Plastic","Glass","None"], correct: 0 }, //23
+{ question: "Examples non-biodegradable:", options: ["Plastic","Leaves","Food","None"], correct: 0 }, //24
+{ question: "Pollution is:", options: ["Environmental damage","Clean","None","All"], correct: 0 }, //25
+
+{ question: "Ozone layer protects from:", options: ["UV rays","IR rays","None","All"], correct: 0 }, //26
+{ question: "Ozone depletion caused by:", options: ["CFCs","Oxygen","None","All"], correct: 0 }, //27
+{ question: "Biological magnification:", options: ["Increase toxins","Decrease","None","All"], correct: 0 }, //28
+{ question: "DDT accumulates in:", options: ["Food chain","Water","None","All"], correct: 0 }, //29
+{ question: "Top consumers have:", options: ["More toxins","Less","None","All"], correct: 0 }, //30
+
+{ question: "3Rs stand for:", options: ["Reduce Reuse Recycle","Run Read Rest","None","All"], correct: 0 }, //31
+{ question: "Waste management includes:", options: ["Proper disposal","Dumping","None","All"], correct: 0 }, //32
+{ question: "Landfills cause:", options: ["Pollution","Clean air","None","All"], correct: 0 }, //33
+{ question: "Burning waste causes:", options: ["Air pollution","Clean air","None","All"], correct: 0 }, //34
+{ question: "Green plants make food by:", options: ["Photosynthesis","Respiration","None","All"], correct: 0 }, //35
+
+{ question: "Sun is source of:", options: ["Energy","Water","None","All"], correct: 0 }, //36
+{ question: "Energy decreases along:", options: ["Food chain","Water cycle","None","All"], correct: 0 }, //37
+{ question: "Ecology studies:", options: ["Environment","Physics","None","All"], correct: 0 }, //38
+{ question: "Biotic example:", options: ["Animals","Water","Air","None"], correct: 0 }, //39
+{ question: "Abiotic example:", options: ["Water","Plants","Animals","None"], correct: 0 }, //40
+
+// ASSERTION (41–80)
+{ question: "Assertion: Energy flow unidirectional\nReason: Lost as heat", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //41
+{ question: "Assertion: 10% law valid\nReason: Energy transfer limited", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //42
+{ question: "Assertion: Producers first level\nReason: Make food", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //43
+{ question: "Assertion: Decomposers recycle\nReason: Break organic matter", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //44
+{ question: "Assertion: Food web complex\nReason: Many chains linked", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //45
+
+{ question: "Assertion: Biodegradable decompose\nReason: Microorganisms act", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //46
+{ question: "Assertion: Non-biodegradable persist\nReason: Not broken", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //47
+{ question: "Assertion: Ozone protects\nReason: Absorbs UV", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //48
+{ question: "Assertion: CFCs harmful\nReason: Destroy ozone", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //49
+{ question: "Assertion: Biomagnification occurs\nReason: Toxins increase", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //50
+
+{ question: "Assertion: Top consumers more toxins\nReason: Accumulation", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //51
+{ question: "Assertion: Energy pyramid upright\nReason: Energy decreases", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //52
+{ question: "Assertion: Sun main source\nReason: Drives ecosystem", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //53
+{ question: "Assertion: Pollution harmful\nReason: Damages environment", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //54
+{ question: "Assertion: Recycling useful\nReason: Saves resources", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //55
+
+{ question: "Assertion: Landfills pollute\nReason: Waste accumulation", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //56
+{ question: "Assertion: Burning waste harmful\nReason: Air pollution", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //57
+{ question: "Assertion: Ecosystem balanced\nReason: Interdependence", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //58
+{ question: "Assertion: Food chain linear\nReason: Energy transfer", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //59
+{ question: "Assertion: Plants producers\nReason: Photosynthesis", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //60
+
+{ question: "Energy decreases at each level:", options: ["Yes","No","None","All"], correct: 0 }, //61
+{ question: "Biomagnification harmful:", options: ["Yes","No","None","All"], correct: 0 }, //62
+{ question: "Ozone depletion dangerous:", options: ["Yes","No","None","All"], correct: 0 }, //63
+{ question: "Plastic biodegradable:", options: ["No","Yes","None","All"], correct: 0 }, //64
+{ question: "Glass biodegradable:", options: ["No","Yes","None","All"], correct: 0 }, //65
+
+{ question: "Plants source of energy:", options: ["Sun","Soil","None","All"], correct: 0 }, //66
+{ question: "Food web stable:", options: ["Yes","No","None","All"], correct: 0 }, //67
+{ question: "Energy pyramid inverted:", options: ["No","Yes","None","All"], correct: 0 }, //68
+{ question: "Consumers depend on:", options: ["Producers","None","All","Abiotic"], correct: 0 }, //69
+{ question: "Decomposers essential:", options: ["Yes","No","None","All"], correct: 0 }, //70
+
+{ question: "3Rs reduce waste:", options: ["Yes","No","None","All"], correct: 0 }, //71
+{ question: "Biodegradable safe:", options: ["Yes","No","None","All"], correct: 0 }, //72
+{ question: "Non-biodegradable harmful:", options: ["Yes","No","None","All"], correct: 0 }, //73
+{ question: "Energy source sun:", options: ["Primary","Secondary","None","All"], correct: 0 }, //74
+{ question: "Ecology studies environment:", options: ["Yes","No","None","All"], correct: 0 }, //75
+
+{ question: "Food chain starts with:", options: ["Producers","Consumers","None","All"], correct: 0 }, //76
+{ question: "Top consumers:", options: ["Carnivores","Herbivores","None","All"], correct: 0 }, //77
+{ question: "Ecosystem includes:", options: ["All components","None","All","Only biotic"], correct: 0 }, //78
+{ question: "Environment balance important:", options: ["Yes","No","None","All"], correct: 0 }, //79
+{ question: "Our environment chapter type:", options: ["Conceptual","Numerical","None","All"], correct: 0 } //80
+],
+
+
+},
+ }
+ }
+  } 
+   }
+    }    
+     }
+      }
+       }
+        }
+         }
+          }
+           }
