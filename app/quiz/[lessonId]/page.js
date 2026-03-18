@@ -1,8 +1,27 @@
 "use client";
 
 import { useSearchParams, useParams } from "next/navigation";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { questions as QUESTION_BANK } from "../../../data/questions";
+
+/* 🔥 SHUFFLE FUNCTION */
+function shuffleQuestion(q) {
+  const arr = q.options.map((opt, i) => ({
+    text: opt,
+    correct: i === q.correct,
+  }));
+
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+
+  return {
+    ...q,
+    options: arr.map((o) => o.text),
+    correct: arr.findIndex((o) => o.correct),
+  };
+}
 
 export default function QuizPage() {
   const { lessonId } = useParams();
@@ -21,12 +40,15 @@ export default function QuizPage() {
     );
   }
 
-  const questions = lessonBlock[mode];
+  /* 🔥 APPLY SHUFFLE ONCE */
+  const questions = useMemo(() => {
+    return lessonBlock[mode].map((q) => shuffleQuestion(q));
+  }, [lessonId, mode]);
 
   const [index, setIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [finished, setFinished] = useState(false);
-  const [answers, setAnswers] = useState([]); // 🆕 store user answers
+  const [answers, setAnswers] = useState([]);
 
   const current = questions[index];
 
