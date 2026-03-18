@@ -2186,7 +2186,1920 @@ mcq80: [
 { question: "Our environment chapter type:", options: ["Conceptual","Numerical","None","All"], correct: 0 } //80
 ],
 
+"real-numbers": {
+  mcq40: [
+    { question: "The Fundamental Theorem of Arithmetic states that:", options: ["Every number has unique prime factorization","Numbers are infinite","All numbers are prime","None"], correct: 0 },
+    { question: "Which number has terminating decimal expansion?", options: ["13/40","7/12","11/9","17/6"], correct: 0 },
+    { question: "A rational number p/q terminates if q has prime factors:", options: ["2 and/or 5 only","Only 2","Only 5","Any primes"], correct: 0 },
+    { question: "Which is irrational?", options: ["√2","1/2","0.25","4"], correct: 0 },
+    { question: "Which is rational?", options: ["√9","√2","π","e"], correct: 0 },
 
+    { question: "Decimal expansion of 7/125 is:", options: ["Terminating","Recurring","Non-terminating","None"], correct: 0 },
+    { question: "Which is non-terminating recurring?", options: ["2/3","1/8","5/16","3/20"], correct: 0 },
+    { question: "If denominator has factor 3, decimal is:", options: ["Recurring","Terminating","Integer","None"], correct: 0 },
+    { question: "Which fraction is terminating?", options: ["9/20","9/7","9/11","9/13"], correct: 0 },
+    { question: "0.375 in simplest form:", options: ["3/8","5/8","7/8","1/8"], correct: 0 },
+
+    { question: "Prime factorization of 360:", options: ["2³×3²×5","2²×3²×5","2³×3×5","2×3²×5"], correct: 0 },
+    { question: "Prime factorization of 945:", options: ["3³×5×7","3²×5×7","3×5×7","3³×7"], correct: 0 },
+    { question: "Which number is prime?", options: ["37","39","49","51"], correct: 0 },
+    { question: "Which is composite?", options: ["21","19","17","13"], correct: 0 },
+    { question: "Number of prime factors of 60:", options: ["3","4","2","5"], correct: 0 },
+
+    { question: "HCF of 2 co-prime numbers is:", options: ["1","0","Product","None"], correct: 0 },
+    { question: "LCM of co-prime numbers:", options: ["Product","1","0","Sum"], correct: 0 },
+    { question: "Product = HCF × LCM is valid for:", options: ["Two numbers","Three numbers","Only primes","None"], correct: 0 },
+    { question: "If HCF=4 and LCM=180, product:", options: ["720","360","180","90"], correct: 0 },
+    { question: "If numbers are 12 and 18, product:", options: ["216","36","30","12"], correct: 0 },
+
+    { question: "√3 is:", options: ["Irrational","Rational","Integer","Whole"], correct: 0 },
+    { question: "π is:", options: ["Irrational","Rational","Integer","Whole"], correct: 0 },
+    { question: "Which is rational?", options: ["0.5","√5","π","√7"], correct: 0 },
+    { question: "Which is irrational?", options: ["√7","1/7","0.25","5"], correct: 0 },
+    { question: "Sum of rational and irrational is:", options: ["Irrational","Rational","Integer","None"], correct: 0 },
+
+    { question: "Product of rational and irrational (≠0):", options: ["Irrational","Rational","Integer","None"], correct: 0 },
+    { question: "Decimal of 1/6:", options: ["Recurring","Terminating","Integer","None"], correct: 0 },
+    { question: "Decimal of 1/4:", options: ["Terminating","Recurring","Integer","None"], correct: 0 },
+    { question: "If denominator = 2^m × 5^n, decimal:", options: ["Terminating","Recurring","Irrational","None"], correct: 0 },
+    { question: "Which has finite decimal?", options: ["5/16","5/18","5/21","5/33"], correct: 0 },
+
+    { question: "HCF(24,36):", options: ["12","6","24","18"], correct: 0 },
+    { question: "LCM(12,18):", options: ["36","72","18","24"], correct: 0 },
+    { question: "If HCF=6, LCM=180, one number=30, other:", options: ["36","18","60","90"], correct: 0 },
+    { question: "Greatest 3-digit number divisible by 8:", options: ["992","996","888","1000"], correct: 0 },
+    { question: "Smallest number divisible by 3,4,5:", options: ["60","30","20","15"], correct: 0 },
+
+    { question: "Number of primes ≤10:", options: ["4","5","3","6"], correct: 0 },
+    { question: "Smallest prime:", options: ["2","1","3","5"], correct: 0 },
+    { question: "Even prime:", options: ["2","4","6","None"], correct: 0 },
+    { question: "1 is:", options: ["Neither prime nor composite","Prime","Composite","Even"], correct: 0 },
+    { question: "Total factors of prime:", options: ["2","1","3","4"], correct: 0 }
+  ],
+mcq80: [
+{ question: "Fundamental theorem of arithmetic states:", options: ["Unique prime factorization","Infinite primes","Even numbers only","None"], correct: 0 }, //1
+{ question: "Prime factorization of 840:", options: ["2³×3×5×7","2²×3×5×7","2³×3²×5×7","2³×3×5²×7"], correct: 0 }, //2
+{ question: "Which is irrational?", options: ["√3","1/3","0.25","5"], correct: 0 }, //3
+{ question: "Which is rational?", options: ["0.75","√5","π","√7"], correct: 0 }, //4
+{ question: "Decimal of 7/8:", options: ["Terminating","Recurring","Irrational","None"], correct: 0 }, //5
+
+{ question: "Decimal of 2/3:", options: ["Recurring","Terminating","Integer","None"], correct: 0 }, //6
+{ question: "Which has terminating decimal?", options: ["13/40","7/12","11/9","17/6"], correct: 0 }, //7
+{ question: "Denominator with only 2 & 5 gives:", options: ["Terminating","Recurring","Irrational","None"], correct: 0 }, //8
+{ question: "0.125 in fraction:", options: ["1/8","1/4","1/16","3/8"], correct: 0 }, //9
+{ question: "Which is composite?", options: ["49","47","43","41"], correct: 0 }, //10
+
+{ question: "Number of primes ≤20:", options: ["8","9","7","6"], correct: 0 }, //11
+{ question: "Smallest prime:", options: ["2","1","3","5"], correct: 0 }, //12
+{ question: "Even prime:", options: ["2","None","4","6"], correct: 0 }, //13
+{ question: "1 is:", options: ["Neither","Prime","Composite","Even"], correct: 0 }, //14
+{ question: "Prime factors of 360:", options: ["2³×3²×5","2²×3²×5","2³×3×5","2×3²×5"], correct: 0 }, //15
+
+{ question: "HCF(84,126):", options: ["42","21","14","7"], correct: 0 }, //16
+{ question: "LCM(84,126):", options: ["252","168","126","84"], correct: 0 }, //17
+{ question: "If HCF=6, product=1800 → LCM:", options: ["300","200","150","120"], correct: 0 }, //18
+{ question: "If numbers are co-prime, LCM:", options: ["Product","1","0","Sum"], correct: 0 }, //19
+{ question: "HCF of co-primes:", options: ["1","0","Same","Product"], correct: 0 }, //20
+
+{ question: "Which is irrational?", options: ["π","1/2","0.5","2"], correct: 0 }, //21
+{ question: "√9 is:", options: ["Rational","Irrational","Integer only","None"], correct: 0 }, //22
+{ question: "√2 is:", options: ["Irrational","Rational","Integer","None"], correct: 0 }, //23
+{ question: "Sum of rational & irrational:", options: ["Irrational","Rational","Integer","None"], correct: 0 }, //24
+{ question: "Product of rational (≠0) & irrational:", options: ["Irrational","Rational","Integer","None"], correct: 0 }, //25
+
+{ question: "Decimal of 1/11:", options: ["Recurring","Terminating","Integer","None"], correct: 0 }, //26
+{ question: "Which terminates?", options: ["9/25","9/7","9/11","9/13"], correct: 0 }, //27
+{ question: "Which is irrational?", options: ["√7","49","0.7","7/10"], correct: 0 }, //28
+{ question: "Greatest 3-digit divisible by 8:", options: ["992","996","888","1000"], correct: 0 }, //29
+{ question: "LCM(12,15,20):", options: ["60","120","180","240"], correct: 0 }, //30
+
+{ question: "If HCF=4, LCM=180 → product:", options: ["720","360","180","90"], correct: 0 }, //31
+{ question: "Number of factors of prime:", options: ["2","1","3","4"], correct: 0 }, //32
+{ question: "Which is NOT prime?", options: ["21","19","17","13"], correct: 0 }, //33
+{ question: "Decimal of 5/16:", options: ["Terminating","Recurring","Irrational","None"], correct: 0 }, //34
+{ question: "Decimal of 7/6:", options: ["Recurring","Terminating","Integer","None"], correct: 0 }, //35
+
+{ question: "Prime factorization of 945:", options: ["3³×5×7","3²×5×7","3×5×7","3³×7"], correct: 0 }, //36
+{ question: "Which is rational?", options: ["0.2","√3","π","√5"], correct: 0 }, //37
+{ question: "Which is irrational?", options: ["√11","1/11","0.11","2"], correct: 0 }, //38
+{ question: "Smallest number divisible by 2,3,5:", options: ["30","60","10","15"], correct: 0 }, //39
+{ question: "LCM ≥ numbers:", options: ["True","False","Depends","None"], correct: 0 }, //40
+
+// ASSERTION (41–80)
+{ question: "Assertion: √2 irrational\nReason: Cannot be p/q", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //41
+{ question: "Assertion: π irrational\nReason: Non-terminating non-recurring", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //42
+{ question: "Assertion: Rational terminates if denominator has 2 & 5\nReason: Prime factor rule", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //43
+{ question: "Assertion: Co-primes HCF=1\nReason: No common factors", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //44
+{ question: "Assertion: Product = HCF×LCM\nReason: For two numbers", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //45
+
+{ question: "Assertion: √4 rational\nReason: Perfect square", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //46
+{ question: "Assertion: 1/6 recurring\nReason: Denominator has 3", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //47
+{ question: "Assertion: 5/16 terminating\nReason: Only 2 factors", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //48
+{ question: "Assertion: √3 irrational\nReason: Not perfect square", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //49
+{ question: "Assertion: Sum rational+irrational irrational\nReason: Property", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //50
+
+{ question: "Assertion: 0.5 rational\nReason: =1/2", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //51
+{ question: "Assertion: Prime has 2 factors\nReason: Definition", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //52
+{ question: "Assertion: 1 not prime\nReason: Only one factor", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //53
+{ question: "Assertion: Even prime is 2\nReason: Others divisible", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //54
+{ question: "Assertion: LCM≥numbers\nReason: Multiple property", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //55
+
+{ question: "Which terminates?", options: ["3/20","3/21","3/22","3/27"], correct: 0 }, //56
+{ question: "Which recurring?", options: ["2/7","2/8","2/16","2/32"], correct: 0 }, //57
+{ question: "Which irrational?", options: ["√13","169","0.13","13/10"], correct: 0 }, //58
+{ question: "Prime factorization of 1001:", options: ["7×11×13","11×13×17","7×13×17","None"], correct: 0 }, //59
+{ question: "HCF(1001,77):", options: ["77","11","7","13"], correct: 0 }, //60
+
+{ question: "LCM(1001,77):", options: ["1001","77","154","700"], correct: 0 }, //61
+{ question: "If HCF=5, numbers 15 & x → x:", options: ["20","25","30","All"], correct: 3 }, //62
+{ question: "Decimal of 13/125:", options: ["Terminating","Recurring","Irrational","None"], correct: 0 }, //63
+{ question: "Which is rational?", options: ["√16","√5","π","√7"], correct: 0 }, //64
+{ question: "Which irrational?", options: ["√17","17","0.17","17/10"], correct: 0 }, //65
+
+{ question: "Smallest number divisible by 4,6,8:", options: ["24","48","12","16"], correct: 0 }, //66
+{ question: "Greatest 3-digit divisible by 9:", options: ["999","990","981","972"], correct: 0 }, //67
+{ question: "HCF always ≤ numbers:", options: ["True","False","Depends","None"], correct: 0 }, //68
+{ question: "Product = HCF×LCM valid:", options: ["Two numbers","Three numbers","All","None"], correct: 0 }, //69
+{ question: "0.333… =", options: ["1/3","3/1","0.3","None"], correct: 0 }, //70
+
+{ question: "0.142857 recurring from:", options: ["1/7","1/8","1/9","1/6"], correct: 0 }, //71
+{ question: "Which has infinite non-recurring?", options: ["π","1/3","1/4","0.5"], correct: 0 }, //72
+{ question: "√18 simplified:", options: ["3√2","2√3","√9","None"], correct: 0 }, //73
+{ question: "√50 simplified:", options: ["5√2","2√5","√25","None"], correct: 0 }, //74
+{ question: "Which irrational?", options: ["√19","19","1.9","19/10"], correct: 0 }, //75
+
+{ question: "Decimal of 1/125:", options: ["Terminating","Recurring","Irrational","None"], correct: 0 }, //76
+{ question: "Decimal of 1/9:", options: ["Recurring","Terminating","Integer","None"], correct: 0 }, //77
+{ question: "Which is rational?", options: ["0.2","√2","π","√3"], correct: 0 }, //78
+{ question: "Which irrational?", options: ["√23","23","2.3","23/10"], correct: 0 }, //79
+{ question: "Real numbers include:", options: ["Rational & irrational","Only rational","Only irrational","None"], correct: 0 } //80
+]
 },
- }
+
+"polynomials": {
+  mcq40: [
+    { question: "Degree of polynomial 5x³ + 2x² - x + 7:", options: ["3","2","1","0"], correct: 0 },
+    { question: "Zero of polynomial f(x)=x²−4:", options: ["±2","±4","2 only","-2 only"], correct: 0 },
+    { question: "Number of zeroes of a linear polynomial:", options: ["1","2","0","Depends"], correct: 0 },
+    { question: "Number of zeroes of quadratic polynomial:", options: ["At most 2","Exactly 2","At least 2","None"], correct: 0 },
+    { question: "Graph of linear polynomial is:", options: ["Straight line","Curve","Parabola","Circle"], correct: 0 },
+
+    { question: "Graph of quadratic polynomial:", options: ["Parabola","Line","Circle","Ellipse"], correct: 0 },
+    { question: "If graph does not cut x-axis, zeroes are:", options: ["None","1","2","Infinite"], correct: 0 },
+    { question: "If graph touches x-axis once:", options: ["1 zero","2 zeroes","No zero","Infinite"], correct: 0 },
+    { question: "If graph cuts x-axis twice:", options: ["2 zeroes","1 zero","No zero","Infinite"], correct: 0 },
+    { question: "f(x)=0 gives:", options: ["Zeroes","Degree","Factor","None"], correct: 0 },
+
+    { question: "Sum of zeroes of ax²+bx+c:", options: ["-b/a","c/a","b/a","-c/a"], correct: 0 },
+    { question: "Product of zeroes:", options: ["c/a","-b/a","b/a","-c/a"], correct: 0 },
+    { question: "If α,β are zeroes → α+β =", options: ["-b/a","c/a","b/a","0"], correct: 0 },
+    { question: "If αβ =", options: ["c/a","-b/a","b/a","0"], correct: 0 },
+    { question: "For x²−5x+6, sum of zeroes:", options: ["5","-5","6","-6"], correct: 0 },
+
+    { question: "For x²−5x+6, product:", options: ["6","5","-6","-5"], correct: 0 },
+    { question: "Zeroes of x²−5x+6:", options: ["2,3","1,6","-2,-3","3,5"], correct: 0 },
+    { question: "If α+β=7 and αβ=10, polynomial:", options: ["x²−7x+10","x²+7x+10","x²−7x−10","x²+7x−10"], correct: 0 },
+    { question: "If α+β=3, αβ=2 → polynomial:", options: ["x²−3x+2","x²+3x+2","x²−3x−2","x²+3x−2"], correct: 0 },
+    { question: "Which is cubic?", options: ["x³+2","x²+1","x+1","1"], correct: 0 },
+
+    { question: "Degree of constant polynomial:", options: ["0","1","Undefined","None"], correct: 0 },
+    { question: "Zero polynomial degree:", options: ["Undefined","0","1","Infinite"], correct: 0 },
+    { question: "If f(2)=0, then 2 is:", options: ["Zero","Factor","Coefficient","None"], correct: 0 },
+    { question: "If (x−a) is factor → f(a)=:", options: ["0","1","a","None"], correct: 0 },
+    { question: "Factor theorem relates:", options: ["Factor & zero","Degree & coeff","None","All"], correct: 0 },
+
+    { question: "If f(x)=x³−1, one factor:", options: ["x−1","x+1","x²+1","None"], correct: 0 },
+    { question: "Remainder theorem gives:", options: ["Remainder","Quotient","Factor","None"], correct: 0 },
+    { question: "Remainder when f(x) divided by (x−a):", options: ["f(a)","f(x)","a","0"], correct: 0 },
+    { question: "If remainder=0, divisor is:", options: ["Factor","Zero","Multiple","None"], correct: 0 },
+    { question: "If f(1)=0, factor:", options: ["x−1","x+1","x²−1","None"], correct: 0 },
+
+    { question: "Which identity is correct?", options: ["(a+b)²=a²+2ab+b²","a²+b²","a²−b²","None"], correct: 0 },
+    { question: "(a−b)² equals:", options: ["a²−2ab+b²","a²+2ab+b²","a²−b²","None"], correct: 0 },
+    { question: "a²−b² equals:", options: ["(a−b)(a+b)","(a+b)²","(a−b)²","None"], correct: 0 },
+    { question: "(x+3)(x−3)=", options: ["x²−9","x²+9","x²−6x","None"], correct: 0 },
+    { question: "Expand (x+2)²:", options: ["x²+4x+4","x²+2x+4","x²+4","None"], correct: 0 },
+
+    { question: "Expand (x−5)²:", options: ["x²−10x+25","x²+10x+25","x²−25","None"], correct: 0 },
+    { question: "Which is identity?", options: ["(a+b)²","a+b=c","a=b","None"], correct: 0 },
+    { question: "Zeroes are x-intercepts:", options: ["True","False","Depends","None"], correct: 0 },
+    { question: "Maximum zeroes of cubic:", options: ["3","2","1","Infinite"], correct: 0 },
+    { question: "Number of zeroes depends on:", options: ["Graph intersection","Degree only","None","All"], correct: 0 }
+  ],
+mcq80: [
+{ question: "Degree of polynomial 7x⁴ + 3x² − 5:", options: ["4","2","3","1"], correct: 0 }, //1
+{ question: "Number of zeroes of cubic polynomial:", options: ["At most 3","Exactly 3","At least 3","Infinite"], correct: 0 }, //2
+{ question: "Graph of quadratic polynomial is:", options: ["Parabola","Line","Circle","None"], correct: 0 }, //3
+{ question: "If graph cuts x-axis twice:", options: ["2 zeroes","1 zero","No zero","Infinite"], correct: 0 }, //4
+{ question: "If graph does not intersect x-axis:", options: ["No zero","1 zero","2 zeroes","Infinite"], correct: 0 }, //5
+
+{ question: "Sum of zeroes of ax²+bx+c:", options: ["-b/a","c/a","b/a","-c/a"], correct: 0 }, //6
+{ question: "Product of zeroes:", options: ["c/a","-b/a","b/a","-c/a"], correct: 0 }, //7
+{ question: "Zeroes of x²−7x+10:", options: ["2,5","1,10","-2,-5","5,7"], correct: 0 }, //8
+{ question: "If α+β=6, αβ=8 → polynomial:", options: ["x²−6x+8","x²+6x+8","x²−6x−8","x²+6x−8"], correct: 0 }, //9
+{ question: "If f(3)=0, then factor:", options: ["x−3","x+3","x²−9","None"], correct: 0 }, //10
+
+{ question: "Remainder when f(x) divided by (x−a):", options: ["f(a)","a","0","None"], correct: 0 }, //11
+{ question: "If remainder=0, then divisor is:", options: ["Factor","Multiple","Zero","None"], correct: 0 }, //12
+{ question: "Zeroes of polynomial are:", options: ["Roots","Factors","Coefficients","None"], correct: 0 }, //13
+{ question: "Graph intersects x-axis means:", options: ["Zero exists","No zero","Infinite zero","None"], correct: 0 }, //14
+{ question: "Maximum zeroes of degree n polynomial:", options: ["n","n−1","n+1","Infinite"], correct: 0 }, //15
+
+{ question: "Which is cubic?", options: ["x³+2","x²+2","x+2","2"], correct: 0 }, //16
+{ question: "Degree of constant polynomial:", options: ["0","1","Undefined","None"], correct: 0 }, //17
+{ question: "Zero polynomial degree:", options: ["Undefined","0","1","Infinite"], correct: 0 }, //18
+{ question: "If α,β roots → α+β =", options: ["-b/a","c/a","b/a","None"], correct: 0 }, //19
+{ question: "If αβ =", options: ["c/a","-b/a","b/a","None"], correct: 0 }, //20
+
+{ question: "If α=2,β=3 → polynomial:", options: ["x²−5x+6","x²+5x+6","x²−6x+5","None"], correct: 0 }, //21
+{ question: "Factor of x³−1:", options: ["x−1","x+1","x²+1","None"], correct: 0 }, //22
+{ question: "Factor theorem says:", options: ["f(a)=0 ⇒ x−a factor","Always zero","Always factor","None"], correct: 0 }, //23
+{ question: "Remainder theorem gives:", options: ["Remainder","Factor","Zero","None"], correct: 0 }, //24
+{ question: "f(−2)=0 → factor:", options: ["x+2","x−2","x²−4","None"], correct: 0 }, //25
+
+{ question: "Expand (a+b)²:", options: ["a²+2ab+b²","a²+b²","a²−b²","None"], correct: 0 }, //26
+{ question: "(a−b)²:", options: ["a²−2ab+b²","a²+2ab+b²","a²−b²","None"], correct: 0 }, //27
+{ question: "a²−b²:", options: ["(a−b)(a+b)","(a+b)²","(a−b)²","None"], correct: 0 }, //28
+{ question: "(x+4)(x−4):", options: ["x²−16","x²+16","x²−8x","None"], correct: 0 }, //29
+{ question: "(x+2)²:", options: ["x²+4x+4","x²+2x+4","x²+4","None"], correct: 0 }, //30
+
+{ question: "Graph touching x-axis once:", options: ["1 zero","2 zeroes","0 zero","Infinite"], correct: 0 }, //31
+{ question: "Graph above x-axis always:", options: ["No real zero","1 zero","2 zero","Infinite"], correct: 0 }, //32
+{ question: "Graph crosses once:", options: ["1 zero","2 zero","None","Infinite"], correct: 0 }, //33
+{ question: "x²+1=0 has:", options: ["No real zero","1 zero","2 zero","Infinite"], correct: 0 }, //34
+{ question: "x²−4=0 has:", options: ["2 zeroes","1 zero","None","Infinite"], correct: 0 }, //35
+
+{ question: "Polynomial degree determines:", options: ["Max zeroes","Min zeroes","None","All"], correct: 0 }, //36
+{ question: "Factor of x²−9:", options: ["x−3","x+3","Both","None"], correct: 2 }, //37
+{ question: "Zeroes of x²−9:", options: ["±3","±9","3 only","None"], correct: 0 }, //38
+{ question: "If α+β=0 → polynomial:", options: ["x²+c","x²−c","x²+x+c","None"], correct: 0 }, //39
+{ question: "If αβ=0:", options: ["One root zero","Both zero","None","All"], correct: 0 }, //40
+
+// ASSERTION (41–80)
+{ question: "Assertion: Graph gives zeroes\nReason: Intersects x-axis", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //41
+{ question: "Assertion: Degree = max zeroes\nReason: Graph property", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //42
+{ question: "Assertion: f(a)=0 ⇒ factor\nReason: Factor theorem", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //43
+{ question: "Assertion: Quadratic has ≤2 roots\nReason: Degree 2", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //44
+{ question: "Assertion: Linear has 1 root\nReason: Straight line", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //45
+
+{ question: "Assertion: x²+1 no real root\nReason: Always positive", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //46
+{ question: "Assertion: (a+b)² identity\nReason: Standard formula", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //47
+{ question: "Assertion: Remainder=f(a)\nReason: Remainder theorem", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //48
+{ question: "Assertion: Cubic ≤3 roots\nReason: Degree 3", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //49
+{ question: "Assertion: α+β = -b/a\nReason: Standard relation", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //50
+
+{ question: "Which is quadratic?", options: ["x²+3","x³+2","x+1","1"], correct: 0 }, //51
+{ question: "Which is linear?", options: ["x+2","x²+2","x³+2","1"], correct: 0 }, //52
+{ question: "Which has 0 roots?", options: ["x²+1","x²−1","x−1","None"], correct: 0 }, //53
+{ question: "Which has 2 roots?", options: ["x²−1","x²+1","x+1","None"], correct: 0 }, //54
+{ question: "Which has 1 root?", options: ["x−2","x²−1","x²+1","None"], correct: 0 }, //55
+
+{ question: "If α=−β:", options: ["Sum=0","Product=0","Both","None"], correct: 0 }, //56
+{ question: "If αβ=1:", options: ["Product 1","Sum 1","None","All"], correct: 0 }, //57
+{ question: "If α+β=0:", options: ["Roots opposite","Same roots","None","All"], correct: 0 }, //58
+{ question: "Graph above x-axis:", options: ["No zero","1 zero","2 zero","None"], correct: 0 }, //59
+{ question: "Graph cuts twice:", options: ["2 zeroes","1 zero","0","Infinite"], correct: 0 }, //60
+
+{ question: "Factor of x²−16:", options: ["x−4","x+4","Both","None"], correct: 2 }, //61
+{ question: "Zeroes of x²−16:", options: ["±4","±16","4 only","None"], correct: 0 }, //62
+{ question: "Expand (x−3)²:", options: ["x²−6x+9","x²+6x+9","x²−9","None"], correct: 0 }, //63
+{ question: "Expand (x+5)²:", options: ["x²+10x+25","x²+5x+25","x²+25","None"], correct: 0 }, //64
+{ question: "Which identity:", options: ["a²−b²","a+b=c","a=b","None"], correct: 0 }, //65
+
+{ question: "Graph determines:", options: ["Zeroes","Degree","Coeff","None"], correct: 0 }, //66
+{ question: "Degree decides:", options: ["Max roots","Min roots","None","All"], correct: 0 }, //67
+{ question: "Polynomial root means:", options: ["f(x)=0","f(x)=1","f(x)=a","None"], correct: 0 }, //68
+{ question: "Factor gives:", options: ["Root","Coeff","Degree","None"], correct: 0 }, //69
+{ question: "Cubic max roots:", options: ["3","2","1","Infinite"], correct: 0 }, //70
+
+{ question: "Which has infinite roots?", options: ["Zero polynomial","x²","x","None"], correct: 0 }, //71
+{ question: "Constant polynomial roots:", options: ["None","1","Infinite","Depends"], correct: 0 }, //72
+{ question: "Polynomial always continuous:", options: ["Yes","No","Depends","None"], correct: 0 }, //73
+{ question: "Graph always smooth:", options: ["Yes","No","Depends","None"], correct: 0 }, //74
+{ question: "Polynomial defined for:", options: ["All real x","Only integers","Only positive","None"], correct: 0 }, //75
+
+{ question: "Factor theorem used for:", options: ["Checking factors","Graph","Coeff","None"], correct: 0 }, //76
+{ question: "Remainder theorem used for:", options: ["Finding remainder","Roots","Degree","None"], correct: 0 }, //77
+{ question: "Polynomial root is x-intercept:", options: ["True","False","Depends","None"], correct: 0 }, //78
+{ question: "Quadratic graph shape:", options: ["Parabola","Line","Circle","None"], correct: 0 }, //79
+{ question: "Real roots shown by:", options: ["Graph intersections","Degree","Coeff","None"], correct: 0 } //80
+]
+},
+
+"pair-of-linear-equations-in-two-variables": {
+  mcq40: [
+    { question: "A pair of linear equations has a unique solution when:", options: ["a1/a2 ≠ b1/b2","a1/a2 = b1/b2","a1/a2 = c1/c2","None"], correct: 0 },
+    { question: "Infinite solutions when:", options: ["a1/a2 = b1/b2 = c1/c2","a1/a2 ≠ b1/b2","a1/a2 = b1/b2 ≠ c1/c2","None"], correct: 0 },
+    { question: "No solution when:", options: ["a1/a2 = b1/b2 ≠ c1/c2","a1/a2 ≠ b1/b2","All equal","None"], correct: 0 },
+    { question: "Graph with unique solution:", options: ["Intersecting lines","Parallel","Coincident","None"], correct: 0 },
+    { question: "Graph with infinite solutions:", options: ["Coincident lines","Parallel","Intersecting","None"], correct: 0 },
+
+    { question: "Graph with no solution:", options: ["Parallel lines","Intersecting","Coincident","None"], correct: 0 },
+    { question: "System: 2x+3y=5, 4x+6y=10 has:", options: ["Infinite solutions","Unique","No solution","None"], correct: 0 },
+    { question: "System: x+y=2, 2x+2y=5 has:", options: ["No solution","Unique","Infinite","None"], correct: 0 },
+    { question: "System: x−y=1, 2x−2y=2 has:", options: ["Infinite solutions","Unique","No solution","None"], correct: 0 },
+    { question: "Condition for consistency:", options: ["a1/a2 ≠ b1/b2 OR equal to c1/c2","Only unequal","Only equal","None"], correct: 0 },
+
+    { question: "Consistent system means:", options: ["At least one solution","No solution","Infinite only","None"], correct: 0 },
+    { question: "Inconsistent system means:", options: ["No solution","One solution","Infinite","None"], correct: 0 },
+    { question: "Dependent system has:", options: ["Infinite solutions","Unique","None","No solution"], correct: 0 },
+    { question: "Independent system has:", options: ["Unique solution","Infinite","None","No solution"], correct: 0 },
+    { question: "Elimination method removes:", options: ["One variable","Two variables","Constants","None"], correct: 0 },
+
+    { question: "Substitution method replaces:", options: ["Variable","Equation","Constant","None"], correct: 0 },
+    { question: "Cross-multiplication gives:", options: ["Direct solution","Graph","Factor","None"], correct: 0 },
+    { question: "Equation pair: 3x+2y=7, 6x+4y=14 is:", options: ["Dependent","Independent","Inconsistent","None"], correct: 0 },
+    { question: "Equation pair: 2x+3y=6, 4x+6y=9 is:", options: ["Inconsistent","Dependent","Independent","None"], correct: 0 },
+    { question: "Equation pair: x+2y=4, 2x+4y=8 is:", options: ["Infinite","Unique","No solution","None"], correct: 0 },
+
+    { question: "If lines intersect at one point:", options: ["Unique solution","Infinite","No solution","None"], correct: 0 },
+    { question: "If lines overlap completely:", options: ["Infinite solutions","Unique","No solution","None"], correct: 0 },
+    { question: "If lines never meet:", options: ["No solution","Unique","Infinite","None"], correct: 0 },
+    { question: "Slopes equal → lines:", options: ["Parallel or coincident","Intersect","Perpendicular","None"], correct: 0 },
+    { question: "Different slopes → lines:", options: ["Intersect","Parallel","Coincident","None"], correct: 0 },
+
+    { question: "If a1/a2 = b1/b2:", options: ["Parallel or same","Intersect","None","All"], correct: 0 },
+    { question: "If a1/a2 ≠ b1/b2:", options: ["Intersect","Parallel","Coincident","None"], correct: 0 },
+    { question: "Solution of equations means:", options: ["Point of intersection","Slope","Line","None"], correct: 0 },
+    { question: "Graph method uses:", options: ["Plotting lines","Algebra","Factor","None"], correct: 0 },
+    { question: "Number of solutions depends on:", options: ["Ratio of coefficients","Constant only","None","All"], correct: 0 },
+
+    { question: "If coefficients proportional but constants not:", options: ["No solution","Infinite","Unique","None"], correct: 0 },
+    { question: "If all ratios equal:", options: ["Infinite solutions","Unique","No solution","None"], correct: 0 },
+    { question: "If first two ratios unequal:", options: ["Unique solution","Infinite","No solution","None"], correct: 0 },
+    { question: "Pair of equations represents:", options: ["Two lines","One line","Curve","None"], correct: 0 },
+    { question: "Equation ax+by+c=0 represents:", options: ["Line","Circle","Parabola","None"], correct: 0 },
+
+    { question: "Two linear equations intersect at:", options: ["At most one point","Two points","Infinite always","None"], correct: 0 },
+    { question: "Coefficient ratio test checks:", options: ["Consistency","Graph","Factor","None"], correct: 0 },
+    { question: "If solution exists → system:", options: ["Consistent","Inconsistent","Dependent","None"], correct: 0 },
+    { question: "If unique solution → system:", options: ["Consistent independent","Dependent","Inconsistent","None"], correct: 0 },
+    { question: "If infinite solutions → system:", options: ["Consistent dependent","Independent","Inconsistent","None"], correct: 0 }
+  ],
+
+  mcq80: [
+{ question: "Unique solution when:", options: ["a1/a2 ≠ b1/b2","a1/a2 = b1/b2","a1/a2 = c1/c2","None"], correct: 0 }, //1
+{ question: "Infinite solutions when:", options: ["a1/a2 = b1/b2 = c1/c2","a1/a2 ≠ b1/b2","a1/a2 = b1/b2 ≠ c1/c2","None"], correct: 0 }, //2
+{ question: "No solution when:", options: ["a1/a2 = b1/b2 ≠ c1/c2","a1/a2 ≠ b1/b2","All equal","None"], correct: 0 }, //3
+{ question: "Graph with unique solution:", options: ["Intersecting","Parallel","Coincident","None"], correct: 0 }, //4
+{ question: "Graph with infinite solutions:", options: ["Coincident","Parallel","Intersecting","None"], correct: 0 }, //5
+
+{ question: "Graph with no solution:", options: ["Parallel","Intersecting","Coincident","None"], correct: 0 }, //6
+{ question: "x+y=2, 2x+2y=4:", options: ["Infinite","Unique","None","No solution"], correct: 0 }, //7
+{ question: "x+y=2, 2x+2y=5:", options: ["No solution","Unique","Infinite","None"], correct: 0 }, //8
+{ question: "x−y=1, 2x−2y=2:", options: ["Infinite","Unique","No solution","None"], correct: 0 }, //9
+{ question: "Condition for consistency:", options: ["a1/a2 ≠ b1/b2 OR equal to c1/c2","Only unequal","Only equal","None"], correct: 0 }, //10
+
+{ question: "Consistent system:", options: ["Has solution","No solution","Infinite only","None"], correct: 0 }, //11
+{ question: "Inconsistent system:", options: ["No solution","One solution","Infinite","None"], correct: 0 }, //12
+{ question: "Dependent system:", options: ["Infinite","Unique","None","No solution"], correct: 0 }, //13
+{ question: "Independent system:", options: ["Unique","Infinite","None","No solution"], correct: 0 }, //14
+{ question: "Elimination removes:", options: ["Variable","Equation","Constant","None"], correct: 0 }, //15
+
+{ question: "Substitution replaces:", options: ["Variable","Equation","Constant","None"], correct: 0 }, //16
+{ question: "Cross multiplication gives:", options: ["Direct solution","Graph","Factor","None"], correct: 0 }, //17
+{ question: "3x+2y=7, 6x+4y=14:", options: ["Infinite","Unique","No solution","None"], correct: 0 }, //18
+{ question: "2x+3y=6, 4x+6y=9:", options: ["No solution","Infinite","Unique","None"], correct: 0 }, //19
+{ question: "x+2y=4, 2x+4y=8:", options: ["Infinite","Unique","No solution","None"], correct: 0 }, //20
+
+{ question: "If slopes equal:", options: ["Parallel or same","Intersect","Perpendicular","None"], correct: 0 }, //21
+{ question: "If slopes different:", options: ["Intersect","Parallel","Coincident","None"], correct: 0 }, //22
+{ question: "a1/a2 = b1/b2:", options: ["Parallel or same","Intersect","None","All"], correct: 0 }, //23
+{ question: "a1/a2 ≠ b1/b2:", options: ["Intersect","Parallel","Coincident","None"], correct: 0 }, //24
+{ question: "Solution means:", options: ["Intersection point","Slope","Line","None"], correct: 0 }, //25
+
+{ question: "ax+by+c=0 represents:", options: ["Line","Circle","Parabola","None"], correct: 0 }, //26
+{ question: "Two lines intersect at:", options: ["1 point","2 points","Infinite always","None"], correct: 0 }, //27
+{ question: "If all ratios equal:", options: ["Infinite","Unique","No solution","None"], correct: 0 }, //28
+{ question: "If first two equal, third not:", options: ["No solution","Infinite","Unique","None"], correct: 0 }, //29
+{ question: "If first two unequal:", options: ["Unique","Infinite","No solution","None"], correct: 0 }, //30
+
+{ question: "Number of solutions depends on:", options: ["Coefficient ratios","Constant only","None","All"], correct: 0 }, //31
+{ question: "Graph method uses:", options: ["Plotting","Algebra","Factor","None"], correct: 0 }, //32
+{ question: "If lines overlap:", options: ["Infinite","Unique","None","No solution"], correct: 0 }, //33
+{ question: "If lines never meet:", options: ["No solution","Unique","Infinite","None"], correct: 0 }, //34
+{ question: "If meet once:", options: ["Unique","Infinite","No solution","None"], correct: 0 }, //35
+
+{ question: "Coefficient ratio test checks:", options: ["Consistency","Graph","Factor","None"], correct: 0 }, //36
+{ question: "Parallel lines have:", options: ["Same slope","Different slope","Zero slope","None"], correct: 0 }, //37
+{ question: "Intersecting lines have:", options: ["Different slope","Same slope","Zero slope","None"], correct: 0 }, //38
+{ question: "Coincident lines have:", options: ["Same equation","Different slope","None","All"], correct: 0 }, //39
+{ question: "Solution of system is:", options: ["Ordered pair","Line","Slope","None"], correct: 0 }, //40
+
+// ASSERTION (41–80)
+{ question: "Assertion: Intersecting lines → unique solution\nReason: One common point", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //41
+{ question: "Assertion: Parallel lines → no solution\nReason: Never meet", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //42
+{ question: "Assertion: Coincident lines → infinite solutions\nReason: Same line", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //43
+{ question: "Assertion: a1/a2 ≠ b1/b2 → unique\nReason: Slopes differ", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //44
+{ question: "Assertion: a1/a2 = b1/b2 ≠ c1/c2 → no solution\nReason: Parallel", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //45
+
+{ question: "Assertion: a1/a2 = b1/b2 = c1/c2 → infinite\nReason: Same line", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //46
+{ question: "Assertion: Consistent system has solution\nReason: Definition", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //47
+{ question: "Assertion: Inconsistent has no solution\nReason: Definition", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //48
+{ question: "Assertion: Dependent infinite\nReason: Same equation", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //49
+{ question: "Assertion: Independent unique\nReason: Different lines", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //50
+
+{ question: "Assertion: Slopes equal → parallel/coincident\nReason: m1=m2", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //51
+{ question: "Assertion: Slopes unequal → intersect\nReason: m1≠m2", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //52
+{ question: "Assertion: Solution is intersection\nReason: Common point", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //53
+{ question: "Assertion: Elimination removes variable\nReason: Method logic", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //54
+{ question: "Assertion: Substitution replaces variable\nReason: Method logic", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //55
+
+{ question: "Assertion: Graph method visual\nReason: Plot lines", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //56
+{ question: "Assertion: Ratio test works\nReason: Coeff relation", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //57
+{ question: "Assertion: Parallel lines same slope\nReason: m1=m2", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //58
+{ question: "Assertion: Coincident same equation\nReason: All ratios equal", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //59
+{ question: "Assertion: Intersecting meet once\nReason: Unique solution", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //60
+
+{ question: "Unique solution system is:", options: ["Independent","Dependent","Inconsistent","None"], correct: 0 }, //61
+{ question: "Infinite solution system:", options: ["Dependent","Independent","Inconsistent","None"], correct: 0 }, //62
+{ question: "No solution system:", options: ["Inconsistent","Dependent","Independent","None"], correct: 0 }, //63
+{ question: "Parallel lines:", options: ["No solution","Infinite","Unique","None"], correct: 0 }, //64
+{ question: "Coincident lines:", options: ["Infinite","No solution","Unique","None"], correct: 0 }, //65
+
+{ question: "Intersecting lines:", options: ["Unique","Infinite","No solution","None"], correct: 0 }, //66
+{ question: "System solution form:", options: ["(x,y)","x only","y only","None"], correct: 0 }, //67
+{ question: "Two lines always:", options: ["At most 1 intersection","2 always","Infinite always","None"], correct: 0 }, //68
+{ question: "Ratio method compares:", options: ["Coefficients","Constants","Variables","None"], correct: 0 }, //69
+{ question: "Slope concept used in:", options: ["Graph","Algebra","Factor","None"], correct: 0 }, //70
+
+{ question: "Consistent independent:", options: ["Unique","Infinite","None","No solution"], correct: 0 }, //71
+{ question: "Consistent dependent:", options: ["Infinite","Unique","None","No solution"], correct: 0 }, //72
+{ question: "Inconsistent:", options: ["No solution","Unique","Infinite","None"], correct: 0 }, //73
+{ question: "Line eqn always:", options: ["Linear","Quadratic","Cubic","None"], correct: 0 }, //74
+{ question: "Two eqns form:", options: ["System","Single eqn","Curve","None"], correct: 0 }, //75
+
+{ question: "Intersection gives:", options: ["Solution","Slope","Line","None"], correct: 0 }, //76
+{ question: "Graph uses:", options: ["Coordinates","Factor","Ratio","None"], correct: 0 }, //77
+{ question: "Solution satisfies:", options: ["Both eqns","One eqn","None","All"], correct: 0 }, //78
+{ question: "System consistent if:", options: ["Solution exists","No solution","Infinite only","None"], correct: 0 }, //79
+{ question: "Chapter concept core:", options: ["Lines & solutions","Numbers","Triangles","None"], correct: 0 } //80
+]
+},
+
+"quadratic-equations": {
+  mcq40: [
+    { question: "Standard form of quadratic equation:", options: ["ax²+bx+c=0","ax+by+c=0","x²+y²=0","None"], correct: 0 },
+    { question: "Discriminant D equals:", options: ["b²−4ac","b²+4ac","4ac−b²","None"], correct: 0 },
+    { question: "If D>0:", options: ["Real & distinct roots","Equal roots","No real roots","None"], correct: 0 },
+    { question: "If D=0:", options: ["Real & equal","Distinct","Imaginary","None"], correct: 0 },
+    { question: "If D<0:", options: ["No real roots","Equal","Distinct","None"], correct: 0 },
+
+    { question: "Roots of x²−5x+6:", options: ["2,3","1,6","-2,-3","None"], correct: 0 },
+    { question: "Sum of roots:", options: ["-b/a","c/a","b/a","None"], correct: 0 },
+    { question: "Product of roots:", options: ["c/a","-b/a","b/a","None"], correct: 0 },
+    { question: "Equation with roots α,β:", options: ["x²−(α+β)x+αβ=0","x²+(α+β)x+αβ","x²−αβx+(α+β)","None"], correct: 0 },
+    { question: "If α+β=5, αβ=6 → eqn:", options: ["x²−5x+6","x²+5x+6","x²−5x−6","None"], correct: 0 },
+
+    { question: "If roots equal, D =", options: ["0","Positive","Negative","None"], correct: 0 },
+    { question: "Nature depends on:", options: ["Discriminant","Sum","Product","None"], correct: 0 },
+    { question: "If D is perfect square:", options: ["Rational roots","Irrational","Imaginary","None"], correct: 0 },
+    { question: "If D not perfect square:", options: ["Irrational roots","Rational","Imaginary","None"], correct: 0 },
+    { question: "Equation x²+4=0 has:", options: ["No real roots","Equal roots","Distinct","None"], correct: 0 },
+
+    { question: "Number of solutions:", options: ["At most 2","Always 2","Infinite","None"], correct: 0 },
+    { question: "Graph of quadratic:", options: ["Parabola","Line","Circle","None"], correct: 0 },
+    { question: "If roots are equal, graph:", options: ["Touches x-axis","Cuts twice","No intersection","None"], correct: 0 },
+    { question: "If roots distinct:", options: ["Cuts twice","Touches once","None","All"], correct: 0 },
+    { question: "If no real roots:", options: ["No intersection","Cuts twice","Touches","None"], correct: 0 },
+
+    { question: "Roots of 2x²−7x+3:", options: ["3,1/2","1,3","-1,3","None"], correct: 0 },
+    { question: "If α,β roots → α²+β²:", options: ["(α+β)²−2αβ","α+β","αβ","None"], correct: 0 },
+    { question: "If α+β=6, αβ=5 → α²+β²:", options: ["26","11","36","None"], correct: 0 },
+    { question: "If αβ=0:", options: ["One root zero","Both zero","None","All"], correct: 0 },
+    { question: "If α=−β:", options: ["Sum zero","Product zero","Both","None"], correct: 0 },
+
+    { question: "Equation x²−4=0 roots:", options: ["±2","±4","2 only","None"], correct: 0 },
+    { question: "If D=16, nature:", options: ["Real distinct","Equal","No real","None"], correct: 0 },
+    { question: "If D=9:", options: ["Rational roots","Irrational","None","All"], correct: 0 },
+    { question: "If D=2:", options: ["Irrational roots","Rational","None","All"], correct: 0 },
+    { question: "If D negative:", options: ["Imaginary","Real","None","All"], correct: 0 },
+
+    { question: "x²−6x+9=0 roots:", options: ["3,3","3,-3","-3,-3","None"], correct: 0 },
+    { question: "If roots equal → α=β:", options: ["True","False","Depends","None"], correct: 0 },
+    { question: "Quadratic formula:", options: ["(-b±√D)/2a","(b±√D)/2a","(-b±√D)/a","None"], correct: 0 },
+    { question: "If a=0 → equation:", options: ["Not quadratic","Quadratic","Linear","None"], correct: 0 },
+    { question: "Coefficient a ≠ 0 ensures:", options: ["Quadratic","Linear","None","All"], correct: 0 },
+
+    { question: "Equation with roots 2 & −3:", options: ["x²+x−6=0","x²−x−6=0","x²−5x+6=0","None"], correct: 0 },
+    { question: "If α+β=0 → eqn:", options: ["x²+αβ=0","x²−αβ=0","x²+x=0","None"], correct: 0 },
+    { question: "If αβ=1:", options: ["Constant term=1","Sum=1","None","All"], correct: 0 },
+    { question: "Roots of x²+1=0:", options: ["Imaginary","Real","Equal","None"], correct: 0 },
+    { question: "Quadratic always has:", options: ["2 roots (real/complex)","1 root","None","Infinite"], correct: 0 }
+  ],
+
+  mcq80: [
+{ question: "Discriminant of ax²+bx+c:", options: ["b²−4ac","b²+4ac","4ac−b²","None"], correct: 0 }, //1
+{ question: "If D>0:", options: ["Distinct real roots","Equal roots","No real","None"], correct: 0 }, //2
+{ question: "If D=0:", options: ["Equal roots","Distinct","Imaginary","None"], correct: 0 }, //3
+{ question: "If D<0:", options: ["No real roots","Equal","Distinct","None"], correct: 0 }, //4
+{ question: "Roots of x²−5x+6:", options: ["2,3","1,6","-2,-3","None"], correct: 0 }, //5
+
+{ question: "Sum of roots:", options: ["-b/a","c/a","b/a","None"], correct: 0 }, //6
+{ question: "Product of roots:", options: ["c/a","-b/a","b/a","None"], correct: 0 }, //7
+{ question: "Equation with roots α,β:", options: ["x²−(α+β)x+αβ=0","x²+(α+β)x+αβ","x²−αβx+(α+β)","None"], correct: 0 }, //8
+{ question: "If α+β=7, αβ=10:", options: ["x²−7x+10","x²+7x+10","x²−7x−10","None"], correct: 0 }, //9
+{ question: "If D perfect square:", options: ["Rational roots","Irrational","Imaginary","None"], correct: 0 }, //10
+
+{ question: "If D not perfect square:", options: ["Irrational roots","Rational","Imaginary","None"], correct: 0 }, //11
+{ question: "x²+4=0 has:", options: ["No real roots","Equal","Distinct","None"], correct: 0 }, //12
+{ question: "Graph of quadratic:", options: ["Parabola","Line","Circle","None"], correct: 0 }, //13
+{ question: "Equal roots graph:", options: ["Touches x-axis","Cuts twice","No intersection","None"], correct: 0 }, //14
+{ question: "Distinct roots graph:", options: ["Cuts twice","Touches","None","All"], correct: 0 }, //15
+
+{ question: "No real roots graph:", options: ["No intersection","Cuts twice","Touches","None"], correct: 0 }, //16
+{ question: "Roots of 2x²−7x+3:", options: ["3,1/2","1,3","-1,3","None"], correct: 0 }, //17
+{ question: "If α²+β²:", options: ["(α+β)²−2αβ","α+β","αβ","None"], correct: 0 }, //18
+{ question: "If α+β=6, αβ=5 → α²+β²:", options: ["26","11","36","None"], correct: 0 }, //19
+{ question: "If αβ=0:", options: ["One root zero","Both zero","None","All"], correct: 0 }, //20
+
+{ question: "If α=−β:", options: ["Sum zero","Product zero","Both","None"], correct: 0 }, //21
+{ question: "x²−4=0:", options: ["±2","±4","2 only","None"], correct: 0 }, //22
+{ question: "If D=16:", options: ["Distinct real","Equal","None","No real"], correct: 0 }, //23
+{ question: "If D=2:", options: ["Irrational","Rational","None","All"], correct: 0 }, //24
+{ question: "If D<0:", options: ["Imaginary","Real","None","All"], correct: 0 }, //25
+
+{ question: "x²−6x+9=0:", options: ["3,3","3,-3","-3,-3","None"], correct: 0 }, //26
+{ question: "Quadratic formula:", options: ["(-b±√D)/2a","(b±√D)/2a","(-b±√D)/a","None"], correct: 0 }, //27
+{ question: "If a=0:", options: ["Not quadratic","Quadratic","Linear","None"], correct: 0 }, //28
+{ question: "Roots 2 & −3 → eqn:", options: ["x²+x−6=0","x²−x−6=0","x²−5x+6","None"], correct: 0 }, //29
+{ question: "If α+β=0:", options: ["x²+αβ=0","x²−αβ=0","x²+x=0","None"], correct: 0 }, //30
+
+{ question: "Roots of x²+1=0:", options: ["Imaginary","Real","Equal","None"], correct: 0 }, //31
+{ question: "Quadratic always has:", options: ["2 roots","1 root","None","Infinite"], correct: 0 }, //32
+{ question: "Nature depends on:", options: ["Discriminant","Sum","Product","None"], correct: 0 }, //33
+{ question: "If D=0 → α=β:", options: ["True","False","Depends","None"], correct: 0 }, //34
+{ question: "If D>0 → α≠β:", options: ["True","False","Depends","None"], correct: 0 }, //35
+
+{ question: "If roots integers:", options: ["D perfect square","D negative","None","All"], correct: 0 }, //36
+{ question: "If roots irrational:", options: ["D not perfect square","D=0","None","All"], correct: 0 }, //37
+{ question: "If roots imaginary:", options: ["D<0","D>0","D=0","None"], correct: 0 }, //38
+{ question: "Coefficient a ensures:", options: ["Quadratic","Linear","None","All"], correct: 0 }, //39
+{ question: "Max solutions:", options: ["2","1","Infinite","None"], correct: 0 }, //40
+
+// ASSERTION (41–80)
+{ question: "Assertion: D>0 → distinct roots\nReason: b²−4ac positive", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //41
+{ question: "Assertion: D=0 → equal roots\nReason: √D=0", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //42
+{ question: "Assertion: D<0 → no real roots\nReason: √D imaginary", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //43
+{ question: "Assertion: Sum = -b/a\nReason: Root relation", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //44
+{ question: "Assertion: Product = c/a\nReason: Root relation", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //45
+
+{ question: "Assertion: Parabola graph\nReason: Quadratic form", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //46
+{ question: "Assertion: Equal roots touch x-axis\nReason: One intersection", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //47
+{ question: "Assertion: Distinct roots cut twice\nReason: Two intersections", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //48
+{ question: "Assertion: No real roots → no cut\nReason: Graph above/below axis", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //49
+{ question: "Assertion: Quadratic always 2 roots\nReason: Complex allowed", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //50
+
+{ question: "Assertion: α=β if D=0\nReason: Equal roots condition", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //51
+{ question: "Assertion: D determines nature\nReason: Formula based", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //52
+{ question: "Assertion: x²+1 no real roots\nReason: D<0", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //53
+{ question: "Assertion: x²−4 real roots\nReason: D>0", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //54
+{ question: "Assertion: a≠0 needed\nReason: Else linear", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //55
+
+{ question: "D=25 → roots:", options: ["Rational distinct","Equal","Imaginary","None"], correct: 0 }, //56
+{ question: "D=0 → roots:", options: ["Equal","Distinct","Imaginary","None"], correct: 0 }, //57
+{ question: "D=-9 → roots:", options: ["Imaginary","Real","Equal","None"], correct: 0 }, //58
+{ question: "x²−2x+1:", options: ["Equal roots","Distinct","Imaginary","None"], correct: 0 }, //59
+{ question: "x²−3x+2:", options: ["Distinct roots","Equal","Imaginary","None"], correct: 0 }, //60
+
+{ question: "x²+2x+5:", options: ["No real roots","Equal","Distinct","None"], correct: 0 }, //61
+{ question: "Graph touches axis:", options: ["D=0","D>0","D<0","None"], correct: 0 }, //62
+{ question: "Graph cuts twice:", options: ["D>0","D=0","D<0","None"], correct: 0 }, //63
+{ question: "Graph no cut:", options: ["D<0","D=0","D>0","None"], correct: 0 }, //64
+{ question: "Quadratic solutions count:", options: ["2","1","0","Infinite"], correct: 0 }, //65
+
+{ question: "Equation valid if:", options: ["a≠0","b≠0","c≠0","None"], correct: 0 }, //66
+{ question: "Roots depend on:", options: ["D","a","b","c"], correct: 0 }, //67
+{ question: "Formula gives:", options: ["Roots","Graph","Factor","None"], correct: 0 }, //68
+{ question: "Nature defined by:", options: ["Discriminant","Graph","Sum","None"], correct: 0 }, //69
+{ question: "Quadratic type:", options: ["Second degree","First","Third","None"], correct: 0 }, //70
+
+{ question: "If D perfect square:", options: ["Rational roots","Irrational","None","All"], correct: 0 }, //71
+{ question: "If D irrational:", options: ["Irrational roots","Rational","None","All"], correct: 0 }, //72
+{ question: "If D negative:", options: ["Imaginary","Real","None","All"], correct: 0 }, //73
+{ question: "Sum relation:", options: ["-b/a","c/a","None","All"], correct: 0 }, //74
+{ question: "Product relation:", options: ["c/a","-b/a","None","All"], correct: 0 }, //75
+
+{ question: "Quadratic roots are:", options: ["Real/complex","Only real","Only imaginary","None"], correct: 0 }, //76
+{ question: "Parabola symmetry:", options: ["Yes","No","Depends","None"], correct: 0 }, //77
+{ question: "Axis symmetry exists:", options: ["Yes","No","None","All"], correct: 0 }, //78
+{ question: "Roots satisfy:", options: ["Equation","Graph","None","All"], correct: 0 }, //79
+{ question: "Chapter core:", options: ["Roots & nature","Lines","Circles","None"], correct: 0 } //80
+],
+
+mcq80: [
+{ question: "Discriminant of ax²+bx+c:", options: ["b²−4ac","b²+4ac","4ac−b²","None"], correct: 0 }, //1
+{ question: "If D>0:", options: ["Distinct real roots","Equal roots","No real","None"], correct: 0 }, //2
+{ question: "If D=0:", options: ["Equal roots","Distinct","Imaginary","None"], correct: 0 }, //3
+{ question: "If D<0:", options: ["No real roots","Equal","Distinct","None"], correct: 0 }, //4
+{ question: "Roots of x²−5x+6:", options: ["2,3","1,6","-2,-3","None"], correct: 0 }, //5
+
+{ question: "Sum of roots:", options: ["-b/a","c/a","b/a","None"], correct: 0 }, //6
+{ question: "Product of roots:", options: ["c/a","-b/a","b/a","None"], correct: 0 }, //7
+{ question: "Equation with roots α,β:", options: ["x²−(α+β)x+αβ=0","x²+(α+β)x+αβ","x²−αβx+(α+β)","None"], correct: 0 }, //8
+{ question: "If α+β=7, αβ=10:", options: ["x²−7x+10","x²+7x+10","x²−7x−10","None"], correct: 0 }, //9
+{ question: "If D perfect square:", options: ["Rational roots","Irrational","Imaginary","None"], correct: 0 }, //10
+
+{ question: "If D not perfect square:", options: ["Irrational roots","Rational","Imaginary","None"], correct: 0 }, //11
+{ question: "x²+4=0 has:", options: ["No real roots","Equal","Distinct","None"], correct: 0 }, //12
+{ question: "Graph of quadratic:", options: ["Parabola","Line","Circle","None"], correct: 0 }, //13
+{ question: "Equal roots graph:", options: ["Touches x-axis","Cuts twice","No intersection","None"], correct: 0 }, //14
+{ question: "Distinct roots graph:", options: ["Cuts twice","Touches","None","All"], correct: 0 }, //15
+
+{ question: "No real roots graph:", options: ["No intersection","Cuts twice","Touches","None"], correct: 0 }, //16
+{ question: "Roots of 2x²−7x+3:", options: ["3,1/2","1,3","-1,3","None"], correct: 0 }, //17
+{ question: "If α²+β²:", options: ["(α+β)²−2αβ","α+β","αβ","None"], correct: 0 }, //18
+{ question: "If α+β=6, αβ=5 → α²+β²:", options: ["26","11","36","None"], correct: 0 }, //19
+{ question: "If αβ=0:", options: ["One root zero","Both zero","None","All"], correct: 0 }, //20
+
+{ question: "If α=−β:", options: ["Sum zero","Product zero","Both","None"], correct: 0 }, //21
+{ question: "x²−4=0:", options: ["±2","±4","2 only","None"], correct: 0 }, //22
+{ question: "If D=16:", options: ["Distinct real","Equal","None","No real"], correct: 0 }, //23
+{ question: "If D=2:", options: ["Irrational","Rational","None","All"], correct: 0 }, //24
+{ question: "If D<0:", options: ["Imaginary","Real","None","All"], correct: 0 }, //25
+
+{ question: "x²−6x+9=0:", options: ["3,3","3,-3","-3,-3","None"], correct: 0 }, //26
+{ question: "Quadratic formula:", options: ["(-b±√D)/2a","(b±√D)/2a","(-b±√D)/a","None"], correct: 0 }, //27
+{ question: "If a=0:", options: ["Not quadratic","Quadratic","Linear","None"], correct: 0 }, //28
+{ question: "Roots 2 & −3 → eqn:", options: ["x²+x−6=0","x²−x−6=0","x²−5x+6","None"], correct: 0 }, //29
+{ question: "If α+β=0:", options: ["x²+αβ=0","x²−αβ=0","x²+x=0","None"], correct: 0 }, //30
+
+{ question: "Roots of x²+1=0:", options: ["Imaginary","Real","Equal","None"], correct: 0 }, //31
+{ question: "Quadratic always has:", options: ["2 roots","1 root","None","Infinite"], correct: 0 }, //32
+{ question: "Nature depends on:", options: ["Discriminant","Sum","Product","None"], correct: 0 }, //33
+{ question: "If D=0 → α=β:", options: ["True","False","Depends","None"], correct: 0 }, //34
+{ question: "If D>0 → α≠β:", options: ["True","False","Depends","None"], correct: 0 }, //35
+
+{ question: "If roots integers:", options: ["D perfect square","D negative","None","All"], correct: 0 }, //36
+{ question: "If roots irrational:", options: ["D not perfect square","D=0","None","All"], correct: 0 }, //37
+{ question: "If roots imaginary:", options: ["D<0","D>0","D=0","None"], correct: 0 }, //38
+{ question: "Coefficient a ensures:", options: ["Quadratic","Linear","None","All"], correct: 0 }, //39
+{ question: "Max solutions:", options: ["2","1","Infinite","None"], correct: 0 }, //40
+
+// ASSERTION (41–80)
+{ question: "Assertion: D>0 → distinct roots\nReason: b²−4ac positive", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //41
+{ question: "Assertion: D=0 → equal roots\nReason: √D=0", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //42
+{ question: "Assertion: D<0 → no real roots\nReason: √D imaginary", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //43
+{ question: "Assertion: Sum = -b/a\nReason: Root relation", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //44
+{ question: "Assertion: Product = c/a\nReason: Root relation", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //45
+
+{ question: "Assertion: Parabola graph\nReason: Quadratic form", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //46
+{ question: "Assertion: Equal roots touch x-axis\nReason: One intersection", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //47
+{ question: "Assertion: Distinct roots cut twice\nReason: Two intersections", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //48
+{ question: "Assertion: No real roots → no cut\nReason: Graph above/below axis", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //49
+{ question: "Assertion: Quadratic always 2 roots\nReason: Complex allowed", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //50
+
+{ question: "Assertion: α=β if D=0\nReason: Equal roots condition", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //51
+{ question: "Assertion: D determines nature\nReason: Formula based", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //52
+{ question: "Assertion: x²+1 no real roots\nReason: D<0", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //53
+{ question: "Assertion: x²−4 real roots\nReason: D>0", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //54
+{ question: "Assertion: a≠0 needed\nReason: Else linear", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //55
+
+{ question: "D=25 → roots:", options: ["Rational distinct","Equal","Imaginary","None"], correct: 0 }, //56
+{ question: "D=0 → roots:", options: ["Equal","Distinct","Imaginary","None"], correct: 0 }, //57
+{ question: "D=-9 → roots:", options: ["Imaginary","Real","Equal","None"], correct: 0 }, //58
+{ question: "x²−2x+1:", options: ["Equal roots","Distinct","Imaginary","None"], correct: 0 }, //59
+{ question: "x²−3x+2:", options: ["Distinct roots","Equal","Imaginary","None"], correct: 0 }, //60
+
+{ question: "x²+2x+5:", options: ["No real roots","Equal","Distinct","None"], correct: 0 }, //61
+{ question: "Graph touches axis:", options: ["D=0","D>0","D<0","None"], correct: 0 }, //62
+{ question: "Graph cuts twice:", options: ["D>0","D=0","D<0","None"], correct: 0 }, //63
+{ question: "Graph no cut:", options: ["D<0","D=0","D>0","None"], correct: 0 }, //64
+{ question: "Quadratic solutions count:", options: ["2","1","0","Infinite"], correct: 0 }, //65
+
+{ question: "Equation valid if:", options: ["a≠0","b≠0","c≠0","None"], correct: 0 }, //66
+{ question: "Roots depend on:", options: ["D","a","b","c"], correct: 0 }, //67
+{ question: "Formula gives:", options: ["Roots","Graph","Factor","None"], correct: 0 }, //68
+{ question: "Nature defined by:", options: ["Discriminant","Graph","Sum","None"], correct: 0 }, //69
+{ question: "Quadratic type:", options: ["Second degree","First","Third","None"], correct: 0 }, //70
+
+{ question: "If D perfect square:", options: ["Rational roots","Irrational","None","All"], correct: 0 }, //71
+{ question: "If D irrational:", options: ["Irrational roots","Rational","None","All"], correct: 0 }, //72
+{ question: "If D negative:", options: ["Imaginary","Real","None","All"], correct: 0 }, //73
+{ question: "Sum relation:", options: ["-b/a","c/a","None","All"], correct: 0 }, //74
+{ question: "Product relation:", options: ["c/a","-b/a","None","All"], correct: 0 }, //75
+
+{ question: "Quadratic roots are:", options: ["Real/complex","Only real","Only imaginary","None"], correct: 0 }, //76
+{ question: "Parabola symmetry:", options: ["Yes","No","Depends","None"], correct: 0 }, //77
+{ question: "Axis symmetry exists:", options: ["Yes","No","None","All"], correct: 0 }, //78
+{ question: "Roots satisfy:", options: ["Equation","Graph","None","All"], correct: 0 }, //79
+{ question: "Chapter core:", options: ["Roots & nature","Lines","Circles","None"], correct: 0 } //80
+]
+},
+
+"arithmetic-progressions": {
+  mcq40: [
+    { question: "General form of AP:", options: ["a, a+d, a+2d…","a, a², a³","a, 2a, 3a","None"], correct: 0 },
+    { question: "Common difference d =", options: ["a₂−a₁","a₁−a₂","a₁+a₂","None"], correct: 0 },
+    { question: "nth term (aₙ):", options: ["a+(n−1)d","a+nd","(n−1)d","None"], correct: 0 },
+    { question: "If d>0:", options: ["Increasing AP","Decreasing","Constant","None"], correct: 0 },
+    { question: "If d<0:", options: ["Decreasing AP","Increasing","Constant","None"], correct: 0 },
+
+    { question: "If d=0:", options: ["Constant sequence","Increasing","Decreasing","None"], correct: 0 },
+    { question: "10th term of AP 2,5,8…:", options: ["29","30","28","None"], correct: 0 },
+    { question: "Find d: 7,10,13…:", options: ["3","2","1","None"], correct: 0 },
+    { question: "nth term of 3,7,11…:", options: ["4n−1","4n+1","n+3","None"], correct: 0 },
+    { question: "Find a₁ if aₙ=50,n=5,d=5:", options: ["30","25","35","None"], correct: 0 },
+
+    { question: "Sum formula Sₙ:", options: ["n/2[2a+(n−1)d]","n(a+d)","n²d","None"], correct: 0 },
+    { question: "Alternative sum:", options: ["n/2(a+l)","a+l","2a+(n−1)d","None"], correct: 0 },
+    { question: "Sum of first 10 terms (a=2,d=3):", options: ["155","150","160","None"], correct: 0 },
+    { question: "Find l if a=3,d=2,n=10:", options: ["21","23","19","None"], correct: 0 },
+    { question: "Find n if l=50,a=2,d=4:", options: ["13","12","14","None"], correct: 0 },
+
+    { question: "Find S₁₀ for AP 1,3,5…:", options: ["100","90","110","None"], correct: 0 },
+    { question: "Find term where value=20 in AP 2,5,8…:", options: ["7th","6th","8th","None"], correct: 0 },
+    { question: "Find missing term: 3,_,11 (AP):", options: ["7","8","6","None"], correct: 0 },
+    { question: "Find d if a₅−a₂=9:", options: ["3","2","4","None"], correct: 0 },
+    { question: "If aₙ=an+b form:", options: ["Linear","Quadratic","Exponential","None"], correct: 0 },
+
+    { question: "If aₙ constant:", options: ["d=0","d>0","d<0","None"], correct: 0 },
+    { question: "If aₙ decreasing:", options: ["d<0","d>0","d=0","None"], correct: 0 },
+    { question: "Sum of n terms depends on:", options: ["a,d,n","Only a","Only d","None"], correct: 0 },
+    { question: "Last term formula:", options: ["l=a+(n−1)d","l=a+nd","l=nd","None"], correct: 0 },
+    { question: "Find a₁ if l=20,n=5,d=3:", options: ["8","5","10","None"], correct: 0 },
+
+    { question: "Sum Sₙ is quadratic in:", options: ["n","a","d","None"], correct: 0 },
+    { question: "Term aₙ is linear in:", options: ["n","a","d","None"], correct: 0 },
+    { question: "If Sₙ given, find aₙ:", options: ["Sₙ−Sₙ₋₁","Sₙ+Sₙ₋₁","Sₙ/Sₙ₋₁","None"], correct: 0 },
+    { question: "Find a₅ if S₅=40,S₄=30:", options: ["10","8","12","None"], correct: 0 },
+    { question: "Find Sₙ if a=1,d=1,n=10:", options: ["55","50","60","None"], correct: 0 },
+
+    { question: "Find d if aₙ=5n−2:", options: ["5","3","2","None"], correct: 0 },
+    { question: "Find a if aₙ=3n+1:", options: ["4","3","1","None"], correct: 0 },
+    { question: "If a₁=2,d=2, find a₁₀:", options: ["20","18","22","None"], correct: 0 },
+    { question: "Find Sₙ if a=2,d=2,n=10:", options: ["110","100","120","None"], correct: 0 },
+    { question: "AP sequence type:", options: ["Linear growth","Exponential","Quadratic","None"], correct: 0 },
+
+    { question: "If d constant:", options: ["AP","GP","HP","None"], correct: 0 },
+    { question: "AP is special case of:", options: ["Linear sequence","Exponential","None","All"], correct: 0 },
+    { question: "nth term independent of:", options: ["Previous term","d","a","None"], correct: 0 },
+    { question: "Sₙ formula valid for:", options: ["All AP","Only finite","None","All"], correct: 0 },
+    { question: "AP terms equally spaced:", options: ["True","False","Depends","None"], correct: 0 }
+  ],
+
+  mcq80: [
+{ question: "General form of AP:", options: ["a,a+d,a+2d…","a,a²,a³","a,2a,3a","None"], correct: 0 }, //1
+{ question: "Common difference:", options: ["a₂−a₁","a₁−a₂","a₁+a₂","None"], correct: 0 }, //2
+{ question: "nth term formula:", options: ["a+(n−1)d","a+nd","(n−1)d","None"], correct: 0 }, //3
+{ question: "If d>0:", options: ["Increasing","Decreasing","Constant","None"], correct: 0 }, //4
+{ question: "If d<0:", options: ["Decreasing","Increasing","Constant","None"], correct: 0 }, //5
+
+{ question: "If d=0:", options: ["Constant AP","Increasing","Decreasing","None"], correct: 0 }, //6
+{ question: "10th term of 3,7,11…:", options: ["39","40","38","None"], correct: 0 }, //7
+{ question: "Find d: 5,9,13…:", options: ["4","3","2","None"], correct: 0 }, //8
+{ question: "nth term of 2,5,8…:", options: ["3n−1","3n+1","n+2","None"], correct: 0 }, //9
+{ question: "Find a if a₅=30,d=5:", options: ["10","5","15","None"], correct: 0 },
+
+{ question: "Sum formula:", options: ["n/2[2a+(n−1)d]","n(a+d)","nd²","None"], correct: 0 }, //11
+{ question: "Alternative sum:", options: ["n/2(a+l)","a+l","2a+(n−1)d","None"], correct: 0 }, //12
+{ question: "Sum of first 10 terms (a=1,d=2):", options: ["100","90","110","None"], correct: 0 }, //13
+{ question: "Find l if a=2,d=3,n=10:", options: ["29","32","26","None"], correct: 0 }, //14
+{ question: "Find n if l=50,a=2,d=4:", options: ["13","12","14","None"], correct: 0 }, //15
+
+{ question: "Sum of 1st 10 odd numbers:", options: ["100","90","110","None"], correct: 0 }, //16
+{ question: "Find term = 35 in 5,10,15…:", options: ["7th","6th","8th","None"], correct: 0 }, //17
+{ question: "Find missing term: 4,_,12:", options: ["8","6","10","None"], correct: 0 }, //18
+{ question: "If aₙ−aₘ=(n−m)d:", options: ["True","False","Depends","None"], correct: 0 }, //19
+{ question: "If a₁=5,d=3 find a₁₀:", options: ["32","35","30","None"], correct: 0 }, //20
+
+{ question: "If Sₙ quadratic:", options: ["True","False","Depends","None"], correct: 0 }, //21
+{ question: "If aₙ linear:", options: ["True","False","Depends","None"], correct: 0 }, //22
+{ question: "If Sₙ known, aₙ:", options: ["Sₙ−Sₙ₋₁","Sₙ+Sₙ₋₁","Sₙ/Sₙ₋₁","None"], correct: 0 }, //23
+{ question: "If S₅=40,S₄=30 → a₅:", options: ["10","8","12","None"], correct: 0 }, //24
+{ question: "Find S₁₀ (a=2,d=2):", options: ["110","100","120","None"], correct: 0 }, //25
+
+{ question: "If aₙ=4n−3 → d:", options: ["4","3","1","None"], correct: 0 }, //26
+{ question: "If aₙ=2n+5 → a:", options: ["7","5","2","None"], correct: 0 }, //27
+{ question: "Find Sₙ if a=1,d=1,n=20:", options: ["210","200","220","None"], correct: 0 }, //28
+{ question: "Sum of first n natural numbers:", options: ["n(n+1)/2","n²","n(n−1)/2","None"], correct: 0 }, //29
+{ question: "Sum of first n even numbers:", options: ["n(n+1)","n²","2n","None"], correct: 0 }, //30
+
+{ question: "Sum of first n odd numbers:", options: ["n²","n(n+1)/2","n(n−1)/2","None"], correct: 0 }, //31
+{ question: "AP growth type:", options: ["Linear","Exponential","Quadratic","None"], correct: 0 }, //32
+{ question: "If d constant:", options: ["AP","GP","HP","None"], correct: 0 }, //33
+{ question: "If terms equally spaced:", options: ["AP","GP","None","All"], correct: 0 }, //34
+{ question: "Find Sₙ using l:", options: ["n/2(a+l)","n(a+l)","a+l","None"], correct: 0 }, //35
+
+{ question: "If l known, easier sum:", options: ["Yes","No","Depends","None"], correct: 0 }, //36
+{ question: "aₙ depends on:", options: ["n,a,d","Only n","Only a","None"], correct: 0 }, //37
+{ question: "Sₙ depends on:", options: ["n,a,d","Only n","Only a","None"], correct: 0 }, //38
+{ question: "If a₁=0,d=3:", options: ["Multiples of 3","Even numbers","Odd","None"], correct: 0 }, //39
+{ question: "If d negative:", options: ["Decreasing","Increasing","Constant","None"], correct: 0 }, //40
+
+// ASSERTION (41–80)
+{ question: "Assertion: aₙ linear\nReason: Formula linear", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //41
+{ question: "Assertion: Sₙ quadratic\nReason: n² term", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //42
+{ question: "Assertion: d constant\nReason: Definition of AP", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //43
+{ question: "Assertion: AP linear growth\nReason: Constant increment", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //44
+{ question: "Assertion: aₙ depends on n\nReason: nth term formula", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //45
+
+{ question: "Assertion: Sₙ depends on n\nReason: formula includes n", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //46
+{ question: "Assertion: d>0 increasing\nReason: terms grow", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //47
+{ question: "Assertion: d<0 decreasing\nReason: terms reduce", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //48
+{ question: "Assertion: d=0 constant\nReason: no change", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //49
+{ question: "Assertion: Sₙ formula correct\nReason: derived", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //50
+
+{ question: "Assertion: l=a+(n−1)d\nReason: nth term", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //51
+{ question: "Assertion: sum odd=n²\nReason: pattern", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //52
+{ question: "Assertion: sum even=n(n+1)\nReason: pattern", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //53
+{ question: "Assertion: Sₙ−Sₙ₋₁=aₙ\nReason: difference gives term", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //54
+{ question: "Assertion: AP linear\nReason: constant diff", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //55
+
+{ question: "Find aₙ for n=15,a=2,d=3:", options: ["44","45","43","None"], correct: 0 }, //56
+{ question: "Find S₁₅:", options: ["345","330","360","None"], correct: 0 }, //57
+{ question: "Find d if aₙ=6n+1:", options: ["6","1","5","None"], correct: 0 }, //58
+{ question: "Find a if aₙ=5n−2:", options: ["3","5","2","None"], correct: 0 }, //59
+{ question: "Find S₂₀ (a=1,d=1):", options: ["210","200","220","None"], correct: 0 }, //60
+
+{ question: "AP sum grows as:", options: ["Quadratic","Linear","Constant","None"], correct: 0 }, //61
+{ question: "Term grows as:", options: ["Linear","Quadratic","Constant","None"], correct: 0 }, //62
+{ question: "AP used in:", options: ["Sequences","Geometry","None","All"], correct: 0 }, //63
+{ question: "Constant difference ensures:", options: ["AP","GP","None","All"], correct: 0 }, //64
+{ question: "Sum finite:", options: ["Yes","No","Depends","None"], correct: 0 }, //65
+
+{ question: "Find term number of 50 in 2,4,6…:", options: ["25","24","26","None"], correct: 0 }, //66
+{ question: "Find S₂₅:", options: ["650","625","675","None"], correct: 0 }, //67
+{ question: "AP core concept:", options: ["Constant difference","Ratio","None","All"], correct: 0 }, //68
+{ question: "AP defined for:", options: ["All n","Only integers","None","All"], correct: 0 }, //69
+{ question: "AP always:", options: ["Linear","Quadratic","None","All"], correct: 0 }, //70
+
+{ question: "Sum formula valid:", options: ["Always","Never","Sometimes","None"], correct: 0 }, //71
+{ question: "Term independent of previous:", options: ["Yes","No","Depends","None"], correct: 0 }, //72
+{ question: "d decides:", options: ["Nature","Sum","n","None"], correct: 0 }, //73
+{ question: "AP graph linear:", options: ["Yes","No","Depends","None"], correct: 0 }, //74
+{ question: "AP progression type:", options: ["Arithmetic","Geometric","None","All"], correct: 0 }, //75
+
+{ question: "If d large:", options: ["Fast growth","Slow","Constant","None"], correct: 0 }, //76
+{ question: "If d small:", options: ["Slow growth","Fast","Constant","None"], correct: 0 }, //77
+{ question: "AP defined by:", options: ["a,d","n only","None","All"], correct: 0 }, //78
+{ question: "Sum depends on:", options: ["n,a,d","Only n","Only d","None"], correct: 0 }, //79
+{ question: "Chapter core:", options: ["Sequences & sums","Triangles","Lines","None"], correct: 0 } //80
+]
+},
+
+"triangles": {
+  mcq40: [
+    { question: "Triangles are similar if:", options: ["AA condition","SSS condition","SAS condition","All"], correct: 3 },
+    { question: "AA similarity requires:", options: ["Two angles equal","Two sides equal","All sides equal","None"], correct: 0 },
+    { question: "SSS similarity requires:", options: ["Sides proportional","Angles equal","Both","None"], correct: 0 },
+    { question: "SAS similarity requires:", options: ["Two sides proportional & included angle equal","Two angles","All sides","None"], correct: 0 },
+    { question: "If triangles similar, ratio of areas:", options: ["Square of sides ratio","Same ratio","Inverse ratio","None"], correct: 0 },
+
+    { question: "If two triangles similar, corresponding sides:", options: ["Proportional","Equal","Inverse","None"], correct: 0 },
+    { question: "If sides equal, triangles:", options: ["Congruent","Similar only","Different","None"], correct: 0 },
+    { question: "Pythagoras theorem applies to:", options: ["Right triangle","Equilateral","Isosceles","None"], correct: 0 },
+    { question: "a²+b²=c² applies when:", options: ["Right angle","Acute","Obtuse","None"], correct: 0 },
+    { question: "Hypotenuse is:", options: ["Opposite right angle","Adjacent","Smallest side","None"], correct: 0 },
+
+    { question: "In similar triangles, altitudes ratio:", options: ["Same as sides","Square","Inverse","None"], correct: 0 },
+    { question: "In similar triangles, perimeters ratio:", options: ["Same as sides","Square","Inverse","None"], correct: 0 },
+    { question: "Area ratio:", options: ["(side ratio)²","Same","Inverse","None"], correct: 0 },
+    { question: "If ΔABC ~ ΔDEF, then AB/DE =", options: ["BC/EF","EF/BC","None","All"], correct: 0 },
+    { question: "If triangles similar, angles:", options: ["Equal","Proportional","Inverse","None"], correct: 0 },
+
+    { question: "Thales theorem relates:", options: ["Parallel lines divide sides","Angles","Area","None"], correct: 0 },
+    { question: "If line parallel to side:", options: ["Divides sides proportionally","Equal parts","None","All"], correct: 0 },
+    { question: "If sides proportional:", options: ["Line parallel","Not parallel","None","All"], correct: 0 },
+    { question: "If triangles have same shape:", options: ["Similar","Congruent","Equal area","None"], correct: 0 },
+    { question: "If scale factor k, area factor:", options: ["k²","k","1/k","None"], correct: 0 },
+
+    { question: "If k=2, area ratio:", options: ["4","2","8","None"], correct: 0 },
+    { question: "If triangles congruent:", options: ["All equal","Only sides","Only angles","None"], correct: 0 },
+    { question: "If right triangle, longest side:", options: ["Hypotenuse","Base","Height","None"], correct: 0 },
+    { question: "If a²+b²<c²:", options: ["Obtuse triangle","Right","Acute","None"], correct: 0 },
+    { question: "If a²+b²>c²:", options: ["Acute","Right","Obtuse","None"], correct: 0 },
+
+    { question: "If a²+b²=c²:", options: ["Right","Acute","Obtuse","None"], correct: 0 },
+    { question: "Ratio of medians in similar triangles:", options: ["Same as sides","Square","Inverse","None"], correct: 0 },
+    { question: "Ratio of heights:", options: ["Same as sides","Square","Inverse","None"], correct: 0 },
+    { question: "If two angles equal:", options: ["Triangles similar","Congruent","None","All"], correct: 0 },
+    { question: "If three sides proportional:", options: ["Similar","Congruent","None","All"], correct: 0 },
+
+    { question: "If two sides proportional & angle equal:", options: ["Similar","Congruent","None","All"], correct: 0 },
+    { question: "Pythagoras converse proves:", options: ["Right triangle","Acute","Obtuse","None"], correct: 0 },
+    { question: "If line divides proportionally:", options: ["Parallel","Not parallel","None","All"], correct: 0 },
+    { question: "Triangles with same angles:", options: ["Similar","Congruent","None","All"], correct: 0 },
+    { question: "Scale factor affects:", options: ["Size","Shape","Angles","None"], correct: 0 },
+
+    { question: "Angles in similar triangles:", options: ["Equal","Different","None","All"], correct: 0 },
+    { question: "Sides in similar triangles:", options: ["Proportional","Equal","None","All"], correct: 0 },
+    { question: "Area relation:", options: ["Square ratio","Linear","Inverse","None"], correct: 0 },
+    { question: "Pythagoras works only for:", options: ["Right triangle","All triangles","None","All"], correct: 0 },
+    { question: "Triangle type depends on:", options: ["Sides & angles","Only sides","Only angles","None"], correct: 0 }
+  ],
+
+  mcq80: [
+{ question: "Triangles are similar if:", options: ["AA","SSS","SAS","All"], correct: 3 }, //1
+{ question: "AA similarity needs:", options: ["2 angles equal","2 sides equal","All sides","None"], correct: 0 }, //2
+{ question: "SSS similarity:", options: ["Sides proportional","Angles equal","Both","None"], correct: 0 }, //3
+{ question: "SAS similarity:", options: ["Sides proportional + included angle","Angles only","All sides","None"], correct: 0 }, //4
+{ question: "If triangles similar, sides:", options: ["Proportional","Equal","Inverse","None"], correct: 0 }, //5
+
+{ question: "Area ratio of similar triangles:", options: ["Square of sides ratio","Same ratio","Inverse","None"], correct: 0 }, //6
+{ question: "Perimeter ratio:", options: ["Same as sides","Square","Inverse","None"], correct: 0 }, //7
+{ question: "Altitude ratio:", options: ["Same as sides","Square","Inverse","None"], correct: 0 }, //8
+{ question: "Median ratio:", options: ["Same as sides","Square","Inverse","None"], correct: 0 }, //9
+{ question: "If k=3, area ratio:", options: ["9","3","6","None"], correct: 0 }, //10
+
+{ question: "If triangles congruent:", options: ["All equal","Only sides","Only angles","None"], correct: 0 }, //11
+{ question: "Congruent triangles are:", options: ["Similar","Different","None","All"], correct: 0 }, //12
+{ question: "Right triangle hypotenuse:", options: ["Opposite right angle","Adjacent","Smallest","None"], correct: 0 }, //13
+{ question: "Pythagoras theorem:", options: ["a²+b²=c²","a²−b²=c²","a+b=c","None"], correct: 0 }, //14
+{ question: "Applies to:", options: ["Right triangle","All triangles","None","All"], correct: 0 }, //15
+
+{ question: "If a²+b²>c²:", options: ["Acute","Right","Obtuse","None"], correct: 0 }, //16
+{ question: "If a²+b²<c²:", options: ["Obtuse","Right","Acute","None"], correct: 0 }, //17
+{ question: "If a²+b²=c²:", options: ["Right","Acute","Obtuse","None"], correct: 0 }, //18
+{ question: "Thales theorem:", options: ["Parallel divides proportionally","Angle","Area","None"], correct: 0 }, //19
+{ question: "If line parallel:", options: ["Divides sides proportionally","Equal parts","None","All"], correct: 0 }, //20
+
+{ question: "If proportional division:", options: ["Line parallel","Not parallel","None","All"], correct: 0 }, //21
+{ question: "ΔABC~ΔDEF → AB/DE:", options: ["BC/EF","EF/BC","None","All"], correct: 0 }, //22
+{ question: "Angles in similar triangles:", options: ["Equal","Different","None","All"], correct: 0 }, //23
+{ question: "If 2 angles equal:", options: ["Similar","Congruent","None","All"], correct: 0 }, //24
+{ question: "If sides equal:", options: ["Congruent","Similar","None","All"], correct: 0 }, //25
+
+{ question: "Scale factor affects:", options: ["Size","Shape","Angles","None"], correct: 0 }, //26
+{ question: "Shape remains:", options: ["Same","Different","None","All"], correct: 0 }, //27
+{ question: "Area changes by:", options: ["Square factor","Linear","Inverse","None"], correct: 0 }, //28
+{ question: "Perimeter changes by:", options: ["Linear factor","Square","Inverse","None"], correct: 0 }, //29
+{ question: "Height ratio:", options: ["Same as sides","Square","Inverse","None"], correct: 0 }, //30
+
+{ question: "Triangle similarity gives:", options: ["Proportional sides","Equal sides","None","All"], correct: 0 }, //31
+{ question: "Pythagoras converse:", options: ["Proves right triangle","Acute","Obtuse","None"], correct: 0 }, //32
+{ question: "If line divides proportionally:", options: ["Parallel","Not parallel","None","All"], correct: 0 }, //33
+{ question: "Triangles same shape:", options: ["Similar","Congruent","None","All"], correct: 0 }, //34
+{ question: "Angle sum triangle:", options: ["180°","90°","360°","None"], correct: 0 }, //35
+
+{ question: "Right triangle angle sum:", options: ["180°","90°","None","All"], correct: 0 }, //36
+{ question: "Sum of squares sides relation:", options: ["Triangle type","Area","None","All"], correct: 0 }, //37
+{ question: "Smallest angle opposite:", options: ["Smallest side","Largest","None","All"], correct: 0 }, //38
+{ question: "Largest side opposite:", options: ["Largest angle","Smallest","None","All"], correct: 0 }, //39
+{ question: "Triangle determined by:", options: ["Sides & angles","Only sides","None","All"], correct: 0 }, //40
+
+// ASSERTION (41–80)
+{ question: "Assertion: Similar triangles same shape\nReason: Angles equal", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //41
+{ question: "Assertion: Congruent triangles equal\nReason: Same size & shape", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //42
+{ question: "Assertion: Area ratio square\nReason: Scale factor squared", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //43
+{ question: "Assertion: Altitude ratio same\nReason: Similarity", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //44
+{ question: "Assertion: Median ratio same\nReason: Similar triangles", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //45
+
+{ question: "Assertion: Pythagoras valid\nReason: Right triangle", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //46
+{ question: "Assertion: Converse proves right\nReason: Condition a²+b²=c²", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //47
+{ question: "Assertion: Parallel divides proportionally\nReason: Thales theorem", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //48
+{ question: "Assertion: Equal angles → similar\nReason: AA rule", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //49
+{ question: "Assertion: Sides proportional → similar\nReason: SSS rule", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //50
+
+{ question: "Assertion: SAS works\nReason: Included angle", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //51
+{ question: "Assertion: Congruent ⇒ similar\nReason: Equal sides & angles", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //52
+{ question: "Assertion: Similar ≠ congruent\nReason: Size differs", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //53
+{ question: "Assertion: Hypotenuse longest\nReason: Opposite right angle", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //54
+{ question: "Assertion: Triangle sum 180\nReason: Geometry rule", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //55
+
+{ question: "Assertion: Acute triangle a²+b²>c²\nReason: Condition", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //56
+{ question: "Assertion: Obtuse triangle a²+b²<c²\nReason: Condition", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //57
+{ question: "Assertion: Right triangle a²+b²=c²\nReason: Condition", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //58
+{ question: "Assertion: Scale factor changes size\nReason: Multiplies sides", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //59
+{ question: "Assertion: Shape unchanged\nReason: Angles same", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //60
+
+{ question: "Ratio of sides determines:", options: ["Similarity","Congruence","None","All"], correct: 0 }, //61
+{ question: "Equal triangles always:", options: ["Congruent","Similar only","None","All"], correct: 0 }, //62
+{ question: "If sides proportional:", options: ["Similar","Congruent","None","All"], correct: 0 }, //63
+{ question: "If angles equal:", options: ["Similar","Congruent","None","All"], correct: 0 }, //64
+{ question: "Area depends on:", options: ["Side²","Side","Angle","None"], correct: 0 }, //65
+
+{ question: "Perimeter depends on:", options: ["Side","Side²","Angle","None"], correct: 0 }, //66
+{ question: "Altitude depends on:", options: ["Side ratio","Square","None","All"], correct: 0 }, //67
+{ question: "Median depends on:", options: ["Side ratio","Square","None","All"], correct: 0 }, //68
+{ question: "Triangle core concept:", options: ["Similarity","Numbers","Lines","None"], correct: 0 }, //69
+{ question: "Triangle classification:", options: ["Sides & angles","Only sides","None","All"], correct: 0 }, //70
+
+{ question: "If k=2 → perimeter:", options: ["2x","4x","1/2x","None"], correct: 0 }, //71
+{ question: "If k=2 → area:", options: ["4x","2x","1/2x","None"], correct: 0 }, //72
+{ question: "Similar triangles always:", options: ["Same angles","Same sides","None","All"], correct: 0 }, //73
+{ question: "Congruent triangles:", options: ["Same size & shape","Only shape","None","All"], correct: 0 }, //74
+{ question: "Triangle relations:", options: ["Ratios","Angles","Sides","All"], correct: 3 }, //75
+
+{ question: "If two triangles same shape:", options: ["Similar","Congruent","None","All"], correct: 0 }, //76
+{ question: "If same size:", options: ["Congruent","Similar","None","All"], correct: 0 }, //77
+{ question: "Triangle geometry base:", options: ["Ratios","Numbers","None","All"], correct: 0 }, //78
+{ question: "Core theorem:", options: ["Pythagoras","Algebra","None","All"], correct: 0 }, //79
+{ question: "Chapter focus:", options: ["Similarity & ratios","Circles","Lines","None"], correct: 0 } //80
+]
+},
+
+"applications-of-trigonometry": {
+  mcq40: [
+    { question: "Angle of elevation is measured from:", options: ["Horizontal upward","Vertical downward","Top","None"], correct: 0 },
+    { question: "Angle of depression is measured from:", options: ["Horizontal downward","Vertical upward","Top","None"], correct: 0 },
+    { question: "Height of object using tanθ:", options: ["Opp/Adj","Adj/Opp","Hyp/Opp","None"], correct: 0 },
+    { question: "tanθ equals:", options: ["Opp/Adj","Adj/Opp","Hyp/Opp","None"], correct: 0 },
+    { question: "sinθ equals:", options: ["Opp/Hyp","Adj/Hyp","Opp/Adj","None"], correct: 0 },
+
+    { question: "cosθ equals:", options: ["Adj/Hyp","Opp/Hyp","Opp/Adj","None"], correct: 0 },
+    { question: "If height increases, angle:", options: ["Increases","Decreases","Same","None"], correct: 0 },
+    { question: "If distance increases, angle:", options: ["Decreases","Increases","Same","None"], correct: 0 },
+    { question: "Angle of elevation always:", options: ["Above horizontal","Below","None","All"], correct: 0 },
+    { question: "Angle of depression always:", options: ["Below horizontal","Above","None","All"], correct: 0 },
+
+    { question: "Height = distance × tanθ:", options: ["True","False","Depends","None"], correct: 0 },
+    { question: "If θ=45°, tanθ:", options: ["1","0","√3","None"], correct: 0 },
+    { question: "If θ=30°, tanθ:", options: ["1/√3","√3","1","None"], correct: 0 },
+    { question: "If θ=60°, tanθ:", options: ["√3","1","1/√3","None"], correct: 0 },
+    { question: "If θ=30°, sinθ:", options: ["1/2","√3/2","1","None"], correct: 0 },
+
+    { question: "If θ=60°, cosθ:", options: ["1/2","√3/2","1","None"], correct: 0 },
+    { question: "If θ=45°, sinθ:", options: ["1/√2","1/2","√3/2","None"], correct: 0 },
+    { question: "If θ=45°, cosθ:", options: ["1/√2","1/2","√3/2","None"], correct: 0 },
+    { question: "Shadow length increases when:", options: ["Angle decreases","Angle increases","Same","None"], correct: 0 },
+    { question: "Height found using:", options: ["Trigonometric ratios","Algebra","Geometry only","None"], correct: 0 },
+
+    { question: "Angle of depression equals:", options: ["Angle of elevation","Different always","Zero","None"], correct: 0 },
+    { question: "If observer higher:", options: ["Angle of depression used","Elevation","None","All"], correct: 0 },
+    { question: "If observer lower:", options: ["Angle of elevation","Depression","None","All"], correct: 0 },
+    { question: "Distance is adjacent side:", options: ["True","False","Depends","None"], correct: 0 },
+    { question: "Height is opposite side:", options: ["True","False","Depends","None"], correct: 0 },
+
+    { question: "Hypotenuse in problems:", options: ["Line of sight","Height","Base","None"], correct: 0 },
+    { question: "tanθ used when:", options: ["Height & base known","Hypotenuse","Angle only","None"], correct: 0 },
+    { question: "sinθ used when:", options: ["Height & hyp","Base","None","All"], correct: 0 },
+    { question: "cosθ used when:", options: ["Base & hyp","Height","None","All"], correct: 0 },
+    { question: "Angle increases → tanθ:", options: ["Increases","Decreases","Same","None"], correct: 0 },
+
+    { question: "Angle decreases → tanθ:", options: ["Decreases","Increases","Same","None"], correct: 0 },
+    { question: "If height doubles, tanθ:", options: ["Increases","Decreases","Same","None"], correct: 0 },
+    { question: "If base doubles, tanθ:", options: ["Decreases","Increases","Same","None"], correct: 0 },
+    { question: "Real life application:", options: ["Height measurement","Speed","Force","None"], correct: 0 },
+    { question: "Used in:", options: ["Surveying","Physics","Engineering","All"], correct: 3 },
+
+    { question: "Angle of elevation measured at:", options: ["Observer","Object","Ground","None"], correct: 0 },
+    { question: "Angle of depression measured at:", options: ["Observer","Object","Ground","None"], correct: 0 },
+    { question: "If tanθ=1:", options: ["θ=45°","30°","60°","None"], correct: 0 },
+    { question: "If tanθ=√3:", options: ["60°","30°","45°","None"], correct: 0 },
+    { question: "If tanθ=1/√3:", options: ["30°","60°","45°","None"], correct: 0 }
+  ],
+
+
+  mcq80: [
+{ question: "Angle of elevation is measured from:", options: ["Horizontal upward","Vertical","Top","None"], correct: 0 }, //1
+{ question: "Angle of depression is measured from:", options: ["Horizontal downward","Vertical","Top","None"], correct: 0 }, //2
+{ question: "tanθ equals:", options: ["Opp/Adj","Adj/Opp","Hyp/Opp","None"], correct: 0 }, //3
+{ question: "sinθ equals:", options: ["Opp/Hyp","Adj/Hyp","Opp/Adj","None"], correct: 0 }, //4
+{ question: "cosθ equals:", options: ["Adj/Hyp","Opp/Hyp","Opp/Adj","None"], correct: 0 }, //5
+
+{ question: "Height formula:", options: ["Distance × tanθ","Distance ÷ tanθ","tanθ ÷ distance","None"], correct: 0 }, //6
+{ question: "If θ=45°, tanθ:", options: ["1","0","√3","None"], correct: 0 }, //7
+{ question: "If θ=30°, tanθ:", options: ["1/√3","√3","1","None"], correct: 0 }, //8
+{ question: "If θ=60°, tanθ:", options: ["√3","1","1/√3","None"], correct: 0 }, //9
+{ question: "If θ=30°, sinθ:", options: ["1/2","√3/2","1","None"], correct: 0 }, //10
+
+{ question: "If θ=60°, cosθ:", options: ["1/2","√3/2","1","None"], correct: 0 }, //11
+{ question: "If θ=45°, sinθ:", options: ["1/√2","1/2","√3/2","None"], correct: 0 }, //12
+{ question: "If θ=45°, cosθ:", options: ["1/√2","1/2","√3/2","None"], correct: 0 }, //13
+{ question: "Angle increases → tanθ:", options: ["Increases","Decreases","Same","None"], correct: 0 }, //14
+{ question: "Distance increases → angle:", options: ["Decreases","Increases","Same","None"], correct: 0 }, //15
+
+{ question: "Shadow length increases when:", options: ["Angle decreases","Angle increases","Same","None"], correct: 0 }, //16
+{ question: "Hypotenuse represents:", options: ["Line of sight","Height","Base","None"], correct: 0 }, //17
+{ question: "Height is:", options: ["Opposite side","Adjacent","Hypotenuse","None"], correct: 0 }, //18
+{ question: "Distance is:", options: ["Adjacent side","Opposite","Hypotenuse","None"], correct: 0 }, //19
+{ question: "Angle of elevation always:", options: ["Above horizontal","Below","None","All"], correct: 0 }, //20
+
+{ question: "Angle of depression always:", options: ["Below horizontal","Above","None","All"], correct: 0 }, //21
+{ question: "Angle of depression equals:", options: ["Angle of elevation","Different","Zero","None"], correct: 0 }, //22
+{ question: "tanθ used when:", options: ["Height & base","Hyp only","Angle only","None"], correct: 0 }, //23
+{ question: "sinθ used when:", options: ["Height & hyp","Base","None","All"], correct: 0 }, //24
+{ question: "cosθ used when:", options: ["Base & hyp","Height","None","All"], correct: 0 }, //25
+
+{ question: "If height doubles:", options: ["tanθ increases","Decreases","Same","None"], correct: 0 }, //26
+{ question: "If base doubles:", options: ["tanθ decreases","Increases","Same","None"], correct: 0 }, //27
+{ question: "If θ=0°:", options: ["tanθ=0","tanθ=1","tanθ undefined","None"], correct: 0 }, //28
+{ question: "If θ=90°:", options: ["tanθ undefined","tanθ=0","tanθ=1","None"], correct: 0 }, //29
+{ question: "Real life use:", options: ["Height measurement","Cooking","Painting","None"], correct: 0 }, //30
+
+{ question: "Used in surveying:", options: ["Yes","No","Depends","None"], correct: 0 }, //31
+{ question: "Observer angle measured at:", options: ["Observer","Object","Ground","None"], correct: 0 }, //32
+{ question: "If tanθ=1:", options: ["45°","30°","60°","None"], correct: 0 }, //33
+{ question: "If tanθ=√3:", options: ["60°","30°","45°","None"], correct: 0 }, //34
+{ question: "If tanθ=1/√3:", options: ["30°","60°","45°","None"], correct: 0 }, //35
+
+{ question: "Angle increases → height:", options: ["Increases","Decreases","Same","None"], correct: 0 }, //36
+{ question: "Distance decreases → angle:", options: ["Increases","Decreases","Same","None"], correct: 0 }, //37
+{ question: "If observer higher:", options: ["Depression","Elevation","None","All"], correct: 0 }, //38
+{ question: "If observer lower:", options: ["Elevation","Depression","None","All"], correct: 0 }, //39
+{ question: "Right triangle used in:", options: ["All problems","None","Few","None"], correct: 0 }, //40
+
+// ASSERTION (41–80)
+{ question: "Assertion: tanθ=opp/adj\nReason: Definition", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //41
+{ question: "Assertion: Angle elevation above\nReason: Horizontal reference", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //42
+{ question: "Assertion: Depression below\nReason: Horizontal reference", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //43
+{ question: "Assertion: tan increases with angle\nReason: Ratio increases", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //44
+{ question: "Assertion: Distance ↑ angle ↓\nReason: Geometry relation", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //45
+
+{ question: "Assertion: Height ↑ angle ↑\nReason: tan relation", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //46
+{ question: "Assertion: Shadow ↑ angle ↓\nReason: Sun angle", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //47
+{ question: "Assertion: sinθ opp/hyp\nReason: Definition", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //48
+{ question: "Assertion: cosθ adj/hyp\nReason: Definition", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //49
+{ question: "Assertion: Hyp is longest\nReason: Right triangle", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //50
+
+{ question: "Assertion: tan45=1\nReason: Opp=Adj", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //51
+{ question: "Assertion: tan30 small\nReason: small opp", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //52
+{ question: "Assertion: tan60 large\nReason: large opp", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //53
+{ question: "Assertion: Angle 0 tan=0\nReason: opp=0", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //54
+{ question: "Assertion: tan90 undefined\nReason: adj=0", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //55
+
+{ question: "Assertion: Line of sight hyp\nReason: triangle formed", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //56
+{ question: "Assertion: Distance adj\nReason: base side", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //57
+{ question: "Assertion: Height opp\nReason: vertical side", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //58
+{ question: "Assertion: Problems use right triangle\nReason: geometry model", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //59
+{ question: "Assertion: tan gives height\nReason: opp/adj", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //60
+
+{ question: "Height depends on:", options: ["Angle & distance","Only angle","Only distance","None"], correct: 0 }, //61
+{ question: "Angle depends on:", options: ["Height & distance","Only height","Only base","None"], correct: 0 }, //62
+{ question: "Distance depends on:", options: ["Height & angle","Only height","Only angle","None"], correct: 0 }, //63
+{ question: "Trig used in:", options: ["Engineering","Surveying","Physics","All"], correct: 3 }, //64
+{ question: "Angle measured at:", options: ["Observer","Object","Ground","None"], correct: 0 }, //65
+
+{ question: "Triangle formed:", options: ["Right triangle","Acute","Obtuse","None"], correct: 0 }, //66
+{ question: "Base always:", options: ["Horizontal","Vertical","Slant","None"], correct: 0 }, //67
+{ question: "Height always:", options: ["Vertical","Horizontal","Slant","None"], correct: 0 }, //68
+{ question: "Hypotenuse always:", options: ["Slanted","Horizontal","Vertical","None"], correct: 0 }, //69
+{ question: "Chapter core:", options: ["Heights & distances","Numbers","Circles","None"], correct: 0 }, //70
+
+{ question: "tanθ main role:", options: ["Height calculation","Distance only","Angle only","None"], correct: 0 }, //71
+{ question: "sinθ main role:", options: ["Height-hyp relation","Base","None","All"], correct: 0 }, //72
+{ question: "cosθ main role:", options: ["Base-hyp relation","Height","None","All"], correct: 0 }, //73
+{ question: "Angle increase → height:", options: ["Increase","Decrease","Same","None"], correct: 0 }, //74
+{ question: "Angle decrease → height:", options: ["Decrease","Increase","Same","None"], correct: 0 }, //75
+
+{ question: "Distance increase → height:", options: ["Same angle lower height ratio","Depends","None","All"], correct: 0 }, //76
+{ question: "Trig always uses:", options: ["Right triangle","Circle","None","All"], correct: 0 }, //77
+{ question: "Height measurement method:", options: ["Indirect","Direct","None","All"], correct: 0 }, //78
+{ question: "Used for towers:", options: ["Yes","No","None","All"], correct: 0 }, //79
+{ question: "Chapter focus:", options: ["Angles & heights","Algebra","Geometry only","None"], correct: 0 } //80
+]
+},
+
+"circles": {
+  mcq40: [
+    { question: "A tangent to a circle touches it at:", options: ["One point","Two points","No point","Infinite"], correct: 0 },
+    { question: "Number of tangents from a point on circle:", options: ["1","2","0","Infinite"], correct: 0 },
+    { question: "Number of tangents from external point:", options: ["2","1","0","Infinite"], correct: 0 },
+    { question: "Number of tangents from inside point:", options: ["0","1","2","Infinite"], correct: 0 },
+    { question: "Radius at point of contact is:", options: ["Perpendicular to tangent","Parallel","Inclined","None"], correct: 0 },
+
+    { question: "Angle between tangent and radius:", options: ["90°","45°","60°","None"], correct: 0 },
+    { question: "Tangents from same external point are:", options: ["Equal","Unequal","Parallel","None"], correct: 0 },
+    { question: "If PA and PB tangents:", options: ["PA=PB","PA≠PB","PA>PB","None"], correct: 0 },
+    { question: "Tangent always lies:", options: ["Outside circle","Inside","On radius","None"], correct: 0 },
+    { question: "A line intersecting circle at two points:", options: ["Secant","Tangent","Radius","None"], correct: 0 },
+
+    { question: "If radius drawn to tangent point:", options: ["Perpendicular","Parallel","None","All"], correct: 0 },
+    { question: "Shortest distance from centre to tangent:", options: ["Radius","Diameter","Chord","None"], correct: 0 },
+    { question: "If two tangents drawn:", options: ["Equal lengths","Different","None","All"], correct: 0 },
+    { question: "Angle between two tangents:", options: ["Supplementary to central angle","Equal","None","All"], correct: 0 },
+    { question: "Chord perpendicular from centre:", options: ["Bisected","Unequal","None","All"], correct: 0 },
+
+    { question: "Distance from centre to tangent:", options: ["Radius","Diameter","None","All"], correct: 0 },
+    { question: "Tangent at any point:", options: ["Unique","Two","None","All"], correct: 0 },
+    { question: "If tangent parallel to chord:", options: ["Angle relation holds","None","All","Equal"], correct: 0 },
+    { question: "If two circles touch externally:", options: ["One common tangent","Two","None","All"], correct: 0 },
+    { question: "If two circles touch internally:", options: ["One tangent","Two","None","All"], correct: 0 },
+
+    { question: "Length of tangent PA:", options: ["√(PO²−r²)","PO+r","PO−r","None"], correct: 0 },
+    { question: "If PO=5,r=3 → PA:", options: ["4","2","3","None"], correct: 0 },
+    { question: "If radius increases:", options: ["Tangent length decreases","Increases","Same","None"], correct: 0 },
+    { question: "If distance increases:", options: ["Tangent length increases","Decreases","Same","None"], correct: 0 },
+    { question: "If point on circle:", options: ["One tangent","Two","None","All"], correct: 0 },
+
+    { question: "If point inside:", options: ["No tangent","One","Two","None"], correct: 0 },
+    { question: "If point outside:", options: ["Two tangents","One","None","All"], correct: 0 },
+    { question: "Angle between tangents equals:", options: ["180°−central angle","Central angle","None","All"], correct: 0 },
+    { question: "Central angle subtended:", options: ["At centre","At tangent","None","All"], correct: 0 },
+    { question: "Tangent length depends on:", options: ["Distance & radius","Only radius","Only distance","None"], correct: 0 },
+
+    { question: "Radius drawn to tangent point:", options: ["Perpendicular","Parallel","None","All"], correct: 0 },
+    { question: "Two tangents form triangle:", options: ["Isosceles","Scalene","None","All"], correct: 0 },
+    { question: "Equal tangents imply:", options: ["Symmetry","None","All","Unequal"], correct: 0 },
+    { question: "Tangent segment:", options: ["External","Internal","None","All"], correct: 0 },
+    { question: "Circle tangent property:", options: ["Perpendicular radius","Parallel","None","All"], correct: 0 },
+
+    { question: "If angle between tangents 60°, central angle:", options: ["120°","60°","90°","None"], correct: 0 },
+    { question: "If central angle 90°, angle between tangents:", options: ["90°","180°","60°","None"], correct: 0 },
+    { question: "If tangent length 0:", options: ["Point on circle","Inside","Outside","None"], correct: 0 },
+    { question: "Circle geometry core:", options: ["Tangents","Lines","Triangles","None"], correct: 0 },
+    { question: "Chapter concept:", options: ["Tangents & properties","Angles","Numbers","None"], correct: 0 }
+  ],
+
+mcq80: [
+{ question: "A tangent touches circle at:", options: ["One point","Two","None","Infinite"], correct: 0 }, //1
+{ question: "Tangents from external point:", options: ["2","1","0","Infinite"], correct: 0 }, //2
+{ question: "Tangents from point on circle:", options: ["1","2","0","Infinite"], correct: 0 }, //3
+{ question: "Tangents from inside point:", options: ["0","1","2","Infinite"], correct: 0 }, //4
+{ question: "Radius to tangent point:", options: ["Perpendicular","Parallel","Inclined","None"], correct: 0 }, //5
+
+{ question: "Angle between radius & tangent:", options: ["90°","45°","60°","None"], correct: 0 }, //6
+{ question: "Tangents from same point:", options: ["Equal","Unequal","Parallel","None"], correct: 0 }, //7
+{ question: "If PA,PB tangents:", options: ["PA=PB","PA≠PB","PA>PB","None"], correct: 0 }, //8
+{ question: "Line cutting circle twice:", options: ["Secant","Tangent","Radius","None"], correct: 0 }, //9
+{ question: "Tangent lies:", options: ["Outside","Inside","On radius","None"], correct: 0 }, //10
+
+{ question: "Distance centre to tangent:", options: ["Radius","Diameter","Chord","None"], correct: 0 }, //11
+{ question: "Shortest distance centre to tangent:", options: ["Radius","Diameter","None","All"], correct: 0 }, //12
+{ question: "Angle between tangents:", options: ["180°−central angle","Central angle","None","All"], correct: 0 }, //13
+{ question: "If central angle θ:", options: ["Angle tangents=180−θ","θ","None","All"], correct: 0 }, //14
+{ question: "Chord perpendicular from centre:", options: ["Bisected","Unequal","None","All"], correct: 0 }, //15
+
+{ question: "Tangent length formula:", options: ["√(PO²−r²)","PO+r","PO−r","None"], correct: 0 }, //16
+{ question: "If PO=10,r=6:", options: ["8","6","4","None"], correct: 0 }, //17
+{ question: "If radius increases:", options: ["Tangent decreases","Increases","Same","None"], correct: 0 }, //18
+{ question: "If distance increases:", options: ["Tangent increases","Decreases","Same","None"], correct: 0 }, //19
+{ question: "Point on circle tangent length:", options: ["0","1","None","All"], correct: 0 }, //20
+
+{ question: "If point inside:", options: ["No tangent","One","Two","None"], correct: 0 }, //21
+{ question: "If point outside:", options: ["Two tangents","One","None","All"], correct: 0 }, //22
+{ question: "Two tangents form:", options: ["Isosceles triangle","Scalene","None","All"], correct: 0 }, //23
+{ question: "Equal tangents imply:", options: ["Symmetry","None","All","Unequal"], correct: 0 }, //24
+{ question: "Radius drawn:", options: ["Perpendicular","Parallel","None","All"], correct: 0 }, //25
+
+{ question: "If angle tangents 60°:", options: ["Central=120°","60°","90°","None"], correct: 0 }, //26
+{ question: "If central=90°:", options: ["Tangents=90°","180°","60°","None"], correct: 0 }, //27
+{ question: "If tangent length zero:", options: ["Point on circle","Inside","Outside","None"], correct: 0 }, //28
+{ question: "Tangent depends on:", options: ["Distance & radius","Only r","Only d","None"], correct: 0 }, //29
+{ question: "If PO=r:", options: ["Tangent=0","Positive","None","All"], correct: 0 }, //30
+
+{ question: "If PO<r:", options: ["No tangent","One","Two","None"], correct: 0 }, //31
+{ question: "If PO>r:", options: ["Two tangents","One","None","All"], correct: 0 }, //32
+{ question: "Circle tangent concept:", options: ["Perpendicular radius","Parallel","None","All"], correct: 0 }, //33
+{ question: "Tangents always:", options: ["Straight lines","Curves","None","All"], correct: 0 }, //34
+{ question: "Chord centre relation:", options: ["Perpendicular bisects","Parallel","None","All"], correct: 0 }, //35
+
+{ question: "Distance centre to chord:", options: ["Perpendicular","Parallel","None","All"], correct: 0 }, //36
+{ question: "Chord length increases:", options: ["Near centre","Far","None","All"], correct: 0 }, //37
+{ question: "Largest chord:", options: ["Diameter","Radius","None","All"], correct: 0 }, //38
+{ question: "Smallest tangent length:", options: ["At circle","Far","None","All"], correct: 0 }, //39
+{ question: "Circle defined by:", options: ["Centre & radius","Diameter","None","All"], correct: 0 }, //40
+
+// ASSERTION (41–80)
+{ question: "Assertion: Tangent ⟂ radius\nReason: Geometry rule", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //41
+{ question: "Assertion: PA=PB\nReason: Equal tangents", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //42
+{ question: "Assertion: One tangent on circle\nReason: Touch point unique", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //43
+{ question: "Assertion: No tangent inside\nReason: Cannot touch", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //44
+{ question: "Assertion: Two tangents outside\nReason: Geometry", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //45
+
+{ question: "Assertion: Tangent length formula\nReason: Pythagoras", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //46
+{ question: "Assertion: Radius shortest\nReason: Perpendicular", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //47
+{ question: "Assertion: Tangent decreases with r\nReason: Formula", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //48
+{ question: "Assertion: Tangent increases with distance\nReason: Formula", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //49
+{ question: "Assertion: Angle tangents relation\nReason: 180−θ", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //50
+
+{ question: "Assertion: Isosceles triangle\nReason: Equal tangents", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //51
+{ question: "Assertion: Chord bisected\nReason: Perpendicular", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //52
+{ question: "Assertion: Diameter largest chord\nReason: Max distance", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //53
+{ question: "Assertion: Tangent straight line\nReason: Definition", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //54
+{ question: "Assertion: Circle defined by r\nReason: Fixed distance", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //55
+
+{ question: "If r doubles:", options: ["Tangent decreases","Increases","Same","None"], correct: 0 }, //56
+{ question: "If PO doubles:", options: ["Tangent increases","Decreases","Same","None"], correct: 0 }, //57
+{ question: "If PO=r:", options: ["Tangent=0","Positive","None","All"], correct: 0 }, //58
+{ question: "If PO<r:", options: ["No tangent","One","Two","None"], correct: 0 }, //59
+{ question: "If PO>r:", options: ["Two tangents","One","None","All"], correct: 0 }, //60
+
+{ question: "Angle tangents depends on:", options: ["Central angle","Radius","None","All"], correct: 0 }, //61
+{ question: "Central angle at:", options: ["Centre","Tangent","None","All"], correct: 0 }, //62
+{ question: "Tangent meets circle at:", options: ["One point","Two","None","All"], correct: 0 }, //63
+{ question: "Secant meets circle at:", options: ["Two points","One","None","All"], correct: 0 }, //64
+{ question: "Radius meets tangent:", options: ["Perpendicular","Parallel","None","All"], correct: 0 }, //65
+
+{ question: "Equal tangents form:", options: ["Equal sides","Different","None","All"], correct: 0 }, //66
+{ question: "Circle geometry uses:", options: ["Tangents","Angles","Lengths","All"], correct: 3 }, //67
+{ question: "Tangent always:", options: ["External","Internal","None","All"], correct: 0 }, //68
+{ question: "Chord relation:", options: ["Perpendicular bisects","Parallel","None","All"], correct: 0 }, //69
+{ question: "Core concept:", options: ["Tangents","Lines","Triangles","None"], correct: 0 }, //70
+
+{ question: "If tangent length increases:", options: ["Distance ↑","Radius ↑","None","All"], correct: 0 }, //71
+{ question: "If tangent decreases:", options: ["Radius ↑","Distance ↓","None","All"], correct: 0 }, //72
+{ question: "Circle always:", options: ["Closed curve","Open","None","All"], correct: 0 }, //73
+{ question: "Tangents properties:", options: ["Equal lengths","Perpendicular radius","All","None"], correct: 2 }, //74
+{ question: "Chapter focus:", options: ["Tangents & properties","Angles","Numbers","None"], correct: 0 }, //75
+
+{ question: "Number of tangents max:", options: ["2","1","Infinite","None"], correct: 0 }, //76
+{ question: "Internal point tangents:", options: ["0","1","2","None"], correct: 0 }, //77
+{ question: "External point tangents:", options: ["2","1","None","All"], correct: 0 }, //78
+{ question: "On circle tangents:", options: ["1","2","None","All"], correct: 0 }, //79
+{ question: "Final concept:", options: ["Geometry of tangents","Algebra","None","All"], correct: 0 } //80
+]
+},
+
+"areas-related-to-circles": {
+  mcq40: [
+    { question: "Area of circle:", options: ["πr²","2πr","πd","None"], correct: 0 },
+    { question: "Circumference of circle:", options: ["2πr","πr²","πd²","None"], correct: 0 },
+    { question: "Area of semicircle:", options: ["(1/2)πr²","πr²","2πr","None"], correct: 0 },
+    { question: "Perimeter of semicircle:", options: ["πr+2r","πr","2πr","None"], correct: 0 },
+    { question: "Area of quadrant:", options: ["(1/4)πr²","(1/2)πr²","πr²","None"], correct: 0 },
+
+    { question: "Arc length formula:", options: ["θ/360 × 2πr","θ/360 × πr²","2πr","None"], correct: 0 },
+    { question: "Sector area:", options: ["θ/360 × πr²","θ/360 × 2πr","πr²","None"], correct: 0 },
+    { question: "If θ=90°, sector area:", options: ["(1/4)πr²","(1/2)πr²","πr²","None"], correct: 0 },
+    { question: "If θ=180°, sector:", options: ["Semicircle","Quadrant","Circle","None"], correct: 0 },
+    { question: "If θ=360°, sector:", options: ["Full circle","Semicircle","None","All"], correct: 0 },
+
+    { question: "Arc length depends on:", options: ["θ & r","Only r","Only θ","None"], correct: 0 },
+    { question: "Sector area depends on:", options: ["θ & r","Only r","Only θ","None"], correct: 0 },
+    { question: "If radius doubles, area:", options: ["4 times","2 times","Same","None"], correct: 0 },
+    { question: "If radius doubles, circumference:", options: ["2 times","4 times","Same","None"], correct: 0 },
+    { question: "If θ doubles, sector area:", options: ["Doubles","Quadruples","Same","None"], correct: 0 },
+
+    { question: "Segment area:", options: ["Sector−triangle","Triangle−sector","Sector only","None"], correct: 0 },
+    { question: "Area of ring:", options: ["π(R²−r²)","π(R+r)","2πR","None"], correct: 0 },
+    { question: "If R=5,r=3 ring area:", options: ["16π","25π","9π","None"], correct: 0 },
+    { question: "Area ratio circles:", options: ["r² ratio","r ratio","Inverse","None"], correct: 0 },
+    { question: "Circumference ratio:", options: ["r ratio","r² ratio","Inverse","None"], correct: 0 },
+
+    { question: "If diameter doubles, area:", options: ["4 times","2 times","Same","None"], correct: 0 },
+    { question: "If diameter doubles, circumference:", options: ["2 times","4 times","Same","None"], correct: 0 },
+    { question: "Sector fraction:", options: ["θ/360","θ/180","θ/90","None"], correct: 0 },
+    { question: "Arc is part of:", options: ["Circumference","Area","Radius","None"], correct: 0 },
+    { question: "Chord divides circle into:", options: ["Segments","Sectors","Triangles","None"], correct: 0 },
+
+    { question: "Major segment larger than:", options: ["Minor segment","Sector","Circle","None"], correct: 0 },
+    { question: "Sector bounded by:", options: ["2 radii & arc","Chord","Diameter","None"], correct: 0 },
+    { question: "Angle in radians not used in:", options: ["Board formulas","Advanced math","Physics","None"], correct: 0 },
+    { question: "π value approx:", options: ["22/7","3","4","None"], correct: 0 },
+    { question: "Area unit:", options: ["Square units","Units","cm","None"], correct: 0 },
+
+    { question: "Circumference unit:", options: ["Length units","Square","None","All"], correct: 0 },
+    { question: "If arc = full circle:", options: ["2πr","πr²","None","All"], correct: 0 },
+    { question: "If θ small:", options: ["Small sector","Large","None","All"], correct: 0 },
+    { question: "If θ large:", options: ["Large sector","Small","None","All"], correct: 0 },
+    { question: "Circle area grows:", options: ["Quadratically","Linearly","Constant","None"], correct: 0 },
+
+    { question: "Circumference grows:", options: ["Linearly","Quadratically","Constant","None"], correct: 0 },
+    { question: "Segment requires:", options: ["Triangle area","Sector area","Both","None"], correct: 2 },
+    { question: "Area related chapter uses:", options: ["Formulas","Logic","Both","None"], correct: 2 },
+    { question: "If θ=60°, sector area:", options: ["(1/6)πr²","(1/3)πr²","πr²","None"], correct: 0 },
+    { question: "If θ=120°, sector:", options: ["(1/3)πr²","(1/6)πr²","πr²","None"], correct: 0 }
+  ],
+
+  mcq80: [
+{ question: "Area of circle:", options: ["πr²","2πr","πd","None"], correct: 0 }, //1
+{ question: "Circumference:", options: ["2πr","πr²","πd²","None"], correct: 0 }, //2
+{ question: "Area semicircle:", options: ["(1/2)πr²","πr²","2πr","None"], correct: 0 }, //3
+{ question: "Perimeter semicircle:", options: ["πr+2r","πr","2πr","None"], correct: 0 }, //4
+{ question: "Area quadrant:", options: ["(1/4)πr²","(1/2)πr²","πr²","None"], correct: 0 }, //5
+
+{ question: "Arc length:", options: ["θ/360×2πr","θ/360×πr²","2πr","None"], correct: 0 }, //6
+{ question: "Sector area:", options: ["θ/360×πr²","θ/360×2πr","πr²","None"], correct: 0 }, //7
+{ question: "If θ=90°:", options: ["Quarter circle","Half","Full","None"], correct: 0 }, //8
+{ question: "If θ=180°:", options: ["Semicircle","Quadrant","Full","None"], correct: 0 }, //9
+{ question: "If θ=360°:", options: ["Full circle","Half","None","All"], correct: 0 }, //10
+
+{ question: "Arc depends on:", options: ["θ & r","Only r","Only θ","None"], correct: 0 }, //11
+{ question: "Sector depends on:", options: ["θ & r","Only r","Only θ","None"], correct: 0 }, //12
+{ question: "If r doubles, area:", options: ["4x","2x","Same","None"], correct: 0 }, //13
+{ question: "If r doubles, circumference:", options: ["2x","4x","Same","None"], correct: 0 }, //14
+{ question: "If θ doubles, sector:", options: ["2x","4x","Same","None"], correct: 0 }, //15
+
+{ question: "Segment area:", options: ["Sector−triangle","Triangle−sector","Sector only","None"], correct: 0 }, //16
+{ question: "Ring area:", options: ["π(R²−r²)","π(R+r)","2πR","None"], correct: 0 }, //17
+{ question: "If R=7,r=5:", options: ["24π","49π","25π","None"], correct: 0 }, //18
+{ question: "Area ratio circles:", options: ["r² ratio","r ratio","Inverse","None"], correct: 0 }, //19
+{ question: "Circumference ratio:", options: ["r ratio","r² ratio","Inverse","None"], correct: 0 }, //20
+
+{ question: "Diameter doubles → area:", options: ["4x","2x","Same","None"], correct: 0 }, //21
+{ question: "Diameter doubles → circumference:", options: ["2x","4x","Same","None"], correct: 0 }, //22
+{ question: "Sector fraction:", options: ["θ/360","θ/180","θ/90","None"], correct: 0 }, //23
+{ question: "Arc is:", options: ["Part of circumference","Area","Radius","None"], correct: 0 }, //24
+{ question: "Chord divides:", options: ["Segments","Sectors","Triangles","None"], correct: 0 }, //25
+
+{ question: "Major segment:", options: ["Larger part","Smaller","None","All"], correct: 0 }, //26
+{ question: "Sector bounded by:", options: ["2 radii & arc","Chord","Diameter","None"], correct: 0 }, //27
+{ question: "π approx:", options: ["22/7","3","4","None"], correct: 0 }, //28
+{ question: "Area units:", options: ["Square","Length","None","All"], correct: 0 }, //29
+{ question: "Circumference units:", options: ["Length","Square","None","All"], correct: 0 }, //30
+
+{ question: "If θ small:", options: ["Small sector","Large","None","All"], correct: 0 }, //31
+{ question: "If θ large:", options: ["Large sector","Small","None","All"], correct: 0 }, //32
+{ question: "Circle area growth:", options: ["Quadratic","Linear","Constant","None"], correct: 0 }, //33
+{ question: "Circumference growth:", options: ["Linear","Quadratic","Constant","None"], correct: 0 }, //34
+{ question: "Segment needs:", options: ["Triangle & sector","Only sector","Only triangle","None"], correct: 0 }, //35
+
+{ question: "If θ=60° sector:", options: ["(1/6)πr²","(1/3)πr²","πr²","None"], correct: 0 }, //36
+{ question: "If θ=120°:", options: ["(1/3)πr²","(1/6)πr²","πr²","None"], correct: 0 }, //37
+{ question: "If θ=30°:", options: ["(1/12)πr²","(1/6)πr²","πr²","None"], correct: 0 }, //38
+{ question: "Arc 90°:", options: ["(1/4)×2πr","πr","None","All"], correct: 0 }, //39
+{ question: "Arc 180°:", options: ["πr","2πr","None","All"], correct: 0 }, //40
+
+// ASSERTION (41–80)
+{ question: "Assertion: Area πr²\nReason: Formula", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //41
+{ question: "Assertion: Circumference 2πr\nReason: Formula", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //42
+{ question: "Assertion: Sector area θ/360πr²\nReason: Fraction concept", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //43
+{ question: "Assertion: Arc θ/360×2πr\nReason: Fraction concept", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //44
+{ question: "Assertion: r doubles area 4x\nReason: Square relation", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //45
+
+{ question: "Assertion: r doubles circumference 2x\nReason: Linear relation", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //46
+{ question: "Assertion: θ doubles area doubles\nReason: Direct proportion", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //47
+{ question: "Assertion: Segment = sector−triangle\nReason: Geometry", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //48
+{ question: "Assertion: Ring area π(R²−r²)\nReason: Subtraction", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //49
+{ question: "Assertion: Area ratio r²\nReason: Square relation", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //50
+
+{ question: "Assertion: Circumference ratio r\nReason: Linear", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //51
+{ question: "Assertion: Arc part of circle\nReason: Boundary", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //52
+{ question: "Assertion: Chord creates segments\nReason: Division", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //53
+{ question: "Assertion: Sector has 2 radii\nReason: Definition", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //54
+{ question: "Assertion: Area unit square\nReason: Definition", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //55
+
+{ question: "If r increases:", options: ["Area ↑","Area ↓","Same","None"], correct: 0 }, //56
+{ question: "If θ increases:", options: ["Sector ↑","↓","Same","None"], correct: 0 }, //57
+{ question: "If r decreases:", options: ["Area ↓","↑","Same","None"], correct: 0 }, //58
+{ question: "If θ small:", options: ["Small arc","Large","None","All"], correct: 0 }, //59
+{ question: "If θ large:", options: ["Large arc","Small","None","All"], correct: 0 }, //60
+
+{ question: "Arc 360°:", options: ["2πr","πr²","None","All"], correct: 0 }, //61
+{ question: "Area 360°:", options: ["πr²","2πr","None","All"], correct: 0 }, //62
+{ question: "Semicircle arc:", options: ["πr","2πr","None","All"], correct: 0 }, //63
+{ question: "Quadrant arc:", options: ["(1/2)πr","πr","None","All"], correct: 0 }, //64
+{ question: "Core concept:", options: ["Sectors & segments","Lines","Numbers","None"], correct: 0 }, //65
+
+{ question: "If θ=45°:", options: ["(1/8)πr²","(1/4)πr²","πr²","None"], correct: 0 }, //66
+{ question: "If θ=270°:", options: ["(3/4)πr²","(1/4)πr²","πr²","None"], correct: 0 }, //67
+{ question: "Arc depends:", options: ["θ & r","Only r","Only θ","None"], correct: 0 }, //68
+{ question: "Sector depends:", options: ["θ & r","Only r","Only θ","None"], correct: 0 }, //69
+{ question: "Circle geometry base:", options: ["Radius","Diameter","All","None"], correct: 2 }, //70
+
+{ question: "Area increases with:", options: ["r²","r","θ","None"], correct: 0 }, //71
+{ question: "Circumference increases with:", options: ["r","r²","θ","None"], correct: 0 }, //72
+{ question: "Segment area uses:", options: ["Both sector & triangle","Only sector","Only triangle","None"], correct: 0 }, //73
+{ question: "Ring formed by:", options: ["Two circles","One circle","None","All"], correct: 0 }, //74
+{ question: "Chapter focus:", options: ["Area & arcs","Lines","Triangles","None"], correct: 0 }, //75
+
+{ question: "Max area sector:", options: ["360°","180°","90°","None"], correct: 0 }, //76
+{ question: "Min area sector:", options: ["Small θ","Large θ","None","All"], correct: 0 }, //77
+{ question: "Arc length max:", options: ["360°","180°","90°","None"], correct: 0 }, //78
+{ question: "Arc length min:", options: ["Small θ","Large θ","None","All"], correct: 0 }, //79
+{ question: "Final concept:", options: ["Circle areas","Algebra","None","All"], correct: 0 } //80
+]
+},
+
+"surface-areas-and-volumes": {
+  mcq40: [
+    { question: "Volume of cube:", options: ["a³","6a²","a²","None"], correct: 0 },
+    { question: "TSA of cube:", options: ["6a²","a³","4a²","None"], correct: 0 },
+    { question: "Volume of cuboid:", options: ["lbh","2lbh","lb","None"], correct: 0 },
+    { question: "TSA of cuboid:", options: ["2(lb+bh+hl)","lbh","2l+b+h","None"], correct: 0 },
+    { question: "CSA of cylinder:", options: ["2πrh","πr²","πrl","None"], correct: 0 },
+
+    { question: "Volume of cylinder:", options: ["πr²h","2πrh","πr²","None"], correct: 0 },
+    { question: "TSA of cylinder:", options: ["2πr(h+r)","2πrh","πr²h","None"], correct: 0 },
+    { question: "Slant height of cone:", options: ["√(r²+h²)","r+h","r²+h²","None"], correct: 0 },
+    { question: "CSA of cone:", options: ["πrl","πr²","2πr","None"], correct: 0 },
+    { question: "Volume of cone:", options: ["(1/3)πr²h","πr²h","2πr²h","None"], correct: 0 },
+
+    { question: "Volume of sphere:", options: ["(4/3)πr³","πr²","2πr","None"], correct: 0 },
+    { question: "Surface area sphere:", options: ["4πr²","2πr","πr²","None"], correct: 0 },
+    { question: "Volume hemisphere:", options: ["(2/3)πr³","(4/3)πr³","πr³","None"], correct: 0 },
+    { question: "CSA hemisphere:", options: ["2πr²","4πr²","πr²","None"], correct: 0 },
+    { question: "TSA hemisphere:", options: ["3πr²","2πr²","4πr²","None"], correct: 0 },
+
+    { question: "Frustum volume:", options: ["(1/3)πh(R²+r²+Rr)","πr²h","π(R+r)h","None"], correct: 0 },
+    { question: "Frustum slant height:", options: ["√((R−r)²+h²)","R+r","R−r","None"], correct: 0 },
+    { question: "Frustum CSA:", options: ["πl(R+r)","πr²","2πr","None"], correct: 0 },
+    { question: "If radius doubles, sphere volume:", options: ["8 times","4 times","2 times","None"], correct: 0 },
+    { question: "If radius doubles, area:", options: ["4 times","2 times","8 times","None"], correct: 0 },
+
+    { question: "If height doubles cylinder volume:", options: ["2 times","4 times","Same","None"], correct: 0 },
+    { question: "If radius doubles cylinder volume:", options: ["4 times","2 times","8 times","None"], correct: 0 },
+    { question: "Cone volume compared to cylinder:", options: ["1/3","1/2","Same","None"], correct: 0 },
+    { question: "Sphere volume vs cone (same r,h=2r):", options: ["Equal","Double","Half","None"], correct: 0 },
+    { question: "Cube diagonal:", options: ["a√3","a√2","2a","None"], correct: 0 },
+
+    { question: "Cuboid diagonal:", options: ["√(l²+b²+h²)","l+b+h","lbh","None"], correct: 0 },
+    { question: "Unit of volume:", options: ["Cubic","Square","Length","None"], correct: 0 },
+    { question: "Unit of area:", options: ["Square","Cubic","Length","None"], correct: 0 },
+    { question: "If volume constant, shape changes:", options: ["Surface area changes","Same","None","All"], correct: 0 },
+    { question: "Melting solids conserve:", options: ["Volume","Area","Shape","None"], correct: 0 },
+
+    { question: "Sphere melted to smaller spheres:", options: ["Volume conserved","Area conserved","None","All"], correct: 0 },
+    { question: "Cone → cylinder (same base,height):", options: ["Volume 1/3","Same","2x","None"], correct: 0 },
+    { question: "If l increases in cone:", options: ["CSA increases","Decreases","Same","None"], correct: 0 },
+    { question: "Cylinder TSA includes:", options: ["2πrh+2πr²","2πrh","πr²","None"], correct: 0 },
+    { question: "Cone TSA:", options: ["πr(l+r)","πrl","πr²","None"], correct: 0 },
+
+    { question: "Sphere TSA vs CSA:", options: ["Same","Different","None","All"], correct: 0 },
+    { question: "Hemisphere TSA includes:", options: ["Base+CSA","CSA only","None","All"], correct: 0 },
+    { question: "If radius halves sphere volume:", options: ["1/8","1/4","1/2","None"], correct: 0 },
+    { question: "If radius halves area:", options: ["1/4","1/2","1/8","None"], correct: 0 },
+    { question: "Core concept:", options: ["3D solids","2D shapes","Lines","None"], correct: 0 }
+  ],
+
+  mcq80: [
+{ question: "Volume cube:", options: ["a³","6a²","a²","None"], correct: 0 }, //1
+{ question: "TSA cube:", options: ["6a²","a³","4a²","None"], correct: 0 }, //2
+{ question: "Volume cuboid:", options: ["lbh","2lbh","lb","None"], correct: 0 }, //3
+{ question: "TSA cuboid:", options: ["2(lb+bh+hl)","lbh","2l+b+h","None"], correct: 0 }, //4
+{ question: "CSA cylinder:", options: ["2πrh","πr²","πrl","None"], correct: 0 }, //5
+
+{ question: "Volume cylinder:", options: ["πr²h","2πrh","πr²","None"], correct: 0 }, //6
+{ question: "TSA cylinder:", options: ["2πr(h+r)","2πrh","πr²h","None"], correct: 0 }, //7
+{ question: "Cone slant height:", options: ["√(r²+h²)","r+h","r²+h²","None"], correct: 0 }, //8
+{ question: "CSA cone:", options: ["πrl","πr²","2πr","None"], correct: 0 }, //9
+{ question: "Volume cone:", options: ["(1/3)πr²h","πr²h","2πr²h","None"], correct: 0 }, //10
+
+{ question: "Volume sphere:", options: ["(4/3)πr³","πr²","2πr","None"], correct: 0 }, //11
+{ question: "Surface sphere:", options: ["4πr²","2πr","πr²","None"], correct: 0 }, //12
+{ question: "Volume hemisphere:", options: ["(2/3)πr³","(4/3)πr³","πr³","None"], correct: 0 }, //13
+{ question: "CSA hemisphere:", options: ["2πr²","4πr²","πr²","None"], correct: 0 }, //14
+{ question: "TSA hemisphere:", options: ["3πr²","2πr²","4πr²","None"], correct: 0 }, //15
+
+{ question: "Frustum volume:", options: ["(1/3)πh(R²+r²+Rr)","πr²h","π(R+r)h","None"], correct: 0 }, //16
+{ question: "Frustum CSA:", options: ["πl(R+r)","πr²","2πr","None"], correct: 0 }, //17
+{ question: "If r doubles sphere volume:", options: ["8x","4x","2x","None"], correct: 0 }, //18
+{ question: "If r doubles area:", options: ["4x","2x","8x","None"], correct: 0 }, //19
+{ question: "If h doubles cylinder volume:", options: ["2x","4x","Same","None"], correct: 0 }, //20
+
+{ question: "If r doubles cylinder volume:", options: ["4x","2x","8x","None"], correct: 0 }, //21
+{ question: "Cone vs cylinder:", options: ["1/3 volume","1/2","Same","None"], correct: 0 }, //22
+{ question: "Sphere vs cone (h=2r):", options: ["Equal","Double","Half","None"], correct: 0 }, //23
+{ question: "Cube diagonal:", options: ["a√3","a√2","2a","None"], correct: 0 }, //24
+{ question: "Cuboid diagonal:", options: ["√(l²+b²+h²)","l+b+h","lbh","None"], correct: 0 }, //25
+
+{ question: "Volume unit:", options: ["Cubic","Square","Length","None"], correct: 0 }, //26
+{ question: "Area unit:", options: ["Square","Cubic","Length","None"], correct: 0 }, //27
+{ question: "Melting solids conserve:", options: ["Volume","Area","Shape","None"], correct: 0 }, //28
+{ question: "Sphere → small spheres:", options: ["Volume conserved","Area conserved","None","All"], correct: 0 }, //29
+{ question: "Cylinder TSA:", options: ["2πrh+2πr²","2πrh","πr²","None"], correct: 0 }, //30
+
+{ question: "Cone TSA:", options: ["πr(l+r)","πrl","πr²","None"], correct: 0 }, //31
+{ question: "Sphere TSA vs CSA:", options: ["Same","Different","None","All"], correct: 0 }, //32
+{ question: "Hemisphere TSA:", options: ["Base+CSA","CSA only","None","All"], correct: 0 }, //33
+{ question: "If r halves volume:", options: ["1/8","1/4","1/2","None"], correct: 0 }, //34
+{ question: "If r halves area:", options: ["1/4","1/2","1/8","None"], correct: 0 }, //35
+
+{ question: "If l increases cone CSA:", options: ["Increases","Decreases","Same","None"], correct: 0 }, //36
+{ question: "If h increases cylinder volume:", options: ["Increases","Decreases","Same","None"], correct: 0 }, //37
+{ question: "Cube vs sphere same r:", options: ["Sphere larger volume","Cube larger","Equal","None"], correct: 0 }, //38
+{ question: "Frustum slant height:", options: ["√((R−r)²+h²)","R+r","R−r","None"], correct: 0 }, //39
+{ question: "Core concept:", options: ["3D solids","2D","Lines","None"], correct: 0 }, //40
+
+// ASSERTION (41–80)
+{ question: "Assertion: Volume cube a³\nReason: Formula", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //41
+{ question: "Assertion: TSA cube 6a²\nReason: 6 faces", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //42
+{ question: "Assertion: Cylinder volume πr²h\nReason: Base×height", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //43
+{ question: "Assertion: Cone volume 1/3\nReason: Pyramid logic", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //44
+{ question: "Assertion: Sphere volume 4/3πr³\nReason: Formula", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //45
+
+{ question: "Assertion: Area depends r²\nReason: Square relation", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //46
+{ question: "Assertion: Volume depends r³\nReason: Cube relation", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //47
+{ question: "Assertion: Melting conserves volume\nReason: Same material", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //48
+{ question: "Assertion: Sphere CSA=4πr²\nReason: Formula", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //49
+{ question: "Assertion: Hemisphere TSA=3πr²\nReason: Base+CSA", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //50
+
+{ question: "Assertion: Cylinder TSA=2πr(h+r)\nReason: CSA+2 bases", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //51
+{ question: "Assertion: Cone CSA=πrl\nReason: Lateral surface", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //52
+{ question: "Assertion: Frustum formula valid\nReason: Derived", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //53
+{ question: "Assertion: Diagonal cube a√3\nReason: 3D Pythagoras", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //54
+{ question: "Assertion: Diagonal cuboid formula\nReason: Pythagoras", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //55
+
+{ question: "If r increases:", options: ["Volume ↑","↓","Same","None"], correct: 0 }, //56
+{ question: "If r decreases:", options: ["Volume ↓","↑","Same","None"], correct: 0 }, //57
+{ question: "If h increases:", options: ["Volume ↑","↓","Same","None"], correct: 0 }, //58
+{ question: "If r doubles sphere:", options: ["Volume 8x","4x","2x","None"], correct: 0 }, //59
+{ question: "If r doubles area:", options: ["4x","2x","8x","None"], correct: 0 }, //60
+
+{ question: "If r halves volume:", options: ["1/8","1/4","1/2","None"], correct: 0 }, //61
+{ question: "If r halves area:", options: ["1/4","1/2","1/8","None"], correct: 0 }, //62
+{ question: "Cone vs cylinder:", options: ["1/3 volume","Same","None","All"], correct: 0 }, //63
+{ question: "Sphere vs cylinder:", options: ["Depends","Same","None","All"], correct: 0 }, //64
+{ question: "Units volume:", options: ["Cubic","Square","None","All"], correct: 0 }, //65
+
+{ question: "Units area:", options: ["Square","Cubic","None","All"], correct: 0 }, //66
+{ question: "Core solids:", options: ["3D","2D","None","All"], correct: 0 }, //67
+{ question: "Formulas needed:", options: ["Yes","No","None","All"], correct: 0 }, //68
+{ question: "Chapter uses:", options: ["Math & logic","Only math","None","All"], correct: 0 }, //69
+{ question: "Concept base:", options: ["Geometry","Algebra","None","All"], correct: 0 }, //70
+
+{ question: "Cylinder base:", options: ["Circle","Square","None","All"], correct: 0 }, //71
+{ question: "Cone base:", options: ["Circle","Square","None","All"], correct: 0 }, //72
+{ question: "Sphere shape:", options: ["Round","Flat","None","All"], correct: 0 }, //73
+{ question: "Frustum shape:", options: ["Cut cone","Cylinder","None","All"], correct: 0 }, //74
+{ question: "Cube faces:", options: ["6","4","8","None"], correct: 0 }, //75
+
+{ question: "Cuboid faces:", options: ["6","4","8","None"], correct: 0 }, //76
+{ question: "Sphere faces:", options: ["0","1","None","All"], correct: 0 }, //77
+{ question: "Hemisphere faces:", options: ["1 curved +1 flat","Only curved","None","All"], correct: 0 }, //78
+{ question: "Cone faces:", options: ["1 curved+1 base","Only curved","None","All"], correct: 0 }, //79
+{ question: "Final concept:", options: ["Volumes & areas","Lines","None","All"], correct: 0 } //80
+]
+},
+
+"statistics": {
+  mcq40: [
+    { question: "Mean formula (direct):", options: ["Σfᵢxᵢ/Σfᵢ","Σxᵢ/Σfᵢ","Σfᵢ/Σxᵢ","None"], correct: 0 },
+    { question: "Assumed mean method uses:", options: ["a + (Σfᵢdᵢ/Σfᵢ)","Σfᵢxᵢ","Σxᵢ","None"], correct: 0 },
+    { question: "Step deviation formula:", options: ["a + (Σfᵢuᵢ/Σfᵢ)h","Σfᵢxᵢ","Σfᵢdᵢ","None"], correct: 0 },
+    { question: "Class mark xᵢ:", options: ["(upper+lower)/2","upper−lower","upper×lower","None"], correct: 0 },
+    { question: "Frequency means:", options: ["Number of observations","Value","Mean","None"], correct: 0 },
+
+    { question: "Median position:", options: ["N/2","(N+1)/2","N/3","None"], correct: 0 },
+    { question: "Mode formula:", options: ["l + [(f1−f0)/(2f1−f0−f2)]×h","Σfᵢxᵢ","N/2","None"], correct: 0 },
+    { question: "Cumulative frequency:", options: ["Running total","Mean","Mode","None"], correct: 0 },
+    { question: "Ogive graph used for:", options: ["Median","Mean","Mode","None"], correct: 0 },
+    { question: "Mean depends on:", options: ["All values","Middle","Max","None"], correct: 0 },
+
+    { question: "Median depends on:", options: ["Position","All values","Sum","None"], correct: 0 },
+    { question: "Mode depends on:", options: ["Highest frequency","Position","Mean","None"], correct: 0 },
+    { question: "Grouped data mean:", options: ["Approximate","Exact","Zero","None"], correct: 0 },
+    { question: "Class width h:", options: ["Upper−lower","Lower−upper","Sum","None"], correct: 0 },
+    { question: "If data symmetric:", options: ["Mean=Median=Mode","All different","None","All"], correct: 0 },
+
+    { question: "Mean shifts if:", options: ["All values change","Frequency changes","None","All"], correct: 0 },
+    { question: "Median unaffected by:", options: ["Extreme values","Middle","None","All"], correct: 0 },
+    { question: "Mode unaffected by:", options: ["Extreme values","Mean","None","All"], correct: 0 },
+    { question: "Less than ogive:", options: ["Upper limit cumulative","Lower","None","All"], correct: 0 },
+    { question: "More than ogive:", options: ["Lower limit cumulative","Upper","None","All"], correct: 0 },
+
+    { question: "Intersection of ogives gives:", options: ["Median","Mean","Mode","None"], correct: 0 },
+    { question: "Mean of grouped data uses:", options: ["Class mark","Frequency","Both","None"], correct: 2 },
+    { question: "Median class contains:", options: ["N/2 value","Highest value","None","All"], correct: 0 },
+    { question: "Modal class:", options: ["Highest frequency","Lowest","None","All"], correct: 0 },
+    { question: "If class width equal:", options: ["Step deviation easier","Hard","None","All"], correct: 0 },
+
+    { question: "Mean formula simplest:", options: ["Direct","Step","Assumed","None"], correct: 0 },
+    { question: "Step deviation reduces:", options: ["Calculation","Values","None","All"], correct: 0 },
+    { question: "If frequencies same:", options: ["Mean=avg values","Zero","None","All"], correct: 0 },
+    { question: "Graph type for freq:", options: ["Histogram","Pie","Line","None"], correct: 0 },
+    { question: "Histogram uses:", options: ["Bars","Lines","Points","None"], correct: 0 },
+
+    { question: "Continuous data:", options: ["Class intervals","Discrete","None","All"], correct: 0 },
+    { question: "Discrete data:", options: ["Individual values","Intervals","None","All"], correct: 0 },
+    { question: "If class unequal:", options: ["Adjust freq","Ignore","None","All"], correct: 0 },
+    { question: "Mean sensitive to:", options: ["Extreme values","Middle","None","All"], correct: 0 },
+    { question: "Median stable for:", options: ["Skewed data","Normal","None","All"], correct: 0 },
+
+    { question: "Mode useful for:", options: ["Most common value","Mean","Median","None"], correct: 0 },
+    { question: "If data skewed:", options: ["Mean≠Median≠Mode","Equal","None","All"], correct: 0 },
+    { question: "Statistics deals with:", options: ["Data","Shapes","Lines","None"], correct: 0 },
+    { question: "Central tendency includes:", options: ["Mean, median, mode","Only mean","None","All"], correct: 0 },
+    { question: "Core concept:", options: ["Data analysis","Geometry","Algebra","None"], correct: 0 }
+  ],
+
+
+  mcq80: [
+{ question: "Mean formula:", options: ["Σfᵢxᵢ/Σfᵢ","Σxᵢ/Σfᵢ","Σfᵢ/Σxᵢ","None"], correct: 0 }, //1
+{ question: "Assumed mean:", options: ["a+(Σfᵢdᵢ/Σfᵢ)","Σxᵢ","Σfᵢ","None"], correct: 0 }, //2
+{ question: "Step deviation:", options: ["a+(Σfᵢuᵢ/Σfᵢ)h","Σxᵢ","Σfᵢ","None"], correct: 0 }, //3
+{ question: "Class mark:", options: ["(l+u)/2","l−u","l×u","None"], correct: 0 }, //4
+{ question: "Frequency:", options: ["Count","Value","Mean","None"], correct: 0 }, //5
+
+{ question: "Median position:", options: ["N/2","(N+1)/2","N/3","None"], correct: 0 }, //6
+{ question: "Mode formula:", options: ["l+[(f1−f0)/(2f1−f0−f2)]h","Σxᵢ","N/2","None"], correct: 0 }, //7
+{ question: "Cumulative freq:", options: ["Running total","Mean","Mode","None"], correct: 0 }, //8
+{ question: "Ogive gives:", options: ["Median","Mean","Mode","None"], correct: 0 }, //9
+{ question: "Mean uses:", options: ["All data","Middle","None","All"], correct: 0 }, //10
+
+{ question: "Median uses:", options: ["Position","Values","None","All"], correct: 0 }, //11
+{ question: "Mode uses:", options: ["Highest freq","Position","Mean","None"], correct: 0 }, //12
+{ question: "Grouped mean:", options: ["Approx","Exact","Zero","None"], correct: 0 }, //13
+{ question: "Class width:", options: ["u−l","l−u","Sum","None"], correct: 0 }, //14
+{ question: "Symmetric data:", options: ["Mean=Median=Mode","Different","None","All"], correct: 0 }, //15
+
+{ question: "Mean sensitive to:", options: ["Extreme values","Middle","None","All"], correct: 0 }, //16
+{ question: "Median resistant to:", options: ["Extreme values","Mean","None","All"], correct: 0 }, //17
+{ question: "Mode resistant to:", options: ["Extreme values","Mean","None","All"], correct: 0 }, //18
+{ question: "Less than ogive:", options: ["Upper cumulative","Lower","None","All"], correct: 0 }, //19
+{ question: "More than ogive:", options: ["Lower cumulative","Upper","None","All"], correct: 0 }, //20
+
+{ question: "Ogives intersection:", options: ["Median","Mean","Mode","None"], correct: 0 }, //21
+{ question: "Mean uses:", options: ["Class mark & freq","Only freq","None","All"], correct: 0 }, //22
+{ question: "Median class:", options: ["Contains N/2","Max value","None","All"], correct: 0 }, //23
+{ question: "Modal class:", options: ["Max freq","Min","None","All"], correct: 0 }, //24
+{ question: "Equal class width:", options: ["Step easier","Hard","None","All"], correct: 0 }, //25
+
+{ question: "Direct method:", options: ["Simple","Complex","None","All"], correct: 0 }, //26
+{ question: "Step deviation:", options: ["Reduces calc","Increases","None","All"], correct: 0 }, //27
+{ question: "If freq same:", options: ["Mean=avg","Zero","None","All"], correct: 0 }, //28
+{ question: "Histogram:", options: ["Bars","Lines","Points","None"], correct: 0 }, //29
+{ question: "Continuous data:", options: ["Intervals","Points","None","All"], correct: 0 }, //30
+
+{ question: "Discrete data:", options: ["Values","Intervals","None","All"], correct: 0 }, //31
+{ question: "Unequal class:", options: ["Adjust","Ignore","None","All"], correct: 0 }, //32
+{ question: "Skewed data:", options: ["Mean≠Median≠Mode","Equal","None","All"], correct: 0 }, //33
+{ question: "Central tendency:", options: ["Mean,Median,Mode","Mean","None","All"], correct: 0 }, //34
+{ question: "Statistics deals:", options: ["Data","Shapes","None","All"], correct: 0 }, //35
+
+{ question: "Mean shift:", options: ["All values","Freq","None","All"], correct: 0 }, //36
+{ question: "Median stable:", options: ["Skewed data","Normal","None","All"], correct: 0 }, //37
+{ question: "Mode gives:", options: ["Most common","Mean","Median","None"], correct: 0 }, //38
+{ question: "Ogive type:", options: ["Graph","Table","None","All"], correct: 0 }, //39
+{ question: "Core concept:", options: ["Data analysis","Geometry","None","All"], correct: 0 }, //40
+
+// ASSERTION (41–80)
+{ question: "Assertion: Mean uses all values\nReason: Formula", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //41
+{ question: "Assertion: Median uses position\nReason: N/2", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //42
+{ question: "Assertion: Mode highest freq\nReason: Definition", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //43
+{ question: "Assertion: Mean affected extremes\nReason: Values used", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //44
+{ question: "Assertion: Median stable extremes\nReason: Position based", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //45
+
+{ question: "Assertion: Mode stable extremes\nReason: Highest freq", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //46
+{ question: "Assertion: Ogive gives median\nReason: Intersection", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //47
+{ question: "Assertion: Step reduces calc\nReason: Simplifies values", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //48
+{ question: "Assertion: Class mark avg\nReason: Middle value", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //49
+{ question: "Assertion: Histogram bars\nReason: Frequency display", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //50
+
+{ question: "Assertion: Continuous intervals\nReason: Grouped data", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //51
+{ question: "Assertion: Discrete values\nReason: Individual data", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //52
+{ question: "Assertion: Mean approx grouped\nReason: Midpoints", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //53
+{ question: "Assertion: Median class N/2\nReason: Definition", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //54
+{ question: "Assertion: Modal class max freq\nReason: Definition", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //55
+
+{ question: "If data increases:", options: ["Mean ↑","↓","Same","None"], correct: 0 }, //56
+{ question: "If extreme added:", options: ["Mean changes","Median stable","None","All"], correct: 3 }, //57
+{ question: "If freq changes:", options: ["Mean changes","Median changes","None","All"], correct: 3 }, //58
+{ question: "If class width same:", options: ["Step easy","Hard","None","All"], correct: 0 }, //59
+{ question: "If skewed:", options: ["Mean≠Median≠Mode","Equal","None","All"], correct: 0 }, //60
+
+{ question: "Mean always:", options: ["Unique","Multiple","None","All"], correct: 0 }, //61
+{ question: "Median always:", options: ["Unique","Multiple","None","All"], correct: 0 }, //62
+{ question: "Mode may be:", options: ["Multiple","Single","None","All"], correct: 3 }, //63
+{ question: "Data representation:", options: ["Graph","Table","All","None"], correct: 2 }, //64
+{ question: "Statistics uses:", options: ["Data","Math","All","None"], correct: 2 }, //65
+
+{ question: "Mean formula base:", options: ["Σfᵢxᵢ","Σxᵢ","None","All"], correct: 0 }, //66
+{ question: "Median formula base:", options: ["N/2","Σxᵢ","None","All"], correct: 0 }, //67
+{ question: "Mode formula base:", options: ["f1,f0,f2","Σxᵢ","None","All"], correct: 0 }, //68
+{ question: "Core methods:", options: ["Direct,Assumed,Step","Only direct","None","All"], correct: 0 }, //69
+{ question: "Chapter focus:", options: ["Data analysis","Geometry","None","All"], correct: 0 }, //70
+
+{ question: "Mean relation:", options: ["Uses values","Position","None","All"], correct: 0 }, //71
+{ question: "Median relation:", options: ["Position","Values","None","All"], correct: 0 }, //72
+{ question: "Mode relation:", options: ["Frequency","Position","None","All"], correct: 0 }, //73
+{ question: "Histogram shows:", options: ["Frequency","Mean","None","All"], correct: 0 }, //74
+{ question: "Ogive shows:", options: ["Cumulative freq","Mean","None","All"], correct: 0 }, //75
+
+{ question: "Mean best for:", options: ["Symmetric data","Skewed","None","All"], correct: 0 }, //76
+{ question: "Median best for:", options: ["Skewed data","Symmetric","None","All"], correct: 0 }, //77
+{ question: "Mode best for:", options: ["Most frequent","Mean","None","All"], correct: 0 }, //78
+{ question: "Data summary:", options: ["Central tendency","Spread","None","All"], correct: 0 }, //79
+{ question: "Final concept:", options: ["Statistics","Geometry","None","All"], correct: 0 } //80
+]
+},
+
+"probability": {
+  mcq40: [
+    { question: "Probability formula:", options: ["Favourable/Total","Total/Favourable","Difference","None"], correct: 0 },
+    { question: "Range of probability:", options: ["0 to 1","0 to 10","-1 to 1","None"], correct: 0 },
+    { question: "If event certain:", options: ["P=1","P=0","P=1/2","None"], correct: 0 },
+    { question: "If impossible:", options: ["P=0","P=1","P=1/2","None"], correct: 0 },
+    { question: "Total outcomes called:", options: ["Sample space","Event","Trial","None"], correct: 0 },
+
+    { question: "Event is:", options: ["Subset of sample space","Whole sample","Trial","None"], correct: 0 },
+    { question: "If outcomes equally likely:", options: ["Classical probability","Experimental","None","All"], correct: 0 },
+    { question: "Probability of event A:", options: ["n(A)/n(S)","n(S)/n(A)","n(A)+n(S)","None"], correct: 0 },
+    { question: "If P(A)=0.5:", options: ["Even chance","Impossible","Certain","None"], correct: 0 },
+    { question: "Complementary event:", options: ["A′","A+B","A×B","None"], correct: 0 },
+
+    { question: "P(A)+P(A′):", options: ["1","0","2","None"], correct: 0 },
+    { question: "If P(A)=0.3, P(A′):", options: ["0.7","0.3","1","None"], correct: 0 },
+    { question: "Probability cannot be:", options: ["Negative","Fraction","Decimal","None"], correct: 0 },
+    { question: "Max probability:", options: ["1","0","∞","None"], correct: 0 },
+    { question: "Min probability:", options: ["0","1","-1","None"], correct: 0 },
+
+    { question: "If coin tossed once:", options: ["2 outcomes","1","3","None"], correct: 0 },
+    { question: "Probability of head:", options: ["1/2","1","0","None"], correct: 0 },
+    { question: "Dice outcomes:", options: ["6","3","2","None"], correct: 0 },
+    { question: "P(get 3 on dice):", options: ["1/6","1/3","1/2","None"], correct: 0 },
+    { question: "P(get even number):", options: ["3/6","1/6","2/6","None"], correct: 0 },
+
+    { question: "P(get odd):", options: ["3/6","2/6","1/6","None"], correct: 0 },
+    { question: "If card drawn from 52:", options: ["52 outcomes","13","4","None"], correct: 0 },
+    { question: "P(get ace:", options: ["4/52","1/52","13/52","None"], correct: 0 },
+    { question: "P(get red card:", options: ["26/52","13/52","4/52","None"], correct: 0 },
+    { question: "P(get black card:", options: ["26/52","13/52","None","All"], correct: 0 },
+
+    { question: "If event impossible:", options: ["0","1","1/2","None"], correct: 0 },
+    { question: "If event certain:", options: ["1","0","None","All"], correct: 0 },
+    { question: "Sum of all probabilities:", options: ["1","0","2","None"], correct: 0 },
+    { question: "Probability type:", options: ["Classical","Algebra","Geometry","None"], correct: 0 },
+    { question: "If favourable=total:", options: ["1","0","1/2","None"], correct: 0 },
+
+    { question: "If favourable=0:", options: ["0","1","1/2","None"], correct: 0 },
+    { question: "Probability uses:", options: ["Ratios","Addition","None","All"], correct: 0 },
+    { question: "Trial means:", options: ["Experiment","Event","Outcome","None"], correct: 0 },
+    { question: "Outcome means:", options: ["Result","Trial","Event","None"], correct: 0 },
+    { question: "Event example:", options: ["Getting head","Coin","Dice","None"], correct: 0 },
+
+    { question: "Complement rule:", options: ["1−P(A)","P(A)+1","P(A)−1","None"], correct: 0 },
+    { question: "If P(A)=0.8:", options: ["Likely","Impossible","None","All"], correct: 0 },
+    { question: "If P(A)=0:", options: ["Impossible","Certain","None","All"], correct: 0 },
+    { question: "If P(A)=1:", options: ["Certain","Impossible","None","All"], correct: 0 },
+    { question: "Core concept:", options: ["Chance","Numbers","Shapes","None"], correct: 0 }
+  ],
+
+  mcq80: [
+{ question: "Probability formula:", options: ["Favourable/Total","Total/Favourable","Difference","None"], correct: 0 }, //1
+{ question: "Range:", options: ["0 to 1","0 to 10","-1 to 1","None"], correct: 0 }, //2
+{ question: "Certain event:", options: ["1","0","1/2","None"], correct: 0 }, //3
+{ question: "Impossible event:", options: ["0","1","1/2","None"], correct: 0 }, //4
+{ question: "Sample space:", options: ["All outcomes","Event","Trial","None"], correct: 0 }, //5
+
+{ question: "Event:", options: ["Subset of sample","Whole sample","Trial","None"], correct: 0 }, //6
+{ question: "Equally likely:", options: ["Classical","Experimental","None","All"], correct: 0 }, //7
+{ question: "P(A):", options: ["n(A)/n(S)","n(S)/n(A)","Sum","None"], correct: 0 }, //8
+{ question: "Complement:", options: ["A′","A+B","A×B","None"], correct: 0 }, //9
+{ question: "P(A)+P(A′):", options: ["1","0","2","None"], correct: 0 }, //10
+
+{ question: "If P(A)=0.3:", options: ["P(A′)=0.7","0.3","1","None"], correct: 0 }, //11
+{ question: "Max probability:", options: ["1","0","∞","None"], correct: 0 }, //12
+{ question: "Min probability:", options: ["0","1","-1","None"], correct: 0 }, //13
+{ question: "Coin outcomes:", options: ["2","1","3","None"], correct: 0 }, //14
+{ question: "P(head):", options: ["1/2","1","0","None"], correct: 0 }, //15
+
+{ question: "Dice outcomes:", options: ["6","3","2","None"], correct: 0 }, //16
+{ question: "P(3):", options: ["1/6","1/3","1/2","None"], correct: 0 }, //17
+{ question: "P(even):", options: ["3/6","2/6","1/6","None"], correct: 0 }, //18
+{ question: "P(odd):", options: ["3/6","2/6","1/6","None"], correct: 0 }, //19
+{ question: "Cards total:", options: ["52","26","13","None"], correct: 0 }, //20
+
+{ question: "P(ace):", options: ["4/52","1/52","13/52","None"], correct: 0 }, //21
+{ question: "P(red):", options: ["26/52","13/52","4/52","None"], correct: 0 }, //22
+{ question: "P(black):", options: ["26/52","13/52","None","All"], correct: 0 }, //23
+{ question: "P(face card):", options: ["12/52","4/52","13/52","None"], correct: 0 }, //24
+{ question: "P(number card):", options: ["40/52","12/52","26/52","None"], correct: 0 }, //25
+
+{ question: "If favourable=total:", options: ["1","0","1/2","None"], correct: 0 }, //26
+{ question: "If favourable=0:", options: ["0","1","1/2","None"], correct: 0 }, //27
+{ question: "Sum probabilities:", options: ["1","0","2","None"], correct: 0 }, //28
+{ question: "Trial:", options: ["Experiment","Event","Outcome","None"], correct: 0 }, //29
+{ question: "Outcome:", options: ["Result","Trial","Event","None"], correct: 0 }, //30
+
+{ question: "Event example:", options: ["Head","Coin","Dice","None"], correct: 0 }, //31
+{ question: "Complement formula:", options: ["1−P(A)","P(A)+1","P(A)−1","None"], correct: 0 }, //32
+{ question: "If P(A)=0.8:", options: ["Likely","Impossible","None","All"], correct: 0 }, //33
+{ question: "If P(A)=0:", options: ["Impossible","Certain","None","All"], correct: 0 }, //34
+{ question: "If P(A)=1:", options: ["Certain","Impossible","None","All"], correct: 0 }, //35
+
+{ question: "Probability type:", options: ["Classical","Geometry","None","All"], correct: 0 }, //36
+{ question: "Probability uses:", options: ["Ratios","Addition","None","All"], correct: 0 }, //37
+{ question: "Favourable outcomes:", options: ["Desired","All","None","All"], correct: 0 }, //38
+{ question: "Total outcomes:", options: ["Sample space","Event","None","All"], correct: 0 }, //39
+{ question: "Core concept:", options: ["Chance","Numbers","Shapes","None"], correct: 0 }, //40
+
+// ASSERTION (41–80)
+{ question: "Assertion: P=F/T\nReason: Definition", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //41
+{ question: "Assertion: Range 0–1\nReason: Limits", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //42
+{ question: "Assertion: Complement sum=1\nReason: Total probability", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //43
+{ question: "Assertion: Coin 2 outcomes\nReason: H,T", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //44
+{ question: "Assertion: Dice 6 outcomes\nReason: Faces", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //45
+
+{ question: "Assertion: Cards 52\nReason: Standard deck", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //46
+{ question: "Assertion: P(ace)=4/52\nReason: 4 aces", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //47
+{ question: "Assertion: P(red)=26/52\nReason: Half red", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //48
+{ question: "Assertion: Impossible P=0\nReason: Definition", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //49
+{ question: "Assertion: Certain P=1\nReason: Definition", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //50
+
+{ question: "Assertion: Complement P=1−P(A)\nReason: Total=1", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //51
+{ question: "Assertion: Event subset\nReason: Sample space", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //52
+{ question: "Assertion: Trial experiment\nReason: Definition", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //53
+{ question: "Assertion: Outcome result\nReason: Definition", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //54
+{ question: "Assertion: Probability ratio\nReason: F/T", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //55
+
+{ question: "If favourable increases:", options: ["Probability ↑","↓","Same","None"], correct: 0 }, //56
+{ question: "If total increases:", options: ["Probability ↓","↑","Same","None"], correct: 0 }, //57
+{ question: "If P(A)=1:", options: ["Certain","Impossible","None","All"], correct: 0 }, //58
+{ question: "If P(A)=0:", options: ["Impossible","Certain","None","All"], correct: 0 }, //59
+{ question: "If equal chance:", options: ["Fair","Biased","None","All"], correct: 0 }, //60
+
+{ question: "Coin fair:", options: ["Equal prob","Not equal","None","All"], correct: 0 }, //61
+{ question: "Dice fair:", options: ["Equal prob","Not equal","None","All"], correct: 0 }, //62
+{ question: "Card random:", options: ["Equal chance","Biased","None","All"], correct: 0 }, //63
+{ question: "Probability depends:", options: ["Outcomes","Luck","None","All"], correct: 0 }, //64
+{ question: "Chance measure:", options: ["Probability","Mean","None","All"], correct: 0 }, //65
+
+{ question: "Event types:", options: ["Simple","Compound","All","None"], correct: 2 }, //66
+{ question: "Probability always:", options: ["Between 0 &1",">1","<0","None"], correct: 0 }, //67
+{ question: "Total prob always:", options: ["1","0","2","None"], correct: 0 }, //68
+{ question: "Complement event:", options: ["Opposite","Same","None","All"], correct: 0 }, //69
+{ question: "Chapter focus:", options: ["Chance","Geometry","None","All"], correct: 0 }, //70
+
+{ question: "Favourable ≤ total:", options: ["True","False","Depends","None"], correct: 0 }, //71
+{ question: "Probability fraction:", options: ["≤1",">1","None","All"], correct: 0 }, //72
+{ question: "Outcome count:", options: ["Finite","Infinite","None","All"], correct: 0 }, //73
+{ question: "Sample space finite:", options: ["Yes","No","None","All"], correct: 0 }, //74
+{ question: "Probability exact:", options: ["Yes","No","None","All"], correct: 0 }, //75
+
+{ question: "Classical probability:", options: ["Equal outcomes","Unequal","None","All"], correct: 0 }, //76
+{ question: "Experimental probability:", options: ["Based on trials","Formula","None","All"], correct: 0 }, //77
+{ question: "Probability zero means:", options: ["Impossible","Certain","None","All"], correct: 0 }, //78
+{ question: "Probability one means:", options: ["Certain","Impossible","None","All"], correct: 0 }, //79
+{ question: "Final concept:", options: ["Probability","Algebra","None","All"], correct: 0 } //80
+]
+},
+
+
+}
+}
+
+
  

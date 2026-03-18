@@ -32,14 +32,12 @@ export default function Dashboard() {
   const [search, setSearch] = useState("");
   const [lessonData, setLessonData] = useState({});
 
-  /* -------------------- LOAD DATA -------------------- */
   useEffect(() => {
     const saved = localStorage.getItem(`lessonData_class${currentClass}`);
     if (saved) setLessonData(JSON.parse(saved));
     else setLessonData({});
   }, [currentClass]);
 
-  /* -------------------- SAVE -------------------- */
   const saveProgress = () => {
     localStorage.setItem(
       `lessonData_class${currentClass}`,
@@ -54,7 +52,6 @@ export default function Dashboard() {
     localStorage.removeItem(`lessonData_class${currentClass}`);
   };
 
-  /* -------------------- HELPERS -------------------- */
   const toggle = (key) =>
     setOpen((p) => ({ ...p, [key]: !p[key] }));
 
@@ -71,7 +68,6 @@ export default function Dashboard() {
     }));
   };
 
-  /* -------------------- COUNT -------------------- */
   const countCompletedLessons = (node) => {
     if (Array.isArray(node)) {
       return node.filter((lesson) => {
@@ -94,7 +90,6 @@ export default function Dashboard() {
     return 0;
   };
 
-  /* -------------------- LESSON -------------------- */
   const renderLesson = (lesson, meta) => {
     if (search && !lesson.toLowerCase().includes(search.toLowerCase()))
       return null;
@@ -116,7 +111,6 @@ export default function Dashboard() {
       <div key={id} className="ml-6 mt-3 bg-zinc-900 p-4 rounded-xl">
         <div className="font-medium">{lesson}</div>
 
-        {/* STATUS */}
         <div className="mt-2 flex gap-2 flex-wrap">
           {STATUS.map((s) => (
             <button
@@ -131,7 +125,6 @@ export default function Dashboard() {
           ))}
         </div>
 
-        {/* COUNTERS */}
         <div className="mt-2 flex gap-6 text-sm">
           <button
             onClick={() =>
@@ -170,7 +163,6 @@ export default function Dashboard() {
           </button>
         </div>
 
-        {/* LINKS */}
         <div className="mt-2 flex gap-4 text-sm text-blue-400">
           {meta?.video && (
             <a href={meta.video} target="_blank">
@@ -184,7 +176,6 @@ export default function Dashboard() {
           )}
         </div>
 
-        {/* STATUS ACTION */}
         {data.status === "todo" && (
           <a
             href={`/lesson/${lessonId}/prerequisites`}
@@ -196,7 +187,7 @@ export default function Dashboard() {
 
         {data.status === "done" && (
           <a
-            href={`/quiz/${lessonId}?marks=40`}
+            href={`/quiz/${lessonId}?marks=40&shuffle=1`}
             className="block mt-2 text-green-400"
           >
             → Done? Test (40 marks)
@@ -205,7 +196,7 @@ export default function Dashboard() {
 
         {data.status === "mastered" && (
           <a
-            href={`/quiz/${lessonId}?marks=80`}
+            href={`/quiz/${lessonId}?marks=80&shuffle=1`}
             className="block mt-2 text-purple-400"
           >
             → Mastered? Test (80 marks)
@@ -215,7 +206,6 @@ export default function Dashboard() {
     );
   };
 
-  /* -------------------- RECURSIVE -------------------- */
   const renderNode = (node) => {
     if (Array.isArray(node)) {
       return node.map((lesson) => {
@@ -254,14 +244,12 @@ export default function Dashboard() {
     });
   };
 
-  /* -------------------- UI -------------------- */
   return (
     <main className="max-w-5xl mx-auto p-6 space-y-6">
       <h1 className="text-2xl font-semibold">
         Dashboard – Class {currentClass}
       </h1>
 
-      {/* CLASS SELECT */}
       <div className="flex gap-2">
         {CLASSES.map((cls) => (
           <button
@@ -276,7 +264,6 @@ export default function Dashboard() {
         ))}
       </div>
 
-      {/* SAVE RESET */}
       <div className="flex gap-3">
         <button
           onClick={saveProgress}
@@ -293,7 +280,6 @@ export default function Dashboard() {
         </button>
       </div>
 
-      {/* SEARCH */}
       <input
         value={search}
         onChange={(e) => setSearch(e.target.value)}
@@ -301,7 +287,6 @@ export default function Dashboard() {
         className="w-full bg-zinc-900 p-3 rounded-xl"
       />
 
-      {/* SUBJECTS */}
       {Object.entries(syllabus[currentClass] || {}).map(([n, d]) => (
         <div key={n} className="bg-zinc-900 p-5 rounded-2xl">
           <button
