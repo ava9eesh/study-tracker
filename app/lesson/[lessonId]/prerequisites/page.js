@@ -1,56 +1,115 @@
 "use client";
 
-import { useParams } from "next/navigation";
-import { syllabus } from "../../../../data/syllabus";
+import { useSearchParams, useParams } from "next/navigation";
+import { useState } from "react";
+import { questions } from "../../data/questions";
 
+// 🔥 SHUFFLE FUNCTION
+function shuffleQuestion(question) {
+  const options = question.options.map((opt, index) => ({
+    text: opt,
+    isCorrect: index === question.correct,
+  }));
 
-// slug helper — SAME LOGIC EVERYWHERE
-const slugify = (s) =>
-  s
-    .toLowerCase()
-    .replace(/\s+/g, "-")
-    .replace(/[^\w-]/g, "");
-
-const flatten = (node) => {
-  if (Array.isArray(node)) return node;
-  if (typeof node === "object" && node !== null) {
-    return Object.values(node).flatMap(flatten);
+  for (let i = options.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [options[i], options[j]] = [options[j], options[i]];
   }
-  return [];
-};
 
-export default function PrerequisitesPage() {
-  const { lessonId } = useParams(); // ✅ THIS IS THE KEY FIX
+  return {
+    ...question,
+    options: options.map((o) => o.text),
+    correct: options.findIndex((o) => o.isCorrect),
+  };
+}
 
-  const lessons = flatten(syllabus);
+export default function QuizPage() {
+  const params = useParams();
+  const search = useSearchParams();
 
-  const lesson = lessons.find(
-    (l) =>
-      typeof l === "object" &&
-      l.name &&
-      slugify(l.name) === lessonId
-  );
+  const lesson = params.lesson;
+  const marks = search.get("marks") || "40";
+  const shouldShuffle = search.get("shuffle") === "1";
 
-  const prerequisites =
-    lesson?.prerequisites ?? [
-      "No prerequisites added for this lesson yet.",
-    ];
+  const rawQuestions =
+    questions[lesson]?.[`mcq${marks}`] || [];
+
+  const quizQuestions = shouldShuffle
+    ? rawQuestions.map((q) => shuffleQuestion(q))
+    : rawQuestions;
+
+  const [index, setIndex] = useState(0);
+  const [score, setScore] = useState(0);
+  const [selected, setSelected] = useState(null);
+  const [finished, setFinished] = useState(false);
+
+  if (!quizQuestions.length) {
+    return <div className="p-6">No questions found 😭</div>;
+  }
+
+  const q = quizQuestions[index];
+
+  const handleAnswer = (i) => {
+    if (selected !== null) return;
+
+    setSelected(i);
+    if (i === q.correct) {
+      setScore((s) => s + 1);
+    }
+  };
+
+  const next = () => {
+    if (index + 1 < quizQuestions.length) {
+      setIndex(index + 1);
+      setSelected(null);
+    } else {
+      setFinished(true);
+    }
+  };
+
+  if (finished) {
+    return (
+      <div className="p-6 text-center space-y-4">
+        <h1 className="text-2xl font-bold">Finished 😤</h1>
+        <p>
+          Score: {score} / {quizQuestions.length}
+        </p>
+      </div>
+    );
+  }
 
   return (
-    <main className="max-w-2xl mx-auto p-6 text-white">
-      <h1 className="text-2xl font-bold mb-4">
-        Previous Knowledge Required
-      </h1>
+    <main className="max-w-xl mx-auto p-6 space-y-6">
+      <h2 className="text-lg font-semibold">
+        Q{index + 1}. {q.question}
+      </h2>
 
-      <ul className="list-disc ml-6 space-y-2 text-gray-200">
-        {prerequisites.map((p, i) => (
-          <li key={i}>{p}</li>
+      <div className="space-y-2">
+        {q.options.map((opt, i) => (
+          <button
+            key={i}
+            onClick={() => handleAnswer(i)}
+            className={`block w-full text-left p-3 rounded ${
+              selected === i
+                ? i === q.correct
+                  ? "bg-green-600"
+                  : "bg-red-600"
+                : "bg-zinc-800"
+            }`}
+          >
+            {opt}
+          </button>
         ))}
-      </ul>
+      </div>
 
-      <p className="mt-6 text-sm text-gray-400">
-        Lesson: {lessonId.replaceAll("-", " ")}
-      </p>
+      {selected !== null && (
+        <button
+          onClick={next}
+          className="bg-blue-600 px-4 py-2 rounded"
+        >
+          Next
+        </button>
+      )}
     </main>
   );
 }
