@@ -569,6 +569,7 @@ export const syllabus = {
     { name: "Trigonometry", video: "https://www.youtube.com/results?search_query=trigonometry+class+10", pyq: "https://www.google.com/search?q=trigonometry+class+10+pyq", prerequisites: ["Triangles"] },
     { name: "Applications of Trigonometry", video: "https://www.youtube.com/results?search_query=applications+of+trigonometry+class+10", pyq: "https://www.google.com/search?q=applications+of+trigonometry+class+10+pyq", prerequisites: ["Trigonometry"] },
     { name: "Circles", video: "https://www.youtube.com/results?search_query=circles+class+10", pyq: "https://www.google.com/search?q=circles+class+10+pyq", prerequisites: ["Geometry"] },
+    { name: "Area Related to Circles", video: "https://www.youtube.com/results?search_query=area+related+to+circles+class+10", pyq: "https://www.google.com/search?q=area+related+to+circles+class+10+pyq", prerequisites: ["Circles"] },
     { name: "Surface Areas and Volumes", video: "https://www.youtube.com/results?search_query=surface+area+class+10", pyq: "https://www.google.com/search?q=surface+area+class+10+pyq", prerequisites: ["Mensuration"] },
     { name: "Statistics", video: "https://www.youtube.com/results?search_query=statistics+class+10", pyq: "https://www.google.com/search?q=statistics+class+10+pyq", prerequisites: ["Data"] },
     { name: "Probability", video: "https://www.youtube.com/results?search_query=probability+class+10", pyq: "https://www.google.com/search?q=probability+class+10+pyq", prerequisites: ["Statistics"] }
