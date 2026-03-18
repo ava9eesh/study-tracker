@@ -595,6 +595,7 @@ export const questions = {
 { question: "Which process involves gain of electrons?", options: ["Oxidation", "Reduction", "Neutralization", "Combustion"], correct: 1 },
 { question: "Which condition accelerates corrosion?", options: ["Dry air", "Moist salty air", "Vacuum", "Low temperature"], correct: 1 }
   ],
+},
 
 "acids-bases-and-salts": {
   mcq40: [
@@ -740,6 +741,7 @@ export const questions = {
   { question: "POP hardens with:", options: ["Water", "Air", "Heat", "None"], correct: 0 },
   { question: "Baking soda heating gives:", options: ["CO2", "H2", "O2", "None"], correct: 0 }
 ],
+},
 
 "metals-and-non-metals": {
   mcq40: [
@@ -885,142 +887,8 @@ export const questions = {
     { question: "Reactivity decreases down series?", options: ["No", "Yes", "Sometimes", "None"], correct: 1 },
     { question: "Reactivity increases up series?", options: ["Yes", "No", "Sometimes", "None"], correct: 0 }
   ],
-
-  "carbon-and-its-compounds": {
-  mcq40: [
-    { question: "Carbon has valency:", options: ["4", "2", "3", "1"], correct: 0 },
-    { question: "Carbon forms covalent bonds because:", options: ["Tetravalent", "Electropositive", "Electronegative", "None"], correct: 0 },
-    { question: "Covalent bonds are formed by:", options: ["Sharing electrons", "Transfer electrons", "Heat", "None"], correct: 0 },
-    { question: "Methane formula:", options: ["CH4", "C2H6", "C3H8", "CH3OH"], correct: 0 },
-    { question: "Ethane formula:", options: ["C2H6", "CH4", "C2H4", "C3H8"], correct: 0 },
-    { question: "Alkanes have bonds:", options: ["Single", "Double", "Triple", "None"], correct: 0 },
-    { question: "Alkenes have bonds:", options: ["Double", "Single", "Triple", "None"], correct: 0 },
-    { question: "Alkynes have bonds:", options: ["Triple", "Double", "Single", "None"], correct: 0 },
-    { question: "Functional group -OH is:", options: ["Alcohol", "Aldehyde", "Ketone", "Acid"], correct: 0 },
-    { question: "Functional group -COOH is:", options: ["Carboxylic acid", "Alcohol", "Ketone", "Aldehyde"], correct: 0 },
-
-    { question: "Saturated hydrocarbons are:", options: ["Alkanes", "Alkenes", "Alkynes", "None"], correct: 0 },
-    { question: "Unsaturated hydrocarbons are:", options: ["Alkenes & Alkynes", "Alkanes", "None", "All"], correct: 0 },
-    { question: "General formula of alkanes:", options: ["CnH2n+2", "CnH2n", "CnH2n-2", "None"], correct: 0 },
-    { question: "General formula of alkenes:", options: ["CnH2n", "CnH2n+2", "CnH2n-2", "None"], correct: 0 },
-    { question: "General formula of alkynes:", options: ["CnH2n-2", "CnH2n", "CnH2n+2", "None"], correct: 0 },
-    { question: "Homologous series have:", options: ["Same functional group", "Same mass", "Same formula", "None"], correct: 0 },
-    { question: "Difference between successive homologues:", options: ["CH2", "CH3", "C2H2", "None"], correct: 0 },
-    { question: "Combustion of carbon compounds produces:", options: ["CO2 + H2O", "O2", "H2", "None"], correct: 0 },
-    { question: "Which burns with blue flame?", options: ["Alcohol", "Coal", "Wood", "None"], correct: 0 },
-    { question: "Which burns with yellow flame?", options: ["Unsaturated", "Alcohol", "Methane", "None"], correct: 0 },
-
-    { question: "Oxidation of alcohol gives:", options: ["Acid", "Alkane", "Alkene", "None"], correct: 0 },
-    { question: "Ethanol formula:", options: ["C2H5OH", "CH3OH", "C2H6", "None"], correct: 0 },
-    { question: "Ethanoic acid formula:", options: ["CH3COOH", "C2H5OH", "CH4", "None"], correct: 0 },
-    { question: "Vinegar contains:", options: ["Acetic acid", "Citric acid", "Lactic acid", "None"], correct: 0 },
-    { question: "Esterification forms:", options: ["Ester + water", "Salt", "Gas", "None"], correct: 0 },
-    { question: "Soap is:", options: ["Salt of fatty acid", "Acid", "Base", "None"], correct: 0 },
-    { question: "Detergents are:", options: ["Synthetic", "Natural", "Metal", "None"], correct: 0 },
-    { question: "Hard water does not form lather with:", options: ["Soap", "Detergent", "Acid", "None"], correct: 0 },
-    { question: "Micelle formation occurs in:", options: ["Soap solution", "Acid", "Base", "None"], correct: 0 },
-    { question: "Hydrophilic means:", options: ["Water loving", "Water hating", "Neutral", "None"], correct: 0 },
-
-    { question: "Hydrophobic means:", options: ["Water repelling", "Water loving", "Neutral", "None"], correct: 0 },
-    { question: "Catenation means:", options: ["Self-linking", "Breaking", "Heating", "None"], correct: 0 },
-    { question: "Carbon forms chains due to:", options: ["Catenation", "Valency", "Mass", "None"], correct: 0 },
-    { question: "Diamond is:", options: ["Hardest", "Soft", "Liquid", "None"], correct: 0 },
-    { question: "Graphite conducts due to:", options: ["Free electrons", "Ions", "Heat", "None"], correct: 0 },
-    { question: "Full form of LPG:", options: ["Liquefied Petroleum Gas", "Liquid Petrol Gas", "None", "All"], correct: 0 },
-    { question: "CNG is:", options: ["Compressed Natural Gas", "None", "All", "Gas"], correct: 0 },
-    { question: "Petroleum products:", options: ["Fuel", "Gas", "Oil", "All"], correct: 3 },
-    { question: "Coal is:", options: ["Carbon", "Metal", "Alloy", "None"], correct: 0 },
-    { question: "Coke is:", options: ["Carbon", "Metal", "Gas", "None"], correct: 0 }
-  ],
-
-  mcq80: [
-    // 1–20
-    { question: "Assertion (A): Carbon forms covalent bonds\nReason (R): It has 4 valence electrons", options: ["Both true & R explains", "Both true not explain", "A true R false", "A false R true"], correct: 0 },
-    { question: "Assertion (A): Alkanes are saturated\nReason (R): They have single bonds", options: ["Both true & R explains", "Both true not explain", "A true R false", "A false R true"], correct: 0 },
-    { question: "Assertion (A): Alkenes are unsaturated\nReason (R): They have double bonds", options: ["Both true & R explains", "Both true not explain", "A true R false", "A false R true"], correct: 0 },
-    { question: "Assertion (A): Alkynes are unsaturated\nReason (R): They have triple bonds", options: ["Both true & R explains", "Both true not explain", "A true R false", "A false R true"], correct: 0 },
-    { question: "Assertion (A): Ethanol is alcohol\nReason (R): It has -OH group", options: ["Both true & R explains", "Both true not explain", "A true R false", "A false R true"], correct: 0 },
-
-    { question: "Which hydrocarbon is saturated?", options: ["CH4", "C2H4", "C2H2", "None"], correct: 0 },
-    { question: "Which is unsaturated?", options: ["C2H4", "CH4", "C2H6", "None"], correct: 0 },
-    { question: "Combustion produces:", options: ["CO2 + H2O", "O2", "H2", "None"], correct: 0 },
-    { question: "Incomplete combustion produces:", options: ["CO", "CO2", "O2", "None"], correct: 0 },
-    { question: "Oxidation means:", options: ["Add O/remove H", "Add H", "Remove O", "None"], correct: 0 },
-
-    // 11–20
-    { question: "Ethanol oxidizes to:", options: ["Ethanoic acid", "Methane", "Ethane", "None"], correct: 0 },
-    { question: "Ethanoic acid is:", options: ["Acidic", "Basic", "Neutral", "None"], correct: 0 },
-    { question: "Ester smell:", options: ["Fruity", "Bad", "No smell", "None"], correct: 0 },
-    { question: "Soap cleans by:", options: ["Micelles", "Acid", "Base", "None"], correct: 0 },
-    { question: "Detergents work in:", options: ["Hard water", "Soft water", "None", "All"], correct: 0 },
-    { question: "Soap does not work in:", options: ["Hard water", "Soft water", "None", "All"], correct: 0 },
-    { question: "Catenation is property of:", options: ["Carbon", "Oxygen", "Hydrogen", "None"], correct: 0 },
-    { question: "Diamond structure:", options: ["3D network", "Chain", "Ring", "None"], correct: 0 },
-    { question: "Graphite structure:", options: ["Layers", "3D", "Chain", "None"], correct: 0 },
-    { question: "Fullerenes are:", options: ["Carbon forms", "Metals", "Gases", "None"], correct: 0 },
-
-    // 21–40
-    { question: "LPG contains:", options: ["Propane/Butane", "Methane", "Ethane", "None"], correct: 0 },
-    { question: "CNG contains:", options: ["Methane", "Ethane", "Propane", "None"], correct: 0 },
-    { question: "Petroleum gives:", options: ["Fuels", "Water", "Gas", "None"], correct: 0 },
-    { question: "Coal is:", options: ["Carbon", "Metal", "Alloy", "None"], correct: 0 },
-    { question: "Esterification needs:", options: ["Acid catalyst", "Base", "Water", "None"], correct: 0 },
-    { question: "Homologous series differ by:", options: ["CH2", "CH3", "C2H2", "None"], correct: 0 },
-    { question: "Functional group defines:", options: ["Properties", "Mass", "Size", "None"], correct: 0 },
-    { question: "Alcohol suffix:", options: ["-ol", "-ane", "-ene", "None"], correct: 0 },
-    { question: "Acid suffix:", options: ["-oic acid", "-ol", "-ane", "None"], correct: 0 },
-    { question: "Double bond suffix:", options: ["-ene", "-ane", "-ol", "None"], correct: 0 },
-
-    // 41–80 (CORRECT CONTINUATION)
-{ question: "Triple bond suffix:", options: ["-yne", "-ene", "-ane", "None"], correct: 0 }, //41
-{ question: "Soap forms scum due to:", options: ["Hard water", "Soft water", "None", "All"], correct: 0 }, //42
-{ question: "Micelle contains:", options: ["Hydrophobic tail", "Hydrophilic head", "Both", "None"], correct: 2 }, //43
-{ question: "Hydrophilic means:", options: ["Water loving", "Water hating", "Neutral", "None"], correct: 0 }, //44
-{ question: "Hydrophobic means:", options: ["Water repelling", "Water loving", "Neutral", "None"], correct: 0 }, //45
-
-{ question: "Carbon bonds are:", options: ["Strong", "Weak", "None", "All"], correct: 0 }, //46
-{ question: "Catenation is due to:", options: ["Strong C-C bonds", "Weak bonds", "None", "All"], correct: 0 }, //47
-{ question: "Diamond is:", options: ["Insulator", "Conductor", "None", "All"], correct: 0 }, //48
-{ question: "Graphite is:", options: ["Conductor", "Insulator", "None", "All"], correct: 0 }, //49
-{ question: "Fullerenes are:", options: ["Spherical", "Flat", "Linear", "None"], correct: 0 }, //50
-
-{ question: "Fuel burns cleanly if:", options: ["Complete combustion", "Incomplete", "None", "All"], correct: 0 }, //51
-{ question: "CO is poisonous because:", options: ["Binds Hb", "O2 supply", "None", "All"], correct: 0 }, //52
-{ question: "Soot forms in:", options: ["Incomplete combustion", "Complete", "None", "All"], correct: 0 }, //53
-{ question: "Alcohol can be used as fuel:", options: ["Yes", "No", "None", "All"], correct: 0 }, //54
-{ question: "Ethanol boiling point compared to water:", options: ["Lower", "Higher", "Same", "None"], correct: 0 }, //55
-
-{ question: "Acetic acid smell:", options: ["Vinegar", "Sweet", "None", "All"], correct: 0 }, //56
-{ question: "Soap solution is:", options: ["Basic", "Acidic", "Neutral", "None"], correct: 0 }, //57
-{ question: "Detergent solution is:", options: ["Basic", "Acidic", "Neutral", "None"], correct: 0 }, //58
-{ question: "Organic compounds are mostly:", options: ["Covalent", "Ionic", "None", "All"], correct: 0 }, //59
-{ question: "Covalent compounds have:", options: ["Low melting point", "High melting point", "None", "All"], correct: 0 }, //60
-
-{ question: "Which is alkane?", options: ["CH4", "C2H4", "C2H2", "None"], correct: 0 }, //61
-{ question: "Which is alkene?", options: ["C2H4", "CH4", "C2H6", "None"], correct: 0 }, //62
-{ question: "Which is alkyne?", options: ["C2H2", "CH4", "C2H6", "None"], correct: 0 }, //63
-{ question: "Ethanol is:", options: ["Alcohol", "Acid", "Base", "None"], correct: 0 }, //64
-{ question: "Ethanoic acid is:", options: ["Acid", "Alcohol", "Base", "None"], correct: 0 }, //65
-
-{ question: "Ester has smell:", options: ["Fruity", "Bad", "None", "All"], correct: 0 }, //66
-{ question: "Esterification needs:", options: ["Acid catalyst", "Base", "None", "All"], correct: 0 }, //67
-{ question: "Soap cleans by:", options: ["Micelle formation", "Acid reaction", "None", "All"], correct: 0 }, //68
-{ question: "Detergents work in:", options: ["Hard water", "Soft water", "None", "All"], correct: 0 }, //69
-{ question: "Soap fails in:", options: ["Hard water", "Soft water", "None", "All"], correct: 0 }, //70
-
-{ question: "Carbon forms chains due to:", options: ["Catenation", "Mass", "Charge", "None"], correct: 0 }, //71
-{ question: "Carbon valency:", options: ["4", "2", "3", "1"], correct: 0 }, //72
-{ question: "Methane is:", options: ["Alkane", "Alkene", "Alkyne", "None"], correct: 0 }, //73
-{ question: "Ethene is:", options: ["Alkene", "Alkane", "Alkyne", "None"], correct: 0 }, //74
-{ question: "Ethyne is:", options: ["Alkyne", "Alkene", "Alkane", "None"], correct: 0 }, //75
-
-{ question: "Carbon compounds are poor conductors because:", options: ["No free electrons", "Ions", "Heat", "None"], correct: 0 }, //76
-{ question: "Graphite conducts due to:", options: ["Free electrons", "Ions", "None", "All"], correct: 0 }, //77
-{ question: "Diamond is hardest due to:", options: ["Strong bonds", "Weak bonds", "None", "All"], correct: 0 }, //78
-{ question: "Organic compounds generally have:", options: ["Low boiling point", "High boiling", "None", "All"], correct: 0 }, //79
-{ question: "Carbon forms stable compounds due to:", options: ["Strong bonds", "Weak bonds", "None", "All"], correct: 0 } //80
-  ]
 },
+
 "carbon-and-its-compounds": {
 mcq40: [
   { question: "Carbon valency is:", options: ["4", "2", "3", "1"], correct: 0 },
@@ -1158,6 +1026,7 @@ mcq80: [
 { question: "Assertion: Carbon shows catenation\nReason: Strong C-C bonds", options: ["Both true & R explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //79
 { question: "Assertion: Organic compounds have low MP\nReason: Weak intermolecular forces", options: ["Both true & R explains","Both true not explain","A true R false","A false R true"], correct: 0 } //80
   ],
+},
 
   "control-and-coordination": {
   mcq40: [
@@ -1296,6 +1165,7 @@ mcq80: [
 { question: "Animals respond fast:", options: ["Yes","No","None","All"], correct: 0 }, //79
 { question: "Coordination is essential:", options: ["Yes","No","None","All"], correct: 0 } //80
 ],
+},
 
 "how-do-organisms-reproduce": {
   mcq40: [
@@ -1436,6 +1306,7 @@ mcq80: [
 { question: "Assertion: Reproduction maintains species\nReason: Produces offspring", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //79
 { question: "Assertion: STD spread by contact\nReason: Pathogens transmitted", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 } //80
 ],
+},
 
 "heredity-and-evolution": {
   mcq40: [
@@ -1576,6 +1447,7 @@ mcq80: [
 { question: "Traits passed via:", options: ["Genes","Food","None","All"], correct: 0 }, //79
 { question: "Evolution depends on:", options: ["Variation","No variation","None","All"], correct: 0 } //80
 ],
+},
 
 "light-reflection-and-refraction": {
   mcq40: [
@@ -1716,6 +1588,7 @@ mcq80: [
 { question: "Refraction angle depends on:", options: ["Speed","Medium","Both","None"], correct: 2 }, //79
 { question: "Optics studies:", options: ["Light","Sound","Heat","None"], correct: 0 } //80
 ],
+},
 
 "human-eye-and-colourful-world": {
   mcq40: [
@@ -1859,6 +1732,7 @@ mcq80: [
 { question: "Human eye sensitive organ:", options: ["Yes","No","None","All"], correct: 0 }, //79
 { question: "Optics deals with:", options: ["Light","Sound","Heat","None"], correct: 0 } //80
 ],
+},
 
 "electricity": {
   mcq40: [
@@ -2009,6 +1883,7 @@ mcq80: [
 { question: "Energy used depends on:", options: ["Power & time","Only power","None","All"], correct: 0 }, //79
 { question: "Electricity chapter is:", options: ["Numerical heavy","Theory only","None","All"], correct: 0 } //80
 ],
+},
 
 "magnetic-effects-of-electric-current": {
   mcq40: [
@@ -2159,6 +2034,7 @@ mcq80: [
 { question: "Compass needle aligns:", options: ["Field direction","Voltage","None","All"], correct: 0 }, //79
 { question: "Magnetism chapter type:", options: ["Conceptual","Numerical","None","All"], correct: 0 } //80
 ],
+},
 
 "our-enviornment": {
   mcq40: [
@@ -2313,14 +2189,4 @@ mcq80: [
 
 },
  }
- }
-  } 
-   }
-    }    
-     }
-      }
-       }
-        }
-         }
-          }
-           }
+ 
