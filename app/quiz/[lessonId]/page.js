@@ -4,9 +4,6 @@ import { useSearchParams, useParams } from "next/navigation";
 import { useState, useMemo } from "react";
 import { questions as QUESTION_BANK } from "@/data/questions";
 
-console.log("LESSON:", lessonId);
-console.log("AVAILABLE:", Object.keys(QUESTION_BANK));
-
 /* 🔥 SHUFFLE FUNCTION */
 function shuffleQuestion(q) {
   const arr = q.options.map((opt, i) => ({
@@ -27,32 +24,38 @@ function shuffleQuestion(q) {
 }
 
 export default function QuizPage() {
-  const { lessonId } = useParams();
+  const { lesson } = useParams(); // ✅ CORRECT
   const searchParams = useSearchParams();
   const marks = Number(searchParams.get("marks")) || 40;
 
   const mode = marks === 80 ? "mcq80" : "mcq40";
-  const fixedLessonId = lessonId
-  .toLowerCase()
-  .replace(/-/g, "_");
 
-const lessonBlock =
-  QUESTION_BANK[lessonId] ||
-  QUESTION_BANK[fixedLessonId];
+  // 🔥 fallback for _ vs -
+  const fixedLessonId = lesson
+    ?.toLowerCase()
+    .replace(/-/g, "_");
+
+  const lessonBlock =
+    QUESTION_BANK[lesson] ||
+    QUESTION_BANK[fixedLessonId];
+
+  // ✅ DEBUG (safe now)
+  console.log("LESSON:", lesson);
+  console.log("AVAILABLE:", Object.keys(QUESTION_BANK));
 
   if (!lessonBlock || !lessonBlock[mode]) {
     return (
       <main className="max-w-xl mx-auto p-6 text-white text-center">
         <h1 className="text-xl font-bold">Quiz data not found</h1>
-        <p className="text-gray-400">Lesson: {lessonId}</p>
+        <p className="text-gray-400">Lesson: {lesson}</p>
       </main>
     );
   }
 
-  /* 🔥 APPLY SHUFFLE ONCE */
+  /* 🔥 APPLY SHUFFLE */
   const questions = useMemo(() => {
     return lessonBlock[mode].map((q) => shuffleQuestion(q));
-  }, [lessonId, mode]);
+  }, [lesson, mode]);
 
   const [index, setIndex] = useState(0);
   const [score, setScore] = useState(0);
@@ -75,7 +78,7 @@ const lessonBlock =
     }
   };
 
-  /* -------------------- RESULT + REVIEW -------------------- */
+  /* -------------------- RESULT -------------------- */
   if (finished) {
     return (
       <main className="max-w-3xl mx-auto p-6 text-white">
@@ -87,20 +90,13 @@ const lessonBlock =
           Score: <b>{score}</b> / {questions.length}
         </p>
 
-        <h2 className="text-xl font-semibold mb-3">
-          Answer Review
-        </h2>
-
         <div className="space-y-4">
           {questions.map((q, i) => {
             const userAns = answers[i];
             const correctAns = q.correct;
 
             return (
-              <div
-                key={i}
-                className="bg-zinc-900 p-4 rounded"
-              >
+              <div key={i} className="bg-zinc-900 p-4 rounded">
                 <p className="font-medium mb-2">
                   Q{i + 1}. {q.question}
                 </p>
@@ -109,23 +105,15 @@ const lessonBlock =
                   {q.options.map((opt, idx) => {
                     let color = "text-gray-300";
 
-                    if (idx === correctAns) {
-                      color = "text-green-400";
-                    }
-                    if (
-                      idx === userAns &&
-                      userAns !== correctAns
-                    ) {
+                    if (idx === correctAns) color = "text-green-400";
+                    if (idx === userAns && userAns !== correctAns)
                       color = "text-red-400";
-                    }
 
                     return (
                       <li key={idx} className={color}>
                         {opt}
                         {idx === correctAns && " ✔"}
-                        {idx === userAns &&
-                          userAns !== correctAns &&
-                          " ✖"}
+                        {idx === userAns && userAns !== correctAns && " ✖"}
                       </li>
                     );
                   })}
@@ -162,4 +150,4 @@ const lessonBlock =
       </p>
     </main>
   );
-}            
+}
