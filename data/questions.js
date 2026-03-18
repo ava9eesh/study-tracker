@@ -502,102 +502,81 @@ export const questions = {
   ],
 
   mcq80: [
-    {
-      question: "Which reaction is NOT feasible?",
-      options: ["Cu + FeSO4", "Fe + CuSO4", "Zn + CuSO4", "Mg + CuSO4"],
-      correct: 0,
-    },
-    {
-      question: "Which is NOT a redox reaction?",
-      options: ["Zn + CuSO4", "HCl + NaOH", "Fe + O2", "CuO + H2"],
-      correct: 1,
-    },
-    {
-      question: "In CuO + H2 → Cu + H2O, CuO is:",
-      options: ["Oxidized", "Reduced", "Catalyst", "Neutral"],
-      correct: 1,
-    },
+  {
+    question: "Which reaction is NOT feasible?",
+    options: ["Cu + FeSO4", "Fe + CuSO4", "Zn + CuSO4", "Mg + CuSO4"],
+    correct: 0,
+  },
+  {
+    question: "Which is NOT a redox reaction?",
+    options: ["Zn + CuSO4", "HCl + NaOH", "Fe + O2", "CuO + H2"],
+    correct: 1,
+  },
+  {
+    question: "In CuO + H2 → Cu + H2O, CuO is:",
+    options: ["Oxidized", "Reduced", "Catalyst", "Neutral"],
+    correct: 1,
+  },
 
-    // -------- ASSERTION REASON --------
-    {
-      type: "assertion",
-      question: "Assertion: Rusting is oxidation Reason: Iron gains oxygen",
-      options: [
-        "Both A and R are true and R explains A",
-        "Both true but R not explanation",
-        "A true, R false",
-        "A false, R true"
-      ],
-      correct: 0,
-    },
-    {
-      type: "assertion",
-      question: "Assertion: Neutralization is redox Reason: It involves electron transfer",
-      options: [
-        "Both A and R are true and R explains A",
-        "Both true but R not explanation",
-        "A true, R false",
-        "A false, R true"
-      ],
-      correct: 2,
-    },
-    {
-      type: "assertion",
-      question: "Assertion: Photosynthesis is endothermic Reason: It absorbs sunlight",
-      options: [
-        "Both A and R are true and R explains A",
-        "Both true but R not explanation",
-        "A true, R false",
-        "A false, R true"
-      ],
-      correct: 0,
-    },
+  // ASSERTION (converted)
+  {
+    question: "Assertion (A): Rusting is oxidation\nReason (R): Iron gains oxygen",
+    options: [
+      "Both A and R are true and R explains A",
+      "Both true but R not explanation",
+      "A true, R false",
+      "A false, R true"
+    ],
+    correct: 0,
+  },
+  {
+    question: "Assertion (A): Neutralization is redox\nReason (R): It involves electron transfer",
+    options: [
+      "Both A and R are true and R explains A",
+      "Both true but R not explanation",
+      "A true, R false",
+      "A false, R true"
+    ],
+    correct: 2,
+  },
 
-    // -------- CASE BASED --------
-    {
-      type: "case",
-      case: "Iron nail placed in CuSO4 turns solution green and forms brown deposit.",
-      question: "Type of reaction?",
-      options: ["Combination", "Displacement", "Decomposition", "Neutralization"],
-      correct: 1,
-    },
-    {
-      type: "case",
-      case: "Food left open smells bad.",
-      question: "Process is:",
-      options: ["Reduction", "Oxidation", "Neutralization", "Evaporation"],
-      correct: 1,
-    },
-    {
-      type: "case",
-      case: "AgCl exposed to sunlight turns grey.",
-      question: "Reaction type?",
-      options: ["Combination", "Decomposition", "Displacement", "Neutralization"],
-      correct: 1,
-    },
+  // CASE (converted)
+  {
+    question: "Iron nail is placed in CuSO4 solution. Solution turns green and brown deposit forms. What is the type of reaction?",
+    options: ["Combination", "Displacement", "Decomposition", "Neutralization"],
+    correct: 1,
+  },
+  {
+    question: "Food left open smells bad due to which process?",
+    options: ["Reduction", "Oxidation", "Neutralization", "Evaporation"],
+    correct: 1,
+  },
+  {
+    question: "AgCl exposed to sunlight turns grey. Which reaction occurs?",
+    options: ["Combination", "Decomposition", "Displacement", "Neutralization"],
+    correct: 1,
+  },
 
-    // -------- MORE MCQs --------
-    {
-      question: "Which increases rusting?",
-      options: ["Dry air", "Moist air", "Vacuum", "Oil"],
-      correct: 1,
-    },
-    {
-      question: "Which prevents rancidity?",
-      options: ["Heat", "Air", "Nitrogen", "Water"],
-      correct: 2,
-    },
-    {
-      question: "Which is strongest reducing agent?",
-      options: ["H2", "CO", "C", "Zn"],
-      correct: 3,
-    },
-    {
-      question: "Which is strongest oxidizing agent?",
-      options: ["O2", "Zn", "Cu", "Fe"],
-      correct: 0,
-    }
-  ]
-}
-
+  {
+    question: "Which increases rusting?",
+    options: ["Dry air", "Moist air", "Vacuum", "Oil"],
+    correct: 1,
+  },
+  {
+    question: "Which prevents rancidity?",
+    options: ["Heat", "Air", "Nitrogen", "Water"],
+    correct: 2,
+  },
+  {
+    question: "Which is strongest reducing agent?",
+    options: ["H2", "CO", "C", "Zn"],
+    correct: 3,
+  },
+  {
+    question: "Which is strongest oxidizing agent?",
+    options: ["O2", "Zn", "Cu", "Fe"],
+    correct: 0,
+  }
+    ],
+  },
 };
