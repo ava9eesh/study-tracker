@@ -2,7 +2,7 @@
 
 import { useSearchParams, useParams } from "next/navigation";
 import { useState, useMemo } from "react";
-import { questions as QUESTION_BANK } from "../../../data/questions";
+import { questions as QUESTION_BANK } from "@/data/questions";
 
 /* 🔥 SHUFFLE FUNCTION */
 function shuffleQuestion(q) {
