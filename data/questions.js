@@ -521,7 +521,7 @@ export const questions = {
     // -------- ASSERTION REASON --------
     {
       type: "assertion",
-      question: "Assertion: Rusting is oxidation\nReason: Iron gains oxygen",
+      question: "Assertion: Rusting is oxidation Reason: Iron gains oxygen",
       options: [
         "Both A and R are true and R explains A",
         "Both true but R not explanation",
@@ -532,7 +532,7 @@ export const questions = {
     },
     {
       type: "assertion",
-      question: "Assertion: Neutralization is redox\nReason: It involves electron transfer",
+      question: "Assertion: Neutralization is redox Reason: It involves electron transfer",
       options: [
         "Both A and R are true and R explains A",
         "Both true but R not explanation",
@@ -543,7 +543,7 @@ export const questions = {
     },
     {
       type: "assertion",
-      question: "Assertion: Photosynthesis is endothermic\nReason: It absorbs sunlight",
+      question: "Assertion: Photosynthesis is endothermic Reason: It absorbs sunlight",
       options: [
         "Both A and R are true and R explains A",
         "Both true but R not explanation",
