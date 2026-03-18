@@ -3,6 +3,9 @@
 import { useSearchParams, useParams } from "next/navigation";
 import { useState } from "react";
 import { questions } from "@/data/questions";
+import { useMemo } from "react";
+
+console.log("SHUFFLE:", shouldShuffle);
 
 // 🔥 SHUFFLE FUNCTION
 function shuffleQuestion(question) {
@@ -34,9 +37,10 @@ export default function QuizPage() {
   const rawQuestions =
     questions[lesson]?.[`mcq${marks}`] || [];
 
-  const quizQuestions = shouldShuffle
-    ? rawQuestions.map((q) => shuffleQuestion(q))
-    : rawQuestions;
+const quizQuestions = useMemo(() => {
+  if (!shouldShuffle) return rawQuestions;
+  return rawQuestions.map((q) => shuffleQuestion(q));
+}, [lesson, marks, shouldShuffle]);
 
   const [index, setIndex] = useState(0);
   const [score, setScore] = useState(0);
