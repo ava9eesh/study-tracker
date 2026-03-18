@@ -11,16 +11,6 @@ const SUBJECT_TOTALS = {
   SST: 20,
   English: 25,
   Hindi: 14,
-
-  History: 5,
-  Civics: 5,
-  Geography: 6,
-  Economics: 4,
-
-  Beehive: 17,
-  Moments: 8,
-  Sparsh: 10,
-  Sanchayan: 4,
 };
 
 export default function Dashboard() {
@@ -89,7 +79,7 @@ export default function Dashboard() {
       <div key={id} className="ml-6 mt-3 rounded-xl bg-zinc-900 p-4">
         <div className="font-medium">{lesson}</div>
 
-        {/* STATUS BUTTONS */}
+        {/* STATUS */}
         <div className="mt-2 flex gap-2 flex-wrap">
           {STATUS.map((s) => (
             <button
@@ -106,232 +96,133 @@ export default function Dashboard() {
 
         {/* COUNTERS */}
         <div className="mt-2 flex gap-6 text-sm">
-          <button
-            onClick={() =>
-              updateLesson(id, {
-                revisions: Math.max(0, data.revisions - 1),
-              })
-            }
-          >
-            −
-          </button>
-          <span>Revisions: {data.revisions}</span>
-          <button
-            onClick={() =>
-              updateLesson(id, { revisions: data.revisions + 1 })
-            }
-          >
-            +
-          </button>
+          <button onClick={() =>
+            updateLesson(id, { revisions: Math.max(0, data.revisions - 1) })
+          }>−</button>
 
-          <button
-            onClick={() =>
-              updateLesson(id, {
-                pyqs: Math.max(0, data.pyqs - 1),
-              })
-            }
-          >
-            −
-          </button>
+          <span>Revisions: {data.revisions}</span>
+
+          <button onClick={() =>
+            updateLesson(id, { revisions: data.revisions + 1 })
+          }>+</button>
+
+          <button onClick={() =>
+            updateLesson(id, { pyqs: Math.max(0, data.pyqs - 1) })
+          }>−</button>
+
           <span>PYQs: {data.pyqs}</span>
-          <button
-            onClick={() =>
-              updateLesson(id, { pyqs: data.pyqs + 1 })
-            }
-          >
-            +
-          </button>
+
+          <button onClick={() =>
+            updateLesson(id, { pyqs: data.pyqs + 1 })
+          }>+</button>
         </div>
 
         {/* LINKS */}
         <div className="mt-2 flex gap-4 text-sm text-blue-400">
           {meta?.video && (
-            <a
-              href={meta.video}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:underline"
-            >
+            <a href={meta.video} target="_blank" className="hover:underline">
               Lesson Video
             </a>
           )}
           {meta?.pyq && (
-            <a
-              href={meta.pyq}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:underline"
-            >
+            <a href={meta.pyq} target="_blank" className="hover:underline">
               PYQs
             </a>
           )}
         </div>
 
-        {/* STATUS ACTION */}
+        {/* ACTION */}
         {data.status === "todo" && (
-          <a
-            href={`/lesson/${lessonId}/prerequisites`}
-            className="mt-2 block text-sm text-blue-400 font-medium hover:underline"
-          >
+          <a href={`/lesson/${lessonId}/prerequisites`}
+            className="mt-2 block text-blue-400 hover:underline">
             → Previous Knowledge Required
           </a>
         )}
 
         {data.status === "done" && (
-          <a
-            href={`/quiz/${lessonId}?marks=40`}
-            className="mt-2 block text-sm text-green-400 font-medium hover:underline"
-          >
-            → Done? Let’s test (40 marks)
+          <a href={`/quiz/${lessonId}?marks=40`}
+            className="mt-2 block text-green-400 hover:underline">
+            → Done? Let’s test
           </a>
         )}
 
         {data.status === "mastered" && (
-          <a
-            href={`/quiz/${lessonId}?marks=80`}
-            className="mt-2 block text-sm text-purple-400 font-medium hover:underline"
-          >
-            → Mastered? Let’s see (80 marks)
+          <a href={`/quiz/${lessonId}?marks=80`}
+            className="mt-2 block text-purple-400 hover:underline">
+            → Mastered? Let’s see
           </a>
         )}
       </div>
     );
   };
 
-  /* -------------------- COUNT HELPERS -------------------- */
-  const countCompletedLessons = (node) => {
-    if (Array.isArray(node)) {
-      return node.filter((lesson) => {
-        const name =
-          typeof lesson === "string" ? lesson : lesson.name;
-        return (
-          lessonData[name]?.status === "done" ||
-          lessonData[name]?.status === "mastered"
-        );
-      }).length;
-    }
-
-    if (typeof node === "object" && node !== null) {
-      return Object.values(node).reduce(
-        (sum, v) => sum + countCompletedLessons(v),
-        0
-      );
-    }
-
-    return 0;
-  };
-
-  /* -------------------- RECURSIVE RENDER -------------------- */
+  /* -------------------- RENDER TREE -------------------- */
   const renderNode = (node) => {
     if (Array.isArray(node)) {
       return node.map((lesson) => {
-        const name =
-          typeof lesson === "string" ? lesson : lesson.name;
+        const name = typeof lesson === "string" ? lesson : lesson.name;
         const meta = typeof lesson === "string" ? {} : lesson;
         return renderLesson(name, meta);
       });
     }
 
-    return Object.entries(node).map(([key, value]) => {
-      const completed = countCompletedLessons(value);
-      const total = SUBJECT_TOTALS[key] ?? 0;
+    return Object.entries(node).map(([key, value]) => (
+      <div key={key} className="ml-4 mt-4">
+        <button
+          onClick={() => toggle(key)}
+          className="flex items-center gap-3 font-medium"
+        >
+          <span>{open[key] ? "▼" : "▶"}</span>
+          <span>{key}</span>
+        </button>
 
-      return (
-        <div key={key} className="ml-4 mt-4">
-          <button
-            onClick={() => toggle(key)}
-            className="flex items-center gap-3 font-medium"
-          >
-            <span>{open[key] ? "▼" : "▶"}</span>
-            <span>{key}</span>
-            <span className="text-sm text-gray-400">
-              {completed}/{total} completed
-            </span>
-          </button>
-
-          {open[key] && (
-            <div className="mt-2">
-              {renderNode(value)}
-            </div>
-          )}
-        </div>
-      );
-    });
+        {open[key] && <div className="mt-2">{renderNode(value)}</div>}
+      </div>
+    ));
   };
 
   /* -------------------- UI -------------------- */
   return (
     <main className="max-w-5xl mx-auto p-6 space-y-6">
-      <div className="flex justify-between items-center">
-        <h1 className="text-2xl font-semibold">
-          Dashboard – Class {currentClass}
-        </h1>
-        <button className="text-red-500">Logout</button>
-      </div>
+      <h1 className="text-2xl font-semibold">
+        Dashboard – Class {currentClass}
+      </h1>
 
+      {/* CLASS SELECTOR */}
       <div className="flex gap-2 flex-wrap">
-        {CLASSES.map((cls) => {
-          const disabled = cls !== "9";
-
-          return (
-            <button
-              key={cls}
-              disabled={disabled}
-              onClick={() => setCurrentClass(cls)}
-              className={`px-4 py-1 rounded text-sm transition
-                ${currentClass === cls ? "bg-blue-600" : "bg-zinc-800"}
-                ${disabled ? "opacity-50 cursor-not-allowed" : ""}
-              `}
-            >
-              {cls === "JEE" ? "JEE / NEET" : `Class ${cls}`}
-              {disabled && " 🚧"}
-            </button>
-          );
-        })}
+        {CLASSES.map((cls) => (
+          <button
+            key={cls}
+            onClick={() => setCurrentClass(cls)}
+            className={`px-4 py-1 rounded ${
+              currentClass === cls ? "bg-blue-600" : "bg-zinc-800"
+            }`}
+          >
+            Class {cls}
+          </button>
+        ))}
       </div>
 
-      <div className="flex gap-3">
-        <button
-          onClick={saveProgress}
-          className="bg-green-600 px-4 py-2 rounded"
-        >
-          Save
-        </button>
-        <button
-          onClick={resetProgress}
-          className="bg-zinc-700 px-4 py-2 rounded"
-        >
-          Reset
-        </button>
-      </div>
-
+      {/* SEARCH */}
       <input
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         placeholder="Search lessons..."
-        className="w-full rounded-xl bg-zinc-900 px-4 py-3 outline-none"
+        className="w-full rounded-xl bg-zinc-900 px-4 py-3"
       />
 
-      {Object.entries(syllabus).map(([n, d]) => (
+      {/* SUBJECTS */}
+      {Object.entries(syllabus[currentClass] || {}).map(([n, d]) => (
         <div key={n} className="rounded-2xl bg-zinc-900 p-5">
           <button
             onClick={() => toggle(n)}
-            className="flex w-full items-center justify-between text-lg font-semibold"
+            className="flex justify-between w-full"
           >
-            <div className="flex items-center gap-3">
-              <span>{n}</span>
-              <span className="text-sm text-gray-400">
-                {countCompletedLessons(d)}/{SUBJECT_TOTALS[n] ?? 0} completed
-              </span>
-            </div>
+            <span>{n}</span>
             <span>{open[n] ? "▼" : "▶"}</span>
           </button>
 
-          {open[n] && (
-            <div className="mt-4">
-              {renderNode(d)}
-            </div>
-          )}
+          {open[n] && <div className="mt-4">{renderNode(d)}</div>}
         </div>
       ))}
     </main>

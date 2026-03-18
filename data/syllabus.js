@@ -1,5 +1,5 @@
 export const syllabus = {
-  Science: [
+  9 : { Science: [
     {
       name: "Matter in Our Surroundings",
       video: "https://www.youtube.com/results?search_query=matter+in+our+surroundings+class+9",
@@ -536,4 +536,128 @@ export const syllabus = {
       },
     ],
   }
-};
+  },
+
+  "10": {
+
+  /* ---------- SCIENCE ---------- */
+  Science: [
+    { name: "Chemical Reactions and Equations", video: "https://www.youtube.com/results?search_query=chemical+reactions+class+10", pyq: "https://www.google.com/search?q=chemical+reactions+class+10+pyq", prerequisites: ["Class 9 chemistry"] },
+    { name: "Acids Bases and Salts", video: "https://www.youtube.com/results?search_query=acids+bases+class+10", pyq: "https://www.google.com/search?q=acids+bases+class+10+pyq", prerequisites: ["pH concept"] },
+    { name: "Metals and Non Metals", video: "https://www.youtube.com/results?search_query=metals+nonmetals+class+10", pyq: "https://www.google.com/search?q=metals+nonmetals+class+10+pyq", prerequisites: ["Periodic table"] },
+    { name: "Carbon and its Compounds", video: "https://www.youtube.com/results?search_query=carbon+compounds+class+10", pyq: "https://www.google.com/search?q=carbon+compounds+class+10+pyq", prerequisites: ["Bonding"] },
+    { name: "Life Processes", video: "https://www.youtube.com/results?search_query=life+processes+class+10", pyq: "https://www.google.com/search?q=life+processes+class+10+pyq", prerequisites: ["Cell"] },
+    { name: "Control and Coordination", video: "https://www.youtube.com/results?search_query=control+coordination+class+10", pyq: "https://www.google.com/search?q=control+coordination+class+10+pyq", prerequisites: ["Nervous system"] },
+    { name: "How do Organisms Reproduce", video: "https://www.youtube.com/results?search_query=reproduction+class+10", pyq: "https://www.google.com/search?q=reproduction+class+10+pyq", prerequisites: ["Biology basics"] },
+    { name: "Heredity and Evolution", video: "https://www.youtube.com/results?search_query=heredity+class+10", pyq: "https://www.google.com/search?q=heredity+class+10+pyq", prerequisites: ["Genes basics"] },
+    { name: "Light Reflection and Refraction", video: "https://www.youtube.com/results?search_query=light+reflection+class+10", pyq: "https://www.google.com/search?q=light+reflection+class+10+pyq", prerequisites: ["Optics basics"] },
+    { name: "Human Eye and Colourful World", video: "https://www.youtube.com/results?search_query=human+eye+class+10", pyq: "https://www.google.com/search?q=human+eye+class+10+pyq", prerequisites: ["Light"] },
+    { name: "Electricity", video: "https://www.youtube.com/results?search_query=electricity+class+10", pyq: "https://www.google.com/search?q=electricity+class+10+pyq", prerequisites: ["Current basics"] },
+    { name: "Magnetic Effects of Electric Current", video: "https://www.youtube.com/results?search_query=magnetic+effects+class+10", pyq: "https://www.google.com/search?q=magnetic+effects+class+10+pyq", prerequisites: ["Electricity"] },
+    { name: "Our Environment", video: "https://www.youtube.com/results?search_query=environment+class+10", pyq: "https://www.google.com/search?q=environment+class+10+pyq", prerequisites: ["Ecosystem"] }
+  ],
+
+  /* ---------- MATHEMATICS ---------- */
+  Mathematics: [
+    { name: "Real Numbers", video: "https://www.youtube.com/results?search_query=real+numbers+class+10", pyq: "https://www.google.com/search?q=real+numbers+class+10+pyq", prerequisites: ["Number systems"] },
+    { name: "Polynomials", video: "https://www.youtube.com/results?search_query=polynomials+class+10", pyq: "https://www.google.com/search?q=polynomials+class+10+pyq", prerequisites: ["Algebra"] },
+    { name: "Pair of Linear Equations in Two Variables", video: "https://www.youtube.com/results?search_query=pair+of+linear+equations+class+10", pyq: "https://www.google.com/search?q=pair+linear+equations+class+10+pyq", prerequisites: ["Linear equations"] },
+    { name: "Quadratic Equations", video: "https://www.youtube.com/results?search_query=quadratic+equations+class+10", pyq: "https://www.google.com/search?q=quadratic+equations+class+10+pyq", prerequisites: ["Algebra"] },
+    { name: "Arithmetic Progressions", video: "https://www.youtube.com/results?search_query=arithmetic+progression+class+10", pyq: "https://www.google.com/search?q=arithmetic+progression+class+10+pyq", prerequisites: ["Sequences"] },
+    { name: "Triangles", video: "https://www.youtube.com/results?search_query=triangles+class+10", pyq: "https://www.google.com/search?q=triangles+class+10+pyq", prerequisites: ["Geometry"] },
+    { name: "Coordinate Geometry", video: "https://www.youtube.com/results?search_query=coordinate+geometry+class+10", pyq: "https://www.google.com/search?q=coordinate+geometry+class+10+pyq", prerequisites: ["Graphs"] },
+    { name: "Trigonometry", video: "https://www.youtube.com/results?search_query=trigonometry+class+10", pyq: "https://www.google.com/search?q=trigonometry+class+10+pyq", prerequisites: ["Triangles"] },
+    { name: "Applications of Trigonometry", video: "https://www.youtube.com/results?search_query=applications+of+trigonometry+class+10", pyq: "https://www.google.com/search?q=applications+of+trigonometry+class+10+pyq", prerequisites: ["Trigonometry"] },
+    { name: "Circles", video: "https://www.youtube.com/results?search_query=circles+class+10", pyq: "https://www.google.com/search?q=circles+class+10+pyq", prerequisites: ["Geometry"] },
+    { name: "Surface Areas and Volumes", video: "https://www.youtube.com/results?search_query=surface+area+class+10", pyq: "https://www.google.com/search?q=surface+area+class+10+pyq", prerequisites: ["Mensuration"] },
+    { name: "Statistics", video: "https://www.youtube.com/results?search_query=statistics+class+10", pyq: "https://www.google.com/search?q=statistics+class+10+pyq", prerequisites: ["Data"] },
+    { name: "Probability", video: "https://www.youtube.com/results?search_query=probability+class+10", pyq: "https://www.google.com/search?q=probability+class+10+pyq", prerequisites: ["Statistics"] }
+  ],
+
+  /* ---------- SST ---------- */
+  SST: {
+    History: [
+      { name: "Nationalism in Europe", video: "https://www.youtube.com/results?search_query=nationalism+in+europe+class+10", pyq: "https://www.google.com/search?q=nationalism+in+europe+class+10+pyq", prerequisites: ["French Revolution"] },
+      { name: "Nationalism in India", video: "https://www.youtube.com/results?search_query=nationalism+in+india+class+10", pyq: "https://www.google.com/search?q=nationalism+in+india+class+10+pyq", prerequisites: ["Freedom struggle"] },
+      { name: "Making of a Global World", video: "https://www.youtube.com/results?search_query=global+world+class+10", pyq: "https://www.google.com/search?q=global+world+class+10+pyq", prerequisites: ["Trade basics"] },
+      { name: "The Age of Industrialisation", video: "https://www.youtube.com/results?search_query=industrialisation+class+10", pyq: "https://www.google.com/search?q=industrialisation+class+10+pyq", prerequisites: ["Industry"] },
+      { name: "Print Culture and the Modern World", video: "https://www.youtube.com/results?search_query=print+culture+class+10", pyq: "https://www.google.com/search?q=print+culture+class+10+pyq", prerequisites: ["History basics"] }
+    ],
+
+    Geography: [
+      { name: "Resources and Development", video: "https://www.youtube.com/results?search_query=resources+class+10", pyq: "https://www.google.com/search?q=resources+class+10+pyq", prerequisites: ["Resources"] },
+      { name: "Forest and Wildlife", video: "https://www.youtube.com/results?search_query=forest+wildlife+class+10", pyq: "https://www.google.com/search?q=forest+wildlife+class+10+pyq", prerequisites: ["Environment"] },
+      { name: "Water Resources", video: "https://www.youtube.com/results?search_query=water+resources+class+10", pyq: "https://www.google.com/search?q=water+resources+class+10+pyq", prerequisites: ["Water cycle"] },
+      { name: "Agriculture", video: "https://www.youtube.com/results?search_query=agriculture+class+10", pyq: "https://www.google.com/search?q=agriculture+class+10+pyq", prerequisites: ["Farming"] },
+      { name: "Minerals and Energy Resources", video: "https://www.youtube.com/results?search_query=minerals+class+10", pyq: "https://www.google.com/search?q=minerals+class+10+pyq", prerequisites: ["Resources"] },
+      { name: "Manufacturing Industries", video: "https://www.youtube.com/results?search_query=manufacturing+class+10", pyq: "https://www.google.com/search?q=manufacturing+class+10+pyq", prerequisites: ["Industry"] },
+      { name: "Lifelines of National Economy", video: "https://www.youtube.com/results?search_query=lifelines+economy+class+10", pyq: "https://www.google.com/search?q=lifelines+economy+class+10+pyq", prerequisites: ["Transport"] }
+    ],
+
+    Civics: [
+      { name: "Power Sharing", video: "https://www.youtube.com/results?search_query=power+sharing+class+10", pyq: "https://www.google.com/search?q=power+sharing+class+10+pyq", prerequisites: ["Democracy"] },
+      { name: "Federalism", video: "https://www.youtube.com/results?search_query=federalism+class+10", pyq: "https://www.google.com/search?q=federalism+class+10+pyq", prerequisites: ["Government"] },
+      { name: "Democracy and Diversity", video: "https://www.youtube.com/results?search_query=democracy+diversity+class+10", pyq: "https://www.google.com/search?q=democracy+diversity+class+10+pyq", prerequisites: ["Society"] },
+      { name: "Gender Religion and Caste", video: "https://www.youtube.com/results?search_query=gender+religion+caste+class+10", pyq: "https://www.google.com/search?q=gender+religion+caste+class+10+pyq", prerequisites: ["Society"] },
+      { name: "Political Parties", video: "https://www.youtube.com/results?search_query=political+parties+class+10", pyq: "https://www.google.com/search?q=political+parties+class+10+pyq", prerequisites: ["Politics"] },
+      { name: "Outcomes of Democracy", video: "https://www.youtube.com/results?search_query=outcomes+of+democracy+class+10", pyq: "https://www.google.com/search?q=outcomes+of+democracy+class+10+pyq", prerequisites: ["Democracy"] }
+    ],
+
+    Economics: [
+      { name: "Development", video: "https://www.youtube.com/results?search_query=development+class+10", pyq: "https://www.google.com/search?q=development+class+10+pyq", prerequisites: ["Economy basics"] },
+      { name: "Sectors of Indian Economy", video: "https://www.youtube.com/results?search_query=sectors+economy+class+10", pyq: "https://www.google.com/search?q=sectors+economy+class+10+pyq", prerequisites: ["Jobs"] },
+      { name: "Money and Credit", video: "https://www.youtube.com/results?search_query=money+credit+class+10", pyq: "https://www.google.com/search?q=money+credit+class+10+pyq", prerequisites: ["Banking"] },
+      { name: "Globalisation and the Indian Economy", video: "https://www.youtube.com/results?search_query=globalisation+class+10", pyq: "https://www.google.com/search?q=globalisation+class+10+pyq", prerequisites: ["Trade"] },
+      { name: "Consumer Rights", video: "https://www.youtube.com/results?search_query=consumer+rights+class+10", pyq: "https://www.google.com/search?q=consumer+rights+class+10+pyq", prerequisites: ["Markets"] }
+    ]
+  },
+
+  /* ---------- ENGLISH ---------- */
+  /* ---------- ENGLISH ---------- */
+English: {
+  FirstFlight: [
+    { name: "A Letter to God", video: "https://www.youtube.com/results?search_query=a+letter+to+god+class+10", pyq: "https://www.google.com/search?q=a+letter+to+god+class+10+questions", prerequisites: ["Reading comprehension"] },
+    { name: "Nelson Mandela: Long Walk to Freedom", video: "https://www.youtube.com/results?search_query=nelson+mandela+class+10", pyq: "https://www.google.com/search?q=nelson+mandela+class+10+questions", prerequisites: ["History context"] },
+    { name: "Two Stories About Flying", video: "https://www.youtube.com/results?search_query=two+stories+about+flying+class+10", pyq: "https://www.google.com/search?q=two+stories+about+flying+questions", prerequisites: ["Story understanding"] },
+    { name: "From the Diary of Anne Frank", video: "https://www.youtube.com/results?search_query=anne+frank+class+10", pyq: "https://www.google.com/search?q=anne+frank+class+10+questions", prerequisites: ["World War II"] },
+    { name: "The Hundred Dresses I", video: "https://www.youtube.com/results?search_query=hundred+dresses+class+10", pyq: "https://www.google.com/search?q=hundred+dresses+class+10+questions", prerequisites: ["Story comprehension"] },
+    { name: "The Hundred Dresses II", video: "https://www.youtube.com/results?search_query=hundred+dresses+2+class+10", pyq: "https://www.google.com/search?q=hundred+dresses+2+questions", prerequisites: ["Part 1"] },
+    { name: "Glimpses of India", video: "https://www.youtube.com/results?search_query=glimpses+of+india+class+10", pyq: "https://www.google.com/search?q=glimpses+of+india+questions", prerequisites: ["Geography basics"] },
+    { name: "Mijbil the Otter", video: "https://www.youtube.com/results?search_query=mijbil+the+otter+class+10", pyq: "https://www.google.com/search?q=mijbil+the+otter+questions", prerequisites: ["Animal stories"] },
+    { name: "Madam Rides the Bus", video: "https://www.youtube.com/results?search_query=madam+rides+the+bus+class+10", pyq: "https://www.google.com/search?q=madam+rides+the+bus+questions", prerequisites: ["Narrative understanding"] },
+    { name: "The Sermon at Benares", video: "https://www.youtube.com/results?search_query=sermon+at+benares+class+10", pyq: "https://www.google.com/search?q=sermon+at+benares+questions", prerequisites: ["Philosophy basics"] },
+    { name: "The Proposal", video: "https://www.youtube.com/results?search_query=the+proposal+class+10", pyq: "https://www.google.com/search?q=the+proposal+questions", prerequisites: ["Drama basics"] }
+  ],
+
+  Footprints: [
+    { name: "A Triumph of Surgery", video: "https://www.youtube.com/results?search_query=triumph+of+surgery+class+10", pyq: "https://www.google.com/search?q=triumph+of+surgery+questions", prerequisites: ["Story"] },
+    { name: "The Thief Story", video: "https://www.youtube.com/results?search_query=thief+story+class+10", pyq: "https://www.google.com/search?q=thief+story+questions", prerequisites: ["Narrative"] },
+    { name: "The Midnight Visitor", video: "https://www.youtube.com/results?search_query=midnight+visitor+class+10", pyq: "https://www.google.com/search?q=midnight+visitor+questions", prerequisites: ["Suspense"] },
+    { name: "A Question of Trust", video: "https://www.youtube.com/results?search_query=question+of+trust+class+10", pyq: "https://www.google.com/search?q=question+of+trust+questions", prerequisites: ["Story"] },
+    { name: "Footprints Without Feet", video: "https://www.youtube.com/results?search_query=footprints+without+feet+class+10", pyq: "https://www.google.com/search?q=footprints+without+feet+questions", prerequisites: ["Science fiction"] },
+    { name: "The Making of a Scientist", video: "https://www.youtube.com/results?search_query=making+of+a+scientist+class+10", pyq: "https://www.google.com/search?q=making+of+a+scientist+questions", prerequisites: ["Biology basics"] },
+    { name: "The Necklace", video: "https://www.youtube.com/results?search_query=the+necklace+class+10", pyq: "https://www.google.com/search?q=the+necklace+questions", prerequisites: ["Story"] },
+    { name: "The Hack Driver", video: "https://www.youtube.com/results?search_query=hack+driver+class+10", pyq: "https://www.google.com/search?q=hack+driver+questions", prerequisites: ["Humor"] },
+    { name: "Bholi", video: "https://www.youtube.com/results?search_query=bholi+class+10", pyq: "https://www.google.com/search?q=bholi+questions", prerequisites: ["Social themes"] },
+    { name: "The Book That Saved the Earth", video: "https://www.youtube.com/results?search_query=book+that+saved+the+earth+class+10", pyq: "https://www.google.com/search?q=book+that+saved+the+earth+questions", prerequisites: ["Drama"] }
+  ]
+},
+
+/* ---------- HINDI ---------- */
+Hindi: {
+  Sparsh: [
+    { name: "सूरदास", video: "https://www.youtube.com/results?search_query=soordas+class+10", pyq: "https://www.google.com/search?q=soordas+questions", prerequisites: ["Poetry"] },
+    { name: "मीरा", video: "https://www.youtube.com/results?search_query=meera+class+10", pyq: "https://www.google.com/search?q=meera+questions", prerequisites: ["Poetry"] },
+    { name: "पर्वत प्रदेश में पावस", video: "https://www.youtube.com/results?search_query=parvat+pradesh+mein+pavas", pyq: "https://www.google.com/search?q=parvat+pradesh+questions", prerequisites: ["Poetry"] },
+    { name: "कर चले हम फिदा", video: "https://www.youtube.com/results?search_query=kar+chale+hum+fida", pyq: "https://www.google.com/search?q=kar+chale+hum+fida+questions", prerequisites: ["Patriotism"] },
+    { name: "आत्मत्राण", video: "https://www.youtube.com/results?search_query=aatmatran", pyq: "https://www.google.com/search?q=aatmatran+questions", prerequisites: ["Poetry"] }
+  ],
+
+  Sanchayan: [
+    { name: "हरिहर काका", video: "https://www.youtube.com/results?search_query=harihar+kaka", pyq: "https://www.google.com/search?q=harihar+kaka+questions", prerequisites: ["Story"] },
+    { name: "टोपी शुक्ला", video: "https://www.youtube.com/results?search_query=topi+shukla", pyq: "https://www.google.com/search?q=topi+shukla+questions", prerequisites: ["Narrative"] }
+  ]
+}
+
+}
+}
