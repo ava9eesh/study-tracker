@@ -4097,6 +4097,1139 @@ mcq80: [
 ]
 },
 
+"nationalism-in-europe": {
+  mcq40: [
+    {
+      question: "Who wrote 'What is a Nation?'",
+      options: ["Giuseppe Mazzini", "Ernest Renan", "Otto von Bismarck", "Napoleon Bonaparte"],
+      correct: 1,
+    },
+    {
+      question: "Which country was NOT unified in the 19th century?",
+      options: ["Germany", "Italy", "France", "Greece"],
+      correct: 2,
+    },
+    {
+      question: "Zollverein was:",
+      options: ["Military alliance", "Customs union", "Cultural movement", "Religious reform"],
+      correct: 1,
+    },
+    {
+      question: "Who led German unification?",
+      options: ["Mazzini", "Cavour", "Bismarck", "Garibaldi"],
+      correct: 2,
+    },
+    {
+      question: "Greek War of Independence was against:",
+      options: ["Russia", "Ottoman Empire", "Austria", "Britain"],
+      correct: 1,
+    },
+    {
+      question: "“Blood and Iron” policy is linked to:",
+      options: ["Mazzini", "Napoleon", "Bismarck", "Metternich"],
+      correct: 2,
+    },
+    {
+      question: "Carbonari were:",
+      options: ["Soldiers", "Secret society", "Farmers", "Kings"],
+      correct: 1,
+    },
+    {
+      question: "Congress of Vienna aimed to:",
+      options: ["Promote democracy", "Restore monarchies", "Unite Germany", "End wars"],
+      correct: 1,
+    },
+    {
+      question: "Who was Metternich?",
+      options: ["Italian leader", "Austrian chancellor", "French king", "German general"],
+      correct: 1,
+    },
+    {
+      question: "Liberalism stands for:",
+      options: ["Autocracy", "Freedom and equality", "Monarchy", "Slavery"],
+      correct: 1,
+    },
+
+    {
+      question: "Female allegory of France:",
+      options: ["Germania", "Marianne", "Liberty", "Europa"],
+      correct: 1,
+    },
+    {
+      question: "Female allegory of Germany:",
+      options: ["Marianne", "Germania", "Athena", "Roma"],
+      correct: 1,
+    },
+    {
+      question: "Which monarchy was restored in France?",
+      options: ["Bourbon", "Habsburg", "Romanov", "Tudor"],
+      correct: 0,
+    },
+    {
+      question: "Who was Count Cavour?",
+      options: ["Italian PM", "French king", "German general", "Greek leader"],
+      correct: 0,
+    },
+    {
+      question: "Garibaldi was known for:",
+      options: ["Diplomacy", "Military campaigns", "Writing", "Trade"],
+      correct: 1,
+    },
+    {
+      question: "Frankfurt Parliament met in:",
+      options: ["1815", "1830", "1848", "1871"],
+      correct: 2,
+    },
+    {
+      question: "Broken chains symbolize:",
+      options: ["Slavery", "Freedom", "War", "Peace"],
+      correct: 1,
+    },
+    {
+      question: "Nationalism first emerged in:",
+      options: ["Russia", "France", "Italy", "Germany"],
+      correct: 1,
+    },
+    {
+      question: "Napoleonic Code promoted:",
+      options: ["Inequality", "Equality before law", "Slavery", "Church rule"],
+      correct: 1,
+    },
+    {
+      question: "Serfdom means:",
+      options: ["Freedom", "Forced labour", "Trade", "Voting"],
+      correct: 1,
+    },
+
+    {
+      question: "Balkans were under:",
+      options: ["Britain", "Ottoman Empire", "France", "Germany"],
+      correct: 1,
+    },
+    {
+      question: "Balkan nationalism caused:",
+      options: ["Peace", "Tension", "Trade", "Unity"],
+      correct: 1,
+    },
+    {
+      question: "Romantic nationalism focused on:",
+      options: ["Industry", "Culture", "War", "Economy"],
+      correct: 1,
+    },
+    {
+      question: "Who collected folk songs?",
+      options: ["Grimm Brothers", "Newton", "Darwin", "Marx"],
+      correct: 0,
+    },
+    {
+      question: "Germany unified in:",
+      options: ["1815", "1848", "1871", "1900"],
+      correct: 2,
+    },
+    {
+      question: "Italy unified in:",
+      options: ["1861", "1815", "1900", "1700"],
+      correct: 0,
+    },
+    {
+      question: "Red Shirts were led by:",
+      options: ["Mazzini", "Garibaldi", "Cavour", "Bismarck"],
+      correct: 1,
+    },
+    {
+      question: "Greek independence was supported by:",
+      options: ["Europeans", "Asians", "Africans", "Americans"],
+      correct: 0,
+    },
+    {
+      question: "Liberty Leading the People shows:",
+      options: ["War", "Revolution", "Trade", "Peace"],
+      correct: 1,
+    },
+    {
+      question: "Nation-state means:",
+      options: ["Many cultures", "Single identity", "No govt", "Empire"],
+      correct: 1,
+    },
+
+    {
+      question: "Liberalism benefited:",
+      options: ["Peasants", "Middle class", "Kings", "Slaves"],
+      correct: 1,
+    },
+    {
+      question: "Conservatives believed in:",
+      options: ["Change", "Tradition", "Revolution", "Freedom"],
+      correct: 1,
+    },
+    {
+      question: "Radicals wanted:",
+      options: ["Slow change", "Quick reform", "No change", "Monarchy"],
+      correct: 1,
+    },
+    {
+      question: "Utopian society means:",
+      options: ["Perfect society", "War", "Trade", "None"],
+      correct: 0,
+    },
+    {
+      question: "France became:",
+      options: ["Constitutional monarchy", "Empire", "Republic only", "Dictatorship"],
+      correct: 0,
+    },
+    {
+      question: "Balkan nationalism led to:",
+      options: ["Unity", "Conflicts", "Trade", "Peace"],
+      correct: 1,
+    },
+    {
+      question: "Austria was ruled by:",
+      options: ["Metternich", "Napoleon", "Bismarck", "Garibaldi"],
+      correct: 0,
+    },
+    {
+      question: "Opposed liberal nationalism:",
+      options: ["Conservatives", "Liberals", "Radicals", "Workers"],
+      correct: 0,
+    },
+    {
+      question: "Nationalism led to:",
+      options: ["Unity and conflict", "Peace only", "Trade only", "None"],
+      correct: 0,
+    },
+    {
+      question: "Key idea of nationalism:",
+      options: ["Unity", "Division", "Trade", "War"],
+      correct: 0,
+    }
+  ],
+
+  mcq80: [
+  // 1–10
+  { question: "Who described nation as a 'daily plebiscite'?", options: ["Mazzini","Renan","Bismarck","Napoleon"], correct: 1 },
+  { question: "Which treaty reshaped Europe after Napoleon?", options: ["Treaty of Paris","Treaty of Vienna","Treaty of Versailles","Treaty of Berlin"], correct: 1 },
+  { question: "Zollverein excluded:", options: ["Prussia","Austria","Bavaria","Saxony"], correct: 1 },
+  { question: "Bismarck was:", options: ["Austrian leader","Prussian chancellor","Italian king","French general"], correct: 1 },
+  { question: "Which revolution is linked with 1848?", options: ["French Revolution","Liberal revolution","Russian Revolution","Industrial Revolution"], correct: 1 },
+  { question: "Which group wanted a constitution?", options: ["Conservatives","Liberals","Kings","Clergy"], correct: 1 },
+  { question: "Which ideology supported monarchy?", options: ["Liberalism","Radicalism","Conservatism","Socialism"], correct: 2 },
+  { question: "Who led Italian unification diplomatically?", options: ["Garibaldi","Cavour","Mazzini","Victor Emmanuel"], correct: 1 },
+  { question: "Garibaldi belonged to:", options: ["France","Italy","Germany","Austria"], correct: 1 },
+  { question: "Greek independence year:", options: ["1821","1815","1848","1871"], correct: 0 },
+
+  // 11–20
+  { question: "Which empire controlled Balkans?", options: ["Ottoman","British","French","Russian"], correct: 0 },
+  { question: "Romanticism promoted:", options: ["Science","Culture","Trade","War"], correct: 1 },
+  { question: "Germania symbolizes:", options: ["Peace","Unity","Freedom","Justice"], correct: 2 },
+  { question: "Marianne represents:", options: ["Liberty","War","Trade","Religion"], correct: 0 },
+  { question: "Napoleon spread:", options: ["Feudalism","Equality","Slavery","Church power"], correct: 1 },
+  { question: "Which class grew due to industrialization?", options: ["Peasants","Middle class","Clergy","Kings"], correct: 1 },
+  { question: "Frankfurt Parliament failed due to:", options: ["Unity","Opposition","War","Trade"], correct: 1 },
+  { question: "Which was not part of Italian unification?", options: ["Venetia","Rome","Prussia","Sicily"], correct: 2 },
+  { question: "Bismarck used:", options: ["Diplomacy","War","Trade","Religion"], correct: 1 },
+  { question: "Which war unified Germany?", options: ["Franco-Prussian","World War","Cold War","Crimean"], correct: 0 },
+
+  // 21–30
+  { question: "Which idea is core to nationalism?", options: ["Unity","Trade","War","Religion"], correct: 0 },
+  { question: "Serfdom ended in:", options: ["France","Russia","Italy","Germany"], correct: 1 },
+  { question: "Who opposed nationalism?", options: ["Liberals","Conservatives","Workers","Students"], correct: 1 },
+  { question: "Which painting shows nationalism?", options: ["Liberty Leading","Mona Lisa","Starry Night","Guernica"], correct: 0 },
+  { question: "Which symbol shows strength?", options: ["Sword","Chains","Crown","Book"], correct: 0 },
+  { question: "Which ideology wanted quick reform?", options: ["Conservatives","Radicals","Liberals","Kings"], correct: 1 },
+  { question: "Italy became unified in:", options: ["1861","1871","1815","1848"], correct: 0 },
+  { question: "Germany became unified in:", options: ["1871","1861","1815","1900"], correct: 0 },
+  { question: "Who was Italian king?", options: ["Victor Emmanuel","Napoleon","Bismarck","Mazzini"], correct: 0 },
+  { question: "Mazzini supported:", options: ["Monarchy","Republic","Empire","Dictatorship"], correct: 1 },
+
+  // 31–40
+  { question: "Which revolution failed?", options: ["1848","1789","1917","1939"], correct: 0 },
+  { question: "Who wrote nationalist songs?", options: ["Poets","Kings","Soldiers","Clergy"], correct: 0 },
+  { question: "Nationalism spread through:", options: ["Culture","War","Trade","All"], correct: 3 },
+  { question: "Which empire declined?", options: ["Ottoman","British","French","German"], correct: 0 },
+  { question: "Which region was unstable?", options: ["Balkans","France","Germany","Italy"], correct: 0 },
+  { question: "Which symbol means unity?", options: ["Bundle of rods","Chains","Sword","Crown"], correct: 0 },
+  { question: "Which country remained divided?", options: ["Germany","Italy","France","Russia"], correct: 3 },
+  { question: "Which ideology promotes equality?", options: ["Liberalism","Conservatism","Feudalism","Monarchy"], correct: 0 },
+  { question: "Napoleon was defeated at:", options: ["Waterloo","Paris","Vienna","Berlin"], correct: 0 },
+  { question: "Congress of Vienna year:", options: ["1815","1848","1871","1900"], correct: 0 },
+
+  // 41–50
+  { question: "Who restored monarchy?", options: ["Metternich","Napoleon","Garibaldi","Cavour"], correct: 0 },
+  { question: "Which is secret society?", options: ["Carbonari","Liberals","Radicals","Kings"], correct: 0 },
+  { question: "Which class supported nationalism?", options: ["Middle class","Peasants","Kings","Clergy"], correct: 0 },
+  { question: "Which revolution inspired Europe?", options: ["French","Russian","Chinese","American"], correct: 0 },
+  { question: "Which was not liberal demand?", options: ["Equality","Freedom","Monarchy","Rights"], correct: 2 },
+  { question: "Which is economic union?", options: ["Zollverein","NATO","UNO","League"], correct: 0 },
+  { question: "Which symbol shows justice?", options: ["Scales","Sword","Crown","Book"], correct: 0 },
+  { question: "Which region wanted independence?", options: ["Balkans","Germany","France","Italy"], correct: 0 },
+  { question: "Which is allegory?", options: ["Symbolic figure","Real person","Place","Event"], correct: 0 },
+  { question: "Which idea unites people?", options: ["Nation","War","Trade","Religion"], correct: 0 },
+
+  // 51–60
+  { question: "Which empire weakened?", options: ["Ottoman","British","French","German"], correct: 0 },
+  { question: "Who led Red Shirts?", options: ["Garibaldi","Cavour","Mazzini","Bismarck"], correct: 0 },
+  { question: "Which was cultural movement?", options: ["Romanticism","Industrial","War","Trade"], correct: 0 },
+  { question: "Which promoted identity?", options: ["Language","War","Trade","Money"], correct: 0 },
+  { question: "Which symbol shows freedom?", options: ["Broken chain","Sword","Crown","Book"], correct: 0 },
+  { question: "Which empire controlled Greece?", options: ["Ottoman","French","British","German"], correct: 0 },
+  { question: "Which leader used diplomacy?", options: ["Cavour","Garibaldi","Mazzini","Napoleon"], correct: 0 },
+  { question: "Which war helped Italy?", options: ["Austrian war","World War","Cold War","None"], correct: 0 },
+  { question: "Which group wanted rights?", options: ["Liberals","Kings","Clergy","Nobles"], correct: 0 },
+  { question: "Which class opposed change?", options: ["Conservatives","Liberals","Radicals","Workers"], correct: 0 },
+
+  // 61–70
+  { question: "Which was revolution center?", options: ["France","Germany","Italy","Russia"], correct: 0 },
+  { question: "Which promoted nationalism?", options: ["Art","Trade","War","None"], correct: 0 },
+  { question: "Which leader unified Germany?", options: ["Bismarck","Mazzini","Cavour","Garibaldi"], correct: 0 },
+  { question: "Which used war strategy?", options: ["Bismarck","Cavour","Mazzini","Napoleon"], correct: 0 },
+  { question: "Which is nation-state?", options: ["Unified people","Empire","Colony","None"], correct: 0 },
+  { question: "Which wanted republic?", options: ["Mazzini","Bismarck","Metternich","Napoleon"], correct: 0 },
+  { question: "Which symbol is Germania?", options: ["German nation","France","Italy","Russia"], correct: 0 },
+  { question: "Which is Marianne?", options: ["France","Germany","Italy","Austria"], correct: 0 },
+  { question: "Which idea spread nationalism?", options: ["Education","War","Trade","None"], correct: 0 },
+  { question: "Which movement was cultural?", options: ["Romanticism","Industrial","Political","None"], correct: 0 },
+
+  // 71–80
+  { question: "Which empire declined most?", options: ["Ottoman","British","French","German"], correct: 0 },
+  { question: "Which was unstable region?", options: ["Balkans","France","Germany","Italy"], correct: 0 },
+  { question: "Which caused wars?", options: ["Nationalism","Trade","Religion","None"], correct: 0 },
+  { question: "Which idea united Germany?", options: ["Nationalism","Trade","War","Religion"], correct: 0 },
+  { question: "Which leader was military?", options: ["Garibaldi","Cavour","Mazzini","Metternich"], correct: 0 },
+  { question: "Which idea created nations?", options: ["Nationalism","Trade","War","Religion"], correct: 0 },
+  { question: "Which symbol shows unity?", options: ["Bundle rods","Sword","Chain","Book"], correct: 0 },
+  { question: "Which was intellectual movement?", options: ["Romanticism","War","Trade","None"], correct: 0 },
+  { question: "Which supported monarchy?", options: ["Conservatives","Liberals","Radicals","Workers"], correct: 0 },
+  { question: "Which supported democracy?", options: ["Liberals","Kings","Clergy","Nobles"], correct: 0 }
+]
+},
+
+"nationalism-in-india": {
+  mcq40: [
+    // 🔥 NORMAL MCQs (1–25)
+    {
+      question: "Who launched the Non-Cooperation Movement?",
+      options: ["Gandhi", "Nehru", "Subhas Bose", "Tilak"],
+      correct: 0,
+    },
+    {
+      question: "Jallianwala Bagh massacre took place in:",
+      options: ["1919", "1920", "1915", "1930"],
+      correct: 0,
+    },
+    {
+      question: "Rowlatt Act allowed:",
+      options: ["Detention without trial", "Free speech", "Voting rights", "Trade freedom"],
+      correct: 0,
+    },
+    {
+      question: "Who was the viceroy during Jallianwala Bagh?",
+      options: ["Dyer", "Irwin", "Curzon", "Hastings"],
+      correct: 0,
+    },
+    {
+      question: "Khilafat Movement was related to:",
+      options: ["Muslim Caliph", "Hindu reform", "Trade", "Education"],
+      correct: 0,
+    },
+    {
+      question: "Non-Cooperation Movement ended due to:",
+      options: ["Chauri Chaura incident", "WW1", "Partition", "None"],
+      correct: 0,
+    },
+    {
+      question: "Salt March was started in:",
+      options: ["1930", "1920", "1919", "1942"],
+      correct: 0,
+    },
+    {
+      question: "Dandi March was led by:",
+      options: ["Gandhi", "Nehru", "Bose", "Patel"],
+      correct: 0,
+    },
+    {
+      question: "Civil Disobedience Movement started in:",
+      options: ["1930", "1922", "1919", "1942"],
+      correct: 0,
+    },
+    {
+      question: "Quit India Movement started in:",
+      options: ["1942", "1930", "1920", "1919"],
+      correct: 0,
+    },
+
+    {
+      question: "Simon Commission was opposed because:",
+      options: ["No Indian member", "Too many Indians", "War", "Tax"],
+      correct: 0,
+    },
+    {
+      question: "Who wrote Vande Mataram?",
+      options: ["Bankim Chandra", "Tagore", "Gandhi", "Nehru"],
+      correct: 0,
+    },
+    {
+      question: "Swadeshi means:",
+      options: ["Use of local goods", "Foreign goods", "Trade", "Import"],
+      correct: 0,
+    },
+    {
+      question: "Boycott means:",
+      options: ["Reject goods", "Buy goods", "Sell goods", "Import"],
+      correct: 0,
+    },
+    {
+      question: "Who composed National Anthem?",
+      options: ["Tagore", "Gandhi", "Nehru", "Bose"],
+      correct: 0,
+    },
+
+    {
+      question: "Gandhi returned to India in:",
+      options: ["1915", "1920", "1919", "1930"],
+      correct: 0,
+    },
+    {
+      question: "Champaran movement was related to:",
+      options: ["Indigo farmers", "Salt", "Textile", "Coal"],
+      correct: 0,
+    },
+    {
+      question: "Kheda movement was about:",
+      options: ["Tax relief", "Salt", "War", "Trade"],
+      correct: 0,
+    },
+    {
+      question: "Ahmedabad movement was about:",
+      options: ["Mill workers", "Farmers", "Trade", "War"],
+      correct: 0,
+    },
+    {
+      question: "Poona Pact was between:",
+      options: ["Gandhi & Ambedkar", "Gandhi & Nehru", "Nehru & Bose", "None"],
+      correct: 0,
+    },
+
+    {
+      question: "Which leader demanded Purna Swaraj?",
+      options: ["Nehru", "Gandhi", "Bose", "Tilak"],
+      correct: 0,
+    },
+    {
+      question: "When was Purna Swaraj declared?",
+      options: ["1930", "1920", "1919", "1942"],
+      correct: 0,
+    },
+    {
+      question: "Which movement involved breaking salt law?",
+      options: ["Civil Disobedience", "Non-Cooperation", "Quit India", "None"],
+      correct: 0,
+    },
+    {
+      question: "Who was associated with militant nationalism?",
+      options: ["Bose", "Gandhi", "Nehru", "Tagore"],
+      correct: 0,
+    },
+    {
+      question: "Which method did Gandhi follow?",
+      options: ["Non-violence", "Violence", "War", "None"],
+      correct: 0,
+    },
+
+    // 🔥 ASSERTION–REASON (26–40)
+    {
+      question: "Assertion: Rowlatt Act was opposed by Indians. Reason: It allowed arrest without trial.",
+      options: ["Both A and R true and R explains A", "Both true but R not explanation", "A true R false", "A false R true"],
+      correct: 0,
+    },
+    {
+      question: "Assertion: Gandhi started Non-Cooperation Movement. Reason: To protest against British policies.",
+      options: ["Both true and R explains A", "Both true not explanation", "A true R false", "A false R true"],
+      correct: 0,
+    },
+    {
+      question: "Assertion: Chauri Chaura ended movement. Reason: It involved violence.",
+      options: ["Both true and R explains A", "Both true not explanation", "A true R false", "A false R true"],
+      correct: 0,
+    },
+    {
+      question: "Assertion: Salt March was important. Reason: It broke British monopoly.",
+      options: ["Both true and R explains A", "Both true not explanation", "A true R false", "A false R true"],
+      correct: 0,
+    },
+    {
+      question: "Assertion: Civil Disobedience Movement failed. Reason: British suppressed it.",
+      options: ["Both true and R explains A", "Both true not explanation", "A true R false", "A false R true"],
+      correct: 1,
+    },
+
+    {
+      question: "Assertion: Quit India was powerful. Reason: It demanded immediate independence.",
+      options: ["Both true and R explains A", "Both true not explanation", "A true R false", "A false R true"],
+      correct: 0,
+    },
+    {
+      question: "Assertion: Swadeshi promoted Indian goods. Reason: To reduce British imports.",
+      options: ["Both true and R explains A", "Both true not explanation", "A true R false", "A false R true"],
+      correct: 0,
+    },
+    {
+      question: "Assertion: Gandhi used non-violence. Reason: He believed in peaceful protest.",
+      options: ["Both true and R explains A", "Both true not explanation", "A true R false", "A false R true"],
+      correct: 0,
+    },
+    {
+      question: "Assertion: Simon Commission was opposed. Reason: It had no Indians.",
+      options: ["Both true and R explains A", "Both true not explanation", "A true R false", "A false R true"],
+      correct: 0,
+    },
+    {
+      question: "Assertion: Nationalism united people. Reason: It created common identity.",
+      options: ["Both true and R explains A", "Both true not explanation", "A true R false", "A false R true"],
+      correct: 0,
+    },
+
+    {
+      question: "Assertion: Khilafat supported Gandhi. Reason: It united Hindus and Muslims.",
+      options: ["Both true and R explains A", "Both true not explanation", "A true R false", "A false R true"],
+      correct: 0,
+    },
+    {
+      question: "Assertion: British used divide and rule. Reason: To weaken unity.",
+      options: ["Both true and R explains A", "Both true not explanation", "A true R false", "A false R true"],
+      correct: 0,
+    },
+    {
+      question: "Assertion: Peasants joined movements. Reason: They wanted relief from taxes.",
+      options: ["Both true and R explains A", "Both true not explanation", "A true R false", "A false R true"],
+      correct: 0,
+    },
+    {
+      question: "Assertion: Workers joined strikes. Reason: They wanted better wages.",
+      options: ["Both true and R explains A", "Both true not explanation", "A true R false", "A false R true"],
+      correct: 0,
+    },
+    {
+      question: "Assertion: Nationalism spread widely. Reason: Through movements and leaders.",
+      options: ["Both true and R explains A", "Both true not explanation", "A true R false", "A false R true"],
+      correct: 0,
+    }
+  ],
+
+  mcq80: [
+  // 🔥 1–64 NORMAL
+
+  { question: "Rowlatt Act passed in:", options: ["1919","1920","1915","1930"], correct: 0 }, //1
+  { question: "Jallianwala Bagh is in:", options: ["Amritsar","Delhi","Lahore","Kolkata"], correct: 0 }, //2
+  { question: "General Dyer ordered:", options: ["Firing","Speech","Arrest","Leave"], correct: 0 }, //3
+  { question: "Khilafat related to:", options: ["Caliph","Tax","Trade","War"], correct: 0 }, //4
+  { question: "Non-Cooperation started:", options: ["1920","1919","1930","1942"], correct: 0 }, //5
+  { question: "Movement withdrawn due to:", options: ["Chauri Chaura","War","Trade","None"], correct: 0 }, //6
+  { question: "Salt March year:", options: ["1930","1920","1919","1942"], correct: 0 }, //7
+  { question: "Dandi March leader:", options: ["Gandhi","Nehru","Bose","Patel"], correct: 0 }, //8
+  { question: "Quit India year:", options: ["1942","1930","1920","1919"], correct: 0 }, //9
+  { question: "Simon Commission year:", options: ["1928","1919","1930","1942"], correct: 0 }, //10
+
+  { question: "Simon opposed because:", options: ["No Indians","War","Trade","Tax"], correct: 0 }, //11
+  { question: "Poona Pact year:", options: ["1932","1930","1919","1942"], correct: 0 }, //12
+  { question: "Champaran issue:", options: ["Indigo","Salt","Trade","War"], correct: 0 }, //13
+  { question: "Kheda issue:", options: ["Tax relief","Salt","Trade","War"], correct: 0 }, //14
+  { question: "Ahmedabad issue:", options: ["Workers","Farmers","Trade","War"], correct: 0 }, //15
+  { question: "Purna Swaraj declared:", options: ["1930","1920","1919","1942"], correct: 0 }, //16
+  { question: "Swadeshi means:", options: ["Local goods","Foreign","Trade","Import"], correct: 0 }, //17
+  { question: "Boycott means:", options: ["Reject goods","Buy","Sell","Import"], correct: 0 }, //18
+  { question: "Nationalism spread by:", options: ["Movements","War","Trade","Religion"], correct: 0 }, //19
+  { question: "Gandhi method:", options: ["Non-violence","War","Violence","None"], correct: 0 }, //20
+
+  { question: "Khilafat supported by:", options: ["Gandhi","Nehru","Bose","Tilak"], correct: 0 }, //21
+  { question: "Peasants joined for:", options: ["Tax relief","War","Trade","None"], correct: 0 }, //22
+  { question: "Workers joined for:", options: ["Wages","War","Trade","None"], correct: 0 }, //23
+  { question: "Business supported:", options: ["Boycott imports","War","Trade","None"], correct: 0 }, //24
+  { question: "Dalits demanded:", options: ["Separate electorate","Trade","War","None"], correct: 0 }, //25
+  { question: "Ambedkar was:", options: ["Dalit leader","King","British","Trader"], correct: 0 }, //26
+  { question: "Which failed early:", options: ["Non-Cooperation","Quit India","Civil","None"], correct: 0 }, //27
+  { question: "British reaction:", options: ["Repression","Support","Ignore","Trade"], correct: 0 }, //28
+  { question: "Leading class:", options: ["Middle class","Kings","Clergy","None"], correct: 0 }, //29
+  { question: "Symbol used:", options: ["Flag","Sword","Gun","None"], correct: 0 }, //30
+
+  { question: "Women joined for:", options: ["Freedom","War","Trade","None"], correct: 0 }, //31
+  { question: "Salt law broken in:", options: ["Civil Disobedience","Non-Cooperation","Quit India","None"], correct: 0 }, //32
+  { question: "Militant leader:", options: ["Bose","Gandhi","Nehru","None"], correct: 0 }, //33
+  { question: "Peace ideology:", options: ["Gandhism","War","Militant","None"], correct: 0 }, //34
+  { question: "Religious unity via:", options: ["Khilafat","War","Trade","None"], correct: 0 }, //35
+  { question: "Mass movement:", options: ["Quit India","War","Trade","None"], correct: 0 }, //36
+  { question: "Slogan:", options: ["Do or Die","Trade","War","None"], correct: 0 }, //37
+  { question: "Final aim:", options: ["Independence","Trade","War","None"], correct: 0 }, //38
+  { question: "Identity formed by:", options: ["Nationalism","Trade","War","None"], correct: 0 }, //39
+  { question: "Unity built through:", options: ["Struggle","Trade","War","None"], correct: 0 }, //40
+
+  { question: "Salt law broken by:", options: ["Gandhi","British","Kings","None"], correct: 0 }, //41
+  { question: "Movement largest:", options: ["Quit India","Civil","Non-Coop","None"], correct: 0 }, //42
+  { question: "Mass unity from:", options: ["Nationalism","Trade","War","None"], correct: 0 }, //43
+  { question: "Peace leader:", options: ["Gandhi","Bose","Tilak","None"], correct: 0 }, //44
+  { question: "Boycott used in:", options: ["Non-Cooperation","War","Trade","None"], correct: 0 }, //45
+  { question: "Strongest class:", options: ["Middle class","Kings","Clergy","None"], correct: 0 }, //46
+  { question: "Radical leader:", options: ["Bose","Gandhi","Nehru","None"], correct: 0 }, //47
+  { question: "Symbols used by:", options: ["Nationalists","British","Kings","None"], correct: 0 }, //48
+  { question: "Rights demanded by:", options: ["Indians","British","Kings","None"], correct: 0 }, //49
+  { question: "Unity spread by:", options: ["Movements","Trade","War","None"], correct: 0 }, //50
+
+  { question: "Identity created by:", options: ["Nationalism","Trade","War","None"], correct: 0 }, //51
+  { question: "Opposed British:", options: ["Indians","Kings","None","Trade"], correct: 0 }, //52
+  { question: "Ended early:", options: ["Non-Cooperation","Quit","Civil","None"], correct: 0 }, //53
+  { question: "Demanded Swaraj:", options: ["Congress","British","Kings","None"], correct: 0 }, //54
+  { question: "United classes:", options: ["Nationalism","Trade","War","None"], correct: 0 }, //55
+  { question: "Protest method:", options: ["Boycott","War","Trade","None"], correct: 0 }, //56
+  { question: "Broke monopoly:", options: ["Salt March","War","Trade","None"], correct: 0 }, //57
+  { question: "Unity cause:", options: ["Shared struggle","Trade","War","None"], correct: 0 }, //58
+  { question: "Non-violence used by:", options: ["Gandhi","Bose","Tilak","None"], correct: 0 }, //59
+  { question: "Goal of nationalism:", options: ["Freedom","Trade","War","None"], correct: 0 }, //60
+
+  { question: "Movement against British:", options: ["Non-Cooperation","Trade","War","None"], correct: 0 }, //61
+  { question: "Mass participation seen in:", options: ["Civil Disobedience","War","Trade","None"], correct: 0 }, //62
+  { question: "Unity symbol:", options: ["Flag","Gun","Sword","None"], correct: 0 }, //63
+  { question: "Freedom achieved in:", options: ["1947","1930","1920","1919"], correct: 0 }, //64
+
+  // 🔥 65–80 ASSERTION REASON (16)
+
+  { question: "Assertion: Rowlatt Act angered Indians. Reason: Allowed detention without trial.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //65
+  { question: "Assertion: Gandhi launched movement. Reason: Protest British.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //66
+  { question: "Assertion: Chauri Chaura ended movement. Reason: Violence.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //67
+  { question: "Assertion: Salt March important. Reason: Broke monopoly.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //68
+  { question: "Assertion: Civil Disobedience strong. Reason: Mass support.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //69
+
+  { question: "Assertion: Quit India powerful. Reason: Immediate independence.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //70
+  { question: "Assertion: Swadeshi promoted industry. Reason: Reduced imports.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //71
+  { question: "Assertion: Gandhi believed peace. Reason: Non-violence.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //72
+  { question: "Assertion: Simon opposed. Reason: No Indians.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //73
+  { question: "Assertion: Nationalism united people. Reason: Common identity.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //74
+
+  { question: "Assertion: Khilafat supported unity. Reason: Hindu-Muslim unity.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //75
+  { question: "Assertion: British divide rule. Reason: Weak unity.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //76
+  { question: "Assertion: Peasants joined. Reason: Tax burden.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //77
+  { question: "Assertion: Workers joined. Reason: Wage issues.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //78
+  { question: "Assertion: Nationalism spread. Reason: Leaders + movements.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //79
+  { question: "Assertion: Movements unified India. Reason: Shared struggle.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 } //80
+]
+},  
+
+"making-of-a-global-world": {
+  mcq40: [
+    { question: "Globalisation refers to:", options: ["Integration of economies","Isolation","War","Trade ban"], correct: 0 },
+    { question: "Silk Route connected:", options: ["Asia, Europe, Africa","Only India","Only China","Only Europe"], correct: 0 },
+    { question: "Which crop from America became staple in Europe?", options: ["Potato","Rice","Wheat","Barley"], correct: 0 },
+    { question: "Who discovered sea route to India?", options: ["Vasco da Gama","Columbus","Cook","Magellan"], correct: 0 },
+    { question: "Corn is also called:", options: ["Maize","Rice","Wheat","Barley"], correct: 0 },
+
+    { question: "19th century globalisation was driven by:", options: ["Trade","Isolation","War","None"], correct: 0 },
+    { question: "Indentured labour refers to:", options: ["Bonded labour","Free labour","Skilled labour","None"], correct: 0 },
+    { question: "Girmitiyas were:", options: ["Indentured workers","Kings","Traders","Soldiers"], correct: 0 },
+    { question: "Most indentured workers went to:", options: ["Plantations","Cities","Villages","Farms"], correct: 0 },
+    { question: "Industrial revolution began in:", options: ["Britain","India","USA","China"], correct: 0 },
+
+    { question: "Which country dominated world trade in 19th century?", options: ["Britain","India","China","USA"], correct: 0 },
+    { question: "Trade expanded due to:", options: ["Railways & ships","War","Isolation","None"], correct: 0 },
+    { question: "Rinderpest affected:", options: ["Cattle","Humans","Crops","Trade"], correct: 0 },
+    { question: "Rinderpest led to:", options: ["Famine","Trade","War","Growth"], correct: 0 },
+    { question: "Which continent was heavily affected by rinderpest?", options: ["Africa","Europe","Asia","America"], correct: 0 },
+
+    { question: "Which country imported cheap goods to India?", options: ["Britain","France","Germany","USA"], correct: 0 },
+    { question: "Indian farmers were forced to grow:", options: ["Cash crops","Food crops","None","Only wheat"], correct: 0 },
+    { question: "Opium was exported to:", options: ["China","USA","Europe","Africa"], correct: 0 },
+    { question: "Indentured labour ended in:", options: ["1921","1919","1930","1947"], correct: 0 },
+    { question: "Which country restricted imports in 1930s?", options: ["USA","India","China","Japan"], correct: 0 },
+
+    { question: "Great Depression began in:", options: ["1929","1919","1939","1945"], correct: 0 },
+    { question: "Great Depression started in:", options: ["USA","India","Britain","China"], correct: 0 },
+    { question: "Farmers were affected by:", options: ["Price fall","Price rise","War","Trade"], correct: 0 },
+    { question: "Which system collapsed during depression?", options: ["Banks","Schools","Hospitals","None"], correct: 0 },
+    { question: "Which country recovered fast from depression?", options: ["USA","Germany","India","China"], correct: 1 },
+
+    { question: "Post-WWII institution:", options: ["IMF","UNO","NATO","All"], correct: 3 },
+    { question: "IMF stands for:", options: ["International Monetary Fund","Indian Money Fund","None","Trade Fund"], correct: 0 },
+    { question: "World Bank helps in:", options: ["Development","War","Trade","None"], correct: 0 },
+    { question: "Which promoted global trade?", options: ["WTO","UNO","IMF","None"], correct: 0 },
+    { question: "Modern globalisation involves:", options: ["Technology","Isolation","War","None"], correct: 0 },
+
+    { question: "Which is a modern example of globalisation?", options: ["Internet","War","Isolation","None"], correct: 0 },
+    { question: "Which country became economic power later?", options: ["China","India","Africa","None"], correct: 0 },
+    { question: "Which factor helped globalisation?", options: ["Transport","War","Isolation","None"], correct: 0 },
+    { question: "Which caused migration?", options: ["Work","War","Trade","All"], correct: 3 },
+    { question: "Which region saw mass migration?", options: ["Europe","Asia","Africa","All"], correct: 3 },
+
+    { question: "Which crop demand increased globally?", options: ["Cotton","Rice","Barley","None"], correct: 0 },
+    { question: "Which country exported wheat?", options: ["USA","India","China","Japan"], correct: 0 },
+    { question: "Which invention helped trade?", options: ["Steamship","Sword","Gun","None"], correct: 0 },
+    { question: "Which caused economic crisis?", options: ["Depression","Growth","Trade","None"], correct: 0 },
+    { question: "Globalisation increased:", options: ["Interdependence","Isolation","War","None"], correct: 0 }
+  ],
+
+
+  mcq80: [
+    // 🔥 1–64 NORMAL MCQs
+
+    { question: "Globalisation means:", options: ["Integration","Isolation","War","None"], correct: 0 }, //1
+    { question: "Silk Route linked:", options: ["Asia-Europe-Africa","Only India","Only China","Only Europe"], correct: 0 }, //2
+    { question: "Potato came from:", options: ["America","India","China","Africa"], correct: 0 }, //3
+    { question: "Vasco da Gama reached India in:", options: ["1498","1500","1600","1700"], correct: 0 }, //4
+    { question: "Corn is:", options: ["Maize","Rice","Wheat","Barley"], correct: 0 }, //5
+
+    { question: "Industrial Revolution began in:", options: ["Britain","India","USA","China"], correct: 0 }, //6
+    { question: "Indentured labour means:", options: ["Bonded labour","Free labour","Skilled","None"], correct: 0 }, //7
+    { question: "Girmitiyas were:", options: ["Indentured workers","Kings","Traders","None"], correct: 0 }, //8
+    { question: "Indentured labour ended in:", options: ["1921","1919","1930","1947"], correct: 0 }, //9
+    { question: "Rinderpest affected:", options: ["Cattle","Humans","Trade","War"], correct: 0 }, //10
+
+    { question: "Rinderpest spread in:", options: ["Africa","Asia","Europe","America"], correct: 0 }, //11
+    { question: "Cash crops grown for:", options: ["Market","Food","Trade only","None"], correct: 0 }, //12
+    { question: "Opium exported to:", options: ["China","USA","Europe","Africa"], correct: 0 }, //13
+    { question: "Britain exported:", options: ["Manufactured goods","Raw","Food","None"], correct: 0 }, //14
+    { question: "19th century trade used:", options: ["Railways","None","War","Trade ban"], correct: 0 }, //15
+
+    { question: "Great Depression year:", options: ["1929","1919","1939","1945"], correct: 0 }, //16
+    { question: "Depression began in:", options: ["USA","India","China","Britain"], correct: 0 }, //17
+    { question: "Farmers suffered due to:", options: ["Price fall","Rise","War","None"], correct: 0 }, //18
+    { question: "Banks collapsed in:", options: ["Depression","War","Trade","None"], correct: 0 }, //19
+    { question: "USA recovery via:", options: ["New Deal","War","Trade","None"], correct: 0 }, //20
+
+    { question: "WWII ended in:", options: ["1945","1939","1929","1919"], correct: 0 }, //21
+    { question: "IMF created to:", options: ["Stabilize economy","War","Trade","None"], correct: 0 }, //22
+    { question: "World Bank gives:", options: ["Loans","War","Trade","None"], correct: 0 }, //23
+    { question: "WTO promotes:", options: ["Trade","War","Isolation","None"], correct: 0 }, //24
+    { question: "Modern globalisation uses:", options: ["Technology","War","Trade only","None"], correct: 0 }, //25
+
+    { question: "Migration due to:", options: ["Work","War","Trade","All"], correct: 3 }, //26
+    { question: "Europe migration:", options: ["Mass","Low","None","Trade"], correct: 0 }, //27
+    { question: "USA imported:", options: ["Wheat","Rice","Barley","None"], correct: 0 }, //28
+    { question: "Steamship helped:", options: ["Trade","War","None","Isolation"], correct: 0 }, //29
+    { question: "Railways helped:", options: ["Transport","War","Trade ban","None"], correct: 0 }, //30
+
+    { question: "Which crop demand rose:", options: ["Cotton","Rice","None","Barley"], correct: 0 }, //31
+    { question: "Which country industrial leader:", options: ["Britain","India","China","Africa"], correct: 0 }, //32
+    { question: "Which was colonised:", options: ["India","USA","Britain","None"], correct: 0 }, //33
+    { question: "Colonies provided:", options: ["Raw material","War","Trade","None"], correct: 0 }, //34
+    { question: "Colonies bought:", options: ["Finished goods","War","Trade","None"], correct: 0 }, //35
+
+    { question: "Which disease spread:", options: ["Rinderpest","Plague","Covid","None"], correct: 0 }, //36
+    { question: "Africa economy affected by:", options: ["Cattle loss","Trade","War","None"], correct: 0 }, //37
+    { question: "Indentured workers went to:", options: ["Plantations","Cities","Villages","None"], correct: 0 }, //38
+    { question: "Which labour forced:", options: ["Indentured","Free","None","Skilled"], correct: 0 }, //39
+    { question: "Indentured system ended due to:", options: ["Criticism","War","Trade","None"], correct: 0 }, //40
+
+    { question: "Global trade increased due to:", options: ["Transport","War","None","Trade ban"], correct: 0 }, //41
+    { question: "Which economy collapsed:", options: ["USA","India","China","None"], correct: 0 }, //42
+    { question: "Which saw unemployment:", options: ["USA","India","China","None"], correct: 0 }, //43
+    { question: "Which policy used:", options: ["Protectionism","Free trade","None","War"], correct: 0 }, //44
+    { question: "Tariffs increased to:", options: ["Protect economy","War","Trade","None"], correct: 0 }, //45
+
+    { question: "Which reduced imports:", options: ["USA","India","China","None"], correct: 0 }, //46
+    { question: "Which was global crisis:", options: ["Depression","War","Trade","None"], correct: 0 }, //47
+    { question: "Which caused poverty:", options: ["Depression","Trade","War","None"], correct: 0 }, //48
+    { question: "Which helped recovery:", options: ["Govt policies","War","Trade","None"], correct: 0 }, //49
+    { question: "Which promoted unity:", options: ["Globalisation","War","Trade","None"], correct: 0 }, //50
+
+    { question: "Which increased interdependence:", options: ["Globalisation","War","Trade","None"], correct: 0 }, //51
+    { question: "Which improved trade:", options: ["Technology","War","None","Isolation"], correct: 0 }, //52
+    { question: "Which system global:", options: ["Capitalism","War","None","Trade"], correct: 0 }, //53
+    { question: "Which reduced distance:", options: ["Transport","War","Trade","None"], correct: 0 }, //54
+    { question: "Which improved communication:", options: ["Telegraph","War","Trade","None"], correct: 0 }, //55
+
+    { question: "Which linked world:", options: ["Trade","War","Isolation","None"], correct: 0 }, //56
+    { question: "Which brought change:", options: ["Globalisation","War","None","Trade"], correct: 0 }, //57
+    { question: "Which increased jobs:", options: ["Industry","War","Trade","None"], correct: 0 }, //58
+    { question: "Which helped economy:", options: ["Trade","War","None","Isolation"], correct: 0 }, //59
+    { question: "Which spread ideas:", options: ["Migration","War","Trade","None"], correct: 0 }, //60
+
+    { question: "Which connected markets:", options: ["Globalisation","War","None","Trade"], correct: 0 }, //61
+    { question: "Which caused migration:", options: ["Work","War","Trade","All"], correct: 3 }, //62
+    { question: "Which was world market:", options: ["Global economy","War","None","Trade"], correct: 0 }, //63
+    { question: "Which increased trade:", options: ["Industrialisation","War","None","Trade"], correct: 0 }, //64
+
+    // 🔥 65–80 ASSERTION–REASON (16)
+
+    { question: "Assertion: Globalisation connects countries. Reason: Through trade and technology.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //65
+    { question: "Assertion: Silk route important. Reason: Connected regions.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //66
+    { question: "Assertion: Potato changed diet. Reason: High nutrition.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //67
+    { question: "Assertion: Indentured labour ended. Reason: Criticism.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //68
+    { question: "Assertion: Rinderpest harmful. Reason: Killed cattle.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //69
+
+    { question: "Assertion: Depression global. Reason: Started USA.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //70
+    { question: "Assertion: Farmers suffered. Reason: Price fall.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //71
+    { question: "Assertion: IMF formed. Reason: Stabilize economy.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //72
+    { question: "Assertion: WTO promotes trade. Reason: Free markets.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //73
+    { question: "Assertion: Technology boosts trade. Reason: Faster communication.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //74
+
+    { question: "Assertion: Migration increased. Reason: Job search.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //75
+    { question: "Assertion: Colonies exploited. Reason: Raw materials taken.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //76
+    { question: "Assertion: Trade expanded. Reason: Transport improved.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //77
+    { question: "Assertion: Depression caused unemployment. Reason: Industries closed.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //78
+    { question: "Assertion: Globalisation increases interdependence. Reason: Countries rely on each other.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //79
+    { question: "Assertion: Global economy exists. Reason: Trade connects nations.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 } //80
+  ]
+},
+
+"making-of-a-global-world": {
+  mcq80: [
+    // 🔥 1–64 NORMAL MCQs
+
+    { question: "Globalisation means:", options: ["Integration","Isolation","War","None"], correct: 0 }, //1
+    { question: "Silk Route linked:", options: ["Asia-Europe-Africa","Only India","Only China","Only Europe"], correct: 0 }, //2
+    { question: "Potato came from:", options: ["America","India","China","Africa"], correct: 0 }, //3
+    { question: "Vasco da Gama reached India in:", options: ["1498","1500","1600","1700"], correct: 0 }, //4
+    { question: "Corn is:", options: ["Maize","Rice","Wheat","Barley"], correct: 0 }, //5
+
+    { question: "Industrial Revolution began in:", options: ["Britain","India","USA","China"], correct: 0 }, //6
+    { question: "Indentured labour means:", options: ["Bonded labour","Free labour","Skilled","None"], correct: 0 }, //7
+    { question: "Girmitiyas were:", options: ["Indentured workers","Kings","Traders","None"], correct: 0 }, //8
+    { question: "Indentured labour ended in:", options: ["1921","1919","1930","1947"], correct: 0 }, //9
+    { question: "Rinderpest affected:", options: ["Cattle","Humans","Trade","War"], correct: 0 }, //10
+
+    { question: "Rinderpest spread in:", options: ["Africa","Asia","Europe","America"], correct: 0 }, //11
+    { question: "Cash crops grown for:", options: ["Market","Food","Trade only","None"], correct: 0 }, //12
+    { question: "Opium exported to:", options: ["China","USA","Europe","Africa"], correct: 0 }, //13
+    { question: "Britain exported:", options: ["Manufactured goods","Raw","Food","None"], correct: 0 }, //14
+    { question: "19th century trade used:", options: ["Railways","None","War","Trade ban"], correct: 0 }, //15
+
+    { question: "Great Depression year:", options: ["1929","1919","1939","1945"], correct: 0 }, //16
+    { question: "Depression began in:", options: ["USA","India","China","Britain"], correct: 0 }, //17
+    { question: "Farmers suffered due to:", options: ["Price fall","Rise","War","None"], correct: 0 }, //18
+    { question: "Banks collapsed in:", options: ["Depression","War","Trade","None"], correct: 0 }, //19
+    { question: "USA recovery via:", options: ["New Deal","War","Trade","None"], correct: 0 }, //20
+
+    { question: "WWII ended in:", options: ["1945","1939","1929","1919"], correct: 0 }, //21
+    { question: "IMF created to:", options: ["Stabilize economy","War","Trade","None"], correct: 0 }, //22
+    { question: "World Bank gives:", options: ["Loans","War","Trade","None"], correct: 0 }, //23
+    { question: "WTO promotes:", options: ["Trade","War","Isolation","None"], correct: 0 }, //24
+    { question: "Modern globalisation uses:", options: ["Technology","War","Trade only","None"], correct: 0 }, //25
+
+    { question: "Migration due to:", options: ["Work","War","Trade","All"], correct: 3 }, //26
+    { question: "Europe migration:", options: ["Mass","Low","None","Trade"], correct: 0 }, //27
+    { question: "USA imported:", options: ["Wheat","Rice","Barley","None"], correct: 0 }, //28
+    { question: "Steamship helped:", options: ["Trade","War","None","Isolation"], correct: 0 }, //29
+    { question: "Railways helped:", options: ["Transport","War","Trade ban","None"], correct: 0 }, //30
+
+    { question: "Which crop demand rose:", options: ["Cotton","Rice","None","Barley"], correct: 0 }, //31
+    { question: "Which country industrial leader:", options: ["Britain","India","China","Africa"], correct: 0 }, //32
+    { question: "Which was colonised:", options: ["India","USA","Britain","None"], correct: 0 }, //33
+    { question: "Colonies provided:", options: ["Raw material","War","Trade","None"], correct: 0 }, //34
+    { question: "Colonies bought:", options: ["Finished goods","War","Trade","None"], correct: 0 }, //35
+
+    { question: "Which disease spread:", options: ["Rinderpest","Plague","Covid","None"], correct: 0 }, //36
+    { question: "Africa economy affected by:", options: ["Cattle loss","Trade","War","None"], correct: 0 }, //37
+    { question: "Indentured workers went to:", options: ["Plantations","Cities","Villages","None"], correct: 0 }, //38
+    { question: "Which labour forced:", options: ["Indentured","Free","None","Skilled"], correct: 0 }, //39
+    { question: "Indentured system ended due to:", options: ["Criticism","War","Trade","None"], correct: 0 }, //40
+
+    { question: "Global trade increased due to:", options: ["Transport","War","None","Trade ban"], correct: 0 }, //41
+    { question: "Which economy collapsed:", options: ["USA","India","China","None"], correct: 0 }, //42
+    { question: "Which saw unemployment:", options: ["USA","India","China","None"], correct: 0 }, //43
+    { question: "Which policy used:", options: ["Protectionism","Free trade","None","War"], correct: 0 }, //44
+    { question: "Tariffs increased to:", options: ["Protect economy","War","Trade","None"], correct: 0 }, //45
+
+    { question: "Which reduced imports:", options: ["USA","India","China","None"], correct: 0 }, //46
+    { question: "Which was global crisis:", options: ["Depression","War","Trade","None"], correct: 0 }, //47
+    { question: "Which caused poverty:", options: ["Depression","Trade","War","None"], correct: 0 }, //48
+    { question: "Which helped recovery:", options: ["Govt policies","War","Trade","None"], correct: 0 }, //49
+    { question: "Which promoted unity:", options: ["Globalisation","War","Trade","None"], correct: 0 }, //50
+
+    { question: "Which increased interdependence:", options: ["Globalisation","War","Trade","None"], correct: 0 }, //51
+    { question: "Which improved trade:", options: ["Technology","War","None","Isolation"], correct: 0 }, //52
+    { question: "Which system global:", options: ["Capitalism","War","None","Trade"], correct: 0 }, //53
+    { question: "Which reduced distance:", options: ["Transport","War","Trade","None"], correct: 0 }, //54
+    { question: "Which improved communication:", options: ["Telegraph","War","Trade","None"], correct: 0 }, //55
+
+    { question: "Which linked world:", options: ["Trade","War","Isolation","None"], correct: 0 }, //56
+    { question: "Which brought change:", options: ["Globalisation","War","None","Trade"], correct: 0 }, //57
+    { question: "Which increased jobs:", options: ["Industry","War","Trade","None"], correct: 0 }, //58
+    { question: "Which helped economy:", options: ["Trade","War","None","Isolation"], correct: 0 }, //59
+    { question: "Which spread ideas:", options: ["Migration","War","Trade","None"], correct: 0 }, //60
+
+    { question: "Which connected markets:", options: ["Globalisation","War","None","Trade"], correct: 0 }, //61
+    { question: "Which caused migration:", options: ["Work","War","Trade","All"], correct: 3 }, //62
+    { question: "Which was world market:", options: ["Global economy","War","None","Trade"], correct: 0 }, //63
+    { question: "Which increased trade:", options: ["Industrialisation","War","None","Trade"], correct: 0 }, //64
+
+    // 🔥 65–80 ASSERTION–REASON (16)
+
+    { question: "Assertion: Globalisation connects countries. Reason: Through trade and technology.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //65
+    { question: "Assertion: Silk route important. Reason: Connected regions.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //66
+    { question: "Assertion: Potato changed diet. Reason: High nutrition.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //67
+    { question: "Assertion: Indentured labour ended. Reason: Criticism.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //68
+    { question: "Assertion: Rinderpest harmful. Reason: Killed cattle.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //69
+
+    { question: "Assertion: Depression global. Reason: Started USA.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //70
+    { question: "Assertion: Farmers suffered. Reason: Price fall.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //71
+    { question: "Assertion: IMF formed. Reason: Stabilize economy.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //72
+    { question: "Assertion: WTO promotes trade. Reason: Free markets.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //73
+    { question: "Assertion: Technology boosts trade. Reason: Faster communication.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //74
+
+    { question: "Assertion: Migration increased. Reason: Job search.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //75
+    { question: "Assertion: Colonies exploited. Reason: Raw materials taken.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //76
+    { question: "Assertion: Trade expanded. Reason: Transport improved.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //77
+    { question: "Assertion: Depression caused unemployment. Reason: Industries closed.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //78
+    { question: "Assertion: Globalisation increases interdependence. Reason: Countries rely on each other.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //79
+    { question: "Assertion: Global economy exists. Reason: Trade connects nations.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 } //80
+  ],
+
+
+  mcq80: [
+    // 🔥 1–64 NORMAL
+
+    { question: "Industrial Revolution began in:", options: ["Britain","India","USA","China"], correct: 0 }, //1
+    { question: "Proto-industrialisation refers to:", options: ["Pre-factory production","Modern factories","Machines","None"], correct: 0 }, //2
+    { question: "Merchants supplied raw materials to:", options: ["Rural households","Factories","Cities","None"], correct: 0 }, //3
+    { question: "Who benefited from proto system?", options: ["Peasants","Kings","Clergy","None"], correct: 0 }, //4
+    { question: "Population growth led to:", options: ["Demand increase","War","Trade","None"], correct: 0 }, //5
+
+    { question: "First industrial sector:", options: ["Cotton","Iron","Steel","Coal"], correct: 0 }, //6
+    { question: "Spinning Jenny inventor:", options: ["Hargreaves","Watt","Cartwright","None"], correct: 0 }, //7
+    { question: "Power loom inventor:", options: ["Cartwright","Hargreaves","Watt","None"], correct: 0 }, //8
+    { question: "Steam engine improved by:", options: ["James Watt","Stephenson","None","Newton"], correct: 0 }, //9
+    { question: "Factories grew due to:", options: ["Machines","War","Trade","None"], correct: 0 }, //10
+
+    { question: "Hand labour preferred because:", options: ["Cheap","Fast","Strong","None"], correct: 0 }, //11
+    { question: "Industrialists feared:", options: ["Unemployment","War","Trade","None"], correct: 0 }, //12
+    { question: "Clothing industry was:", options: ["Seasonal","Permanent","None","War"], correct: 0 }, //13
+    { question: "Which needed skilled workers?", options: ["Factories","War","Trade","None"], correct: 0 }, //14
+    { question: "Which spread globally:", options: ["Textiles","War","Trade","None"], correct: 0 }, //15
+
+    { question: "Indian textiles known for:", options: ["Quality","Price","None","Trade"], correct: 0 }, //16
+    { question: "Britain imported:", options: ["Indian textiles","Coal","Iron","None"], correct: 0 }, //17
+    { question: "Indian weavers affected by:", options: ["Machine imports","War","Trade","None"], correct: 0 }, //18
+    { question: "Raw material:", options: ["Cotton","Rice","None","Wheat"], correct: 0 }, //19
+    { question: "First cotton mill India:", options: ["1854","1900","1800","None"], correct: 0 }, //20
+
+    { question: "Jute mills located in:", options: ["Bengal","Punjab","Delhi","None"], correct: 0 }, //21
+    { question: "Workers came from:", options: ["Villages","Cities","None","Foreign"], correct: 0 }, //22
+    { question: "Workers faced:", options: ["Low wages","High wages","None","Luxury"], correct: 0 }, //23
+    { question: "Industrialists controlled:", options: ["Production","War","Trade","None"], correct: 0 }, //24
+    { question: "Demand increased due to:", options: ["Population","War","Trade","None"], correct: 0 }, //25
+
+    { question: "Transport improved by:", options: ["Railways","War","Trade","None"], correct: 0 }, //26
+    { question: "Technology helped:", options: ["Industry","War","Trade","None"], correct: 0 }, //27
+    { question: "Factories created:", options: ["Jobs","War","Trade","None"], correct: 0 }, //28
+    { question: "Industrialisation changed:", options: ["Economy","War","Trade","None"], correct: 0 }, //29
+    { question: "Brands created:", options: ["Trust","War","Trade","None"], correct: 0 }, //30
+
+    { question: "Labels used for:", options: ["Marketing","War","Trade","None"], correct: 0 }, //31
+    { question: "Advertisements used:", options: ["Images","War","Trade","None"], correct: 0 }, //32
+    { question: "Which symbol used:", options: ["Quality","War","Trade","None"], correct: 0 }, //33
+    { question: "Mass production means:", options: ["Large scale","Small","None","War"], correct: 0 }, //34
+    { question: "Which industry slow:", options: ["Clothing","Iron","Coal","None"], correct: 0 }, //35
+
+    { question: "Factory advantage:", options: ["Low cost","High cost","None","War"], correct: 0 }, //36
+    { question: "Seasonal industry example:", options: ["Clothing","Iron","None","Steel"], correct: 0 }, //37
+    { question: "Indian industry grew in:", options: ["Cotton","Rice","None","Wheat"], correct: 0 }, //38
+    { question: "Which controlled markets:", options: ["Industrialists","Workers","None","Farmers"], correct: 0 }, //39
+    { question: "Which used machines:", options: ["Factories","Homes","None","Villages"], correct: 0 }, //40
+
+    { question: "Which reduced cost:", options: ["Machines","War","Trade","None"], correct: 0 }, //41
+    { question: "Which improved output:", options: ["Technology","War","Trade","None"], correct: 0 }, //42
+    { question: "Which increased jobs:", options: ["Factories","War","Trade","None"], correct: 0 }, //43
+    { question: "Which improved economy:", options: ["Industrialisation","War","Trade","None"], correct: 0 }, //44
+    { question: "Which created markets:", options: ["Production","War","Trade","None"], correct: 0 }, //45
+
+    { question: "Which built identity:", options: ["Brands","War","Trade","None"], correct: 0 }, //46
+    { question: "Which increased demand:", options: ["Population","War","Trade","None"], correct: 0 }, //47
+    { question: "Which created supply:", options: ["Factories","War","Trade","None"], correct: 0 }, //48
+    { question: "Which linked markets:", options: ["Transport","War","Trade","None"], correct: 0 }, //49
+    { question: "Which boosted industry:", options: ["Technology","War","Trade","None"], correct: 0 }, //50
+
+    { question: "Which created system:", options: ["Industrial economy","War","Trade","None"], correct: 0 }, //51
+    { question: "Which used labour:", options: ["Factories","War","Trade","None"], correct: 0 }, //52
+    { question: "Which produced goods:", options: ["Industry","War","Trade","None"], correct: 0 }, //53
+    { question: "Which built growth:", options: ["Industrialisation","War","Trade","None"], correct: 0 }, //54
+    { question: "Which increased trade:", options: ["Production","War","None","Trade"], correct: 0 }, //55
+
+    { question: "Which used capital:", options: ["Industrialists","Workers","None","Farmers"], correct: 0 }, //56
+    { question: "Which expanded markets:", options: ["Trade","War","None","Isolation"], correct: 0 }, //57
+    { question: "Which improved goods:", options: ["Machines","War","Trade","None"], correct: 0 }, //58
+    { question: "Which reduced time:", options: ["Machines","War","Trade","None"], correct: 0 }, //59
+    { question: "Which increased efficiency:", options: ["Technology","War","Trade","None"], correct: 0 }, //60
+
+    { question: "Which created modern economy:", options: ["Industrialisation","War","Trade","None"], correct: 0 }, //61
+    { question: "Which changed society:", options: ["Industry","War","Trade","None"], correct: 0 }, //62
+    { question: "Which used factory system:", options: ["Industrialists","Workers","None","Farmers"], correct: 0 }, //63
+    { question: "Which produced mass goods:", options: ["Factories","War","Trade","None"], correct: 0 }, //64
+
+    // 🔥 65–80 ASSERTION REASON
+
+    { question: "Assertion: Proto-industrialisation existed. Reason: Before factories.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //65
+    { question: "Assertion: Factories grew. Reason: Machines used.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //66
+    { question: "Assertion: Cotton industry grew. Reason: Demand high.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //67
+    { question: "Assertion: Hand labour used. Reason: Cheap.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //68
+    { question: "Assertion: Machines improved output. Reason: Faster production.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //69
+
+    { question: "Assertion: Indian weavers suffered. Reason: Machine imports.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //70
+    { question: "Assertion: Factories created jobs. Reason: Need labour.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //71
+    { question: "Assertion: Demand increased. Reason: Population growth.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //72
+    { question: "Assertion: Railways helped industry. Reason: Transport goods.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //73
+    { question: "Assertion: Technology boosted industry. Reason: Efficiency increased.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //74
+
+    { question: "Assertion: Brands created trust. Reason: Marketing.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //75
+    { question: "Assertion: Industrialisation changed economy. Reason: Production increased.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //76
+    { question: "Assertion: Workers faced low wages. Reason: Cheap labour.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //77
+    { question: "Assertion: Factories mass produced goods. Reason: Machines used.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //78
+    { question: "Assertion: Industry increased trade. Reason: More goods.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //79
+    { question: "Assertion: Industrialisation modernised society. Reason: Economic growth.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 } //80
+  ]
+},
+
+"print-culture-and-the-modern-world": {
+  mcq40: [
+    { question: "First printing press was developed in:", options: ["China","India","Britain","USA"], correct: 0 },
+    { question: "Woodblock printing originated in:", options: ["China","Japan","Europe","India"], correct: 0 },
+    { question: "Earliest printed book:", options: ["Diamond Sutra","Bible","Ramayana","Quran"], correct: 0 },
+    { question: "Printing reached Europe in:", options: ["15th century","10th","18th","20th"], correct: 0 },
+    { question: "Johann Gutenberg was from:", options: ["Germany","France","Britain","Italy"], correct: 0 },
+
+    { question: "Gutenberg invented:", options: ["Printing press","Steam engine","Telegraph","None"], correct: 0 },
+    { question: "First printed Bible:", options: ["Gutenberg Bible","Oxford Bible","King James","None"], correct: 0 },
+    { question: "Print revolution led to:", options: ["Spread of ideas","War","Trade","None"], correct: 0 },
+    { question: "Martin Luther supported:", options: ["Printing","War","Trade","None"], correct: 0 },
+    { question: "Reformation used:", options: ["Printed material","War","Trade","None"], correct: 0 },
+
+    { question: "Which book criticized Church?", options: ["95 Theses","Bible","Quran","None"], correct: 0 },
+    { question: "Printing increased:", options: ["Literacy","War","Trade","None"], correct: 0 },
+    { question: "Which group feared print?", options: ["Authorities","Readers","Workers","None"], correct: 0 },
+    { question: "Which was printed cheaply?", options: ["Pamphlets","Books","None","Trade"], correct: 0 },
+    { question: "Which promoted debate?", options: ["Print","War","Trade","None"], correct: 0 },
+
+    { question: "Who read printed books?", options: ["Public","Kings","None","Trade"], correct: 0 },
+    { question: "Which was popular in France?", options: ["Satirical books","None","Trade","War"], correct: 0 },
+    { question: "Which revolution used print?", options: ["French Revolution","WW1","WW2","None"], correct: 0 },
+    { question: "Which spread news?", options: ["Newspapers","Books","None","Trade"], correct: 0 },
+    { question: "Which spread knowledge?", options: ["Books","War","Trade","None"], correct: 0 },
+
+    { question: "Print reached India in:", options: ["16th century","10th","18th","20th"], correct: 0 },
+    { question: "First printing press in India:", options: ["Goa","Delhi","Mumbai","None"], correct: 0 },
+    { question: "Which religion used print?", options: ["Christianity","None","Trade","War"], correct: 0 },
+    { question: "Which texts printed first?", options: ["Religious","Scientific","None","Trade"], correct: 0 },
+    { question: "Which language printed in India?", options: ["Vernacular","Only English","None","Trade"], correct: 0 },
+
+    { question: "Which reformers used print?", options: ["Social reformers","Kings","None","Trade"], correct: 0 },
+    { question: "Which helped women education?", options: ["Print","War","Trade","None"], correct: 0 },
+    { question: "Which spread nationalism?", options: ["Print","War","Trade","None"], correct: 0 },
+    { question: "Which was censored?", options: ["Books","War","Trade","None"], correct: 0 },
+    { question: "Which law controlled press?", options: ["Vernacular Press Act","None","Trade","War"], correct: 0 },
+
+    { question: "Which period saw print growth?", options: ["19th century","10th","None","War"], correct: 0 },
+    { question: "Which improved printing?", options: ["Technology","War","Trade","None"], correct: 0 },
+    { question: "Which created awareness?", options: ["Print","War","Trade","None"], correct: 0 },
+    { question: "Which increased readers?", options: ["Literacy","War","Trade","None"], correct: 0 },
+    { question: "Which connected people?", options: ["Print","War","Trade","None"], correct: 0 },
+
+    { question: "Which made books cheap?", options: ["Printing","War","Trade","None"], correct: 0 },
+    { question: "Which influenced society?", options: ["Print culture","War","Trade","None"], correct: 0 },
+    { question: "Which spread reforms?", options: ["Books","War","Trade","None"], correct: 0 },
+    { question: "Which created ideas?", options: ["Print","War","Trade","None"], correct: 0 },
+    { question: "Which changed world?", options: ["Printing press","War","Trade","None"], correct: 0 }
+  ],
+
+   mcq80: [
+    // 🔥 1–64 NORMAL
+
+    { question: "First printing developed in:", options: ["China","India","Europe","USA"], correct: 0 }, //1
+    { question: "Woodblock printing used in:", options: ["China","Japan","India","Europe"], correct: 0 }, //2
+    { question: "Diamond Sutra printed in:", options: ["868 CE","900 CE","700 CE","1000 CE"], correct: 0 }, //3
+    { question: "Gutenberg was from:", options: ["Germany","France","Italy","Britain"], correct: 0 }, //4
+    { question: "Gutenberg invented:", options: ["Printing press","Telegraph","Engine","None"], correct: 0 }, //5
+
+    { question: "First printed Bible:", options: ["Gutenberg Bible","King James","Oxford","None"], correct: 0 }, //6
+    { question: "Print revolution led to:", options: ["Spread of ideas","War","Trade","None"], correct: 0 }, //7
+    { question: "Martin Luther used:", options: ["Print","War","Trade","None"], correct: 0 }, //8
+    { question: "95 Theses were:", options: ["Criticism of Church","Book","Law","None"], correct: 0 }, //9
+    { question: "Reformation spread by:", options: ["Printing","War","Trade","None"], correct: 0 }, //10
+
+    { question: "Printing increased:", options: ["Literacy","War","Trade","None"], correct: 0 }, //11
+    { question: "Authorities feared:", options: ["Print","Readers","Workers","None"], correct: 0 }, //12
+    { question: "Cheap print form:", options: ["Pamphlets","Books","None","Trade"], correct: 0 }, //13
+    { question: "Debate spread by:", options: ["Print","War","Trade","None"], correct: 0 }, //14
+    { question: "French Revolution used:", options: ["Print","War","Trade","None"], correct: 0 }, //15
+
+    { question: "Popular genre in France:", options: ["Satire","War","Trade","None"], correct: 0 }, //16
+    { question: "Newspapers spread:", options: ["News","War","Trade","None"], correct: 0 }, //17
+    { question: "Books spread:", options: ["Knowledge","War","Trade","None"], correct: 0 }, //18
+    { question: "Print reached India in:", options: ["16th century","10th","18th","20th"], correct: 0 }, //19
+    { question: "First press India:", options: ["Goa","Delhi","Mumbai","None"], correct: 0 }, //20
+
+    { question: "Early printed texts:", options: ["Religious","Scientific","Trade","None"], correct: 0 }, //21
+    { question: "Language used:", options: ["Vernacular","English only","None","Trade"], correct: 0 }, //22
+    { question: "Print used by:", options: ["Reformers","Kings","None","Trade"], correct: 0 }, //23
+    { question: "Women education helped by:", options: ["Print","War","Trade","None"], correct: 0 }, //24
+    { question: "Nationalism spread via:", options: ["Print","War","Trade","None"], correct: 0 }, //25
+
+    { question: "Press censored by:", options: ["British","Public","None","Trade"], correct: 0 }, //26
+    { question: "Vernacular Press Act:", options: ["Controlled press","War","Trade","None"], correct: 0 }, //27
+    { question: "19th century saw:", options: ["Print growth","War","Trade","None"], correct: 0 }, //28
+    { question: "Printing improved by:", options: ["Technology","War","Trade","None"], correct: 0 }, //29
+    { question: "Print created:", options: ["Awareness","War","Trade","None"], correct: 0 }, //30
+
+    { question: "Literacy increased:", options: ["Readers","War","Trade","None"], correct: 0 }, //31
+    { question: "Books became:", options: ["Cheap","Expensive","None","Trade"], correct: 0 }, //32
+    { question: "Print influenced:", options: ["Society","War","Trade","None"], correct: 0 }, //33
+    { question: "Ideas spread through:", options: ["Books","War","Trade","None"], correct: 0 }, //34
+    { question: "Print changed:", options: ["World","War","Trade","None"], correct: 0 }, //35
+
+    { question: "Which created readers:", options: ["Literacy","War","Trade","None"], correct: 0 }, //36
+    { question: "Which connected people:", options: ["Print","War","Trade","None"], correct: 0 }, //37
+    { question: "Which promoted reforms:", options: ["Books","War","Trade","None"], correct: 0 }, //38
+    { question: "Which created public opinion:", options: ["Print","War","Trade","None"], correct: 0 }, //39
+    { question: "Which supported debate:", options: ["Pamphlets","War","Trade","None"], correct: 0 }, //40
+
+    { question: "Which opposed Church:", options: ["Luther","Kings","None","Trade"], correct: 0 }, //41
+    { question: "Which used images:", options: ["Print","War","Trade","None"], correct: 0 }, //42
+    { question: "Which influenced politics:", options: ["Print","War","Trade","None"], correct: 0 }, //43
+    { question: "Which created nationalism:", options: ["Print","War","Trade","None"], correct: 0 }, //44
+    { question: "Which spread religion:", options: ["Books","War","Trade","None"], correct: 0 }, //45
+
+    { question: "Which improved communication:", options: ["Print","War","Trade","None"], correct: 0 }, //46
+    { question: "Which used press:", options: ["Reformers","Kings","None","Trade"], correct: 0 }, //47
+    { question: "Which was mass medium:", options: ["Print","War","Trade","None"], correct: 0 }, //48
+    { question: "Which built knowledge:", options: ["Books","War","Trade","None"], correct: 0 }, //49
+    { question: "Which spread education:", options: ["Print","War","Trade","None"], correct: 0 }, //50
+
+    { question: "Which helped literacy:", options: ["Books","War","Trade","None"], correct: 0 }, //51
+    { question: "Which created awareness:", options: ["Print","War","Trade","None"], correct: 0 }, //52
+    { question: "Which spread culture:", options: ["Print","War","Trade","None"], correct: 0 }, //53
+    { question: "Which promoted ideas:", options: ["Books","War","Trade","None"], correct: 0 }, //54
+    { question: "Which changed society:", options: ["Print","War","Trade","None"], correct: 0 }, //55
+
+    { question: "Which increased reading:", options: ["Literacy","War","Trade","None"], correct: 0 }, //56
+    { question: "Which reduced cost:", options: ["Printing","War","Trade","None"], correct: 0 }, //57
+    { question: "Which spread knowledge:", options: ["Books","War","Trade","None"], correct: 0 }, //58
+    { question: "Which connected ideas:", options: ["Print","War","Trade","None"], correct: 0 }, //59
+    { question: "Which created global ideas:", options: ["Print","War","Trade","None"], correct: 0 }, //60
+
+    { question: "Which created revolution:", options: ["Print","War","Trade","None"], correct: 0 }, //61
+    { question: "Which built society:", options: ["Ideas","War","Trade","None"], correct: 0 }, //62
+    { question: "Which influenced masses:", options: ["Print","War","Trade","None"], correct: 0 }, //63
+    { question: "Which shaped opinions:", options: ["Books","War","Trade","None"], correct: 0 }, //64
+
+    // 🔥 65–80 ASSERTION REASON
+
+    { question: "Assertion: Print spread ideas. Reason: Cheap books.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //65
+    { question: "Assertion: Gutenberg important. Reason: Invented press.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //66
+    { question: "Assertion: Luther used print. Reason: Spread ideas.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //67
+    { question: "Assertion: Literacy increased. Reason: Books available.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //68
+    { question: "Assertion: Authorities feared print. Reason: Spread ideas.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //69
+
+    { question: "Assertion: Pamphlets popular. Reason: Cheap.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //70
+    { question: "Assertion: Print helped revolution. Reason: Spread awareness.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //71
+    { question: "Assertion: Print reached India. Reason: Europeans came.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //72
+    { question: "Assertion: Vernacular important. Reason: Local readers.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //73
+    { question: "Assertion: Reformers used print. Reason: Spread ideas.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //74
+
+    { question: "Assertion: Women education grew. Reason: Print access.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //75
+    { question: "Assertion: Nationalism spread. Reason: Print media.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //76
+    { question: "Assertion: Press censored. Reason: Control ideas.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //77
+    { question: "Assertion: Technology improved print. Reason: Efficiency.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //78
+    { question: "Assertion: Print created public opinion. Reason: Debate.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //79
+    { question: "Assertion: Print changed society. Reason: Spread knowledge.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 } //80
+  ]
+},
+
+
+
 
 }
 }
