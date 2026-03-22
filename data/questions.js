@@ -2036,7 +2036,7 @@ mcq80: [
 ],
 },
 
-"our-enviornment": {
+"our-environment": {
   mcq40: [
 { question: "Environment includes:", options: ["Biotic & abiotic","Only plants","Only animals","None"], correct: 0 }, //1
 { question: "Biotic components are:", options: ["Living","Non-living","Both","None"], correct: 0 }, //2
