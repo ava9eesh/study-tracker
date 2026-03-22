@@ -2185,6 +2185,7 @@ mcq80: [
 { question: "Environment balance important:", options: ["Yes","No","None","All"], correct: 0 }, //79
 { question: "Our environment chapter type:", options: ["Conceptual","Numerical","None","All"], correct: 0 } //80
 ],
+},
 
 "real-numbers": {
   mcq40: [
@@ -2786,105 +2787,6 @@ mcq80: [
 { question: "Roots satisfy:", options: ["Equation","Graph","None","All"], correct: 0 }, //79
 { question: "Chapter core:", options: ["Roots & nature","Lines","Circles","None"], correct: 0 } //80
 ],
-
-mcq80: [
-{ question: "Discriminant of ax²+bx+c:", options: ["b²−4ac","b²+4ac","4ac−b²","None"], correct: 0 }, //1
-{ question: "If D>0:", options: ["Distinct real roots","Equal roots","No real","None"], correct: 0 }, //2
-{ question: "If D=0:", options: ["Equal roots","Distinct","Imaginary","None"], correct: 0 }, //3
-{ question: "If D<0:", options: ["No real roots","Equal","Distinct","None"], correct: 0 }, //4
-{ question: "Roots of x²−5x+6:", options: ["2,3","1,6","-2,-3","None"], correct: 0 }, //5
-
-{ question: "Sum of roots:", options: ["-b/a","c/a","b/a","None"], correct: 0 }, //6
-{ question: "Product of roots:", options: ["c/a","-b/a","b/a","None"], correct: 0 }, //7
-{ question: "Equation with roots α,β:", options: ["x²−(α+β)x+αβ=0","x²+(α+β)x+αβ","x²−αβx+(α+β)","None"], correct: 0 }, //8
-{ question: "If α+β=7, αβ=10:", options: ["x²−7x+10","x²+7x+10","x²−7x−10","None"], correct: 0 }, //9
-{ question: "If D perfect square:", options: ["Rational roots","Irrational","Imaginary","None"], correct: 0 }, //10
-
-{ question: "If D not perfect square:", options: ["Irrational roots","Rational","Imaginary","None"], correct: 0 }, //11
-{ question: "x²+4=0 has:", options: ["No real roots","Equal","Distinct","None"], correct: 0 }, //12
-{ question: "Graph of quadratic:", options: ["Parabola","Line","Circle","None"], correct: 0 }, //13
-{ question: "Equal roots graph:", options: ["Touches x-axis","Cuts twice","No intersection","None"], correct: 0 }, //14
-{ question: "Distinct roots graph:", options: ["Cuts twice","Touches","None","All"], correct: 0 }, //15
-
-{ question: "No real roots graph:", options: ["No intersection","Cuts twice","Touches","None"], correct: 0 }, //16
-{ question: "Roots of 2x²−7x+3:", options: ["3,1/2","1,3","-1,3","None"], correct: 0 }, //17
-{ question: "If α²+β²:", options: ["(α+β)²−2αβ","α+β","αβ","None"], correct: 0 }, //18
-{ question: "If α+β=6, αβ=5 → α²+β²:", options: ["26","11","36","None"], correct: 0 }, //19
-{ question: "If αβ=0:", options: ["One root zero","Both zero","None","All"], correct: 0 }, //20
-
-{ question: "If α=−β:", options: ["Sum zero","Product zero","Both","None"], correct: 0 }, //21
-{ question: "x²−4=0:", options: ["±2","±4","2 only","None"], correct: 0 }, //22
-{ question: "If D=16:", options: ["Distinct real","Equal","None","No real"], correct: 0 }, //23
-{ question: "If D=2:", options: ["Irrational","Rational","None","All"], correct: 0 }, //24
-{ question: "If D<0:", options: ["Imaginary","Real","None","All"], correct: 0 }, //25
-
-{ question: "x²−6x+9=0:", options: ["3,3","3,-3","-3,-3","None"], correct: 0 }, //26
-{ question: "Quadratic formula:", options: ["(-b±√D)/2a","(b±√D)/2a","(-b±√D)/a","None"], correct: 0 }, //27
-{ question: "If a=0:", options: ["Not quadratic","Quadratic","Linear","None"], correct: 0 }, //28
-{ question: "Roots 2 & −3 → eqn:", options: ["x²+x−6=0","x²−x−6=0","x²−5x+6","None"], correct: 0 }, //29
-{ question: "If α+β=0:", options: ["x²+αβ=0","x²−αβ=0","x²+x=0","None"], correct: 0 }, //30
-
-{ question: "Roots of x²+1=0:", options: ["Imaginary","Real","Equal","None"], correct: 0 }, //31
-{ question: "Quadratic always has:", options: ["2 roots","1 root","None","Infinite"], correct: 0 }, //32
-{ question: "Nature depends on:", options: ["Discriminant","Sum","Product","None"], correct: 0 }, //33
-{ question: "If D=0 → α=β:", options: ["True","False","Depends","None"], correct: 0 }, //34
-{ question: "If D>0 → α≠β:", options: ["True","False","Depends","None"], correct: 0 }, //35
-
-{ question: "If roots integers:", options: ["D perfect square","D negative","None","All"], correct: 0 }, //36
-{ question: "If roots irrational:", options: ["D not perfect square","D=0","None","All"], correct: 0 }, //37
-{ question: "If roots imaginary:", options: ["D<0","D>0","D=0","None"], correct: 0 }, //38
-{ question: "Coefficient a ensures:", options: ["Quadratic","Linear","None","All"], correct: 0 }, //39
-{ question: "Max solutions:", options: ["2","1","Infinite","None"], correct: 0 }, //40
-
-// ASSERTION (41–80)
-{ question: "Assertion: D>0 → distinct roots\nReason: b²−4ac positive", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //41
-{ question: "Assertion: D=0 → equal roots\nReason: √D=0", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //42
-{ question: "Assertion: D<0 → no real roots\nReason: √D imaginary", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //43
-{ question: "Assertion: Sum = -b/a\nReason: Root relation", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //44
-{ question: "Assertion: Product = c/a\nReason: Root relation", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //45
-
-{ question: "Assertion: Parabola graph\nReason: Quadratic form", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //46
-{ question: "Assertion: Equal roots touch x-axis\nReason: One intersection", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //47
-{ question: "Assertion: Distinct roots cut twice\nReason: Two intersections", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //48
-{ question: "Assertion: No real roots → no cut\nReason: Graph above/below axis", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //49
-{ question: "Assertion: Quadratic always 2 roots\nReason: Complex allowed", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //50
-
-{ question: "Assertion: α=β if D=0\nReason: Equal roots condition", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //51
-{ question: "Assertion: D determines nature\nReason: Formula based", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //52
-{ question: "Assertion: x²+1 no real roots\nReason: D<0", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //53
-{ question: "Assertion: x²−4 real roots\nReason: D>0", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //54
-{ question: "Assertion: a≠0 needed\nReason: Else linear", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //55
-
-{ question: "D=25 → roots:", options: ["Rational distinct","Equal","Imaginary","None"], correct: 0 }, //56
-{ question: "D=0 → roots:", options: ["Equal","Distinct","Imaginary","None"], correct: 0 }, //57
-{ question: "D=-9 → roots:", options: ["Imaginary","Real","Equal","None"], correct: 0 }, //58
-{ question: "x²−2x+1:", options: ["Equal roots","Distinct","Imaginary","None"], correct: 0 }, //59
-{ question: "x²−3x+2:", options: ["Distinct roots","Equal","Imaginary","None"], correct: 0 }, //60
-
-{ question: "x²+2x+5:", options: ["No real roots","Equal","Distinct","None"], correct: 0 }, //61
-{ question: "Graph touches axis:", options: ["D=0","D>0","D<0","None"], correct: 0 }, //62
-{ question: "Graph cuts twice:", options: ["D>0","D=0","D<0","None"], correct: 0 }, //63
-{ question: "Graph no cut:", options: ["D<0","D=0","D>0","None"], correct: 0 }, //64
-{ question: "Quadratic solutions count:", options: ["2","1","0","Infinite"], correct: 0 }, //65
-
-{ question: "Equation valid if:", options: ["a≠0","b≠0","c≠0","None"], correct: 0 }, //66
-{ question: "Roots depend on:", options: ["D","a","b","c"], correct: 0 }, //67
-{ question: "Formula gives:", options: ["Roots","Graph","Factor","None"], correct: 0 }, //68
-{ question: "Nature defined by:", options: ["Discriminant","Graph","Sum","None"], correct: 0 }, //69
-{ question: "Quadratic type:", options: ["Second degree","First","Third","None"], correct: 0 }, //70
-
-{ question: "If D perfect square:", options: ["Rational roots","Irrational","None","All"], correct: 0 }, //71
-{ question: "If D irrational:", options: ["Irrational roots","Rational","None","All"], correct: 0 }, //72
-{ question: "If D negative:", options: ["Imaginary","Real","None","All"], correct: 0 }, //73
-{ question: "Sum relation:", options: ["-b/a","c/a","None","All"], correct: 0 }, //74
-{ question: "Product relation:", options: ["c/a","-b/a","None","All"], correct: 0 }, //75
-
-{ question: "Quadratic roots are:", options: ["Real/complex","Only real","Only imaginary","None"], correct: 0 }, //76
-{ question: "Parabola symmetry:", options: ["Yes","No","Depends","None"], correct: 0 }, //77
-{ question: "Axis symmetry exists:", options: ["Yes","No","None","All"], correct: 0 }, //78
-{ question: "Roots satisfy:", options: ["Equation","Graph","None","All"], correct: 0 }, //79
-{ question: "Chapter core:", options: ["Roots & nature","Lines","Circles","None"], correct: 0 } //80
-]
 },
 
 "arithmetic-progressions": {
@@ -5178,7 +5080,6 @@ mcq80: [
 
 
 
-}
 }
 
 
