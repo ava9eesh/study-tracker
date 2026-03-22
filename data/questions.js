@@ -5077,8 +5077,1086 @@ mcq80: [
   ]
 },
 
+"resources-and-development": {
+  mcq40: [
+    { question: "Everything available in our environment is called:", options: ["Resource","Utility","Stock","Reserve"], correct: 0 },
+    { question: "Resources become valuable when they have:", options: ["Utility","Color","Shape","Weight"], correct: 0 },
+    { question: "Which is a human-made resource?", options: ["Road","Water","Forest","Soil"], correct: 0 },
+    { question: "Which is a natural resource?", options: ["Air","Building","Machine","Bridge"], correct: 0 },
+    { question: "Which resource is renewable?", options: ["Solar energy","Coal","Petroleum","Gas"], correct: 0 },
+
+    { question: "Which resource is non-renewable?", options: ["Coal","Wind","Sunlight","Water"], correct: 0 },
+    { question: "Biotic resources include:", options: ["Plants & animals","Rocks","Water","Air"], correct: 0 },
+    { question: "Abiotic resources include:", options: ["Land & water","Animals","Plants","Humans"], correct: 0 },
+    { question: "Stock refers to:", options: ["Available but unused","Used resource","Renewable","None"], correct: 0 },
+    { question: "Reserves are:", options: ["Usable part of stock","Unused","Non-renewable","None"], correct: 0 },
+
+    { question: "Sustainable development means:", options: ["Use without harming future","Overuse","Waste","None"], correct: 0 },
+    { question: "Land degradation caused by:", options: ["Deforestation","Plantation","Irrigation","None"], correct: 0 },
+    { question: "Which is a major soil type in India?", options: ["Alluvial","Snow","Ice","None"], correct: 0 },
+    { question: "Black soil is ideal for:", options: ["Cotton","Rice","Wheat","Maize"], correct: 0 },
+    { question: "Laterite soil forms in:", options: ["High rainfall","Desert","Cold","None"], correct: 0 },
+
+    { question: "Red soil is rich in:", options: ["Iron","Gold","Silver","None"], correct: 0 },
+    { question: "Alluvial soil found in:", options: ["Plains","Mountains","Plateaus","Deserts"], correct: 0 },
+    { question: "Soil erosion means:", options: ["Removal of top soil","Growth","Formation","None"], correct: 0 },
+    { question: "Which method prevents erosion?", options: ["Terrace farming","Deforestation","Mining","None"], correct: 0 },
+    { question: "Contour ploughing helps:", options: ["Prevent erosion","Increase erosion","None","Destroy soil"], correct: 0 },
+
+    { question: "Land use depends on:", options: ["Relief & climate","Only people","Only soil","None"], correct: 0 },
+    { question: "Net sown area means:", options: ["Area cultivated","Forest","Waste land","None"], correct: 0 },
+    { question: "Waste land means:", options: ["Unused land","Cultivated","Forest","None"], correct: 0 },
+    { question: "Which causes land degradation?", options: ["Overgrazing","Plantation","Terrace","None"], correct: 0 },
+    { question: "Mining leads to:", options: ["Land degradation","Growth","None","Fertility"], correct: 0 },
+
+    { question: "Deforestation leads to:", options: ["Soil erosion","Growth","None","Water"], correct: 0 },
+    { question: "Afforestation means:", options: ["Planting trees","Cutting trees","None","Mining"], correct: 0 },
+    { question: "Which improves soil fertility?", options: ["Manure","Chemicals only","None","Waste"], correct: 0 },
+    { question: "Which is not a resource?", options: ["Waste","Water","Land","Forest"], correct: 0 },
+    { question: "Which resource is limited?", options: ["Non-renewable","Renewable","None","Solar"], correct: 0 },
+
+    { question: "Which resource is continuous?", options: ["Solar","Coal","Petroleum","None"], correct: 0 },
+    { question: "Which is human resource?", options: ["People","Water","Land","Air"], correct: 0 },
+    { question: "Education improves:", options: ["Human resource","Soil","Water","None"], correct: 0 },
+    { question: "Which causes soil pollution?", options: ["Chemicals","Plants","Rain","None"], correct: 0 },
+    { question: "Which land is not fit for farming?", options: ["Rocky land","Alluvial","Black soil","None"], correct: 0 },
+
+    { question: "Which is a national resource?", options: ["Roads","Private house","None","Gold"], correct: 0 },
+    { question: "Which is an individual resource?", options: ["Private land","Forest","River","None"], correct: 0 },
+    { question: "Community resource example:", options: ["Park","Private house","None","Factory"], correct: 0 },
+    { question: "International resource example:", options: ["Ocean","House","None","Land"], correct: 0 },
+    { question: "Which soil is sandy?", options: ["Arid soil","Black soil","Alluvial","None"], correct: 0 }
+  ],
+
+  mcq80: [
+    // 🔥 1–64 NORMAL
+
+    { question: "Resource means:", options: ["Useful thing","Waste","None","Object"], correct: 0 }, //1
+    { question: "Utility makes:", options: ["Resource","Waste","None","Object"], correct: 0 }, //2
+    { question: "Human-made resource:", options: ["Bridge","Water","Air","Soil"], correct: 0 }, //3
+    { question: "Natural resource:", options: ["Land","Machine","Road","None"], correct: 0 }, //4
+    { question: "Renewable resource:", options: ["Solar","Coal","Petroleum","None"], correct: 0 }, //5
+
+    { question: "Non-renewable:", options: ["Coal","Wind","Sun","Water"], correct: 0 }, //6
+    { question: "Biotic resource:", options: ["Animals","Water","Soil","Air"], correct: 0 }, //7
+    { question: "Abiotic resource:", options: ["Land","Plants","Animals","None"], correct: 0 }, //8
+    { question: "Stock means:", options: ["Unused resource","Used","Renewable","None"], correct: 0 }, //9
+    { question: "Reserves are:", options: ["Usable stock","Unused","None","Waste"], correct: 0 }, //10
+
+    { question: "Sustainable development:", options: ["Future safe use","Overuse","Waste","None"], correct: 0 }, //11
+    { question: "Land degradation cause:", options: ["Deforestation","Plantation","Rain","None"], correct: 0 }, //12
+    { question: "Soil erosion means:", options: ["Loss of top soil","Growth","None","Fertility"], correct: 0 }, //13
+    { question: "Prevent erosion:", options: ["Terrace farming","Mining","Deforestation","None"], correct: 0 }, //14
+    { question: "Contour ploughing:", options: ["Reduces erosion","Increases","None","Stops crops"], correct: 0 }, //15
+
+    { question: "Black soil good for:", options: ["Cotton","Rice","Wheat","None"], correct: 0 }, //16
+    { question: "Alluvial soil found in:", options: ["Plains","Deserts","Mountains","None"], correct: 0 }, //17
+    { question: "Red soil contains:", options: ["Iron","Gold","Silver","None"], correct: 0 }, //18
+    { question: "Laterite soil forms in:", options: ["Rainfall areas","Desert","Cold","None"], correct: 0 }, //19
+    { question: "Arid soil found in:", options: ["Desert","Plains","Mountains","None"], correct: 0 }, //20
+
+    { question: "Land use depends on:", options: ["Relief","Only soil","None","Only people"], correct: 0 }, //21
+    { question: "Net sown area:", options: ["Cultivated land","Forest","Waste","None"], correct: 0 }, //22
+    { question: "Waste land:", options: ["Unused","Farmed","Forest","None"], correct: 0 }, //23
+    { question: "Overgrazing causes:", options: ["Degradation","Growth","None","Water"], correct: 0 }, //24
+    { question: "Mining leads to:", options: ["Degradation","Growth","None","Fertility"], correct: 0 }, //25
+
+    { question: "Deforestation causes:", options: ["Erosion","Growth","None","Water"], correct: 0 }, //26
+    { question: "Afforestation means:", options: ["Planting trees","Cutting","None","Mining"], correct: 0 }, //27
+    { question: "Soil fertility improved by:", options: ["Manure","Waste","None","Chemicals only"], correct: 0 }, //28
+    { question: "Human resource:", options: ["People","Land","Air","Water"], correct: 0 }, //29
+    { question: "Education improves:", options: ["People","Soil","Water","None"], correct: 0 }, //30
+
+    { question: "National resource:", options: ["Roads","Private land","None","House"], correct: 0 }, //31
+    { question: "Individual resource:", options: ["Private land","Forest","River","None"], correct: 0 }, //32
+    { question: "Community resource:", options: ["Park","House","None","Factory"], correct: 0 }, //33
+    { question: "International resource:", options: ["Ocean","Land","None","House"], correct: 0 }, //34
+    { question: "Soil pollution caused by:", options: ["Chemicals","Plants","Rain","None"], correct: 0 }, //35
+
+    { question: "Which is limited:", options: ["Non-renewable","Renewable","None","Solar"], correct: 0 }, //36
+    { question: "Continuous resource:", options: ["Solar","Coal","Gas","None"], correct: 0 }, //37
+    { question: "Which improves soil:", options: ["Crop rotation","Mining","None","Deforestation"], correct: 0 }, //38
+    { question: "Which degrades soil:", options: ["Overuse","Rotation","None","Plantation"], correct: 0 }, //39
+    { question: "Which prevents erosion:", options: ["Strip cropping","Mining","None","Cutting"], correct: 0 }, //40
+
+    { question: "Which is not resource:", options: ["Waste","Land","Water","Forest"], correct: 0 }, //41
+    { question: "Which is renewable:", options: ["Wind","Coal","Oil","None"], correct: 0 }, //42
+    { question: "Which is abiotic:", options: ["Water","Plants","Animals","None"], correct: 0 }, //43
+    { question: "Which is biotic:", options: ["Plants","Rocks","Air","None"], correct: 0 }, //44
+    { question: "Which affects land use:", options: ["Climate","None","War","Trade"], correct: 0 }, //45
+
+    { question: "Which increases fertility:", options: ["Organic manure","Chemicals","None","Waste"], correct: 0 }, //46
+    { question: "Which reduces fertility:", options: ["Overuse","Rotation","None","Care"], correct: 0 }, //47
+    { question: "Which improves yield:", options: ["Better methods","None","War","Trade"], correct: 0 }, //48
+    { question: "Which causes erosion:", options: ["Wind","Care","None","Planting"], correct: 0 }, //49
+    { question: "Which prevents degradation:", options: ["Conservation","War","Trade","None"], correct: 0 }, //50
+
+    { question: "Which creates resource:", options: ["Human skill","None","War","Trade"], correct: 0 }, //51
+    { question: "Which develops resource:", options: ["Technology","None","War","Trade"], correct: 0 }, //52
+    { question: "Which uses resource:", options: ["People","None","War","Trade"], correct: 0 }, //53
+    { question: "Which is main factor:", options: ["Utility","None","War","Trade"], correct: 0 }, //54
+    { question: "Which increases value:", options: ["Use","None","War","Trade"], correct: 0 }, //55
+
+    { question: "Which causes scarcity:", options: ["Overuse","Care","None","Rotation"], correct: 0 }, //56
+    { question: "Which helps future:", options: ["Sustainability","War","Trade","None"], correct: 0 }, //57
+    { question: "Which improves land:", options: ["Management","None","War","Trade"], correct: 0 }, //58
+    { question: "Which destroys soil:", options: ["Mining","Care","None","Planting"], correct: 0 }, //59
+    { question: "Which protects soil:", options: ["Trees","None","War","Trade"], correct: 0 }, //60
+
+    { question: "Which controls erosion:", options: ["Terracing","Mining","None","Cutting"], correct: 0 }, //61
+    { question: "Which builds soil:", options: ["Humus","None","War","Trade"], correct: 0 }, //62
+    { question: "Which damages land:", options: ["Overgrazing","Care","None","Planting"], correct: 0 }, //63
+    { question: "Which improves resources:", options: ["Planning","None","War","Trade"], correct: 0 }, //64
+
+    // 🔥 65–80 ASSERTION REASON
+
+    { question: "Assertion: Resources useful. Reason: They have utility.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //65
+    { question: "Assertion: Renewable resources unlimited. Reason: Can be replenished.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //66
+    { question: "Assertion: Non-renewable limited. Reason: Form slowly.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //67
+    { question: "Assertion: Soil erosion harmful. Reason: Removes top soil.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //68
+    { question: "Assertion: Terrace farming useful. Reason: Prevent erosion.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //69
+
+    { question: "Assertion: Black soil good. Reason: Holds moisture.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //70
+    { question: "Assertion: Alluvial fertile. Reason: Deposited by rivers.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //71
+    { question: "Assertion: Deforestation harmful. Reason: Causes erosion.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //72
+    { question: "Assertion: Afforestation useful. Reason: Increases trees.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //73
+    { question: "Assertion: Overgrazing harmful. Reason: Damages land.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //74
+
+    { question: "Assertion: Mining harmful. Reason: Degrades land.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //75
+    { question: "Assertion: Education improves resource. Reason: Builds skills.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //76
+    { question: "Assertion: Sustainability important. Reason: Protect future.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //77
+    { question: "Assertion: Technology helps. Reason: Better use.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //78
+    { question: "Assertion: Planning needed. Reason: Avoid misuse.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //79
+    { question: "Assertion: Trees protect soil. Reason: Prevent erosion.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 } //80
+  ]
+},
+
+"forest-and-wildlife-resources": {
+  mcq40: [
+    { question: "Biodiversity means:", options: ["Variety of life","Only animals","Only plants","None"], correct: 0 },
+    { question: "Flora refers to:", options: ["Plants","Animals","Humans","None"], correct: 0 },
+    { question: "Fauna refers to:", options: ["Animals","Plants","Humans","None"], correct: 0 },
+    { question: "Which is a wildlife species?", options: ["Tiger","Crop","Road","None"], correct: 0 },
+    { question: "India is rich in:", options: ["Biodiversity","Only minerals","Only soil","None"], correct: 0 },
+
+    { question: "Which category is highly endangered?", options: ["Endangered species","Normal","Safe","None"], correct: 0 },
+    { question: "Species with small population:", options: ["Endangered","Abundant","Normal","None"], correct: 0 },
+    { question: "Species not found anywhere else:", options: ["Endemic","Endangered","Normal","None"], correct: 0 },
+    { question: "Species facing risk of extinction:", options: ["Endangered","Normal","Abundant","None"], correct: 0 },
+    { question: "Species with large population:", options: ["Abundant","Endangered","Rare","None"], correct: 0 },
+
+    { question: "Main cause of wildlife decline:", options: ["Deforestation","Plantation","Care","None"], correct: 0 },
+    { question: "Habitat means:", options: ["Natural home","Food","Water","None"], correct: 0 },
+    { question: "Which causes habitat loss?", options: ["Urbanization","Plantation","Care","None"], correct: 0 },
+    { question: "Which is a conservation method?", options: ["National parks","Cutting trees","None","Mining"], correct: 0 },
+    { question: "Which protects wildlife?", options: ["Sanctuary","Factory","Mine","None"], correct: 0 },
+
+    { question: "Which is not conservation?", options: ["Deforestation","Protection","Awareness","None"], correct: 0 },
+    { question: "Which helps biodiversity?", options: ["Protection","Cutting","None","Mining"], correct: 0 },
+    { question: "Chipko movement aimed at:", options: ["Saving trees","Cutting trees","None","Mining"], correct: 0 },
+    { question: "Project Tiger started in:", options: ["1973","1980","1960","1990"], correct: 0 },
+    { question: "Which animal protected by Project Tiger?", options: ["Tiger","Lion","Elephant","None"], correct: 0 },
+
+    { question: "Which act protects wildlife?", options: ["Wildlife Protection Act","Forest Act","None","Trade Act"], correct: 0 },
+    { question: "Which area protects animals?", options: ["Sanctuary","City","Village","None"], correct: 0 },
+    { question: "Which area protects full ecosystem?", options: ["National park","City","Village","None"], correct: 0 },
+    { question: "Which includes people living inside?", options: ["Biosphere reserve","National park","None","City"], correct: 0 },
+    { question: "Which helps conservation?", options: ["Awareness","Cutting","None","Mining"], correct: 0 },
+
+    { question: "Which causes extinction?", options: ["Hunting","Care","None","Protection"], correct: 0 },
+    { question: "Which is rare species?", options: ["Low population","High population","None","Common"], correct: 0 },
+    { question: "Which species already extinct?", options: ["Dodo","Tiger","Elephant","None"], correct: 0 },
+    { question: "Which is endangered?", options: ["Blackbuck","Dog","Cow","None"], correct: 0 },
+    { question: "Which is endemic?", options: ["Nilgiri Tahr","Tiger","Lion","None"], correct: 0 },
+
+    { question: "Which is abundant?", options: ["Cattle","Tiger","Lion","None"], correct: 0 },
+    { question: "Which resource is forest?", options: ["Trees","Water","Air","None"], correct: 0 },
+    { question: "Which improves wildlife?", options: ["Protection","Hunting","None","Mining"], correct: 0 },
+    { question: "Which harms forest?", options: ["Fire","Rain","None","Care"], correct: 0 },
+    { question: "Which protects forest?", options: ["Law","Hunting","None","Mining"], correct: 0 },
+
+    { question: "Which helps animals survive?", options: ["Habitat","War","Trade","None"], correct: 0 },
+    { question: "Which reduces biodiversity?", options: ["Deforestation","Care","None","Protection"], correct: 0 },
+    { question: "Which increases biodiversity?", options: ["Conservation","Cutting","None","Mining"], correct: 0 },
+    { question: "Which spreads awareness?", options: ["Education","War","Trade","None"], correct: 0 },
+    { question: "Which improves environment?", options: ["Trees","Mining","None","Cutting"], correct: 0 }
+  ],
+
+  mcq80: [
+    // 🔥 1–64 NORMAL
+
+    { question: "Biodiversity means:", options: ["Variety of life","Only animals","Only plants","None"], correct: 0 }, //1
+    { question: "Flora refers to:", options: ["Plants","Animals","Humans","None"], correct: 0 }, //2
+    { question: "Fauna refers to:", options: ["Animals","Plants","Humans","None"], correct: 0 }, //3
+    { question: "India is rich in:", options: ["Biodiversity","Only minerals","None","Only soil"], correct: 0 }, //4
+    { question: "Endangered species:", options: ["Risk of extinction","Safe","Abundant","None"], correct: 0 }, //5
+
+    { question: "Rare species:", options: ["Low population","High population","None","Common"], correct: 0 }, //6
+    { question: "Endemic species:", options: ["Found only in one region","Everywhere","None","Common"], correct: 0 }, //7
+    { question: "Abundant species:", options: ["Large population","Low population","None","Rare"], correct: 0 }, //8
+    { question: "Main cause of decline:", options: ["Deforestation","Care","None","Protection"], correct: 0 }, //9
+    { question: "Habitat means:", options: ["Natural home","Food","Water","None"], correct: 0 }, //10
+
+    { question: "Habitat loss caused by:", options: ["Urbanisation","Care","None","Protection"], correct: 0 }, //11
+    { question: "Conservation means:", options: ["Protection","Destruction","None","Use"], correct: 0 }, //12
+    { question: "National park protects:", options: ["Whole ecosystem","Only animals","None","Only plants"], correct: 0 }, //13
+    { question: "Sanctuary protects:", options: ["Animals","Cities","None","Factories"], correct: 0 }, //14
+    { question: "Biosphere reserve includes:", options: ["People + nature","Only animals","None","Only plants"], correct: 0 }, //15
+
+    { question: "Chipko movement:", options: ["Save trees","Cut trees","None","Mining"], correct: 0 }, //16
+    { question: "Project Tiger year:", options: ["1973","1980","1960","None"], correct: 0 }, //17
+    { question: "Wildlife Protection Act:", options: ["1972","1980","1990","None"], correct: 0 }, //18
+    { question: "Extinct species:", options: ["No longer exist","Rare","None","Common"], correct: 0 }, //19
+    { question: "Dodo is:", options: ["Extinct","Endangered","None","Common"], correct: 0 }, //20
+
+    { question: "Blackbuck is:", options: ["Endangered","Abundant","None","Common"], correct: 0 }, //21
+    { question: "Nilgiri Tahr is:", options: ["Endemic","Abundant","None","Common"], correct: 0 }, //22
+    { question: "Forest resource:", options: ["Trees","Water","Air","None"], correct: 0 }, //23
+    { question: "Which harms wildlife:", options: ["Hunting","Care","None","Protection"], correct: 0 }, //24
+    { question: "Which protects wildlife:", options: ["Law","Hunting","None","Mining"], correct: 0 }, //25
+
+    { question: "Which increases biodiversity:", options: ["Conservation","Cutting","None","Mining"], correct: 0 }, //26
+    { question: "Which reduces biodiversity:", options: ["Deforestation","Care","None","Protection"], correct: 0 }, //27
+    { question: "Forest fire causes:", options: ["Destruction","Growth","None","Protection"], correct: 0 }, //28
+    { question: "Which improves forest:", options: ["Afforestation","Cutting","None","Mining"], correct: 0 }, //29
+    { question: "Which causes extinction:", options: ["Hunting","Care","None","Protection"], correct: 0 }, //30
+
+    { question: "Which is conservation method:", options: ["National park","Cutting","None","Mining"], correct: 0 }, //31
+    { question: "Which is not conservation:", options: ["Deforestation","Protection","None","Awareness"], correct: 0 }, //32
+    { question: "Which spreads awareness:", options: ["Education","War","Trade","None"], correct: 0 }, //33
+    { question: "Which improves environment:", options: ["Trees","Mining","None","Cutting"], correct: 0 }, //34
+    { question: "Which protects soil:", options: ["Trees","Mining","None","Cutting"], correct: 0 }, //35
+
+    { question: "Which improves wildlife:", options: ["Protection","Hunting","None","Mining"], correct: 0 }, //36
+    { question: "Which harms forest:", options: ["Fire","Rain","None","Care"], correct: 0 }, //37
+    { question: "Which helps animals:", options: ["Habitat","War","Trade","None"], correct: 0 }, //38
+    { question: "Which reduces habitat:", options: ["Urbanisation","Care","None","Protection"], correct: 0 }, //39
+    { question: "Which builds biodiversity:", options: ["Protection","Cutting","None","Mining"], correct: 0 }, //40
+
+    { question: "Which maintains balance:", options: ["Biodiversity","War","Trade","None"], correct: 0 }, //41
+    { question: "Which improves ecosystem:", options: ["Conservation","War","Trade","None"], correct: 0 }, //42
+    { question: "Which reduces animals:", options: ["Hunting","Care","None","Protection"], correct: 0 }, //43
+    { question: "Which supports life:", options: ["Forest","War","Trade","None"], correct: 0 }, //44
+    { question: "Which increases wildlife:", options: ["Protection","Cutting","None","Mining"], correct: 0 }, //45
+
+    { question: "Which damages ecosystem:", options: ["Deforestation","Care","None","Protection"], correct: 0 }, //46
+    { question: "Which restores forest:", options: ["Planting trees","Cutting","None","Mining"], correct: 0 }, //47
+    { question: "Which protects animals:", options: ["Sanctuary","City","None","Factory"], correct: 0 }, //48
+    { question: "Which protects full system:", options: ["National park","City","None","Village"], correct: 0 }, //49
+    { question: "Which allows humans:", options: ["Biosphere reserve","National park","None","Sanctuary"], correct: 0 }, //50
+
+    { question: "Which spreads knowledge:", options: ["Education","War","Trade","None"], correct: 0 }, //51
+    { question: "Which helps survival:", options: ["Habitat","War","Trade","None"], correct: 0 }, //52
+    { question: "Which increases forest:", options: ["Afforestation","Cutting","None","Mining"], correct: 0 }, //53
+    { question: "Which reduces forest:", options: ["Deforestation","Care","None","Protection"], correct: 0 }, //54
+    { question: "Which helps animals grow:", options: ["Protection","Hunting","None","Mining"], correct: 0 }, //55
+
+    { question: "Which harms animals:", options: ["Poaching","Care","None","Protection"], correct: 0 }, //56
+    { question: "Which protects environment:", options: ["Conservation","War","Trade","None"], correct: 0 }, //57
+    { question: "Which increases balance:", options: ["Biodiversity","War","Trade","None"], correct: 0 }, //58
+    { question: "Which maintains nature:", options: ["Forest","War","Trade","None"], correct: 0 }, //59
+    { question: "Which improves ecosystem:", options: ["Trees","Mining","None","Cutting"], correct: 0 }, //60
+
+    { question: "Which helps species:", options: ["Protection","War","Trade","None"], correct: 0 }, //61
+    { question: "Which supports biodiversity:", options: ["Forest","War","Trade","None"], correct: 0 }, //62
+    { question: "Which increases life:", options: ["Nature","War","Trade","None"], correct: 0 }, //63
+    { question: "Which protects balance:", options: ["Conservation","War","Trade","None"], correct: 0 }, //64
+
+    // 🔥 65–80 ASSERTION–REASON
+
+    { question: "Assertion: Biodiversity important. Reason: Maintains balance.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //65
+    { question: "Assertion: Endangered species at risk. Reason: Low population.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //66
+    { question: "Assertion: Habitat loss harmful. Reason: No shelter.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //67
+    { question: "Assertion: Deforestation harmful. Reason: Destroys habitat.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //68
+    { question: "Assertion: Conservation needed. Reason: Protect species.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //69
+
+    { question: "Assertion: National parks important. Reason: Protect ecosystem.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //70
+    { question: "Assertion: Sanctuaries useful. Reason: Protect animals.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //71
+    { question: "Assertion: Biosphere reserves special. Reason: Include humans.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //72
+    { question: "Assertion: Chipko movement important. Reason: Saved trees.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //73
+    { question: "Assertion: Project Tiger needed. Reason: Protect tiger.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //74
+
+    { question: "Assertion: Hunting harmful. Reason: Reduces population.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //75
+    { question: "Assertion: Afforestation useful. Reason: Increases trees.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //76
+    { question: "Assertion: Education helps conservation. Reason: Awareness.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //77
+    { question: "Assertion: Laws important. Reason: Protect wildlife.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //78
+    { question: "Assertion: Biodiversity loss harmful. Reason: Ecosystem affected.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //79
+    { question: "Assertion: Forests support life. Reason: Provide habitat.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 } //80
+  ]
+},
+
+"water-resources": {
+  mcq40: [
+    { question: "Water covers about how much of Earth's surface?", options: ["71%","50%","30%","90%"], correct: 0 },
+    { question: "Freshwater available for use is:", options: ["Limited","Unlimited","None","Abundant"], correct: 0 },
+    { question: "Main source of freshwater:", options: ["Rivers","Oceans","Seas","None"], correct: 0 },
+    { question: "Largest use of water in India:", options: ["Agriculture","Industry","Domestic","None"], correct: 0 },
+    { question: "Multipurpose river projects aim to:", options: ["Use water for many purposes","Only irrigation","None","Only electricity"], correct: 0 },
+
+    { question: "Which is a multipurpose project?", options: ["Bhakra Nangal","School","Factory","None"], correct: 0 },
+    { question: "Dam stores:", options: ["Water","Air","Soil","None"], correct: 0 },
+    { question: "Hydroelectricity is generated from:", options: ["Water","Coal","Wind","None"], correct: 0 },
+    { question: "Which river project is in Punjab?", options: ["Bhakra Nangal","Tehri","Hirakud","None"], correct: 0 },
+    { question: "Tehri dam is on river:", options: ["Ganga","Yamuna","Godavari","None"], correct: 0 },
+
+    { question: "Hirakud dam is on:", options: ["Mahanadi","Ganga","Yamuna","None"], correct: 0 },
+    { question: "Dams help in:", options: ["Flood control","Flood increase","None","Dryness"], correct: 0 },
+    { question: "Dams may cause:", options: ["Displacement","Growth","None","Benefit only"], correct: 0 },
+    { question: "Water scarcity occurs due to:", options: ["Overuse","Care","None","Rain"], correct: 0 },
+    { question: "Rainwater harvesting means:", options: ["Collecting rainwater","Wasting water","None","Pollution"], correct: 0 },
+
+    { question: "Traditional water system:", options: ["Tank","Dam","None","Pipe"], correct: 0 },
+    { question: "Which method saves water?", options: ["Harvesting","Waste","None","Overuse"], correct: 0 },
+    { question: "Which is groundwater source?", options: ["Well","River","Sea","None"], correct: 0 },
+    { question: "Which pollutes water?", options: ["Waste","Trees","None","Rain"], correct: 0 },
+    { question: "Which improves water quality?", options: ["Treatment","Waste","None","Pollution"], correct: 0 },
+
+    { question: "Which causes water shortage?", options: ["Population","Care","None","Rain"], correct: 0 },
+    { question: "Which increases demand?", options: ["Urbanisation","Care","None","Trees"], correct: 0 },
+    { question: "Which uses most water?", options: ["Farming","Industry","Home","None"], correct: 0 },
+    { question: "Which is not freshwater?", options: ["Sea","River","Lake","None"], correct: 0 },
+    { question: "Which stores water underground?", options: ["Aquifer","River","None","Sea"], correct: 0 },
+
+    { question: "Which is water conservation?", options: ["Saving water","Wasting","None","Pollution"], correct: 0 },
+    { question: "Which reduces water level?", options: ["Overuse","Care","None","Rain"], correct: 0 },
+    { question: "Which helps recharge groundwater?", options: ["Rainwater harvesting","Waste","None","Cutting"], correct: 0 },
+    { question: "Which damages water?", options: ["Pollution","Care","None","Trees"], correct: 0 },
+    { question: "Which helps agriculture?", options: ["Irrigation","Pollution","None","Waste"], correct: 0 },
+
+    { question: "Which is modern irrigation?", options: ["Drip","Flood","None","Rain"], correct: 0 },
+    { question: "Which wastes water?", options: ["Flood irrigation","Drip","None","Sprinkler"], correct: 0 },
+    { question: "Which saves water best?", options: ["Drip","Flood","None","Overuse"], correct: 0 },
+    { question: "Which stores rainwater?", options: ["Tank","River","None","Sea"], correct: 0 },
+    { question: "Which is traditional method?", options: ["Stepwell","Dam","None","Pipe"], correct: 0 },
+
+    { question: "Which is modern project?", options: ["Dam","Well","None","Tank"], correct: 0 },
+    { question: "Which improves supply?", options: ["Management","Waste","None","Pollution"], correct: 0 },
+    { question: "Which increases scarcity?", options: ["Overuse","Care","None","Rain"], correct: 0 },
+    { question: "Which protects water?", options: ["Conservation","Waste","None","Pollution"], correct: 0 },
+    { question: "Which is key resource?", options: ["Water","Air","Soil","None"], correct: 0 }
+  ],
+
+  mcq80: [
+    // 🔥 1–64 NORMAL
+
+    { question: "Water covers Earth surface:", options: ["71%","50%","30%","None"], correct: 0 }, //1
+    { question: "Freshwater availability:", options: ["Limited","Unlimited","None","Abundant"], correct: 0 }, //2
+    { question: "Main freshwater source:", options: ["Rivers","Oceans","Seas","None"], correct: 0 }, //3
+    { question: "Largest water use:", options: ["Agriculture","Industry","Domestic","None"], correct: 0 }, //4
+    { question: "Multipurpose project:", options: ["Many uses","Single use","None","Waste"], correct: 0 }, //5
+
+    { question: "Dam stores:", options: ["Water","Air","Soil","None"], correct: 0 }, //6
+    { question: "Hydroelectricity from:", options: ["Water","Coal","Wind","None"], correct: 0 }, //7
+    { question: "Bhakra Nangal in:", options: ["Punjab","UP","Bihar","None"], correct: 0 }, //8
+    { question: "Tehri dam river:", options: ["Ganga","Yamuna","Godavari","None"], correct: 0 }, //9
+    { question: "Hirakud dam river:", options: ["Mahanadi","Ganga","Yamuna","None"], correct: 0 }, //10
+
+    { question: "Dams control:", options: ["Floods","Drought","None","Wind"], correct: 0 }, //11
+    { question: "Dams cause:", options: ["Displacement","Growth","None","Only benefit"], correct: 0 }, //12
+    { question: "Water scarcity due to:", options: ["Overuse","Care","None","Rain"], correct: 0 }, //13
+    { question: "Rainwater harvesting:", options: ["Collect rainwater","Waste","None","Pollute"], correct: 0 }, //14
+    { question: "Traditional system:", options: ["Tank","Pipe","None","Dam"], correct: 0 }, //15
+
+    { question: "Groundwater source:", options: ["Well","Sea","River","None"], correct: 0 }, //16
+    { question: "Water pollution caused by:", options: ["Waste","Trees","None","Rain"], correct: 0 }, //17
+    { question: "Water treatment improves:", options: ["Quality","Waste","None","Pollution"], correct: 0 }, //18
+    { question: "Water demand increases due to:", options: ["Population","Care","None","Rain"], correct: 0 }, //19
+    { question: "Urbanisation causes:", options: ["More demand","Less demand","None","Care"], correct: 0 }, //20
+
+    { question: "Which is not freshwater:", options: ["Sea","River","Lake","None"], correct: 0 }, //21
+    { question: "Aquifer stores:", options: ["Groundwater","Air","Soil","None"], correct: 0 }, //22
+    { question: "Water conservation:", options: ["Saving water","Wasting","None","Pollution"], correct: 0 }, //23
+    { question: "Overuse leads to:", options: ["Scarcity","Growth","None","Rain"], correct: 0 }, //24
+    { question: "Recharge groundwater:", options: ["Rainwater harvesting","Waste","None","Cutting"], correct: 0 }, //25
+
+    { question: "Irrigation helps:", options: ["Agriculture","Pollution","None","Waste"], correct: 0 }, //26
+    { question: "Drip irrigation:", options: ["Saves water","Wastes","None","Flood"], correct: 0 }, //27
+    { question: "Flood irrigation:", options: ["Wastes water","Saves","None","Drip"], correct: 0 }, //28
+    { question: "Stepwell is:", options: ["Traditional system","Modern","None","Dam"], correct: 0 }, //29
+    { question: "Modern project:", options: ["Dam","Well","None","Tank"], correct: 0 }, //30
+
+    { question: "Which reduces water level:", options: ["Overuse","Care","None","Rain"], correct: 0 }, //31
+    { question: "Which protects water:", options: ["Conservation","Waste","None","Pollution"], correct: 0 }, //32
+    { question: "Which increases supply:", options: ["Management","Waste","None","Pollution"], correct: 0 }, //33
+    { question: "Which damages water:", options: ["Pollution","Care","None","Trees"], correct: 0 }, //34
+    { question: "Which improves supply:", options: ["Planning","Waste","None","Pollution"], correct: 0 }, //35
+
+    { question: "Which increases scarcity:", options: ["Overuse","Care","None","Rain"], correct: 0 }, //36
+    { question: "Which is key resource:", options: ["Water","Air","Soil","None"], correct: 0 }, //37
+    { question: "Which supports life:", options: ["Water","Air","None","Soil"], correct: 0 }, //38
+    { question: "Which is renewable:", options: ["Water","Coal","Oil","None"], correct: 0 }, //39
+    { question: "Which becomes scarce:", options: ["Water","Air","None","Soil"], correct: 0 }, //40
+
+    { question: "Which causes shortage:", options: ["Overuse","Care","None","Rain"], correct: 0 }, //41
+    { question: "Which increases usage:", options: ["Industry","Care","None","Trees"], correct: 0 }, //42
+    { question: "Which stores rain:", options: ["Tank","River","None","Sea"], correct: 0 }, //43
+    { question: "Which helps recharge:", options: ["Harvesting","Waste","None","Cutting"], correct: 0 }, //44
+    { question: "Which reduces pollution:", options: ["Treatment","Waste","None","Pollution"], correct: 0 }, //45
+
+    { question: "Which supports farming:", options: ["Water","Air","None","Soil"], correct: 0 }, //46
+    { question: "Which increases crop yield:", options: ["Irrigation","Pollution","None","Waste"], correct: 0 }, //47
+    { question: "Which saves water:", options: ["Drip","Flood","None","Waste"], correct: 0 }, //48
+    { question: "Which wastes water:", options: ["Flood","Drip","None","Sprinkler"], correct: 0 }, //49
+    { question: "Which improves groundwater:", options: ["Recharge","Waste","None","Cutting"], correct: 0 }, //50
+
+    { question: "Which protects future:", options: ["Conservation","Waste","None","Pollution"], correct: 0 }, //51
+    { question: "Which increases demand:", options: ["Population","Care","None","Rain"], correct: 0 }, //52
+    { question: "Which reduces supply:", options: ["Overuse","Care","None","Rain"], correct: 0 }, //53
+    { question: "Which improves management:", options: ["Planning","Waste","None","Pollution"], correct: 0 }, //54
+    { question: "Which supports ecosystem:", options: ["Water","Air","None","Soil"], correct: 0 }, //55
+
+    { question: "Which increases storage:", options: ["Dams","Waste","None","Pollution"], correct: 0 }, //56
+    { question: "Which helps flood control:", options: ["Dams","Waste","None","Pollution"], correct: 0 }, //57
+    { question: "Which creates electricity:", options: ["Hydropower","Coal","None","Wind"], correct: 0 }, //58
+    { question: "Which displaces people:", options: ["Dams","Care","None","Trees"], correct: 0 }, //59
+    { question: "Which improves development:", options: ["Water use","Waste","None","Pollution"], correct: 0 }, //60
+
+    { question: "Which supports industry:", options: ["Water","Air","None","Soil"], correct: 0 }, //61
+    { question: "Which supports life:", options: ["Water","Air","None","Soil"], correct: 0 }, //62
+    { question: "Which helps growth:", options: ["Water","War","None","Trade"], correct: 0 }, //63
+    { question: "Which maintains balance:", options: ["Water","War","None","Trade"], correct: 0 }, //64
+
+    // 🔥 65–80 ASSERTION–REASON
+
+    { question: "Assertion: Water is vital. Reason: Supports life.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //65
+    { question: "Assertion: Freshwater limited. Reason: Most is saline.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //66
+    { question: "Assertion: Dams useful. Reason: Store water.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //67
+    { question: "Assertion: Dams cause issues. Reason: Displacement.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //68
+    { question: "Assertion: Water scarcity rising. Reason: Overuse.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //69
+
+    { question: "Assertion: Rainwater harvesting useful. Reason: Recharges groundwater.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //70
+    { question: "Assertion: Pollution harmful. Reason: Affects quality.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //71
+    { question: "Assertion: Irrigation important. Reason: Helps farming.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //72
+    { question: "Assertion: Drip irrigation good. Reason: Saves water.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //73
+    { question: "Assertion: Flood irrigation bad. Reason: Wastes water.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //74
+
+    { question: "Assertion: Population increases demand. Reason: More usage.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //75
+    { question: "Assertion: Conservation needed. Reason: Protect future.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //76
+    { question: "Assertion: Aquifers important. Reason: Store groundwater.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //77
+    { question: "Assertion: Water pollution rising. Reason: Waste disposal.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //78
+    { question: "Assertion: Planning helps water. Reason: Better management.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //79
+    { question: "Assertion: Water essential. Reason: Supports ecosystem.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 } //80
+  ]
+},
+
+"agriculture": {
+  mcq40: [
+    { question: "Agriculture is a:", options: ["Primary activity","Secondary activity","Tertiary activity","None"], correct: 0 },
+    { question: "India is a:", options: ["Agricultural country","Industrial country","Developed country","None"], correct: 0 },
+    { question: "Main occupation in India:", options: ["Farming","Industry","Trade","None"], correct: 0 },
+    { question: "Which is a food crop?", options: ["Rice","Cotton","Jute","None"], correct: 0 },
+    { question: "Which is a cash crop?", options: ["Cotton","Rice","Wheat","None"], correct: 0 },
+
+    { question: "Rice requires:", options: ["High rainfall","Low rainfall","Cold climate","None"], correct: 0 },
+    { question: "Wheat requires:", options: ["Cool climate","Hot climate","Heavy rain","None"], correct: 0 },
+    { question: "Millets grow in:", options: ["Dry regions","Wet regions","Cold regions","None"], correct: 0 },
+    { question: "Which is a plantation crop?", options: ["Tea","Wheat","Rice","None"], correct: 0 },
+    { question: "Coffee grows in:", options: ["Hills","Desert","Plains","None"], correct: 0 },
+
+    { question: "Rubber requires:", options: ["Hot and wet climate","Cold climate","Dry climate","None"], correct: 0 },
+    { question: "Cotton grows in:", options: ["Black soil","Alluvial soil","Red soil","None"], correct: 0 },
+    { question: "Jute grows in:", options: ["Alluvial soil","Black soil","Desert","None"], correct: 0 },
+    { question: "Which season for crops?", options: ["Kharif","Winter","Summer","None"], correct: 0 },
+    { question: "Kharif crops sown in:", options: ["Monsoon","Winter","Summer","None"], correct: 0 },
+
+    { question: "Rabi crops sown in:", options: ["Winter","Monsoon","Summer","None"], correct: 0 },
+    { question: "Zaid crops grown in:", options: ["Summer","Winter","Monsoon","None"], correct: 0 },
+    { question: "Example of rabi crop:", options: ["Wheat","Rice","Cotton","None"], correct: 0 },
+    { question: "Example of kharif crop:", options: ["Rice","Wheat","Gram","None"], correct: 0 },
+    { question: "Example of zaid crop:", options: ["Watermelon","Rice","Wheat","None"], correct: 0 },
+
+    { question: "Which is irrigation method?", options: ["Drip","Rain","None","Wind"], correct: 0 },
+    { question: "Green Revolution increased:", options: ["Production","Pollution","None","Loss"], correct: 0 },
+    { question: "Which crop benefited most?", options: ["Wheat","Rice","Cotton","None"], correct: 0 },
+    { question: "Which state leads wheat?", options: ["Punjab","Kerala","Assam","None"], correct: 0 },
+    { question: "Which state leads rice?", options: ["West Bengal","Punjab","Gujarat","None"], correct: 0 },
+
+    { question: "Which is oilseed?", options: ["Mustard","Rice","Wheat","None"], correct: 0 },
+    { question: "Which is fibre crop?", options: ["Cotton","Rice","Wheat","None"], correct: 0 },
+    { question: "Which crop needs slope?", options: ["Tea","Wheat","Rice","None"], correct: 0 },
+    { question: "Which is commercial crop?", options: ["Sugarcane","Rice","Wheat","None"], correct: 0 },
+    { question: "Sugarcane needs:", options: ["Hot climate","Cold","Dry","None"], correct: 0 },
+
+    { question: "Which crop gives beverage?", options: ["Tea","Rice","Wheat","None"], correct: 0 },
+    { question: "Which soil best for rice?", options: ["Alluvial","Desert","None","Rocky"], correct: 0 },
+    { question: "Which method saves water?", options: ["Drip","Flood","None","Overuse"], correct: 0 },
+    { question: "Which wastes water?", options: ["Flood irrigation","Drip","None","Sprinkler"], correct: 0 },
+    { question: "Which improves farming?", options: ["Technology","War","None","Trade"], correct: 0 },
+
+    { question: "Which increases yield?", options: ["Fertilizers","None","War","Trade"], correct: 0 },
+    { question: "Which harms soil?", options: ["Overuse of chemicals","Care","None","Rotation"], correct: 0 },
+    { question: "Which protects soil?", options: ["Crop rotation","None","War","Trade"], correct: 0 },
+    { question: "Which supports farming?", options: ["Irrigation","None","War","Trade"], correct: 0 },
+    { question: "Which is staple crop?", options: ["Rice","Tea","Coffee","None"], correct: 0 }
+  ],
+
+  mcq80: [
+    // 🔥 1–64 NORMAL
+
+    { question: "Agriculture is:", options: ["Primary activity","Secondary","Tertiary","None"], correct: 0 }, //1
+    { question: "India mainly depends on:", options: ["Agriculture","Industry","Trade","None"], correct: 0 }, //2
+    { question: "Main occupation:", options: ["Farming","Trade","Industry","None"], correct: 0 }, //3
+    { question: "Food crop:", options: ["Rice","Cotton","Jute","None"], correct: 0 }, //4
+    { question: "Cash crop:", options: ["Cotton","Rice","Wheat","None"], correct: 0 }, //5
+
+    { question: "Rice requires:", options: ["High rainfall","Low rainfall","Cold","None"], correct: 0 }, //6
+    { question: "Wheat requires:", options: ["Cool climate","Hot","Heavy rain","None"], correct: 0 }, //7
+    { question: "Millets grow in:", options: ["Dry regions","Wet","Cold","None"], correct: 0 }, //8
+    { question: "Plantation crop:", options: ["Tea","Wheat","Rice","None"], correct: 0 }, //9
+    { question: "Coffee grows in:", options: ["Hills","Desert","Plains","None"], correct: 0 }, //10
+
+    { question: "Rubber needs:", options: ["Hot wet climate","Cold","Dry","None"], correct: 0 }, //11
+    { question: "Cotton grows in:", options: ["Black soil","Alluvial","Red","None"], correct: 0 }, //12
+    { question: "Jute grows in:", options: ["Alluvial","Black","Desert","None"], correct: 0 }, //13
+    { question: "Kharif crops:", options: ["Monsoon crops","Winter","Summer","None"], correct: 0 }, //14
+    { question: "Rabi crops:", options: ["Winter crops","Monsoon","Summer","None"], correct: 0 }, //15
+
+    { question: "Zaid crops:", options: ["Summer crops","Winter","Monsoon","None"], correct: 0 }, //16
+    { question: "Example rabi:", options: ["Wheat","Rice","Cotton","None"], correct: 0 }, //17
+    { question: "Example kharif:", options: ["Rice","Wheat","Gram","None"], correct: 0 }, //18
+    { question: "Example zaid:", options: ["Watermelon","Rice","Wheat","None"], correct: 0 }, //19
+    { question: "Irrigation method:", options: ["Drip","Rain","None","Wind"], correct: 0 }, //20
+
+    { question: "Green Revolution increased:", options: ["Production","Pollution","None","Loss"], correct: 0 }, //21
+    { question: "Crop benefited most:", options: ["Wheat","Rice","Cotton","None"], correct: 0 }, //22
+    { question: "Punjab known for:", options: ["Wheat","Tea","Coffee","None"], correct: 0 }, //23
+    { question: "West Bengal known for:", options: ["Rice","Wheat","Cotton","None"], correct: 0 }, //24
+    { question: "Oilseed:", options: ["Mustard","Rice","Wheat","None"], correct: 0 }, //25
+
+    { question: "Fibre crop:", options: ["Cotton","Rice","Wheat","None"], correct: 0 }, //26
+    { question: "Slope farming:", options: ["Tea","Wheat","Rice","None"], correct: 0 }, //27
+    { question: "Commercial crop:", options: ["Sugarcane","Rice","Wheat","None"], correct: 0 }, //28
+    { question: "Sugarcane needs:", options: ["Hot climate","Cold","Dry","None"], correct: 0 }, //29
+    { question: "Beverage crop:", options: ["Tea","Rice","Wheat","None"], correct: 0 }, //30
+
+    { question: "Best soil for rice:", options: ["Alluvial","Desert","None","Rocky"], correct: 0 }, //31
+    { question: "Water saving method:", options: ["Drip","Flood","None","Overuse"], correct: 0 }, //32
+    { question: "Water wasting:", options: ["Flood irrigation","Drip","None","Sprinkler"], correct: 0 }, //33
+    { question: "Improves farming:", options: ["Technology","War","None","Trade"], correct: 0 }, //34
+    { question: "Increase yield:", options: ["Fertilizers","None","War","Trade"], correct: 0 }, //35
+
+    { question: "Harms soil:", options: ["Overuse chemicals","Care","None","Rotation"], correct: 0 }, //36
+    { question: "Protects soil:", options: ["Crop rotation","None","War","Trade"], correct: 0 }, //37
+    { question: "Supports farming:", options: ["Irrigation","None","War","Trade"], correct: 0 }, //38
+    { question: "Staple crop:", options: ["Rice","Tea","Coffee","None"], correct: 0 }, //39
+    { question: "Which is kharif:", options: ["Cotton","Wheat","Gram","None"], correct: 0 }, //40
+
+    { question: "Which is rabi:", options: ["Gram","Rice","Cotton","None"], correct: 0 }, //41
+    { question: "Which is zaid:", options: ["Cucumber","Rice","Wheat","None"], correct: 0 }, //42
+    { question: "Which grows in dry:", options: ["Millets","Rice","None","Tea"], correct: 0 }, //43
+    { question: "Which grows in wet:", options: ["Rice","Millets","None","Tea"], correct: 0 }, //44
+    { question: "Which crop export:", options: ["Tea","Rice","None","Wheat"], correct: 0 }, //45
+
+    { question: "Which is plantation:", options: ["Coffee","Wheat","None","Rice"], correct: 0 }, //46
+    { question: "Which is oil crop:", options: ["Groundnut","Rice","None","Wheat"], correct: 0 }, //47
+    { question: "Which needs irrigation:", options: ["Rice","Millets","None","Tea"], correct: 0 }, //48
+    { question: "Which reduces fertility:", options: ["Chemicals","Rotation","None","Care"], correct: 0 }, //49
+    { question: "Which improves soil:", options: ["Manure","Waste","None","Chemicals"], correct: 0 }, //50
+
+    { question: "Which supports economy:", options: ["Agriculture","War","None","Trade"], correct: 0 }, //51
+    { question: "Which increases food:", options: ["Farming","War","None","Trade"], correct: 0 }, //52
+    { question: "Which helps farmer:", options: ["Technology","War","None","Trade"], correct: 0 }, //53
+    { question: "Which depends on rain:", options: ["Farming","War","None","Trade"], correct: 0 }, //54
+    { question: "Which supports life:", options: ["Agriculture","War","None","Trade"], correct: 0 }, //55
+
+    { question: "Which increases income:", options: ["Cash crops","Food crops","None","Tea"], correct: 0 }, //56
+    { question: "Which gives fibre:", options: ["Cotton","Rice","None","Wheat"], correct: 0 }, //57
+    { question: "Which gives oil:", options: ["Mustard","Rice","None","Wheat"], correct: 0 }, //58
+    { question: "Which gives sugar:", options: ["Sugarcane","Rice","None","Wheat"], correct: 0 }, //59
+    { question: "Which grows in hills:", options: ["Tea","Rice","None","Wheat"], correct: 0 }, //60
+
+    { question: "Which grows in plains:", options: ["Wheat","Tea","None","Coffee"], correct: 0 }, //61
+    { question: "Which improves farming:", options: ["Irrigation","War","None","Trade"], correct: 0 }, //62
+    { question: "Which saves water:", options: ["Drip","Flood","None","Waste"], correct: 0 }, //63
+    { question: "Which wastes water:", options: ["Flood","Drip","None","Sprinkler"], correct: 0 }, //64
+
+    // 🔥 65–80 ASSERTION–REASON
+
+    { question: "Assertion: Agriculture important. Reason: Provides food.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //65
+    { question: "Assertion: Rice needs water. Reason: Grows in wet fields.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //66
+    { question: "Assertion: Wheat grows in winter. Reason: Needs cool climate.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //67
+    { question: "Assertion: Millets grow dry. Reason: Need less water.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //68
+    { question: "Assertion: Cotton needs black soil. Reason: Retains moisture.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //69
+
+    { question: "Assertion: Tea grown hills. Reason: Needs slope.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //70
+    { question: "Assertion: Irrigation useful. Reason: Supports crops.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //71
+    { question: "Assertion: Drip irrigation good. Reason: Saves water.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //72
+    { question: "Assertion: Flood irrigation bad. Reason: Wastes water.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //73
+    { question: "Assertion: Green Revolution important. Reason: Increased production.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //74
+
+    { question: "Assertion: Chemicals harmful. Reason: Reduce fertility.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //75
+    { question: "Assertion: Crop rotation useful. Reason: Improves soil.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //76
+    { question: "Assertion: Agriculture supports economy. Reason: Provides jobs.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //77
+    { question: "Assertion: Cash crops important. Reason: Give income.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //78
+    { question: "Assertion: Irrigation needed. Reason: Rain unreliable.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //79
+    { question: "Assertion: Farming depends on climate. Reason: Crops need conditions.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 } //80
+  ]
+},
+
+"minerals-and-energy-resources": {
+  mcq40: [
+    { question: "Minerals are:", options: ["Naturally occurring substances","Man-made items","Plants","None"], correct: 0 },
+    { question: "Which is a metallic mineral?", options: ["Iron ore","Coal","Petroleum","None"], correct: 0 },
+    { question: "Which is non-metallic?", options: ["Mica","Iron","Copper","None"], correct: 0 },
+    { question: "Which is a fuel mineral?", options: ["Coal","Iron","Gold","None"], correct: 0 },
+    { question: "Coal is a:", options: ["Non-renewable resource","Renewable","None","Biotic"], correct: 0 },
+
+    { question: "Petroleum is:", options: ["Liquid fossil fuel","Solid","Gas","None"], correct: 0 },
+    { question: "Natural gas is:", options: ["Gaseous fuel","Solid fuel","Liquid","None"], correct: 0 },
+    { question: "Iron ore used in:", options: ["Steel making","Food","Clothes","None"], correct: 0 },
+    { question: "Mica used in:", options: ["Electrical industry","Food","Fuel","None"], correct: 0 },
+    { question: "Which is renewable energy?", options: ["Solar","Coal","Petroleum","None"], correct: 0 },
+
+    { question: "Which is non-renewable?", options: ["Coal","Solar","Wind","None"], correct: 0 },
+    { question: "Hydroelectricity uses:", options: ["Water","Coal","Wind","None"], correct: 0 },
+    { question: "Wind energy uses:", options: ["Air","Water","Coal","None"], correct: 0 },
+    { question: "Solar energy from:", options: ["Sun","Water","Wind","None"], correct: 0 },
+    { question: "Which is exhaustible?", options: ["Coal","Sun","Wind","None"], correct: 0 },
+
+    { question: "Which is inexhaustible?", options: ["Solar","Coal","Petroleum","None"], correct: 0 },
+    { question: "Major iron producing state:", options: ["Odisha","Kerala","Punjab","None"], correct: 0 },
+    { question: "Coal mainly found in:", options: ["Jharkhand","Kerala","Goa","None"], correct: 0 },
+    { question: "Petroleum mainly in:", options: ["Mumbai High","Punjab","Bihar","None"], correct: 0 },
+    { question: "Which is nuclear energy?", options: ["Uranium","Coal","Petroleum","None"], correct: 0 },
+
+    { question: "Which mineral for jewellery?", options: ["Gold","Coal","Iron","None"], correct: 0 },
+    { question: "Which mineral for wires?", options: ["Copper","Coal","Iron","None"], correct: 0 },
+    { question: "Which is metallic?", options: ["Aluminium","Mica","Coal","None"], correct: 0 },
+    { question: "Which is non-metallic?", options: ["Limestone","Iron","Copper","None"], correct: 0 },
+    { question: "Which is energy resource?", options: ["Coal","Iron","Mica","None"], correct: 0 },
+
+    { question: "Which pollutes more?", options: ["Coal","Solar","Wind","None"], correct: 0 },
+    { question: "Which is clean energy?", options: ["Solar","Coal","Petroleum","None"], correct: 0 },
+    { question: "Which saves environment?", options: ["Renewable energy","Coal","None","Petroleum"], correct: 0 },
+    { question: "Which causes pollution?", options: ["Fossil fuels","Solar","Wind","None"], correct: 0 },
+    { question: "Which is conventional energy?", options: ["Coal","Solar","Wind","None"], correct: 0 },
+
+    { question: "Which is non-conventional?", options: ["Wind","Coal","Petroleum","None"], correct: 0 },
+    { question: "Which is limited?", options: ["Fossil fuels","Solar","Wind","None"], correct: 0 },
+    { question: "Which is unlimited?", options: ["Solar","Coal","Petroleum","None"], correct: 0 },
+    { question: "Which helps electricity?", options: ["Energy resources","None","War","Trade"], correct: 0 },
+    { question: "Which supports industry?", options: ["Minerals","None","War","Trade"], correct: 0 },
+
+    { question: "Which forms slowly?", options: ["Fossil fuels","Solar","Wind","None"], correct: 0 },
+    { question: "Which should be conserved?", options: ["Minerals","Waste","None","Air"], correct: 0 },
+    { question: "Which improves future?", options: ["Conservation","Waste","None","Pollution"], correct: 0 },
+    { question: "Which increases energy?", options: ["Resources","None","War","Trade"], correct: 0 },
+    { question: "Which is key resource?", options: ["Minerals","None","War","Trade"], correct: 0 }
+  ],
+
+mcq80: [
+    // 🔥 1–64 NORMAL
+
+    { question: "Minerals are:", options: ["Naturally occurring substances","Man-made","Plants","None"], correct: 0 }, //1
+    { question: "Metallic mineral:", options: ["Iron ore","Coal","Petroleum","None"], correct: 0 }, //2
+    { question: "Non-metallic mineral:", options: ["Mica","Iron","Copper","None"], correct: 0 }, //3
+    { question: "Fuel mineral:", options: ["Coal","Iron","Gold","None"], correct: 0 }, //4
+    { question: "Coal is:", options: ["Non-renewable","Renewable","None","Biotic"], correct: 0 }, //5
+
+    { question: "Petroleum is:", options: ["Liquid fossil fuel","Solid","Gas","None"], correct: 0 }, //6
+    { question: "Natural gas is:", options: ["Gaseous fuel","Solid","Liquid","None"], correct: 0 }, //7
+    { question: "Iron used in:", options: ["Steel","Food","Clothes","None"], correct: 0 }, //8
+    { question: "Mica used in:", options: ["Electrical industry","Food","Fuel","None"], correct: 0 }, //9
+    { question: "Renewable energy:", options: ["Solar","Coal","Petroleum","None"], correct: 0 }, //10
+
+    { question: "Non-renewable:", options: ["Coal","Solar","Wind","None"], correct: 0 }, //11
+    { question: "Hydropower uses:", options: ["Water","Coal","Wind","None"], correct: 0 }, //12
+    { question: "Wind energy:", options: ["Air","Water","Coal","None"], correct: 0 }, //13
+    { question: "Solar energy from:", options: ["Sun","Water","Wind","None"], correct: 0 }, //14
+    { question: "Exhaustible resource:", options: ["Coal","Sun","Wind","None"], correct: 0 }, //15
+
+    { question: "Inexhaustible resource:", options: ["Solar","Coal","Petroleum","None"], correct: 0 }, //16
+    { question: "Iron state:", options: ["Odisha","Kerala","Punjab","None"], correct: 0 }, //17
+    { question: "Coal state:", options: ["Jharkhand","Kerala","Goa","None"], correct: 0 }, //18
+    { question: "Petroleum area:", options: ["Mumbai High","Punjab","Bihar","None"], correct: 0 }, //19
+    { question: "Nuclear energy:", options: ["Uranium","Coal","Petroleum","None"], correct: 0 }, //20
+
+    { question: "Jewellery mineral:", options: ["Gold","Coal","Iron","None"], correct: 0 }, //21
+    { question: "Wire metal:", options: ["Copper","Coal","Iron","None"], correct: 0 }, //22
+    { question: "Metallic example:", options: ["Aluminium","Mica","Coal","None"], correct: 0 }, //23
+    { question: "Non-metallic example:", options: ["Limestone","Iron","Copper","None"], correct: 0 }, //24
+    { question: "Energy resource:", options: ["Coal","Iron","Mica","None"], correct: 0 }, //25
+
+    { question: "Pollutes most:", options: ["Coal","Solar","Wind","None"], correct: 0 }, //26
+    { question: "Clean energy:", options: ["Solar","Coal","Petroleum","None"], correct: 0 }, //27
+    { question: "Eco-friendly:", options: ["Renewable energy","Coal","None","Petroleum"], correct: 0 }, //28
+    { question: "Pollution cause:", options: ["Fossil fuels","Solar","Wind","None"], correct: 0 }, //29
+    { question: "Conventional energy:", options: ["Coal","Solar","Wind","None"], correct: 0 }, //30
+
+    { question: "Non-conventional:", options: ["Wind","Coal","Petroleum","None"], correct: 0 }, //31
+    { question: "Limited resource:", options: ["Fossil fuels","Solar","Wind","None"], correct: 0 }, //32
+    { question: "Unlimited resource:", options: ["Solar","Coal","Petroleum","None"], correct: 0 }, //33
+    { question: "Electricity source:", options: ["Energy resources","None","War","Trade"], correct: 0 }, //34
+    { question: "Industry depends on:", options: ["Minerals","None","War","Trade"], correct: 0 }, //35
+
+    { question: "Form slowly:", options: ["Fossil fuels","Solar","Wind","None"], correct: 0 }, //36
+    { question: "Should conserve:", options: ["Minerals","Waste","None","Air"], correct: 0 }, //37
+    { question: "Future safe:", options: ["Conservation","Waste","None","Pollution"], correct: 0 }, //38
+    { question: "Energy increases:", options: ["Resources","None","War","Trade"], correct: 0 }, //39
+    { question: "Key resource:", options: ["Minerals","None","War","Trade"], correct: 0 }, //40
+
+    { question: "Which saves environment:", options: ["Renewable","Coal","None","Petroleum"], correct: 0 }, //41
+    { question: "Which harms environment:", options: ["Coal","Solar","None","Wind"], correct: 0 }, //42
+    { question: "Which produces electricity:", options: ["Hydropower","Coal","None","Wind"], correct: 0 }, //43
+    { question: "Which uses sunlight:", options: ["Solar energy","Coal","None","Wind"], correct: 0 }, //44
+    { question: "Which uses air:", options: ["Wind energy","Coal","None","Water"], correct: 0 }, //45
+
+    { question: "Which is fossil fuel:", options: ["Coal","Solar","None","Wind"], correct: 0 }, //46
+    { question: "Which is renewable:", options: ["Wind","Coal","None","Petroleum"], correct: 0 }, //47
+    { question: "Which is non-renewable:", options: ["Petroleum","Wind","None","Solar"], correct: 0 }, //48
+    { question: "Which increases pollution:", options: ["Coal","Wind","None","Solar"], correct: 0 }, //49
+    { question: "Which reduces pollution:", options: ["Solar","Coal","None","Petroleum"], correct: 0 }, //50
+
+    { question: "Which supports economy:", options: ["Energy","War","None","Trade"], correct: 0 }, //51
+    { question: "Which helps development:", options: ["Minerals","War","None","Trade"], correct: 0 }, //52
+    { question: "Which improves industry:", options: ["Energy","War","None","Trade"], correct: 0 }, //53
+    { question: "Which provides fuel:", options: ["Coal","Air","None","Water"], correct: 0 }, //54
+    { question: "Which produces heat:", options: ["Coal","Solar","None","Wind"], correct: 0 }, //55
+
+    { question: "Which produces gas:", options: ["Natural gas","Coal","None","Solar"], correct: 0 }, //56
+    { question: "Which produces oil:", options: ["Petroleum","Coal","None","Solar"], correct: 0 }, //57
+    { question: "Which gives power:", options: ["Energy","War","None","Trade"], correct: 0 }, //58
+    { question: "Which supports life:", options: ["Energy","War","None","Trade"], correct: 0 }, //59
+    { question: "Which maintains balance:", options: ["Resources","War","None","Trade"], correct: 0 }, //60
+
+    { question: "Which improves future:", options: ["Conservation","Waste","None","Pollution"], correct: 0 }, //61
+    { question: "Which increases supply:", options: ["Resources","War","None","Trade"], correct: 0 }, //62
+    { question: "Which supports growth:", options: ["Energy","War","None","Trade"], correct: 0 }, //63
+    { question: "Which builds economy:", options: ["Minerals","War","None","Trade"], correct: 0 }, //64
+
+    // 🔥 65–80 ASSERTION–REASON
+
+    { question: "Assertion: Minerals important. Reason: Used in industry.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //65
+    { question: "Assertion: Coal limited. Reason: Forms slowly.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //66
+    { question: "Assertion: Renewable energy good. Reason: Unlimited.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //67
+    { question: "Assertion: Solar clean. Reason: No pollution.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //68
+    { question: "Assertion: Wind energy useful. Reason: Renewable.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //69
+
+    { question: "Assertion: Fossil fuels harmful. Reason: Cause pollution.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //70
+    { question: "Assertion: Hydropower useful. Reason: Uses water.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //71
+    { question: "Assertion: Minerals limited. Reason: Non-renewable.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //72
+    { question: "Assertion: Conservation needed. Reason: Protect future.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //73
+    { question: "Assertion: Petroleum important. Reason: Provides fuel.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //74
+
+    { question: "Assertion: Energy supports industry. Reason: Needed for machines.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //75
+    { question: "Assertion: Clean energy needed. Reason: Reduce pollution.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //76
+    { question: "Assertion: Uranium used. Reason: Nuclear energy.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //77
+    { question: "Assertion: Coal pollutes. Reason: Burning releases gases.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //78
+    { question: "Assertion: Planning important. Reason: Manage resources.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //79
+    { question: "Assertion: Minerals support economy. Reason: Used widely.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 } //80
+  ]
+},
+
+"manufacturing-industries": {
+  mcq40: [
+    { question: "Manufacturing means:", options: ["Producing goods","Consuming goods","Selling goods","None"], correct: 0 },
+    { question: "Industry converts:", options: ["Raw materials into products","Products into waste","None","Goods into raw"], correct: 0 },
+    { question: "Which is a basic industry?", options: ["Iron and steel","Textile","None","Food"], correct: 0 },
+    { question: "Which is a consumer industry?", options: ["Sugar","Iron","Coal","None"], correct: 0 },
+    { question: "Which is agro-based?", options: ["Cotton textile","Iron","Coal","None"], correct: 0 },
+
+    { question: "Which is mineral-based?", options: ["Iron industry","Textile","Sugar","None"], correct: 0 },
+    { question: "Which is public sector?", options: ["Government owned","Private owned","None","Foreign"], correct: 0 },
+    { question: "Which is private sector?", options: ["Owned by individuals","Government","None","Public"], correct: 0 },
+    { question: "Which is joint sector?", options: ["Govt + private","Only govt","None","Only private"], correct: 0 },
+    { question: "Which is largest industry?", options: ["Textile","Iron","Coal","None"], correct: 0 },
+
+    { question: "Cotton textile uses:", options: ["Cotton","Iron","Coal","None"], correct: 0 },
+    { question: "Jute industry located in:", options: ["West Bengal","Punjab","Kerala","None"], correct: 0 },
+    { question: "Sugar industry located in:", options: ["UP","Kerala","Punjab","None"], correct: 0 },
+    { question: "Iron and steel located in:", options: ["Jharkhand","Kerala","Goa","None"], correct: 0 },
+    { question: "Which is raw material?", options: ["Cotton","Cloth","None","Product"], correct: 0 },
+
+    { question: "Which is finished product?", options: ["Cloth","Cotton","None","Raw"], correct: 0 },
+    { question: "Which industry pollutes?", options: ["Chemical","Solar","Wind","None"], correct: 0 },
+    { question: "Which reduces pollution?", options: ["Treatment","Waste","None","Pollution"], correct: 0 },
+    { question: "Which industry needs power?", options: ["All industries","None","War","Trade"], correct: 0 },
+    { question: "Which is labour intensive?", options: ["Textile","Iron","None","Coal"], correct: 0 },
+
+    { question: "Which is capital intensive?", options: ["Iron and steel","Textile","None","Food"], correct: 0 },
+    { question: "Which helps economy?", options: ["Industry","War","None","Trade"], correct: 0 },
+    { question: "Which increases jobs?", options: ["Industry","War","None","Trade"], correct: 0 },
+    { question: "Which uses machinery?", options: ["Industry","War","None","Trade"], correct: 0 },
+    { question: "Which supports agriculture?", options: ["Agro industry","None","War","Trade"], correct: 0 },
+
+    { question: "Which gives clothes?", options: ["Textile","Iron","Coal","None"], correct: 0 },
+    { question: "Which gives steel?", options: ["Iron industry","Textile","None","Coal"], correct: 0 },
+    { question: "Which is heavy industry?", options: ["Iron","Textile","None","Food"], correct: 0 },
+    { question: "Which is light industry?", options: ["Textile","Iron","Coal","None"], correct: 0 },
+    { question: "Which improves production?", options: ["Technology","War","None","Trade"], correct: 0 },
+
+    { question: "Which causes pollution?", options: ["Industry","Care","None","Trees"], correct: 0 },
+    { question: "Which saves environment?", options: ["Control pollution","None","War","Trade"], correct: 0 },
+    { question: "Which uses water?", options: ["Industry","None","War","Trade"], correct: 0 },
+    { question: "Which needs transport?", options: ["Industry","None","War","Trade"], correct: 0 },
+    { question: "Which depends on raw material?", options: ["Industry","None","War","Trade"], correct: 0 },
+
+    { question: "Which depends on labour?", options: ["Industry","None","War","Trade"], correct: 0 },
+    { question: "Which depends on capital?", options: ["Industry","None","War","Trade"], correct: 0 },
+    { question: "Which depends on market?", options: ["Industry","None","War","Trade"], correct: 0 },
+    { question: "Which depends on power?", options: ["Industry","None","War","Trade"], correct: 0 },
+    { question: "Which supports development?", options: ["Industry","War","None","Trade"], correct: 0 }
+  ],
+
+  mcq80: [
+    // 🔥 1–64 NORMAL
+
+    { question: "Manufacturing means:", options: ["Producing goods","Consuming","Selling","None"], correct: 0 }, //1
+    { question: "Industry converts:", options: ["Raw to finished","Finished to raw","None","Waste"], correct: 0 }, //2
+    { question: "Basic industry:", options: ["Iron and steel","Textile","Food","None"], correct: 0 }, //3
+    { question: "Consumer industry:", options: ["Sugar","Iron","Coal","None"], correct: 0 }, //4
+    { question: "Agro-based:", options: ["Cotton textile","Iron","Coal","None"], correct: 0 }, //5
+
+    { question: "Mineral-based:", options: ["Iron","Textile","Sugar","None"], correct: 0 }, //6
+    { question: "Public sector:", options: ["Govt owned","Private","None","Foreign"], correct: 0 }, //7
+    { question: "Private sector:", options: ["Individuals","Govt","None","Public"], correct: 0 }, //8
+    { question: "Joint sector:", options: ["Govt+private","Govt","Private","None"], correct: 0 }, //9
+    { question: "Largest industry:", options: ["Textile","Iron","Coal","None"], correct: 0 }, //10
+
+    { question: "Cotton textile uses:", options: ["Cotton","Iron","Coal","None"], correct: 0 }, //11
+    { question: "Jute in:", options: ["West Bengal","Punjab","Kerala","None"], correct: 0 }, //12
+    { question: "Sugar in:", options: ["UP","Kerala","Punjab","None"], correct: 0 }, //13
+    { question: "Iron in:", options: ["Jharkhand","Kerala","Goa","None"], correct: 0 }, //14
+    { question: "Raw material:", options: ["Cotton","Cloth","None","Product"], correct: 0 }, //15
+
+    { question: "Finished product:", options: ["Cloth","Cotton","None","Raw"], correct: 0 }, //16
+    { question: "Polluting industry:", options: ["Chemical","Solar","Wind","None"], correct: 0 }, //17
+    { question: "Reduce pollution:", options: ["Treatment","Waste","None","Pollution"], correct: 0 }, //18
+    { question: "All industries need:", options: ["Power","None","War","Trade"], correct: 0 }, //19
+    { question: "Labour intensive:", options: ["Textile","Iron","None","Coal"], correct: 0 }, //20
+
+    { question: "Capital intensive:", options: ["Iron","Textile","None","Food"], correct: 0 }, //21
+    { question: "Industry helps:", options: ["Economy","War","None","Trade"], correct: 0 }, //22
+    { question: "Creates jobs:", options: ["Industry","War","None","Trade"], correct: 0 }, //23
+    { question: "Uses machines:", options: ["Industry","War","None","Trade"], correct: 0 }, //24
+    { question: "Supports farming:", options: ["Agro industry","None","War","Trade"], correct: 0 }, //25
+
+    { question: "Clothing from:", options: ["Textile","Iron","Coal","None"], correct: 0 }, //26
+    { question: "Steel from:", options: ["Iron industry","Textile","None","Coal"], correct: 0 }, //27
+    { question: "Heavy industry:", options: ["Iron","Textile","None","Food"], correct: 0 }, //28
+    { question: "Light industry:", options: ["Textile","Iron","Coal","None"], correct: 0 }, //29
+    { question: "Improve production:", options: ["Technology","War","None","Trade"], correct: 0 }, //30
+
+    { question: "Causes pollution:", options: ["Industry","Care","None","Trees"], correct: 0 }, //31
+    { question: "Saves environment:", options: ["Control pollution","None","War","Trade"], correct: 0 }, //32
+    { question: "Uses water:", options: ["Industry","None","War","Trade"], correct: 0 }, //33
+    { question: "Needs transport:", options: ["Industry","None","War","Trade"], correct: 0 }, //34
+    { question: "Needs raw material:", options: ["Industry","None","War","Trade"], correct: 0 }, //35
+
+    { question: "Needs labour:", options: ["Industry","None","War","Trade"], correct: 0 }, //36
+    { question: "Needs capital:", options: ["Industry","None","War","Trade"], correct: 0 }, //37
+    { question: "Needs market:", options: ["Industry","None","War","Trade"], correct: 0 }, //38
+    { question: "Needs power:", options: ["Industry","None","War","Trade"], correct: 0 }, //39
+    { question: "Supports development:", options: ["Industry","War","None","Trade"], correct: 0 }, //40
+
+    { question: "Which improves industry:", options: ["Infrastructure","War","None","Trade"], correct: 0 }, //41
+    { question: "Which supports transport:", options: ["Industry","War","None","Trade"], correct: 0 }, //42
+    { question: "Which builds economy:", options: ["Industry","War","None","Trade"], correct: 0 }, //43
+    { question: "Which uses resources:", options: ["Industry","War","None","Trade"], correct: 0 }, //44
+    { question: "Which provides goods:", options: ["Industry","War","None","Trade"], correct: 0 }, //45
+
+    { question: "Which increases GDP:", options: ["Industry","War","None","Trade"], correct: 0 }, //46
+    { question: "Which increases income:", options: ["Industry","War","None","Trade"], correct: 0 }, //47
+    { question: "Which supports trade:", options: ["Industry","War","None","Trade"], correct: 0 }, //48
+    { question: "Which uses energy:", options: ["Industry","War","None","Trade"], correct: 0 }, //49
+    { question: "Which improves standard:", options: ["Industry","War","None","Trade"], correct: 0 }, //50
+
+    { question: "Which increases production:", options: ["Machines","War","None","Trade"], correct: 0 }, //51
+    { question: "Which increases output:", options: ["Technology","War","None","Trade"], correct: 0 }, //52
+    { question: "Which needs skills:", options: ["Labour","War","None","Trade"], correct: 0 }, //53
+    { question: "Which increases efficiency:", options: ["Machines","War","None","Trade"], correct: 0 }, //54
+    { question: "Which supports supply:", options: ["Industry","War","None","Trade"], correct: 0 }, //55
+
+    { question: "Which uses raw:", options: ["Industry","War","None","Trade"], correct: 0 }, //56
+    { question: "Which produces finished:", options: ["Industry","War","None","Trade"], correct: 0 }, //57
+    { question: "Which supports market:", options: ["Industry","War","None","Trade"], correct: 0 }, //58
+    { question: "Which improves growth:", options: ["Industry","War","None","Trade"], correct: 0 }, //59
+    { question: "Which builds nation:", options: ["Industry","War","None","Trade"], correct: 0 }, //60
+
+    { question: "Which supports economy:", options: ["Industry","War","None","Trade"], correct: 0 }, //61
+    { question: "Which improves life:", options: ["Industry","War","None","Trade"], correct: 0 }, //62
+    { question: "Which increases jobs:", options: ["Industry","War","None","Trade"], correct: 0 }, //63
+    { question: "Which increases output:", options: ["Industry","War","None","Trade"], correct: 0 }, //64
+
+    // 🔥 65–80 ASSERTION–REASON
+
+    { question: "Assertion: Industry important. Reason: Provides goods.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //65
+    { question: "Assertion: Textile largest. Reason: Provides clothes.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //66
+    { question: "Assertion: Iron basic industry. Reason: Used in others.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //67
+    { question: "Assertion: Industry pollutes. Reason: Waste released.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //68
+    { question: "Assertion: Pollution control needed. Reason: Protect environment.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //69
+
+    { question: "Assertion: Agro industry depends farming. Reason: Uses crops.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //70
+    { question: "Assertion: Industry needs power. Reason: Machines run.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //71
+    { question: "Assertion: Transport needed. Reason: Move goods.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //72
+    { question: "Assertion: Market important. Reason: Sell goods.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //73
+    { question: "Assertion: Labour needed. Reason: Operate machines.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //74
+
+    { question: "Assertion: Technology helps. Reason: Improves production.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //75
+    { question: "Assertion: Industry creates jobs. Reason: Needs workers.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //76
+    { question: "Assertion: Industry supports economy. Reason: Generates income.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //77
+    { question: "Assertion: Machines important. Reason: Increase efficiency.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //78
+    { question: "Assertion: Infrastructure needed. Reason: Supports industry.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //79
+    { question: "Assertion: Industry builds nation. Reason: Drives development.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 } //80
+  ]
+},
+
+"lifelines-of-national-economy": {
+  mcq40: [
+    { question: "Transport is a:", options: ["Lifeline of economy","Waste","None","Trade only"], correct: 0 },
+    { question: "Communication means:", options: ["Exchange of information","Transport of goods","None","Trade"], correct: 0 },
+    { question: "Which is road transport?", options: ["Bus","Ship","Plane","None"], correct: 0 },
+    { question: "Which is rail transport?", options: ["Train","Bus","Ship","None"], correct: 0 },
+    { question: "Which is water transport?", options: ["Ship","Train","Bus","None"], correct: 0 },
+
+    { question: "Which is air transport?", options: ["Aeroplane","Bus","Train","None"], correct: 0 },
+    { question: "Golden Quadrilateral connects:", options: ["Major cities","Villages","None","Ports"], correct: 0 },
+    { question: "Which is longest highway?", options: ["NH44","NH1","NH2","None"], correct: 0 },
+    { question: "Which is cheap transport?", options: ["Water","Air","Road","None"], correct: 0 },
+    { question: "Which is fastest?", options: ["Air","Road","Rail","None"], correct: 0 },
+
+    { question: "Railways important for:", options: ["Bulk transport","Small goods","None","Mail"], correct: 0 },
+    { question: "Pipelines transport:", options: ["Oil","Passengers","None","Food"], correct: 0 },
+    { question: "Which is communication?", options: ["Internet","Train","Bus","None"], correct: 0 },
+    { question: "Mass communication:", options: ["TV","Phone","None","Letter"], correct: 0 },
+    { question: "Which is personal communication?", options: ["Letter","TV","Radio","None"], correct: 0 },
+
+    { question: "Which helps trade?", options: ["Transport","War","None","Pollution"], correct: 0 },
+    { question: "Which connects markets?", options: ["Transport","War","None","Trade"], correct: 0 },
+    { question: "Which supports economy?", options: ["Transport","War","None","Trade"], correct: 0 },
+    { question: "Which reduces distance?", options: ["Communication","War","None","Trade"], correct: 0 },
+    { question: "Which improves connectivity?", options: ["Transport","War","None","Trade"], correct: 0 },
+
+    { question: "Which is port?", options: ["Mumbai","Delhi","None","Jaipur"], correct: 0 },
+    { question: "Which is major port?", options: ["Chennai","Agra","None","Lucknow"], correct: 0 },
+    { question: "Which is land transport?", options: ["Road","Ship","Plane","None"], correct: 0 },
+    { question: "Which is pipeline transport?", options: ["Oil transport","Passenger","None","Goods"], correct: 0 },
+    { question: "Which is modern communication?", options: ["Internet","Letter","None","Post"], correct: 0 },
+
+    { question: "Which is traditional communication?", options: ["Post","Internet","None","TV"], correct: 0 },
+    { question: "Which supports business?", options: ["Transport","War","None","Pollution"], correct: 0 },
+    { question: "Which helps export?", options: ["Ports","War","None","Trade"], correct: 0 },
+    { question: "Which helps import?", options: ["Ports","War","None","Trade"], correct: 0 },
+    { question: "Which carries bulk goods?", options: ["Railways","Air","None","Road"], correct: 0 },
+
+    { question: "Which is costly?", options: ["Air transport","Water","None","Rail"], correct: 0 },
+    { question: "Which is economical?", options: ["Water transport","Air","None","Road"], correct: 0 },
+    { question: "Which helps communication?", options: ["Media","War","None","Trade"], correct: 0 },
+    { question: "Which spreads news?", options: ["TV","Train","None","Bus"], correct: 0 },
+    { question: "Which connects world?", options: ["Transport","War","None","Trade"], correct: 0 },
+
+    { question: "Which improves development?", options: ["Transport","War","None","Trade"], correct: 0 },
+    { question: "Which supports trade?", options: ["Transport","War","None","Trade"], correct: 0 },
+    { question: "Which builds economy?", options: ["Transport","War","None","Trade"], correct: 0 },
+    { question: "Which moves goods?", options: ["Transport","War","None","Trade"], correct: 0 },
+    { question: "Which moves people?", options: ["Transport","War","None","Trade"], correct: 0 }
+  ],
+
+    mcq80: [
+    // 🔥 1–64 NORMAL
+
+    { question: "Transport is:", options: ["Lifeline of economy","Waste","None","Trade"], correct: 0 }, //1
+    { question: "Communication means:", options: ["Exchange info","Transport goods","None","Trade"], correct: 0 }, //2
+    { question: "Road transport:", options: ["Bus","Ship","Plane","None"], correct: 0 }, //3
+    { question: "Rail transport:", options: ["Train","Bus","Ship","None"], correct: 0 }, //4
+    { question: "Water transport:", options: ["Ship","Train","Bus","None"], correct: 0 }, //5
+
+    { question: "Air transport:", options: ["Plane","Bus","Train","None"], correct: 0 }, //6
+    { question: "Golden Quadrilateral:", options: ["Major cities","Villages","Ports","None"], correct: 0 }, //7
+    { question: "Longest highway:", options: ["NH44","NH1","NH2","None"], correct: 0 }, //8
+    { question: "Cheapest transport:", options: ["Water","Air","Road","None"], correct: 0 }, //9
+    { question: "Fastest transport:", options: ["Air","Road","Rail","None"], correct: 0 }, //10
+
+    { question: "Railways for:", options: ["Bulk goods","Small goods","None","Mail"], correct: 0 }, //11
+    { question: "Pipeline carries:", options: ["Oil","Passengers","None","Food"], correct: 0 }, //12
+    { question: "Modern communication:", options: ["Internet","Post","None","Letter"], correct: 0 }, //13
+    { question: "Mass communication:", options: ["TV","Letter","None","Phone"], correct: 0 }, //14
+    { question: "Personal communication:", options: ["Letter","TV","Radio","None"], correct: 0 }, //15
+
+    { question: "Transport helps:", options: ["Trade","War","None","Pollution"], correct: 0 }, //16
+    { question: "Connect markets:", options: ["Transport","War","None","Trade"], correct: 0 }, //17
+    { question: "Supports economy:", options: ["Transport","War","None","Trade"], correct: 0 }, //18
+    { question: "Reduces distance:", options: ["Communication","War","None","Trade"], correct: 0 }, //19
+    { question: "Improves connectivity:", options: ["Transport","War","None","Trade"], correct: 0 }, //20
+
+    { question: "Major port:", options: ["Mumbai","Delhi","None","Jaipur"], correct: 0 }, //21
+    { question: "Another port:", options: ["Chennai","Agra","None","Lucknow"], correct: 0 }, //22
+    { question: "Land transport:", options: ["Road","Ship","Plane","None"], correct: 0 }, //23
+    { question: "Pipeline transport:", options: ["Oil","Passenger","None","Goods"], correct: 0 }, //24
+    { question: "Traditional communication:", options: ["Post","Internet","None","TV"], correct: 0 }, //25
+
+    { question: "Supports business:", options: ["Transport","War","None","Pollution"], correct: 0 }, //26
+    { question: "Helps export:", options: ["Ports","War","None","Trade"], correct: 0 }, //27
+    { question: "Helps import:", options: ["Ports","War","None","Trade"], correct: 0 }, //28
+    { question: "Bulk goods:", options: ["Railways","Air","None","Road"], correct: 0 }, //29
+    { question: "Costly transport:", options: ["Air","Water","None","Rail"], correct: 0 }, //30
+
+    { question: "Economical transport:", options: ["Water","Air","None","Road"], correct: 0 }, //31
+    { question: "Spreads news:", options: ["TV","Train","None","Bus"], correct: 0 }, //32
+    { question: "Connects world:", options: ["Transport","War","None","Trade"], correct: 0 }, //33
+    { question: "Improves development:", options: ["Transport","War","None","Trade"], correct: 0 }, //34
+    { question: "Supports trade:", options: ["Transport","War","None","Trade"], correct: 0 }, //35
+
+    { question: "Moves goods:", options: ["Transport","War","None","Trade"], correct: 0 }, //36
+    { question: "Moves people:", options: ["Transport","War","None","Trade"], correct: 0 }, //37
+    { question: "Which is inland waterway:", options: ["River","Road","None","Air"], correct: 0 }, //38
+    { question: "Which uses rails:", options: ["Train","Ship","None","Plane"], correct: 0 }, //39
+    { question: "Which uses roads:", options: ["Bus","Ship","None","Plane"], correct: 0 }, //40
+
+    { question: "Which uses sky:", options: ["Plane","Train","None","Bus"], correct: 0 }, //41
+    { question: "Which uses sea:", options: ["Ship","Bus","None","Train"], correct: 0 }, //42
+    { question: "Which improves connectivity:", options: ["Roads","War","None","Trade"], correct: 0 }, //43
+    { question: "Which reduces cost:", options: ["Water transport","Air","None","Road"], correct: 0 }, //44
+    { question: "Which increases speed:", options: ["Air transport","Road","None","Rail"], correct: 0 }, //45
+
+    { question: "Which supports communication:", options: ["Media","War","None","Trade"], correct: 0 }, //46
+    { question: "Which supports economy:", options: ["Transport","War","None","Trade"], correct: 0 }, //47
+    { question: "Which increases trade:", options: ["Transport","War","None","Trade"], correct: 0 }, //48
+    { question: "Which connects regions:", options: ["Transport","War","None","Trade"], correct: 0 }, //49
+    { question: "Which builds nation:", options: ["Transport","War","None","Trade"], correct: 0 }, //50
+
+    { question: "Which supports tourism:", options: ["Transport","War","None","Trade"], correct: 0 }, //51
+    { question: "Which improves economy:", options: ["Transport","War","None","Trade"], correct: 0 }, //52
+    { question: "Which carries passengers:", options: ["Transport","War","None","Trade"], correct: 0 }, //53
+    { question: "Which carries goods:", options: ["Transport","War","None","Trade"], correct: 0 }, //54
+    { question: "Which increases growth:", options: ["Transport","War","None","Trade"], correct: 0 }, //55
+
+    { question: "Which connects cities:", options: ["Roads","War","None","Trade"], correct: 0 }, //56
+    { question: "Which connects countries:", options: ["Airways","War","None","Trade"], correct: 0 }, //57
+    { question: "Which connects villages:", options: ["Roads","War","None","Trade"], correct: 0 }, //58
+    { question: "Which supports trade:", options: ["Ports","War","None","Trade"], correct: 0 }, //59
+    { question: "Which supports economy:", options: ["Lifelines","War","None","Trade"], correct: 0 }, //60
+
+    { question: "Which helps exchange:", options: ["Communication","War","None","Trade"], correct: 0 }, //61
+    { question: "Which spreads info:", options: ["Media","War","None","Trade"], correct: 0 }, //62
+    { question: "Which reduces gap:", options: ["Transport","War","None","Trade"], correct: 0 }, //63
+    { question: "Which improves link:", options: ["Connectivity","War","None","Trade"], correct: 0 }, //64
+
+    // 🔥 65–80 ASSERTION–REASON
+
+    { question: "Assertion: Transport important. Reason: Connects places.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //65
+    { question: "Assertion: Communication useful. Reason: Exchanges info.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //66
+    { question: "Assertion: Railways carry bulk. Reason: Large capacity.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //67
+    { question: "Assertion: Airways fastest. Reason: High speed.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //68
+    { question: "Assertion: Water cheapest. Reason: Low cost.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //69
+
+    { question: "Assertion: Ports important. Reason: Help trade.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //70
+    { question: "Assertion: Pipelines useful. Reason: Carry oil.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //71
+    { question: "Assertion: Roads connect villages. Reason: Easy access.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //72
+    { question: "Assertion: Media spreads news. Reason: Mass communication.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //73
+    { question: "Assertion: Transport supports economy. Reason: Moves goods.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //74
+
+    { question: "Assertion: Connectivity important. Reason: Links regions.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //75
+    { question: "Assertion: Trade depends transport. Reason: Moves goods.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //76
+    { question: "Assertion: Air costly. Reason: Fast speed.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //77
+    { question: "Assertion: Water slow. Reason: Low speed.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //78
+    { question: "Assertion: Transport reduces distance. Reason: Improves links.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //79
+    { question: "Assertion: Lifelines build economy. Reason: Enable trade.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 } //80
+  ]
+},
 
 
+  
 
 }
 
