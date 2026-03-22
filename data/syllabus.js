@@ -644,15 +644,26 @@ English: {
 /* ---------- HINDI ---------- */
 Hindi: {
   Sparsh: [
-      {name: "साखी", video: "https://www.youtube.com/results?search_query=sakhi+class+10", pyq: "https://www.google.com/search?q=sakhi+class+10+questions", prerequisites: ["Poetry"] },
-      {name: "पद" , video: "https://www.youtube.com/results?search_query=pad+class+10", pyq: "https://www.google.com/search?q=pad+class+10+questions", prerequisites: ["Poetry"] },
+    { name: "बड़े भाई साहब", video: "https://www.youtube.com/results?search_query=bade+bhai+sahab+class+10+sparsh", pyq: "https://www.google.com/search?q=bade+bhai+sahab+class+10+questions", prerequisites: ["Hindi prose"] },
+    { name: "डायरी का एक पन्ना", video: "https://www.youtube.com/results?search_query=diary+ka+ek+panna+class+10+sparsh", pyq: "https://www.google.com/search?q=diary+ka+ek+panna+class+10+questions", prerequisites: ["Hindi prose"] },
+    { name: "तताँरा-वामीरो कथा", video: "https://www.youtube.com/results?search_query=tatara+vamiro+katha+class+10+sparsh", pyq: "https://www.google.com/search?q=tatara+vamiro+katha+class+10+questions", prerequisites: ["Hindi prose"] },
+    { name: "तीसरी कसम के शिल्पकार शैलेंद्र", video: "https://www.youtube.com/results?search_query=teesri+kasam+shailendra+class+10+sparsh", pyq: "https://www.google.com/search?q=teesri+kasam+shailendra+class+10+questions", prerequisites: ["Hindi prose"] },
+    { name: "अब कहाँ दूसरे के दुख से दुखी होने वाले", video: "https://www.youtube.com/results?search_query=ab+kahan+doosre+ke+dukh+class+10+sparsh", pyq: "https://www.google.com/search?q=ab+kahan+doosre+ke+dukh+class+10+questions", prerequisites: ["Hindi prose"] },
+    { name: "पतझर में टूटी पत्तियाँ", video: "https://www.youtube.com/results?search_query=patjhar+mein+tooti+pattiyan+class+10+sparsh", pyq: "https://www.google.com/search?q=patjhar+mein+tooti+pattiyan+class+10+questions", prerequisites: ["Hindi prose"] },
+    { name: "कारतूस", video: "https://www.youtube.com/results?search_query=kartoos+class+10+sparsh", pyq: "https://www.google.com/search?q=kartoos+class+10+questions", prerequisites: ["Hindi prose"] },
+    { name: "कबीर की साखियाँ", video: "https://www.youtube.com/results?search_query=kabir+ki+sakhiyan+class+10+sparsh", pyq: "https://www.google.com/search?q=kabir+ki+sakhiyan+class+10+questions", prerequisites: ["Hindi poetry"] },
+    { name: "मीरा के पद", video: "https://www.youtube.com/results?search_query=meera+ke+pad+class+10+sparsh", pyq: "https://www.google.com/search?q=meera+ke+pad+class+10+questions", prerequisites: ["Hindi poetry"] },
+    { name: "मैथिलीशरण गुप्त – मनुष्यता", video: "https://www.youtube.com/results?search_query=manushyata+maithilisharan+gupt+class+10+sparsh", pyq: "https://www.google.com/search?q=manushyata+class+10+questions", prerequisites: ["Hindi poetry"] },
+    { name: "सुमित्रानंदन पंत – पर्वत प्रदेश में पावस", video: "https://www.youtube.com/results?search_query=parvat+pradesh+mein+pavas+class+10+sparsh", pyq: "https://www.google.com/search?q=parvat+pradesh+mein+pavas+class+10+questions", prerequisites: ["Hindi poetry"] },
+    { name: "वीरेन डंगवाल – तोप", video: "https://www.youtube.com/results?search_query=top+veeren+dangwal+class+10+sparsh", pyq: "https://www.google.com/search?q=top+class+10+sparsh+questions", prerequisites: ["Hindi poetry"] },
+    { name: "रवींद्रनाथ ठाकुर – आत्मत्राण", video: "https://www.youtube.com/results?search_query=aatmatran+rabindranath+class+10+sparsh", pyq: "https://www.google.com/search?q=aatmatran+class+10+questions", prerequisites: ["Hindi poetry"] },
   ],
-
   Sanchayan: [
-    { name: "हरिहर काका", video: "https://www.youtube.com/results?search_query=harihar+kaka", pyq: "https://www.google.com/search?q=harihar+kaka+questions", prerequisites: ["Story"] },
-    { name: "टोपी शुक्ला", video: "https://www.youtube.com/results?search_query=topi+shukla", pyq: "https://www.google.com/search?q=topi+shukla+questions", prerequisites: ["Narrative"] }
-  ]
-}
+    { name: "हरिहर काका", video: "https://www.youtube.com/results?search_query=harihar+kaka+class+10+sanchayan", pyq: "https://www.google.com/search?q=harihar+kaka+class+10+questions", prerequisites: ["Hindi prose"] },
+    { name: "सपनों के से दिन", video: "https://www.youtube.com/results?search_query=sapno+ke+se+din+class+10+sanchayan", pyq: "https://www.google.com/search?q=sapno+ke+se+din+class+10+questions", prerequisites: ["Hindi prose"] },
+    { name: "टोपी शुक्ला", video: "https://www.youtube.com/results?search_query=topi+shukla+class+10+sanchayan", pyq: "https://www.google.com/search?q=topi+shukla+class+10+questions", prerequisites: ["Hindi prose"] },
+  ],
+},
 
 }
 }
