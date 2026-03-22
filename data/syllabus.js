@@ -621,8 +621,6 @@ English: {
     { name: "Nelson Mandela: Long Walk to Freedom", video: "https://www.youtube.com/results?search_query=nelson+mandela+class+10", pyq: "https://www.google.com/search?q=nelson+mandela+class+10+questions", prerequisites: ["History context"] },
     { name: "Two Stories About Flying", video: "https://www.youtube.com/results?search_query=two+stories+about+flying+class+10", pyq: "https://www.google.com/search?q=two+stories+about+flying+questions", prerequisites: ["Story understanding"] },
     { name: "From the Diary of Anne Frank", video: "https://www.youtube.com/results?search_query=anne+frank+class+10", pyq: "https://www.google.com/search?q=anne+frank+class+10+questions", prerequisites: ["World War II"] },
-    { name: "The Hundred Dresses I", video: "https://www.youtube.com/results?search_query=hundred+dresses+class+10", pyq: "https://www.google.com/search?q=hundred+dresses+class+10+questions", prerequisites: ["Story comprehension"] },
-    { name: "The Hundred Dresses II", video: "https://www.youtube.com/results?search_query=hundred+dresses+2+class+10", pyq: "https://www.google.com/search?q=hundred+dresses+2+questions", prerequisites: ["Part 1"] },
     { name: "Glimpses of India", video: "https://www.youtube.com/results?search_query=glimpses+of+india+class+10", pyq: "https://www.google.com/search?q=glimpses+of+india+questions", prerequisites: ["Geography basics"] },
     { name: "Mijbil the Otter", video: "https://www.youtube.com/results?search_query=mijbil+the+otter+class+10", pyq: "https://www.google.com/search?q=mijbil+the+otter+questions", prerequisites: ["Animal stories"] },
     { name: "Madam Rides the Bus", video: "https://www.youtube.com/results?search_query=madam+rides+the+bus+class+10", pyq: "https://www.google.com/search?q=madam+rides+the+bus+questions", prerequisites: ["Narrative understanding"] },
@@ -638,20 +636,16 @@ English: {
     { name: "Footprints Without Feet", video: "https://www.youtube.com/results?search_query=footprints+without+feet+class+10", pyq: "https://www.google.com/search?q=footprints+without+feet+questions", prerequisites: ["Science fiction"] },
     { name: "The Making of a Scientist", video: "https://www.youtube.com/results?search_query=making+of+a+scientist+class+10", pyq: "https://www.google.com/search?q=making+of+a+scientist+questions", prerequisites: ["Biology basics"] },
     { name: "The Necklace", video: "https://www.youtube.com/results?search_query=the+necklace+class+10", pyq: "https://www.google.com/search?q=the+necklace+questions", prerequisites: ["Story"] },
-    { name: "The Hack Driver", video: "https://www.youtube.com/results?search_query=hack+driver+class+10", pyq: "https://www.google.com/search?q=hack+driver+questions", prerequisites: ["Humor"] },
     { name: "Bholi", video: "https://www.youtube.com/results?search_query=bholi+class+10", pyq: "https://www.google.com/search?q=bholi+questions", prerequisites: ["Social themes"] },
     { name: "The Book That Saved the Earth", video: "https://www.youtube.com/results?search_query=book+that+saved+the+earth+class+10", pyq: "https://www.google.com/search?q=book+that+saved+the+earth+questions", prerequisites: ["Drama"] }
-  ]
+  ],
 },
 
 /* ---------- HINDI ---------- */
 Hindi: {
   Sparsh: [
-    { name: "सूरदास", video: "https://www.youtube.com/results?search_query=soordas+class+10", pyq: "https://www.google.com/search?q=soordas+questions", prerequisites: ["Poetry"] },
-    { name: "मीरा", video: "https://www.youtube.com/results?search_query=meera+class+10", pyq: "https://www.google.com/search?q=meera+questions", prerequisites: ["Poetry"] },
-    { name: "पर्वत प्रदेश में पावस", video: "https://www.youtube.com/results?search_query=parvat+pradesh+mein+pavas", pyq: "https://www.google.com/search?q=parvat+pradesh+questions", prerequisites: ["Poetry"] },
-    { name: "कर चले हम फिदा", video: "https://www.youtube.com/results?search_query=kar+chale+hum+fida", pyq: "https://www.google.com/search?q=kar+chale+hum+fida+questions", prerequisites: ["Patriotism"] },
-    { name: "आत्मत्राण", video: "https://www.youtube.com/results?search_query=aatmatran", pyq: "https://www.google.com/search?q=aatmatran+questions", prerequisites: ["Poetry"] }
+      {name: "साखी", video: "https://www.youtube.com/results?search_query=sakhi+class+10", pyq: "https://www.google.com/search?q=sakhi+class+10+questions", prerequisites: ["Poetry"] },
+      {name: "पद" , video: "https://www.youtube.com/results?search_query=pad+class+10", pyq: "https://www.google.com/search?q=pad+class+10+questions", prerequisites: ["Poetry"] },
   ],
 
   Sanchayan: [
