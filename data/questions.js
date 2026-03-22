@@ -4864,112 +4864,59 @@ mcq80: [
     { question: "Assertion: Depression caused unemployment. Reason: Industries closed.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //78
     { question: "Assertion: Globalisation increases interdependence. Reason: Countries rely on each other.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //79
     { question: "Assertion: Global economy exists. Reason: Trade connects nations.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 } //80
-  ]
-},
-
-"making-of-a-global-world": {
-  mcq80: [
-    // 🔥 1–64 NORMAL MCQs
-
-    { question: "Globalisation means:", options: ["Integration","Isolation","War","None"], correct: 0 }, //1
-    { question: "Silk Route linked:", options: ["Asia-Europe-Africa","Only India","Only China","Only Europe"], correct: 0 }, //2
-    { question: "Potato came from:", options: ["America","India","China","Africa"], correct: 0 }, //3
-    { question: "Vasco da Gama reached India in:", options: ["1498","1500","1600","1700"], correct: 0 }, //4
-    { question: "Corn is:", options: ["Maize","Rice","Wheat","Barley"], correct: 0 }, //5
-
-    { question: "Industrial Revolution began in:", options: ["Britain","India","USA","China"], correct: 0 }, //6
-    { question: "Indentured labour means:", options: ["Bonded labour","Free labour","Skilled","None"], correct: 0 }, //7
-    { question: "Girmitiyas were:", options: ["Indentured workers","Kings","Traders","None"], correct: 0 }, //8
-    { question: "Indentured labour ended in:", options: ["1921","1919","1930","1947"], correct: 0 }, //9
-    { question: "Rinderpest affected:", options: ["Cattle","Humans","Trade","War"], correct: 0 }, //10
-
-    { question: "Rinderpest spread in:", options: ["Africa","Asia","Europe","America"], correct: 0 }, //11
-    { question: "Cash crops grown for:", options: ["Market","Food","Trade only","None"], correct: 0 }, //12
-    { question: "Opium exported to:", options: ["China","USA","Europe","Africa"], correct: 0 }, //13
-    { question: "Britain exported:", options: ["Manufactured goods","Raw","Food","None"], correct: 0 }, //14
-    { question: "19th century trade used:", options: ["Railways","None","War","Trade ban"], correct: 0 }, //15
-
-    { question: "Great Depression year:", options: ["1929","1919","1939","1945"], correct: 0 }, //16
-    { question: "Depression began in:", options: ["USA","India","China","Britain"], correct: 0 }, //17
-    { question: "Farmers suffered due to:", options: ["Price fall","Rise","War","None"], correct: 0 }, //18
-    { question: "Banks collapsed in:", options: ["Depression","War","Trade","None"], correct: 0 }, //19
-    { question: "USA recovery via:", options: ["New Deal","War","Trade","None"], correct: 0 }, //20
-
-    { question: "WWII ended in:", options: ["1945","1939","1929","1919"], correct: 0 }, //21
-    { question: "IMF created to:", options: ["Stabilize economy","War","Trade","None"], correct: 0 }, //22
-    { question: "World Bank gives:", options: ["Loans","War","Trade","None"], correct: 0 }, //23
-    { question: "WTO promotes:", options: ["Trade","War","Isolation","None"], correct: 0 }, //24
-    { question: "Modern globalisation uses:", options: ["Technology","War","Trade only","None"], correct: 0 }, //25
-
-    { question: "Migration due to:", options: ["Work","War","Trade","All"], correct: 3 }, //26
-    { question: "Europe migration:", options: ["Mass","Low","None","Trade"], correct: 0 }, //27
-    { question: "USA imported:", options: ["Wheat","Rice","Barley","None"], correct: 0 }, //28
-    { question: "Steamship helped:", options: ["Trade","War","None","Isolation"], correct: 0 }, //29
-    { question: "Railways helped:", options: ["Transport","War","Trade ban","None"], correct: 0 }, //30
-
-    { question: "Which crop demand rose:", options: ["Cotton","Rice","None","Barley"], correct: 0 }, //31
-    { question: "Which country industrial leader:", options: ["Britain","India","China","Africa"], correct: 0 }, //32
-    { question: "Which was colonised:", options: ["India","USA","Britain","None"], correct: 0 }, //33
-    { question: "Colonies provided:", options: ["Raw material","War","Trade","None"], correct: 0 }, //34
-    { question: "Colonies bought:", options: ["Finished goods","War","Trade","None"], correct: 0 }, //35
-
-    { question: "Which disease spread:", options: ["Rinderpest","Plague","Covid","None"], correct: 0 }, //36
-    { question: "Africa economy affected by:", options: ["Cattle loss","Trade","War","None"], correct: 0 }, //37
-    { question: "Indentured workers went to:", options: ["Plantations","Cities","Villages","None"], correct: 0 }, //38
-    { question: "Which labour forced:", options: ["Indentured","Free","None","Skilled"], correct: 0 }, //39
-    { question: "Indentured system ended due to:", options: ["Criticism","War","Trade","None"], correct: 0 }, //40
-
-    { question: "Global trade increased due to:", options: ["Transport","War","None","Trade ban"], correct: 0 }, //41
-    { question: "Which economy collapsed:", options: ["USA","India","China","None"], correct: 0 }, //42
-    { question: "Which saw unemployment:", options: ["USA","India","China","None"], correct: 0 }, //43
-    { question: "Which policy used:", options: ["Protectionism","Free trade","None","War"], correct: 0 }, //44
-    { question: "Tariffs increased to:", options: ["Protect economy","War","Trade","None"], correct: 0 }, //45
-
-    { question: "Which reduced imports:", options: ["USA","India","China","None"], correct: 0 }, //46
-    { question: "Which was global crisis:", options: ["Depression","War","Trade","None"], correct: 0 }, //47
-    { question: "Which caused poverty:", options: ["Depression","Trade","War","None"], correct: 0 }, //48
-    { question: "Which helped recovery:", options: ["Govt policies","War","Trade","None"], correct: 0 }, //49
-    { question: "Which promoted unity:", options: ["Globalisation","War","Trade","None"], correct: 0 }, //50
-
-    { question: "Which increased interdependence:", options: ["Globalisation","War","Trade","None"], correct: 0 }, //51
-    { question: "Which improved trade:", options: ["Technology","War","None","Isolation"], correct: 0 }, //52
-    { question: "Which system global:", options: ["Capitalism","War","None","Trade"], correct: 0 }, //53
-    { question: "Which reduced distance:", options: ["Transport","War","Trade","None"], correct: 0 }, //54
-    { question: "Which improved communication:", options: ["Telegraph","War","Trade","None"], correct: 0 }, //55
-
-    { question: "Which linked world:", options: ["Trade","War","Isolation","None"], correct: 0 }, //56
-    { question: "Which brought change:", options: ["Globalisation","War","None","Trade"], correct: 0 }, //57
-    { question: "Which increased jobs:", options: ["Industry","War","Trade","None"], correct: 0 }, //58
-    { question: "Which helped economy:", options: ["Trade","War","None","Isolation"], correct: 0 }, //59
-    { question: "Which spread ideas:", options: ["Migration","War","Trade","None"], correct: 0 }, //60
-
-    { question: "Which connected markets:", options: ["Globalisation","War","None","Trade"], correct: 0 }, //61
-    { question: "Which caused migration:", options: ["Work","War","Trade","All"], correct: 3 }, //62
-    { question: "Which was world market:", options: ["Global economy","War","None","Trade"], correct: 0 }, //63
-    { question: "Which increased trade:", options: ["Industrialisation","War","None","Trade"], correct: 0 }, //64
-
-    // 🔥 65–80 ASSERTION–REASON (16)
-
-    { question: "Assertion: Globalisation connects countries. Reason: Through trade and technology.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //65
-    { question: "Assertion: Silk route important. Reason: Connected regions.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //66
-    { question: "Assertion: Potato changed diet. Reason: High nutrition.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //67
-    { question: "Assertion: Indentured labour ended. Reason: Criticism.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //68
-    { question: "Assertion: Rinderpest harmful. Reason: Killed cattle.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //69
-
-    { question: "Assertion: Depression global. Reason: Started USA.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //70
-    { question: "Assertion: Farmers suffered. Reason: Price fall.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //71
-    { question: "Assertion: IMF formed. Reason: Stabilize economy.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //72
-    { question: "Assertion: WTO promotes trade. Reason: Free markets.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //73
-    { question: "Assertion: Technology boosts trade. Reason: Faster communication.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //74
-
-    { question: "Assertion: Migration increased. Reason: Job search.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //75
-    { question: "Assertion: Colonies exploited. Reason: Raw materials taken.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //76
-    { question: "Assertion: Trade expanded. Reason: Transport improved.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //77
-    { question: "Assertion: Depression caused unemployment. Reason: Industries closed.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //78
-    { question: "Assertion: Globalisation increases interdependence. Reason: Countries rely on each other.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 }, //79
-    { question: "Assertion: Global economy exists. Reason: Trade connects nations.", options: ["Both true & explains","Both true not explain","A true R false","A false R true"], correct: 0 } //80
   ],
+},
+ 
+"age-of-industrialisation": {
+  mcq40: [
+    { question: "Industrial Revolution began in:", options: ["Britain","India","USA","China"], correct: 0 },
+    { question: "First industrialised country:", options: ["Britain","France","Germany","USA"], correct: 0 },
+    { question: "Proto-industrialisation means:", options: ["Pre-industrial production","Modern industry","Factory work","None"], correct: 0 },
+    { question: "Merchants gave raw materials to:", options: ["Rural households","Factories","Shops","None"], correct: 0 },
+    { question: "Who benefited from proto-industrialisation?", options: ["Peasants","Kings","Clergy","None"], correct: 0 },
 
+    { question: "Which factor increased population?", options: ["Food supply","War","Trade","None"], correct: 0 },
+    { question: "Which industry grew first?", options: ["Cotton","Iron","Steel","Coal"], correct: 0 },
+    { question: "Who invented spinning jenny?", options: ["James Hargreaves","Arkwright","Crompton","None"], correct: 0 },
+    { question: "Power loom invented by:", options: ["Cartwright","Hargreaves","Arkwright","None"], correct: 0 },
+    { question: "Steam engine improved by:", options: ["James Watt","Stephenson","None","Faraday"], correct: 0 },
+
+    { question: "Factories grew due to:", options: ["Machines","War","Trade","None"], correct: 0 },
+    { question: "Hand labour was preferred because:", options: ["Cheap","Strong","Fast","None"], correct: 0 },
+    { question: "Industrialists feared:", options: ["Unemployment","War","Trade","None"], correct: 0 },
+    { question: "Which sector grew slowly?", options: ["Clothing","Cotton","Iron","Coal"], correct: 0 },
+    { question: "Which was seasonal industry?", options: ["Clothing","Iron","Coal","Steel"], correct: 0 },
+
+    { question: "Which workers were needed?", options: ["Skilled","Unskilled","None","Only farmers"], correct: 0 },
+    { question: "Which was not factory advantage?", options: ["Low cost","High skill","Mass production","None"], correct: 1 },
+    { question: "Which industry spread globally?", options: ["Textile","Iron","Coal","Steel"], correct: 0 },
+    { question: "Indian textiles famous for:", options: ["Quality","Price","Color","None"], correct: 0 },
+    { question: "Which country imported Indian textiles?", options: ["Britain","China","USA","None"], correct: 0 },
+
+    { question: "Indian weavers were affected by:", options: ["British imports","War","Trade","None"], correct: 0 },
+    { question: "Which product replaced Indian textiles?", options: ["Machine goods","Hand goods","None","Silk"], correct: 0 },
+    { question: "Which was main raw material?", options: ["Cotton","Rice","Wheat","None"], correct: 0 },
+    { question: "Which grew in India?", options: ["Cotton mills","Coal","Steel","None"], correct: 0 },
+    { question: "First cotton mill in India:", options: ["1854","1900","1800","1700"], correct: 0 },
+
+    { question: "Jute mills were in:", options: ["Bengal","Punjab","Delhi","None"], correct: 0 },
+    { question: "Industrial labour came from:", options: ["Villages","Cities","Foreign","None"], correct: 0 },
+    { question: "Which festival affected work?", options: ["Seasonal","War","Trade","None"], correct: 0 },
+    { question: "Workers faced:", options: ["Low wages","High pay","None","Luxury"], correct: 0 },
+    { question: "Which group controlled industry?", options: ["Industrialists","Workers","Farmers","None"], correct: 0 },
+
+    { question: "Which symbol used in ads?", options: ["Quality","War","Trade","None"], correct: 0 },
+    { question: "Brands built:", options: ["Trust","War","Trade","None"], correct: 0 },
+    { question: "Labels used for:", options: ["Marketing","War","Trade","None"], correct: 0 },
+    { question: "Which art used in ads?", options: ["Images","War","Trade","None"], correct: 0 },
+    { question: "Which product promoted?", options: ["Goods","War","Trade","None"], correct: 0 },
+
+    { question: "Which increased demand?", options: ["Population","War","Trade","None"], correct: 0 },
+    { question: "Which improved transport?", options: ["Railways","War","Trade","None"], correct: 0 },
+    { question: "Which helped industry grow?", options: ["Technology","War","Trade","None"], correct: 0 },
+    { question: "Which changed economy?", options: ["Industrialisation","War","Trade","None"], correct: 0 },
+    { question: "Which created jobs?", options: ["Factories","War","Trade","None"], correct: 0 }
+  ],
 
   mcq80: [
     // 🔥 1–64 NORMAL

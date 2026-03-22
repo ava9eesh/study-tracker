@@ -24,23 +24,29 @@ function shuffleQuestion(q) {
 }
 
 export default function QuizPage() {
-  const { lesson } = useParams(); // ✅ CORRECT
+  const params = useParams();
+
+  // ✅ FIX: supports BOTH lesson & lessonId (NO BREAK)
+  const lesson = params.lessonId || params.lesson;
+
   const searchParams = useSearchParams();
   const marks = Number(searchParams.get("marks")) || 40;
 
   const mode = marks === 80 ? "mcq80" : "mcq40";
 
-  // 🔥 fallback for _ vs -
-  const fixedLessonId = lesson
+  // ✅ STRONG NORMALIZATION (fixes ALL mismatches)
+  const normalizedId = lesson
     ?.toLowerCase()
-    .replace(/-/g, "_");
+    .replace(/\s+/g, "-")
+    .replace(/_/g, "-");
 
   const lessonBlock =
     QUESTION_BANK[lesson] ||
-    QUESTION_BANK[fixedLessonId];
+    QUESTION_BANK[normalizedId];
 
-  // ✅ DEBUG (safe now)
+  // ✅ DEBUG
   console.log("LESSON:", lesson);
+  console.log("NORMALIZED:", normalizedId);
   console.log("AVAILABLE:", Object.keys(QUESTION_BANK));
 
   if (!lessonBlock || !lessonBlock[mode]) {
@@ -113,7 +119,9 @@ export default function QuizPage() {
                       <li key={idx} className={color}>
                         {opt}
                         {idx === correctAns && " ✔"}
-                        {idx === userAns && userAns !== correctAns && " ✖"}
+                        {idx === userAns &&
+                          userAns !== correctAns &&
+                          " ✖"}
                       </li>
                     );
                   })}
