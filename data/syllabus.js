@@ -645,7 +645,7 @@ Hindi: {
   Sparsh: [
     { name: "Bade Bhai Sahab", video: "https://www.youtube.com/results?search_query=bade+bhai+sahab+class+10+sparsh", pyq: "https://www.google.com/search?q=bade+bhai+sahab+class+10+questions", prerequisites: ["Hindi prose"] },
     { name: "Diary Ka Ek Panna", video: "https://www.youtube.com/results?search_query=diary+ka+ek+panna+class+10+sparsh", pyq: "https://www.google.com/search?q=diary+ka+ek+panna+class+10+questions", prerequisites: ["Hindi prose"] },
-    { name: "Tantara Vamiro Katha", video: "https://www.youtube.com/results?search_query=tatara+vamiro+katha+class+10+sparsh", pyq: "https://www.google.com/search?q=tatara+vamiro+katha+class+10+questions", prerequisites: ["Hindi prose"] },
+    { name: "Tatara Vamiro Katha", video: "https://www.youtube.com/results?search_query=tatara+vamiro+katha+class+10+sparsh", pyq: "https://www.google.com/search?q=tatara+vamiro+katha+class+10+questions", prerequisites: ["Hindi prose"] },
     { name: "Tisri Kasam Ke Shilpakar Shailendra", video: "https://www.youtube.com/results?search_query=teesri+kasam+shailendra+class+10+sparsh", pyq: "https://www.google.com/search?q=teesri+kasam+shailendra+class+10+questions", prerequisites: ["Hindi prose"] },
     { name: "Ab Kaha Dusre Ke Dukh Me Dukhi Hone Wale", video: "https://www.youtube.com/results?search_query=ab+kahan+doosre+ke+dukh+class+10+sparsh", pyq: "https://www.google.com/search?q=ab+kahan+doosre+ke+dukh+class+10+questions", prerequisites: ["Hindi prose"] },
     { name: "Patjhar Mein Tooti Pattiyan", video: "https://www.youtube.com/results?search_query=patjhar+mein+tooti+pattiyan+class+10+sparsh", pyq: "https://www.google.com/search?q=patjhar+mein+tooti+pattiyan+class+10+questions", prerequisites: ["Hindi prose"] },
