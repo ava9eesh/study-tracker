@@ -36,7 +36,7 @@ export default function Page() {
         fontFamily: "'DM Mono', monospace",
         lineHeight: "1.8",
       }}>
-        Built by Avaneesh Shinde <br />
+        Built by Team Study Tracker <br />
         Contact: <a href = "mailto:studytracker@yahoo.com">studytracker@yahoo.com</a>
       </footer>
     </>

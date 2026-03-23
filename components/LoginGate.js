@@ -30,9 +30,9 @@ if (!user) {
         </button>
 
         <p className="text-sm text-gray-400">
-          Built by Avaneesh Shinde
+          Built by Team Study Tracker <br />
           <br />
-          Contact: <span className="text-blue-400">i_love_zandu_bam</span>
+          Contact: <span className="text-blue-400">studytracker@yahoo.com</span>
         </p>
 
       </div>
