@@ -614,7 +614,6 @@ export const syllabus = {
   },
 
   /* ---------- ENGLISH ---------- */
-  /* ---------- ENGLISH ---------- */
 English: {
   FirstFlight: [
     { name: "A Letter to God", video: "https://www.youtube.com/results?search_query=a+letter+to+god+class+10", pyq: "https://www.google.com/search?q=a+letter+to+god+class+10+questions", prerequisites: ["Reading comprehension"] },
