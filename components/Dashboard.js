@@ -13,10 +13,16 @@ const STATUS_CONFIG = {
 };
 
 const SUBJECT_TOTALS = {
-  Science: 13, Mathematics: 13, SST: 20, English: 25, Hindi: 14,
-  History: 5, Civics: 6, Geography: 7, Economics: 5,
-  FirstFlight: 11, Footprints: 10, Beehive: 17, Moments: 9,
-  Sparsh: 11, Sanchayan: 4,
+  "9": {
+    Science: 12, Mathematics: 10, SST: 18, English: 25, Hindi: 15,
+    History: 5, Civics: 5, Geography: 6, Economics: 4,
+    Beehive: 11, Moments: 9, Sparsh: 11, Sanchayan: 4,
+  },
+  "10": {
+    Science: 13, Mathematics: 14, SST: 23, English: 18, Hindi: 16,
+    History: 5, Civics: 6, Geography: 7, Economics: 5,
+    FirstFlight: 9, Footprints: 9, Sparsh: 13, Sanchayan: 3,
+  },
 };
 
 const SUBJECT_ICONS = {
@@ -50,6 +56,21 @@ export default function Dashboard() {
     if (!confirm("Reset all progress for this class?")) return;
     setLessonData({});
     localStorage.removeItem(`lessonData_class${currentClass}`);
+  };
+
+  // Check if a node contains any lesson matching the search
+  const nodeHasMatch = (node, query) => {
+    if (!query) return false;
+    if (Array.isArray(node)) {
+      return node.some((l) => {
+        const name = typeof l === "string" ? l : l.name;
+        return name.toLowerCase().includes(query.toLowerCase());
+      });
+    }
+    if (typeof node === "object" && node !== null) {
+      return Object.values(node).some((v) => nodeHasMatch(v, query));
+    }
+    return false;
   };
 
   const toggle = (key) => setOpen((p) => ({ ...p, [key]: !p[key] }));
@@ -103,7 +124,7 @@ export default function Dashboard() {
         {/* Lesson name + status dot */}
         <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.75rem" }}>
           <span style={{ width: 8, height: 8, borderRadius: "50%", background: cfg.dot, display: "inline-block", flexShrink: 0, boxShadow: `0 0 6px ${cfg.dot}` }} />
-          <span style={{ fontFamily: "'Crimson Pro', Georgia, serif", fontSize: "1rem", fontWeight: 600, color: "#e2e8f0", letterSpacing: "0.01em" }}>{lesson}</span>
+          <span style={{ fontFamily: "'Outfit', sans-serif", fontSize: "1rem", fontWeight: 600, color: "#e2e8f0", letterSpacing: "0.01em" }}>{lesson}</span>
         </div>
 
         {/* Status buttons */}
@@ -185,7 +206,7 @@ export default function Dashboard() {
     }
     return Object.entries(node).map(([key, value]) => {
       const completed = countCompletedLessons(value);
-      const total = SUBJECT_TOTALS[key] ?? getTotalLessons(value);
+      const total = SUBJECT_TOTALS[currentClass]?.[key] ?? getTotalLessons(value);
       const pct = total > 0 ? Math.round((completed / total) * 100) : 0;
 
       return (
@@ -198,16 +219,16 @@ export default function Dashboard() {
             <span style={{ color: open[key] ? "#f59e0b" : "#475569", fontSize: "0.6rem", transition: "color 0.2s" }}>
               {open[key] ? "▼" : "▶"}
             </span>
-            <span style={{ fontFamily: "'Crimson Pro', Georgia, serif", fontSize: "0.95rem", fontWeight: 600, color: "#cbd5e1" }}>{key}</span>
+            <span style={{ fontFamily: "'Syne', sans-serif", fontSize: "0.95rem", fontWeight: 600, color: "#cbd5e1" }}>{key}</span>
             <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.7rem", color: "#475569", marginLeft: "auto" }}>
               {completed}/{total}
             </span>
           </button>
-          {open[key] && (
+          {open[key] || (search && nodeHasMatch(value, search)) ? (
             <div style={{ paddingLeft: "0.5rem", borderLeft: "1px solid #1e2535", marginLeft: "0.4rem" }}>
               {renderNode(value)}
             </div>
-          )}
+          ) : null}
         </div>
       );
     });
@@ -223,7 +244,7 @@ export default function Dashboard() {
     <>
       {/* Google Fonts */}
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Mono:wght@400;500&family=Outfit:wght@400;500;600&display=swap');
 
         * { box-sizing: border-box; }
 
@@ -343,7 +364,7 @@ export default function Dashboard() {
         <div style={{ marginBottom: "2.5rem" }}>
           <div style={{ display: "flex", alignItems: "baseline", gap: "0.75rem", marginBottom: "0.5rem" }}>
             <h1 style={{
-              fontFamily: "'Crimson Pro', Georgia, serif",
+              fontFamily: "'Syne', sans-serif",
               fontSize: "2rem",
               fontWeight: 700,
               color: "#f1f5f9",
@@ -360,7 +381,7 @@ export default function Dashboard() {
               padding: "2px 8px",
             }}>CLASS {currentClass}</span>
           </div>
-          <p style={{ fontFamily: "'Crimson Pro', Georgia, serif", fontStyle: "italic", color: "#475569", margin: 0, fontSize: "0.95rem" }}>
+          <p style={{ fontFamily: "'Outfit', sans-serif", fontStyle: "normal", color: "#475569", margin: 0, fontSize: "0.9rem", fontWeight: 400 }}>
             {doneAll} of {totalAll} lessons completed
           </p>
 
@@ -404,10 +425,10 @@ export default function Dashboard() {
         <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
           {Object.entries(currentSyllabus).map(([subjectName, subjectData]) => {
             const completed = countCompletedLessons(subjectData);
-            const total = SUBJECT_TOTALS[subjectName] ?? getTotalLessons(subjectData);
+            const total = SUBJECT_TOTALS[currentClass]?.[subjectName] ?? getTotalLessons(subjectData);
             const pct = total > 0 ? Math.round((completed / total) * 100) : 0;
             const icon = SUBJECT_ICONS[subjectName] ?? "📌";
-            const isOpen = open[subjectName];
+            const isOpen = open[subjectName] || (search && nodeHasMatch(subjectData, search));
 
             return (
               <div key={subjectName} className="subject-card">
@@ -415,7 +436,7 @@ export default function Dashboard() {
                 <button className="subject-header" onClick={() => toggle(subjectName)}>
                   <span className="subject-icon" style={{ fontSize: "1.1rem", opacity: 0.7, transition: "opacity 0.2s" }}>{icon}</span>
                   <span style={{
-                    fontFamily: "'Crimson Pro', Georgia, serif",
+                    fontFamily: "'Syne', sans-serif",
                     fontSize: "1.1rem",
                     fontWeight: 700,
                     color: "#e2e8f0",
