@@ -655,6 +655,7 @@ Hindi: {
     { name: "Manushyata", video: "https://www.youtube.com/results?search_query=manushyata+maithilisharan+gupt+class+10+sparsh", pyq: "https://www.google.com/search?q=manushyata+class+10+questions", prerequisites: ["Hindi poetry"] },
     { name: "Parvat Pradesh Me Pavas", video: "https://www.youtube.com/results?search_query=parvat+pradesh+mein+pavas+class+10+sparsh", pyq: "https://www.google.com/search?q=parvat+pradesh+mein+pavas+class+10+questions", prerequisites: ["Hindi poetry"] },
     { name: "Top", video: "https://www.youtube.com/results?search_query=top+veeren+dangwal+class+10+sparsh", pyq: "https://www.google.com/search?q=top+class+10+sparsh+questions", prerequisites: ["Hindi poetry"] },
+    { name: "Kar Chale Hum Fida", video: "https://www.youtube.com/results?search_query=kar+chale+hum+fida+class+10+sparsh", pyq: "https://www.google.com/search?q=kar+chale+hum+fida+class+10+questions", prerequisites: ["Hindi poetry"] },
     { name: "Aatmatran", video: "https://www.youtube.com/results?search_query=aatmatran+rabindranath+class+10+sparsh", pyq: "https://www.google.com/search?q=aatmatran+class+10+questions", prerequisites: ["Hindi poetry"] },
   ],
   Sanchayan: [
