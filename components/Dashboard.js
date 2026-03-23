@@ -114,7 +114,7 @@ export default function Dashboard() {
       <div key={id} style={{
         marginLeft: "1rem",
         marginTop: "0.75rem",
-        background: "rgba(15,17,26,0.8)",
+        background: "#181b28",
         border: `1px solid ${cfg.dot}30`,
         borderLeft: `3px solid ${cfg.dot}`,
         borderRadius: "10px",
@@ -124,7 +124,7 @@ export default function Dashboard() {
         {/* Lesson name + status dot */}
         <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.75rem" }}>
           <span style={{ width: 8, height: 8, borderRadius: "50%", background: cfg.dot, display: "inline-block", flexShrink: 0, boxShadow: `0 0 6px ${cfg.dot}` }} />
-          <span style={{ fontFamily: "'Outfit', sans-serif", fontSize: "1rem", fontWeight: 600, color: "#e2e8f0", letterSpacing: "0.01em" }}>{lesson}</span>
+          <span style={{ fontFamily: "'Outfit', sans-serif", fontSize: "1rem", fontWeight: 600, color: "#f1f5f9", letterSpacing: "0.01em" }}>{lesson}</span>
         </div>
 
         {/* Status buttons */}
@@ -157,12 +157,12 @@ export default function Dashboard() {
           {[["revisions", "REV"], ["pyqs", "PYQ"]].map(([field, label]) => (
             <div key={field} style={{ display: "flex", alignItems: "center", gap: "0.4rem" }}>
               <button onClick={() => updateLesson(id, { [field]: Math.max(0, (data[field] || 0) - 1) })}
-                style={{ width: 20, height: 20, borderRadius: "4px", background: "#1a1f2e", border: "1px solid #2a3040", color: "#64748b", cursor: "pointer", fontSize: "0.9rem", display: "flex", alignItems: "center", justifyContent: "center" }}>−</button>
-              <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.75rem", color: "#94a3b8", minWidth: "4rem" }}>
-                <span style={{ color: "#e2e8f0", fontWeight: 700 }}>{data[field] || 0}</span> {label}
+                style={{ width: 20, height: 20, borderRadius: "4px", background: "#252840", border: "1px solid #3a4060", color: "#8892aa", cursor: "pointer", fontSize: "0.9rem", display: "flex", alignItems: "center", justifyContent: "center" }}>−</button>
+              <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.75rem", color: "#a0aec0", minWidth: "4rem" }}>
+                <span style={{ color: "#f1f5f9", fontWeight: 700 }}>{data[field] || 0}</span> {label}
               </span>
               <button onClick={() => updateLesson(id, { [field]: (data[field] || 0) + 1 })}
-                style={{ width: 20, height: 20, borderRadius: "4px", background: "#1a1f2e", border: "1px solid #2a3040", color: "#64748b", cursor: "pointer", fontSize: "0.9rem", display: "flex", alignItems: "center", justifyContent: "center" }}>+</button>
+                style={{ width: 20, height: 20, borderRadius: "4px", background: "#252840", border: "1px solid #3a4060", color: "#8892aa", cursor: "pointer", fontSize: "0.9rem", display: "flex", alignItems: "center", justifyContent: "center" }}>+</button>
             </div>
           ))}
         </div>
@@ -219,8 +219,8 @@ export default function Dashboard() {
             <span style={{ color: open[key] ? "#f59e0b" : "#475569", fontSize: "0.6rem", transition: "color 0.2s" }}>
               {open[key] ? "▼" : "▶"}
             </span>
-            <span style={{ fontFamily: "'Syne', sans-serif", fontSize: "0.95rem", fontWeight: 600, color: "#cbd5e1" }}>{key}</span>
-            <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.7rem", color: "#475569", marginLeft: "auto" }}>
+            <span style={{ fontFamily: "'Syne', sans-serif", fontSize: "0.95rem", fontWeight: 600, color: "#dde3f0" }}>{key}</span>
+            <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.7rem", color: "#6b7aaa", marginLeft: "auto" }}>
               {completed}/{total}
             </span>
           </button>
@@ -249,21 +249,18 @@ export default function Dashboard() {
         * { box-sizing: border-box; }
 
         body {
-          background: #080a10 !important;
-          background-image:
-            radial-gradient(ellipse 80% 50% at 50% -20%, rgba(251,191,36,0.06), transparent),
-            repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255,255,255,0.015) 39px, rgba(255,255,255,0.015) 40px),
-            repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,0.015) 39px, rgba(255,255,255,0.015) 40px) !important;
+          background: #0f1117 !important;
+          background-image: radial-gradient(ellipse 70% 40% at 50% -5%, rgba(251,191,36,0.07), transparent) !important;
         }
 
         .subject-card {
-          background: rgba(12,14,22,0.9);
-          border: 1px solid #1a2035;
+          background: #1c1f2e;
+          border: 1px solid #2e3450;
           border-radius: 14px;
           overflow: hidden;
           transition: border-color 0.2s ease;
         }
-        .subject-card:hover { border-color: #2a3555; }
+        .subject-card:hover { border-color: #4a5580; background: #20243a; }
 
         .subject-header {
           display: flex;
@@ -278,8 +275,8 @@ export default function Dashboard() {
         .subject-header:hover .subject-icon { opacity: 1; }
 
         .progress-bar-track {
-          height: 3px;
-          background: #1a2035;
+          height: 4px;
+          background: #2a2f48;
           border-radius: 0;
         }
         .progress-bar-fill {
@@ -292,7 +289,7 @@ export default function Dashboard() {
         .class-btn {
           padding: 6px 20px;
           border-radius: 6px;
-          border: 1px solid #1e2535;
+          border: 1px solid #2e3450;
           cursor: pointer;
           font-family: 'DM Mono', monospace;
           font-size: 0.8rem;
@@ -300,18 +297,19 @@ export default function Dashboard() {
           letter-spacing: 0.05em;
           transition: all 0.15s ease;
           background: transparent;
-          color: #475569;
+          color: #7a8aaa;
         }
         .class-btn.active {
-          background: #1c2640;
-          border-color: #3b5099;
+          background: #1e2d50;
+          border-color: #4a6aaa;
           color: #93c5fd;
         }
+        .class-btn:hover:not(.active) { border-color: #4a5580; color: #a0aec0; }
 
         .search-input {
           width: 100%;
-          background: rgba(12,14,22,0.9);
-          border: 1px solid #1a2035;
+          background: #1c1f2e;
+          border: 1px solid #2e3450;
           border-radius: 10px;
           padding: 0.75rem 1rem;
           color: #e2e8f0;
@@ -353,7 +351,7 @@ export default function Dashboard() {
           letter-spacing: 0.05em;
           transition: all 0.15s ease;
           background: transparent;
-          color: #475569;
+          color: #7a8aaa;
         }
         .reset-btn:hover { border-color: #ef4444; color: #ef4444; }
       `}</style>
@@ -381,7 +379,7 @@ export default function Dashboard() {
               padding: "2px 8px",
             }}>CLASS {currentClass}</span>
           </div>
-          <p style={{ fontFamily: "'Outfit', sans-serif", fontStyle: "normal", color: "#475569", margin: 0, fontSize: "0.9rem", fontWeight: 400 }}>
+          <p style={{ fontFamily: "'Outfit', sans-serif", fontStyle: "normal", color: "#6b7aaa", margin: 0, fontSize: "0.9rem", fontWeight: 400 }}>
             {doneAll} of {totalAll} lessons completed
           </p>
 
@@ -411,7 +409,7 @@ export default function Dashboard() {
 
         {/* Search */}
         <div style={{ marginBottom: "1.5rem", position: "relative" }}>
-          <span style={{ position: "absolute", left: "1rem", top: "50%", transform: "translateY(-50%)", color: "#2d3748", fontSize: "0.85rem" }}>⌕</span>
+          <span style={{ position: "absolute", left: "1rem", top: "50%", transform: "translateY(-50%)", color: "#4a5270", fontSize: "0.85rem" }}>⌕</span>
           <input
             className="search-input"
             style={{ paddingLeft: "2.25rem" }}
@@ -439,13 +437,13 @@ export default function Dashboard() {
                     fontFamily: "'Syne', sans-serif",
                     fontSize: "1.1rem",
                     fontWeight: 700,
-                    color: "#e2e8f0",
+                    color: "#f1f5f9",
                     letterSpacing: "0.01em",
                   }}>{subjectName}</span>
 
                   {/* mini progress bar */}
                   <div style={{ flex: 1, margin: "0 1rem" }}>
-                    <div style={{ height: "3px", background: "#1a2035", borderRadius: "2px" }}>
+                    <div style={{ height: "4px", background: "#2e3450", borderRadius: "2px" }}>
                       <div style={{
                         height: "100%",
                         width: `${pct}%`,
@@ -456,7 +454,7 @@ export default function Dashboard() {
                     </div>
                   </div>
 
-                  <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.72rem", color: pct === 100 ? "#22c55e" : "#64748b", whiteSpace: "nowrap" }}>
+                  <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.72rem", color: pct === 100 ? "#4ade80" : "#8892aa", whiteSpace: "nowrap" }}>
                     {completed}/{total}
                   </span>
                   <span style={{ color: isOpen ? "#f59e0b" : "#334155", fontSize: "0.6rem", marginLeft: "0.5rem", transition: "color 0.2s" }}>
