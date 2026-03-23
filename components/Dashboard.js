@@ -5,24 +5,25 @@ import { syllabus } from "../data/syllabus";
 
 const STATUS = ["todo", "doing", "done", "mastered"];
 
+const STATUS_CONFIG = {
+  todo:     { label: "Todo",     color: "#334155", text: "#94a3b8", dot: "#475569" },
+  doing:    { label: "Doing",    color: "#1e3a5f", text: "#60a5fa", dot: "#3b82f6" },
+  done:     { label: "Done",     color: "#14532d", text: "#4ade80", dot: "#22c55e" },
+  mastered: { label: "Mastered", color: "#3b1764", text: "#c084fc", dot: "#a855f7" },
+};
+
 const SUBJECT_TOTALS = {
-  Science: 13,
-  Mathematics: 13,
-  SST: 20,
-  English: 25,
-  Hindi: 14,
+  Science: 13, Mathematics: 13, SST: 20, English: 25, Hindi: 14,
+  History: 5, Civics: 6, Geography: 7, Economics: 5,
+  FirstFlight: 11, Footprints: 10, Beehive: 17, Moments: 9,
+  Sparsh: 11, Sanchayan: 4,
+};
 
-  History: 5,
-  Civics: 6,
-  Geography: 7,
-  Economics: 5,
-
-  FirstFlight: 11,
-  Footprints: 10,
-  Beehive: 17,
-  Moments: 9,
-  Sparsh: 11,
-  Sanchayan: 4,
+const SUBJECT_ICONS = {
+  Science: "⚗️", Mathematics: "∑", SST: "🌏", English: "📖", Hindi: "अ",
+  History: "📜", Civics: "⚖️", Geography: "🗺️", Economics: "📊",
+  FirstFlight: "✈️", Footprints: "👣", Beehive: "🐝", Moments: "💫",
+  Sparsh: "✨", Sanchayan: "📚",
 };
 
 export default function Dashboard() {
@@ -31,221 +32,179 @@ export default function Dashboard() {
   const [open, setOpen] = useState({});
   const [search, setSearch] = useState("");
   const [lessonData, setLessonData] = useState({});
+  const [saveFlash, setSaveFlash] = useState(false);
 
-  /* -------------------- LOAD DATA -------------------- */
   useEffect(() => {
     const saved = localStorage.getItem(`lessonData_class${currentClass}`);
     if (saved) setLessonData(JSON.parse(saved));
     else setLessonData({});
   }, [currentClass]);
 
-  /* -------------------- SAVE -------------------- */
   const saveProgress = () => {
-    localStorage.setItem(
-      `lessonData_class${currentClass}`,
-      JSON.stringify(lessonData)
-    );
-    alert(`Class ${currentClass} progress saved`);
+    localStorage.setItem(`lessonData_class${currentClass}`, JSON.stringify(lessonData));
+    setSaveFlash(true);
+    setTimeout(() => setSaveFlash(false), 1500);
   };
 
   const resetProgress = () => {
-    if (!confirm("Reset progress?")) return;
+    if (!confirm("Reset all progress for this class?")) return;
     setLessonData({});
     localStorage.removeItem(`lessonData_class${currentClass}`);
   };
 
-  /* -------------------- HELPERS -------------------- */
-  const toggle = (key) =>
-    setOpen((p) => ({ ...p, [key]: !p[key] }));
+  const toggle = (key) => setOpen((p) => ({ ...p, [key]: !p[key] }));
 
   const updateLesson = (id, patch) => {
     setLessonData((p) => ({
       ...p,
-      [id]: {
-        status: "todo",
-        revisions: 0,
-        pyqs: 0,
-        ...p[id],
-        ...patch,
-      },
+      [id]: { status: "todo", revisions: 0, pyqs: 0, ...p[id], ...patch },
     }));
   };
 
-  /* -------------------- COUNT -------------------- */
   const countCompletedLessons = (node) => {
     if (Array.isArray(node)) {
       return node.filter((lesson) => {
-        const name =
-          typeof lesson === "string" ? lesson : lesson.name;
-        return (
-          lessonData[name]?.status === "done" ||
-          lessonData[name]?.status === "mastered"
-        );
+        const name = typeof lesson === "string" ? lesson : lesson.name;
+        return lessonData[name]?.status === "done" || lessonData[name]?.status === "mastered";
       }).length;
     }
-
     if (typeof node === "object" && node !== null) {
-      return Object.values(node).reduce(
-        (sum, v) => sum + countCompletedLessons(v),
-        0
-      );
+      return Object.values(node).reduce((sum, v) => sum + countCompletedLessons(v), 0);
     }
-
     return 0;
   };
 
-  /* -------------------- LESSON -------------------- */
+  const getTotalLessons = (node) => {
+    if (Array.isArray(node)) return node.length;
+    if (typeof node === "object" && node !== null) {
+      return Object.values(node).reduce((sum, v) => sum + getTotalLessons(v), 0);
+    }
+    return 0;
+  };
+
   const renderLesson = (lesson, meta) => {
-    if (search && !lesson.toLowerCase().includes(search.toLowerCase()))
-      return null;
-
+    if (search && !lesson.toLowerCase().includes(search.toLowerCase())) return null;
     const id = lesson;
-
-    const data = lessonData[id] || {
-      status: "todo",
-      revisions: 0,
-      pyqs: 0,
-    };
-
-    const lessonId = lesson
-      .toLowerCase()
-      .replace(/\s+/g, "-")
-      .replace(/[^\w-]/g, "");
+    const data = lessonData[id] || { status: "todo", revisions: 0, pyqs: 0 };
+    const cfg = STATUS_CONFIG[data.status] || STATUS_CONFIG.todo;
+    const lessonId = lesson.toLowerCase().replace(/\s+/g, "-").replace(/[^\w-]/g, "");
 
     return (
-      <div key={id} className="ml-6 mt-3 bg-zinc-900 p-4 rounded-xl">
-        <div className="font-medium">{lesson}</div>
+      <div key={id} style={{
+        marginLeft: "1rem",
+        marginTop: "0.75rem",
+        background: "rgba(15,17,26,0.8)",
+        border: `1px solid ${cfg.dot}30`,
+        borderLeft: `3px solid ${cfg.dot}`,
+        borderRadius: "10px",
+        padding: "1rem 1.25rem",
+        transition: "all 0.2s ease",
+      }}>
+        {/* Lesson name + status dot */}
+        <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.75rem" }}>
+          <span style={{ width: 8, height: 8, borderRadius: "50%", background: cfg.dot, display: "inline-block", flexShrink: 0, boxShadow: `0 0 6px ${cfg.dot}` }} />
+          <span style={{ fontFamily: "'Crimson Pro', Georgia, serif", fontSize: "1rem", fontWeight: 600, color: "#e2e8f0", letterSpacing: "0.01em" }}>{lesson}</span>
+        </div>
 
-        {/* STATUS */}
-        <div className="mt-2 flex gap-2 flex-wrap">
-          {STATUS.map((s) => (
-            <button
-              key={s}
-              onClick={() => updateLesson(id, { status: s })}
-              className={`px-3 py-1 rounded text-sm ${
-                data.status === s ? "bg-blue-600" : "bg-zinc-800"
-              }`}
-            >
-              {s.toUpperCase()}
-            </button>
+        {/* Status buttons */}
+        <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap", marginBottom: "0.75rem" }}>
+          {STATUS.map((s) => {
+            const sc = STATUS_CONFIG[s];
+            const active = data.status === s;
+            return (
+              <button key={s} onClick={() => updateLesson(id, { status: s })}
+                style={{
+                  padding: "3px 10px",
+                  borderRadius: "4px",
+                  fontSize: "0.7rem",
+                  fontFamily: "'DM Mono', monospace",
+                  fontWeight: 600,
+                  letterSpacing: "0.08em",
+                  cursor: "pointer",
+                  border: active ? `1px solid ${sc.dot}60` : "1px solid #1e2535",
+                  background: active ? sc.color : "transparent",
+                  color: active ? sc.text : "#475569",
+                  transition: "all 0.15s ease",
+                }}
+              >{s.toUpperCase()}</button>
+            );
+          })}
+        </div>
+
+        {/* Counters */}
+        <div style={{ display: "flex", gap: "1.5rem", marginBottom: "0.75rem" }}>
+          {[["revisions", "REV"], ["pyqs", "PYQ"]].map(([field, label]) => (
+            <div key={field} style={{ display: "flex", alignItems: "center", gap: "0.4rem" }}>
+              <button onClick={() => updateLesson(id, { [field]: Math.max(0, (data[field] || 0) - 1) })}
+                style={{ width: 20, height: 20, borderRadius: "4px", background: "#1a1f2e", border: "1px solid #2a3040", color: "#64748b", cursor: "pointer", fontSize: "0.9rem", display: "flex", alignItems: "center", justifyContent: "center" }}>−</button>
+              <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.75rem", color: "#94a3b8", minWidth: "4rem" }}>
+                <span style={{ color: "#e2e8f0", fontWeight: 700 }}>{data[field] || 0}</span> {label}
+              </span>
+              <button onClick={() => updateLesson(id, { [field]: (data[field] || 0) + 1 })}
+                style={{ width: 20, height: 20, borderRadius: "4px", background: "#1a1f2e", border: "1px solid #2a3040", color: "#64748b", cursor: "pointer", fontSize: "0.9rem", display: "flex", alignItems: "center", justifyContent: "center" }}>+</button>
+            </div>
           ))}
         </div>
 
-        {/* COUNTERS */}
-        <div className="mt-2 flex gap-6 text-sm">
-          <button
-            onClick={() =>
-              updateLesson(id, {
-                revisions: Math.max(0, data.revisions - 1),
-              })
-            }
-          >
-            −
-          </button>
-          <span>Revisions: {data.revisions}</span>
-          <button
-            onClick={() =>
-              updateLesson(id, { revisions: data.revisions + 1 })
-            }
-          >
-            +
-          </button>
-
-          <button
-            onClick={() =>
-              updateLesson(id, {
-                pyqs: Math.max(0, data.pyqs - 1),
-              })
-            }
-          >
-            −
-          </button>
-          <span>PYQs: {data.pyqs}</span>
-          <button
-            onClick={() =>
-              updateLesson(id, { pyqs: data.pyqs + 1 })
-            }
-          >
-            +
-          </button>
+        {/* Links */}
+        <div style={{ display: "flex", gap: "1rem", marginBottom: "0.5rem" }}>
+          {meta?.video && <a href={meta.video} target="_blank" style={{ fontSize: "0.75rem", color: "#60a5fa", textDecoration: "none", fontFamily: "'DM Mono', monospace" }}>▶ Video</a>}
+          {meta?.pyq && <a href={meta.pyq} target="_blank" style={{ fontSize: "0.75rem", color: "#f59e0b", textDecoration: "none", fontFamily: "'DM Mono', monospace" }}>📄 PYQs</a>}
         </div>
 
-        {/* LINKS */}
-        <div className="mt-2 flex gap-4 text-sm text-blue-400">
-          {meta?.video && (
-            <a href={meta.video} target="_blank">
-              Lesson Video
-            </a>
-          )}
-          {meta?.pyq && (
-            <a href={meta.pyq} target="_blank">
-              PYQs
-            </a>
-          )}
-        </div>
-
-        {/* STATUS ACTION */}
+        {/* Action link */}
         {data.status === "todo" && (
-          <a
-            href={`/lesson/${lessonId}/prerequisites`}
-            className="block mt-2 text-blue-400"
-          >
-            → Previous Knowledge Required
+          <a href={`/lesson/${lessonId}/prerequisites`}
+            style={{ display: "inline-block", marginTop: "0.25rem", fontSize: "0.75rem", color: "#60a5fa", fontFamily: "'DM Mono', monospace" }}>
+            → Prerequisites
           </a>
         )}
-
         {data.status === "done" && (
-          <a
-            href={`/quiz/${lessonId}?marks=40`}
-            className="block mt-2 text-green-400"
-          >
-            → Done? Test (40 marks)
+          <a href={`/quiz/${lessonId}?marks=40`}
+            style={{ display: "inline-block", marginTop: "0.25rem", fontSize: "0.75rem", color: "#4ade80", fontFamily: "'DM Mono', monospace" }}>
+            → Test yourself (40 marks)
           </a>
         )}
-
         {data.status === "mastered" && (
-          <a
-            href={`/quiz/${lessonId}?marks=80`}
-            className="block mt-2 text-purple-400"
-          >
-            → Mastered? Test (80 marks)
+          <a href={`/quiz/${lessonId}?marks=80`}
+            style={{ display: "inline-block", marginTop: "0.25rem", fontSize: "0.75rem", color: "#c084fc", fontFamily: "'DM Mono', monospace" }}>
+            → Full test (80 marks)
           </a>
         )}
       </div>
     );
   };
 
-  /* -------------------- RECURSIVE -------------------- */
   const renderNode = (node) => {
     if (Array.isArray(node)) {
       return node.map((lesson) => {
-        const name =
-          typeof lesson === "string" ? lesson : lesson.name;
+        const name = typeof lesson === "string" ? lesson : lesson.name;
         const meta = typeof lesson === "string" ? {} : lesson;
-
         return renderLesson(name, meta);
       });
     }
-
     return Object.entries(node).map(([key, value]) => {
       const completed = countCompletedLessons(value);
-      const total = SUBJECT_TOTALS[key] ?? 0;
+      const total = SUBJECT_TOTALS[key] ?? getTotalLessons(value);
+      const pct = total > 0 ? Math.round((completed / total) * 100) : 0;
 
       return (
-        <div key={key} className="ml-4 mt-4">
-          <button
-            onClick={() => toggle(key)}
-            className="flex gap-3 font-medium"
-          >
-            <span>{open[key] ? "▼" : "▶"}</span>
-            <span>{key}</span>
-            <span className="text-sm text-gray-400">
+        <div key={key} style={{ marginLeft: "0.75rem", marginTop: "0.75rem" }}>
+          <button onClick={() => toggle(key)} style={{
+            display: "flex", alignItems: "center", gap: "0.6rem",
+            background: "none", border: "none", cursor: "pointer",
+            width: "100%", padding: "0.4rem 0",
+          }}>
+            <span style={{ color: open[key] ? "#f59e0b" : "#475569", fontSize: "0.6rem", transition: "color 0.2s" }}>
+              {open[key] ? "▼" : "▶"}
+            </span>
+            <span style={{ fontFamily: "'Crimson Pro', Georgia, serif", fontSize: "0.95rem", fontWeight: 600, color: "#cbd5e1" }}>{key}</span>
+            <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.7rem", color: "#475569", marginLeft: "auto" }}>
               {completed}/{total}
             </span>
           </button>
-
           {open[key] && (
-            <div className="mt-2">
+            <div style={{ paddingLeft: "0.5rem", borderLeft: "1px solid #1e2535", marginLeft: "0.4rem" }}>
               {renderNode(value)}
             </div>
           )}
@@ -254,69 +213,250 @@ export default function Dashboard() {
     });
   };
 
-  /* -------------------- UI -------------------- */
+  /* ---- overall progress ---- */
+  const currentSyllabus = syllabus[currentClass] || {};
+  const totalAll = Object.values(currentSyllabus).reduce((s, v) => s + getTotalLessons(v), 0);
+  const doneAll = Object.values(currentSyllabus).reduce((s, v) => s + countCompletedLessons(v), 0);
+  const overallPct = totalAll > 0 ? Math.round((doneAll / totalAll) * 100) : 0;
+
   return (
-    <main className="max-w-5xl mx-auto p-6 space-y-6">
-      <h1 className="text-2xl font-semibold">
-        Dashboard – Class {currentClass}
-      </h1>
+    <>
+      {/* Google Fonts */}
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap');
 
-      {/* CLASS SELECT */}
-      <div className="flex gap-2">
-        {CLASSES.map((cls) => (
-          <button
-            key={cls}
-            onClick={() => setCurrentClass(cls)}
-            className={`px-4 py-1 rounded ${
-              currentClass === cls ? "bg-blue-600" : "bg-zinc-800"
-            }`}
-          >
-            Class {cls}
-          </button>
-        ))}
-      </div>
+        * { box-sizing: border-box; }
 
-      {/* SAVE RESET */}
-      <div className="flex gap-3">
-        <button
-          onClick={saveProgress}
-          className="bg-green-600 px-4 py-2 rounded"
-        >
-          Save
-        </button>
+        body {
+          background: #080a10 !important;
+          background-image:
+            radial-gradient(ellipse 80% 50% at 50% -20%, rgba(251,191,36,0.06), transparent),
+            repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255,255,255,0.015) 39px, rgba(255,255,255,0.015) 40px),
+            repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,0.015) 39px, rgba(255,255,255,0.015) 40px) !important;
+        }
 
-        <button
-          onClick={resetProgress}
-          className="bg-zinc-700 px-4 py-2 rounded"
-        >
-          Reset
-        </button>
-      </div>
+        .subject-card {
+          background: rgba(12,14,22,0.9);
+          border: 1px solid #1a2035;
+          border-radius: 14px;
+          overflow: hidden;
+          transition: border-color 0.2s ease;
+        }
+        .subject-card:hover { border-color: #2a3555; }
 
-      {/* SEARCH */}
-      <input
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-        placeholder="Search lessons..."
-        className="w-full bg-zinc-900 p-3 rounded-xl"
-      />
+        .subject-header {
+          display: flex;
+          align-items: center;
+          padding: 1.1rem 1.4rem;
+          cursor: pointer;
+          background: none;
+          border: none;
+          width: 100%;
+          gap: 0.75rem;
+        }
+        .subject-header:hover .subject-icon { opacity: 1; }
 
-      {/* SUBJECTS */}
-      {Object.entries(syllabus[currentClass] || {}).map(([n, d]) => (
-        <div key={n} className="bg-zinc-900 p-5 rounded-2xl">
-          <button
-            onClick={() => toggle(n)}
-            className="flex justify-between w-full font-semibold"
-          >
-            <span>{n}</span>
-            <span className="text-gray-400 text-sm">
-              {countCompletedLessons(d)}/{SUBJECT_TOTALS[n] ?? 0}
-            </span>
-          </button>
+        .progress-bar-track {
+          height: 3px;
+          background: #1a2035;
+          border-radius: 0;
+        }
+        .progress-bar-fill {
+          height: 100%;
+          background: linear-gradient(90deg, #f59e0b, #fbbf24);
+          border-radius: 0;
+          transition: width 0.6s ease;
+        }
 
-          {open[n] && <div className="mt-3">{renderNode(d)}</div>}
+        .class-btn {
+          padding: 6px 20px;
+          border-radius: 6px;
+          border: 1px solid #1e2535;
+          cursor: pointer;
+          font-family: 'DM Mono', monospace;
+          font-size: 0.8rem;
+          font-weight: 500;
+          letter-spacing: 0.05em;
+          transition: all 0.15s ease;
+          background: transparent;
+          color: #475569;
+        }
+        .class-btn.active {
+          background: #1c2640;
+          border-color: #3b5099;
+          color: #93c5fd;
+        }
+
+        .search-input {
+          width: 100%;
+          background: rgba(12,14,22,0.9);
+          border: 1px solid #1a2035;
+          border-radius: 10px;
+          padding: 0.75rem 1rem;
+          color: #e2e8f0;
+          font-family: 'DM Mono', monospace;
+          font-size: 0.85rem;
+          outline: none;
+          transition: border-color 0.2s;
+        }
+        .search-input:focus { border-color: #3b5099; }
+        .search-input::placeholder { color: #2d3748; }
+
+        .save-btn {
+          padding: 7px 20px;
+          border-radius: 6px;
+          border: 1px solid #44401030;
+          cursor: pointer;
+          font-family: 'DM Mono', monospace;
+          font-size: 0.8rem;
+          font-weight: 500;
+          letter-spacing: 0.05em;
+          transition: all 0.2s ease;
+          background: #1a1500;
+          color: #f59e0b;
+        }
+        .save-btn.flashing {
+          background: #f59e0b;
+          color: #000;
+          border-color: #f59e0b;
+        }
+
+        .reset-btn {
+          padding: 7px 20px;
+          border-radius: 6px;
+          border: 1px solid #1e2535;
+          cursor: pointer;
+          font-family: 'DM Mono', monospace;
+          font-size: 0.8rem;
+          font-weight: 500;
+          letter-spacing: 0.05em;
+          transition: all 0.15s ease;
+          background: transparent;
+          color: #475569;
+        }
+        .reset-btn:hover { border-color: #ef4444; color: #ef4444; }
+      `}</style>
+
+      <main style={{ maxWidth: "720px", margin: "0 auto", padding: "2rem 1.25rem 4rem" }}>
+
+        {/* Header */}
+        <div style={{ marginBottom: "2.5rem" }}>
+          <div style={{ display: "flex", alignItems: "baseline", gap: "0.75rem", marginBottom: "0.5rem" }}>
+            <h1 style={{
+              fontFamily: "'Crimson Pro', Georgia, serif",
+              fontSize: "2rem",
+              fontWeight: 700,
+              color: "#f1f5f9",
+              margin: 0,
+              letterSpacing: "-0.01em",
+            }}>Study Tracker</h1>
+            <span style={{
+              fontFamily: "'DM Mono', monospace",
+              fontSize: "0.75rem",
+              color: "#f59e0b",
+              background: "#1a1500",
+              border: "1px solid #f59e0b30",
+              borderRadius: "4px",
+              padding: "2px 8px",
+            }}>CLASS {currentClass}</span>
+          </div>
+          <p style={{ fontFamily: "'Crimson Pro', Georgia, serif", fontStyle: "italic", color: "#475569", margin: 0, fontSize: "0.95rem" }}>
+            {doneAll} of {totalAll} lessons completed
+          </p>
+
+          {/* Overall progress bar */}
+          <div style={{ marginTop: "0.75rem" }}>
+            <div className="progress-bar-track">
+              <div className="progress-bar-fill" style={{ width: `${overallPct}%` }} />
+            </div>
+          </div>
         </div>
-      ))}
-    </main>
+
+        {/* Controls row */}
+        <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", marginBottom: "1.25rem", flexWrap: "wrap" }}>
+          {CLASSES.map((cls) => (
+            <button key={cls} className={`class-btn${currentClass === cls ? " active" : ""}`}
+              onClick={() => setCurrentClass(cls)}>
+              Class {cls}
+            </button>
+          ))}
+          <div style={{ marginLeft: "auto", display: "flex", gap: "0.5rem" }}>
+            <button className={`save-btn${saveFlash ? " flashing" : ""}`} onClick={saveProgress}>
+              {saveFlash ? "✓ Saved" : "Save"}
+            </button>
+            <button className="reset-btn" onClick={resetProgress}>Reset</button>
+          </div>
+        </div>
+
+        {/* Search */}
+        <div style={{ marginBottom: "1.5rem", position: "relative" }}>
+          <span style={{ position: "absolute", left: "1rem", top: "50%", transform: "translateY(-50%)", color: "#2d3748", fontSize: "0.85rem" }}>⌕</span>
+          <input
+            className="search-input"
+            style={{ paddingLeft: "2.25rem" }}
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search lessons..."
+          />
+        </div>
+
+        {/* Subject cards */}
+        <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+          {Object.entries(currentSyllabus).map(([subjectName, subjectData]) => {
+            const completed = countCompletedLessons(subjectData);
+            const total = SUBJECT_TOTALS[subjectName] ?? getTotalLessons(subjectData);
+            const pct = total > 0 ? Math.round((completed / total) * 100) : 0;
+            const icon = SUBJECT_ICONS[subjectName] ?? "📌";
+            const isOpen = open[subjectName];
+
+            return (
+              <div key={subjectName} className="subject-card">
+                {/* Subject header */}
+                <button className="subject-header" onClick={() => toggle(subjectName)}>
+                  <span className="subject-icon" style={{ fontSize: "1.1rem", opacity: 0.7, transition: "opacity 0.2s" }}>{icon}</span>
+                  <span style={{
+                    fontFamily: "'Crimson Pro', Georgia, serif",
+                    fontSize: "1.1rem",
+                    fontWeight: 700,
+                    color: "#e2e8f0",
+                    letterSpacing: "0.01em",
+                  }}>{subjectName}</span>
+
+                  {/* mini progress bar */}
+                  <div style={{ flex: 1, margin: "0 1rem" }}>
+                    <div style={{ height: "3px", background: "#1a2035", borderRadius: "2px" }}>
+                      <div style={{
+                        height: "100%",
+                        width: `${pct}%`,
+                        background: pct === 100 ? "#22c55e" : "linear-gradient(90deg, #f59e0b80, #f59e0b)",
+                        borderRadius: "2px",
+                        transition: "width 0.5s ease",
+                      }} />
+                    </div>
+                  </div>
+
+                  <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.72rem", color: pct === 100 ? "#22c55e" : "#64748b", whiteSpace: "nowrap" }}>
+                    {completed}/{total}
+                  </span>
+                  <span style={{ color: isOpen ? "#f59e0b" : "#334155", fontSize: "0.6rem", marginLeft: "0.5rem", transition: "color 0.2s" }}>
+                    {isOpen ? "▲" : "▼"}
+                  </span>
+                </button>
+
+                {/* Thin gold line under header when open */}
+                {isOpen && <div style={{ height: "1px", background: "linear-gradient(90deg, #f59e0b30, transparent)" }} />}
+
+                {/* Subject content */}
+                {isOpen && (
+                  <div style={{ padding: "0.75rem 1rem 1rem" }}>
+                    {renderNode(subjectData)}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </main>
+    </>
   );
 }
