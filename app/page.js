@@ -37,7 +37,7 @@ export default function Page() {
         lineHeight: "1.8",
       }}>
         Built by Avaneesh Shinde <br />
-        Contact:{" "}
+        Contact: <a href = "mailto:studytracker@yahoo.com">studytracker@yahoo.com</a>
       </footer>
     </>
   );
