@@ -14,14 +14,16 @@ const STATUS_CONFIG = {
 
 const SUBJECT_TOTALS = {
   "9": {
-    Science: 12, Mathematics: 10, SST: 18, English: 25, Hindi: 15,
-    History: 5, Civics: 5, Geography: 6, Economics: 4,
-    Beehive: 11, Moments: 9, Sparsh: 11, Sanchayan: 4,
+    Science: 12, Mathematics: 12,
+    SST: 20, History: 5, Civics: 5, Geography: 6, Economics: 4,
+    English: 26, Beehive: 17, Moments: 9,
+    Hindi: 15, Sparsh: 11, Sanchayan: 4,
   },
   "10": {
-    Science: 13, Mathematics: 14, SST: 23, English: 18, Hindi: 16,
-    History: 5, Civics: 6, Geography: 7, Economics: 5,
-    FirstFlight: 9, Footprints: 9, Sparsh: 13, Sanchayan: 3,
+    Science: 13, Mathematics: 14,
+    SST: 23, History: 5, Geography: 7, Civics: 6, Economics: 5,
+    English: 18, FirstFlight: 9, Footprints: 9,
+    Hindi: 17, Sparsh: 14, Sanchayan: 3,
   },
 };
 
