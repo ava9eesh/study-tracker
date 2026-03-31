@@ -6,10 +6,34 @@ import { syllabus } from "../data/syllabus";
 const STATUS = ["todo", "doing", "done", "mastered"];
 
 const STATUS_CONFIG = {
-  todo:     { label: "Todo",     color: "#334155", text: "#94a3b8", dot: "#475569" },
-  doing:    { label: "Doing",    color: "#1e3a5f", text: "#60a5fa", dot: "#3b82f6" },
-  done:     { label: "Done",     color: "#14532d", text: "#4ade80", dot: "#22c55e" },
-  mastered: { label: "Mastered", color: "#3b1764", text: "#c084fc", dot: "#a855f7" },
+  todo: { 
+    label: "To Do", 
+    color: "rgba(71, 85, 105, 0.1)", 
+    border: "rgba(71, 85, 105, 0.3)",
+    text: "#94a3b8",
+    glow: "rgba(148, 163, 184, 0.2)"
+  },
+  doing: { 
+    label: "In Progress", 
+    color: "rgba(59, 130, 246, 0.1)", 
+    border: "rgba(59, 130, 246, 0.3)",
+    text: "#60a5fa",
+    glow: "rgba(96, 165, 250, 0.2)"
+  },
+  done: { 
+    label: "Completed", 
+    color: "rgba(16, 185, 129, 0.1)", 
+    border: "rgba(16, 185, 129, 0.3)",
+    text: "#34d399",
+    glow: "rgba(52, 211, 153, 0.2)"
+  },
+  mastered: { 
+    label: "Mastered", 
+    color: "rgba(168, 85, 247, 0.1)", 
+    border: "rgba(168, 85, 247, 0.3)",
+    text: "#c084fc",
+    glow: "rgba(192, 132, 252, 0.2)"
+  },
 };
 
 const SUBJECT_TOTALS = {
@@ -28,10 +52,21 @@ const SUBJECT_TOTALS = {
 };
 
 const SUBJECT_ICONS = {
-  Science: "⚗️", Mathematics: "∑", SST: "🌏", English: "📖", Hindi: "अ",
-  History: "📜", Civics: "⚖️", Geography: "🗺️", Economics: "📊",
-  FirstFlight: "✈️", Footprints: "👣", Beehive: "🐝", Moments: "💫",
-  Sparsh: "✨", Sanchayan: "📚",
+  Science: "⚗️", 
+  Mathematics: "∑", 
+  SST: "🌏", 
+  English: "📖", 
+  Hindi: "अ",
+  History: "📜", 
+  Civics: "⚖️", 
+  Geography: "🗺️", 
+  Economics: "📊",
+  FirstFlight: "✈️", 
+  Footprints: "👣", 
+  Beehive: "🐝", 
+  Moments: "💫",
+  Sparsh: "✨", 
+  Sanchayan: "📚",
 };
 
 export default function Dashboard() {
@@ -41,6 +76,11 @@ export default function Dashboard() {
   const [search, setSearch] = useState("");
   const [lessonData, setLessonData] = useState({});
   const [saveFlash, setSaveFlash] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const saved = localStorage.getItem(`lessonData_class${currentClass}`);
@@ -55,12 +95,11 @@ export default function Dashboard() {
   };
 
   const resetProgress = () => {
-    if (!confirm("Reset all progress for this class?")) return;
+    if (!confirm("⚠️ Reset all progress for Class " + currentClass + "? This cannot be undone.")) return;
     setLessonData({});
     localStorage.removeItem(`lessonData_class${currentClass}`);
   };
 
-  // Check if a node contains any lesson matching the search
   const nodeHasMatch = (node, query) => {
     if (!query) return false;
     if (Array.isArray(node)) {
@@ -113,85 +152,227 @@ export default function Dashboard() {
     const lessonId = lesson.toLowerCase().replace(/\s+/g, "-").replace(/[^\w-]/g, "");
 
     return (
-      <div key={id} style={{
-        marginLeft: "1rem",
-        marginTop: "0.75rem",
-        background: "#181b28",
-        border: `1px solid ${cfg.dot}30`,
-        borderLeft: `3px solid ${cfg.dot}`,
-        borderRadius: "10px",
-        padding: "1rem 1.25rem",
-        transition: "all 0.2s ease",
-      }}>
-        {/* Lesson name + status dot */}
-        <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.75rem" }}>
-          <span style={{ width: 8, height: 8, borderRadius: "50%", background: cfg.dot, display: "inline-block", flexShrink: 0, boxShadow: `0 0 6px ${cfg.dot}` }} />
-          <span style={{ fontFamily: "'Outfit', sans-serif", fontSize: "1rem", fontWeight: 600, color: "#f1f5f9", letterSpacing: "0.01em" }}>{lesson}</span>
+      <div
+        key={id}
+        className="glass-card"
+        style={{
+          marginTop: "1rem",
+          padding: "1.25rem 1.5rem",
+          borderLeft: `3px solid ${cfg.text}`,
+          opacity: 0,
+          animation: "fadeInUp 0.4s ease-out forwards"
+        }}
+      >
+        {/* Lesson Header */}
+        <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1rem" }}>
+          <span
+            style={{
+              width: 10,
+              height: 10,
+              borderRadius: "50%",
+              background: cfg.text,
+              flexShrink: 0,
+              boxShadow: `0 0 12px ${cfg.glow}`,
+              animation: "pulse 2s ease-in-out infinite"
+            }}
+          />
+          <h4 style={{
+            fontFamily: "'Bricolage Grotesque', sans-serif",
+            fontSize: "1.05rem",
+            fontWeight: 600,
+            color: "var(--text-primary)",
+            letterSpacing: "-0.01em",
+            flex: 1
+          }}>
+            {lesson}
+          </h4>
         </div>
 
-        {/* Status buttons */}
-        <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap", marginBottom: "0.75rem" }}>
+        {/* Status Pills */}
+        <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", marginBottom: "1rem" }}>
           {STATUS.map((s) => {
             const sc = STATUS_CONFIG[s];
             const active = data.status === s;
             return (
-              <button key={s} onClick={() => updateLesson(id, { status: s })}
+              <button
+                key={s}
+                onClick={() => updateLesson(id, { status: s })}
+                className="status-badge"
                 style={{
-                  padding: "3px 10px",
-                  borderRadius: "4px",
-                  fontSize: "0.7rem",
-                  fontFamily: "'DM Mono', monospace",
-                  fontWeight: 600,
-                  letterSpacing: "0.08em",
-                  cursor: "pointer",
-                  border: active ? `1px solid ${sc.dot}60` : "1px solid #1e2535",
                   background: active ? sc.color : "transparent",
-                  color: active ? sc.text : "#475569",
-                  transition: "all 0.15s ease",
+                  borderColor: active ? sc.border : "var(--border-subtle)",
+                  color: active ? sc.text : "var(--text-ghost)",
+                  boxShadow: active ? `0 0 12px ${sc.glow}` : "none",
+                  transform: active ? "scale(1.02)" : "scale(1)"
                 }}
-              >{s.toUpperCase()}</button>
+              >
+                {sc.label}
+              </button>
             );
           })}
         </div>
 
         {/* Counters */}
-        <div style={{ display: "flex", gap: "1.5rem", marginBottom: "0.75rem" }}>
-          {[["revisions", "REV"], ["pyqs", "PYQ"]].map(([field, label]) => (
-            <div key={field} style={{ display: "flex", alignItems: "center", gap: "0.4rem" }}>
-              <button onClick={() => updateLesson(id, { [field]: Math.max(0, (data[field] || 0) - 1) })}
-                style={{ width: 20, height: 20, borderRadius: "4px", background: "#252840", border: "1px solid #3a4060", color: "#8892aa", cursor: "pointer", fontSize: "0.9rem", display: "flex", alignItems: "center", justifyContent: "center" }}>−</button>
-              <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.75rem", color: "#a0aec0", minWidth: "4rem" }}>
-                <span style={{ color: "#f1f5f9", fontWeight: 700 }}>{data[field] || 0}</span> {label}
+        <div style={{ display: "flex", gap: "1.5rem", marginBottom: "1rem" }}>
+          {[
+            { field: "revisions", label: "Revisions", icon: "🔄" },
+            { field: "pyqs", label: "PYQs Done", icon: "📝" }
+          ].map(({ field, label, icon }) => (
+            <div key={field} style={{ display: "flex", alignItems: "center", gap: "0.625rem" }}>
+              <button
+                onClick={() => updateLesson(id, { [field]: Math.max(0, (data[field] || 0) - 1) })}
+                className="btn-ghost"
+                style={{
+                  width: 28,
+                  height: 28,
+                  padding: 0,
+                  borderRadius: "6px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  fontSize: "1rem"
+                }}
+              >
+                −
+              </button>
+              <span style={{
+                fontFamily: "'JetBrains Mono', monospace",
+                fontSize: "0.8rem",
+                color: "var(--text-secondary)",
+                minWidth: "7rem",
+                display: "flex",
+                alignItems: "center",
+                gap: "0.375rem"
+              }}>
+                <span style={{ opacity: 0.6 }}>{icon}</span>
+                <span style={{ color: "var(--accent-amber)", fontWeight: 700 }}>{data[field] || 0}</span>
+                <span style={{ color: "var(--text-tertiary)" }}>{label}</span>
               </span>
-              <button onClick={() => updateLesson(id, { [field]: (data[field] || 0) + 1 })}
-                style={{ width: 20, height: 20, borderRadius: "4px", background: "#252840", border: "1px solid #3a4060", color: "#8892aa", cursor: "pointer", fontSize: "0.9rem", display: "flex", alignItems: "center", justifyContent: "center" }}>+</button>
+              <button
+                onClick={() => updateLesson(id, { [field]: (data[field] || 0) + 1 })}
+                className="btn-ghost"
+                style={{
+                  width: 28,
+                  height: 28,
+                  padding: 0,
+                  borderRadius: "6px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  fontSize: "1rem"
+                }}
+              >
+                +
+              </button>
             </div>
           ))}
         </div>
 
-        {/* Links */}
-        <div style={{ display: "flex", gap: "1rem", marginBottom: "0.5rem" }}>
-          {meta?.video && <a href={meta.video} target="_blank" style={{ fontSize: "0.75rem", color: "#60a5fa", textDecoration: "none", fontFamily: "'DM Mono', monospace" }}>▶ Video</a>}
-          {meta?.pyq && <a href={meta.pyq} target="_blank" style={{ fontSize: "0.75rem", color: "#f59e0b", textDecoration: "none", fontFamily: "'DM Mono', monospace" }}>📄 PYQs</a>}
-        </div>
+        {/* Resource Links */}
+        {(meta?.video || meta?.pyq) && (
+          <div style={{ display: "flex", gap: "1rem", marginBottom: "0.75rem" }}>
+            {meta?.video && (
+              <a
+                href={meta.video}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-ghost"
+                style={{
+                  padding: "0.5rem 1rem",
+                  fontSize: "0.8rem",
+                  textDecoration: "none",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "0.5rem"
+                }}
+              >
+                <span style={{ fontSize: "1rem" }}>▶️</span>
+                Video Lesson
+              </a>
+            )}
+            {meta?.pyq && (
+              <a
+                href={meta.pyq}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-ghost"
+                style={{
+                  padding: "0.5rem 1rem",
+                  fontSize: "0.8rem",
+                  textDecoration: "none",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "0.5rem"
+                }}
+              >
+                <span style={{ fontSize: "1rem" }}>📄</span>
+                Practice PYQs
+              </a>
+            )}
+          </div>
+        )}
 
-        {/* Action link */}
+        {/* Contextual Action Links */}
         {data.status === "todo" && (
-          <a href={`/lesson/${lessonId}/prerequisites`}
-            style={{ display: "inline-block", marginTop: "0.25rem", fontSize: "0.75rem", color: "#60a5fa", fontFamily: "'DM Mono', monospace" }}>
-            → Prerequisites
+          <a
+            href={`/lesson/${lessonId}/prerequisites`}
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.5rem",
+              marginTop: "0.5rem",
+              fontSize: "0.85rem",
+              color: "var(--accent-cyan)",
+              fontFamily: "'JetBrains Mono', monospace",
+              textDecoration: "none",
+              transition: "all 0.2s ease"
+            }}
+            className="hover-link"
+          >
+            <span>→</span>
+            <span>Check Prerequisites</span>
           </a>
         )}
+
         {data.status === "done" && (
-          <a href={`/quiz/${lessonId}?marks=40`}
-            style={{ display: "inline-block", marginTop: "0.25rem", fontSize: "0.75rem", color: "#4ade80", fontFamily: "'DM Mono', monospace" }}>
-            → Test yourself (40 marks)
+          <a
+            href={`/quiz/${lessonId}?marks=40`}
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.5rem",
+              marginTop: "0.5rem",
+              fontSize: "0.85rem",
+              color: "var(--accent-emerald)",
+              fontFamily: "'JetBrains Mono', monospace",
+              textDecoration: "none",
+              transition: "all 0.2s ease"
+            }}
+            className="hover-link"
+          >
+            <span>→</span>
+            <span>Take Assessment (40 marks)</span>
           </a>
         )}
+
         {data.status === "mastered" && (
-          <a href={`/quiz/${lessonId}?marks=80`}
-            style={{ display: "inline-block", marginTop: "0.25rem", fontSize: "0.75rem", color: "#c084fc", fontFamily: "'DM Mono', monospace" }}>
-            → Full test (80 marks)
+          <a
+            href={`/quiz/${lessonId}?marks=80`}
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.5rem",
+              marginTop: "0.5rem",
+              fontSize: "0.85rem",
+              color: "var(--accent-violet)",
+              fontFamily: "'JetBrains Mono', monospace",
+              textDecoration: "none",
+              transition: "all 0.2s ease"
+            }}
+            className="hover-link"
+          >
+            <span>→</span>
+            <span>Master Test (80 marks)</span>
           </a>
         )}
       </div>
@@ -201,229 +382,258 @@ export default function Dashboard() {
   const renderNode = (node) => {
     if (Array.isArray(node)) {
       return node.map((lesson) => {
-        const name = typeof lesson === "string" ? lesson : lesson.name;
-        const meta = typeof lesson === "string" ? {} : lesson;
-        return renderLesson(name, meta);
+        if (typeof lesson === "string") {
+          return renderLesson(lesson, null);
+        } else {
+          return renderLesson(lesson.name, lesson);
+        }
       });
     }
+
     return Object.entries(node).map(([key, value]) => {
+      const hasMatch = search && nodeHasMatch(value, search);
+      const isOpen = open[key] || hasMatch;
       const completed = countCompletedLessons(value);
-      const total = SUBJECT_TOTALS[currentClass]?.[key] ?? getTotalLessons(value);
-      const pct = total > 0 ? Math.round((completed / total) * 100) : 0;
+      const total = getTotalLessons(value);
+      const progress = total > 0 ? (completed / total) * 100 : 0;
 
       return (
-        <div key={key} style={{ marginLeft: "0.75rem", marginTop: "0.75rem" }}>
-          <button onClick={() => toggle(key)} style={{
-            display: "flex", alignItems: "center", gap: "0.6rem",
-            background: "none", border: "none", cursor: "pointer",
-            width: "100%", padding: "0.4rem 0",
-          }}>
-            <span style={{ color: open[key] ? "#f59e0b" : "#475569", fontSize: "0.6rem", transition: "color 0.2s" }}>
-              {open[key] ? "▼" : "▶"}
+        <div key={key} style={{ marginTop: "1.25rem" }}>
+          <button
+            onClick={() => toggle(key)}
+            style={{
+              width: "100%",
+              display: "flex",
+              alignItems: "center",
+              gap: "0.75rem",
+              padding: "0.875rem 1rem",
+              background: isOpen ? "var(--glass-bg)" : "transparent",
+              border: `1px solid ${isOpen ? "var(--border-medium)" : "var(--border-subtle)"}`,
+              borderRadius: "10px",
+              cursor: "pointer",
+              transition: "all 0.2s ease",
+              backdropFilter: isOpen ? "blur(12px)" : "none"
+            }}
+            className="clickable"
+          >
+            <span style={{ 
+              fontSize: "0.9rem", 
+              transition: "transform 0.2s ease",
+              transform: isOpen ? "rotate(90deg)" : "rotate(0deg)"
+            }}>
+              ▶
             </span>
-            <span style={{ fontFamily: "'Syne', sans-serif", fontSize: "0.95rem", fontWeight: 600, color: "#dde3f0" }}>{key}</span>
-            <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.7rem", color: "#6b7aaa", marginLeft: "auto" }}>
+            <span style={{
+              fontFamily: "'Bricolage Grotesque', sans-serif",
+              fontSize: "1rem",
+              fontWeight: 600,
+              color: "var(--text-secondary)"
+            }}>
+              {key}
+            </span>
+            <div style={{ flex: 1, margin: "0 1rem" }}>
+              <div className="progress-container" style={{ height: "5px" }}>
+                <div 
+                  className="progress-bar" 
+                  style={{ 
+                    width: `${progress}%`,
+                    background: progress === 100 
+                      ? "linear-gradient(90deg, #10b981, #34d399)" 
+                      : "linear-gradient(90deg, #f59e0b, #fbbf24)"
+                  }} 
+                />
+              </div>
+            </div>
+            <span style={{
+              fontFamily: "'JetBrains Mono', monospace",
+              fontSize: "0.75rem",
+              color: progress === 100 ? "var(--accent-emerald)" : "var(--text-muted)"
+            }}>
               {completed}/{total}
             </span>
           </button>
-          {open[key] || (search && nodeHasMatch(value, search)) ? (
-            <div style={{ paddingLeft: "0.5rem", borderLeft: "1px solid #1e2535", marginLeft: "0.4rem" }}>
+
+          {isOpen && (
+            <div style={{ paddingLeft: "1rem", marginTop: "0.75rem" }}>
               {renderNode(value)}
             </div>
-          ) : null}
+          )}
         </div>
       );
     });
   };
 
-  /* ---- overall progress ---- */
   const currentSyllabus = syllabus[currentClass] || {};
-  const totalAll = Object.values(currentSyllabus).reduce((s, v) => s + getTotalLessons(v), 0);
-  const doneAll = Object.values(currentSyllabus).reduce((s, v) => s + countCompletedLessons(v), 0);
+  const doneAll = countCompletedLessons(currentSyllabus);
+  const totalAll = SUBJECT_TOTALS[currentClass]
+    ? Object.values(SUBJECT_TOTALS[currentClass]).reduce((a, b) => a + b, 0)
+    : getTotalLessons(currentSyllabus);
   const overallPct = totalAll > 0 ? Math.round((doneAll / totalAll) * 100) : 0;
+
+  if (!mounted) return null;
 
   return (
     <>
-      {/* Google Fonts */}
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Mono:wght@400;500&family=Outfit:wght@400;500;600&display=swap');
-
-        * { box-sizing: border-box; }
-
-        body {
-          background: #0f1117 !important;
-          background-image: radial-gradient(ellipse 70% 40% at 50% -5%, rgba(251,191,36,0.07), transparent) !important;
+        .hover-link:hover {
+          transform: translateX(4px);
+          text-shadow: 0 0 8px currentColor;
         }
-
-        .subject-card {
-          background: #1c1f2e;
-          border: 1px solid #2e3450;
-          border-radius: 14px;
-          overflow: hidden;
-          transition: border-color 0.2s ease;
-        }
-        .subject-card:hover { border-color: #4a5580; background: #20243a; }
-
-        .subject-header {
-          display: flex;
-          align-items: center;
-          padding: 1.1rem 1.4rem;
-          cursor: pointer;
-          background: none;
-          border: none;
-          width: 100%;
-          gap: 0.75rem;
-        }
-        .subject-header:hover .subject-icon { opacity: 1; }
-
-        .progress-bar-track {
-          height: 4px;
-          background: #2a2f48;
-          border-radius: 0;
-        }
-        .progress-bar-fill {
-          height: 100%;
-          background: linear-gradient(90deg, #f59e0b, #fbbf24);
-          border-radius: 0;
-          transition: width 0.6s ease;
-        }
-
-        .class-btn {
-          padding: 6px 20px;
-          border-radius: 6px;
-          border: 1px solid #2e3450;
-          cursor: pointer;
-          font-family: 'DM Mono', monospace;
-          font-size: 0.8rem;
-          font-weight: 500;
-          letter-spacing: 0.05em;
-          transition: all 0.15s ease;
-          background: transparent;
-          color: #7a8aaa;
-        }
-        .class-btn.active {
-          background: #1e2d50;
-          border-color: #4a6aaa;
-          color: #93c5fd;
-        }
-        .class-btn:hover:not(.active) { border-color: #4a5580; color: #a0aec0; }
-
-        .search-input {
-          width: 100%;
-          background: #1c1f2e;
-          border: 1px solid #2e3450;
-          border-radius: 10px;
-          padding: 0.75rem 1rem;
-          color: #e2e8f0;
-          font-family: 'DM Mono', monospace;
-          font-size: 0.85rem;
-          outline: none;
-          transition: border-color 0.2s;
-        }
-        .search-input:focus { border-color: #3b5099; }
-        .search-input::placeholder { color: #2d3748; }
-
-        .save-btn {
-          padding: 7px 20px;
-          border-radius: 6px;
-          border: 1px solid #44401030;
-          cursor: pointer;
-          font-family: 'DM Mono', monospace;
-          font-size: 0.8rem;
-          font-weight: 500;
-          letter-spacing: 0.05em;
-          transition: all 0.2s ease;
-          background: #1a1500;
-          color: #f59e0b;
-        }
-        .save-btn.flashing {
-          background: #f59e0b;
-          color: #000;
-          border-color: #f59e0b;
-        }
-
-        .reset-btn {
-          padding: 7px 20px;
-          border-radius: 6px;
-          border: 1px solid #1e2535;
-          cursor: pointer;
-          font-family: 'DM Mono', monospace;
-          font-size: 0.8rem;
-          font-weight: 500;
-          letter-spacing: 0.05em;
-          transition: all 0.15s ease;
-          background: transparent;
-          color: #7a8aaa;
-        }
-        .reset-btn:hover { border-color: #ef4444; color: #ef4444; }
       `}</style>
 
-      <main style={{ maxWidth: "720px", margin: "0 auto", padding: "2rem 1.25rem 4rem" }}>
-
-        {/* Header */}
-        <div style={{ marginBottom: "2.5rem" }}>
-          <div style={{ display: "flex", alignItems: "baseline", gap: "0.75rem", marginBottom: "0.5rem" }}>
+      <main 
+        style={{ 
+          maxWidth: "800px", 
+          margin: "0 auto", 
+          padding: "2.5rem 1.5rem 5rem",
+          position: "relative",
+          zIndex: 10
+        }}
+      >
+        {/* Hero Header */}
+        <div style={{ marginBottom: "3rem" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "0.75rem" }}>
             <h1 style={{
-              fontFamily: "'Syne', sans-serif",
-              fontSize: "2rem",
-              fontWeight: 700,
-              color: "#f1f5f9",
+              fontFamily: "'Bricolage Grotesque', sans-serif",
+              fontSize: "clamp(2rem, 5vw, 3rem)",
+              fontWeight: 800,
+              background: "linear-gradient(135deg, #fbbf24, #f59e0b, #fbbf24)",
+              backgroundSize: "200% 200%",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
               margin: 0,
-              letterSpacing: "-0.01em",
-            }}>Study Tracker</h1>
-            <span style={{
-              fontFamily: "'DM Mono', monospace",
-              fontSize: "0.75rem",
-              color: "#f59e0b",
-              background: "#1a1500",
-              border: "1px solid #f59e0b30",
-              borderRadius: "4px",
-              padding: "2px 8px",
-            }}>CLASS {currentClass}</span>
+              letterSpacing: "-0.02em",
+              animation: "shimmer 3s ease-in-out infinite"
+            }}>
+              Study Tracker
+            </h1>
+            <span 
+              className="status-badge"
+              style={{
+                background: "var(--accent-amber-glow)",
+                borderColor: "var(--accent-amber)",
+                color: "var(--accent-amber)",
+                fontWeight: 700
+              }}
+            >
+              Class {currentClass}
+            </span>
           </div>
-          <p style={{ fontFamily: "'Outfit', sans-serif", fontStyle: "normal", color: "#6b7aaa", margin: 0, fontSize: "0.9rem", fontWeight: 400 }}>
-            {doneAll} of {totalAll} lessons completed
+
+          <p style={{
+            fontFamily: "'Crimson Pro', serif",
+            fontSize: "1.125rem",
+            color: "var(--text-tertiary)",
+            margin: "0 0 1.25rem 0",
+            fontStyle: "italic"
+          }}>
+            {doneAll} of {totalAll} lessons completed — keep going! 🚀
           </p>
 
-          {/* Overall progress bar */}
-          <div style={{ marginTop: "0.75rem" }}>
-            <div className="progress-bar-track">
-              <div className="progress-bar-fill" style={{ width: `${overallPct}%` }} />
-            </div>
+          {/* Overall Progress */}
+          <div className="progress-container" style={{ height: "10px" }}>
+            <div 
+              className="progress-bar" 
+              style={{ 
+                width: `${overallPct}%`,
+                background: overallPct === 100
+                  ? "linear-gradient(90deg, #10b981, #34d399)"
+                  : "linear-gradient(90deg, #f59e0b, #fbbf24)"
+              }} 
+            />
           </div>
+          <p style={{
+            fontFamily: "'JetBrains Mono', monospace",
+            fontSize: "0.875rem",
+            color: "var(--text-muted)",
+            marginTop: "0.5rem",
+            textAlign: "right"
+          }}>
+            {overallPct}% Complete
+          </p>
         </div>
 
-        {/* Controls row */}
-        <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", marginBottom: "1.25rem", flexWrap: "wrap" }}>
+        {/* Controls Bar */}
+        <div style={{
+          display: "flex",
+          gap: "0.75rem",
+          alignItems: "center",
+          marginBottom: "1.5rem",
+          flexWrap: "wrap"
+        }}>
           {CLASSES.map((cls) => (
-            <button key={cls} className={`class-btn${currentClass === cls ? " active" : ""}`}
-              onClick={() => setCurrentClass(cls)}>
+            <button
+              key={cls}
+              onClick={() => setCurrentClass(cls)}
+              className={currentClass === cls ? "btn-primary" : "btn-ghost"}
+              style={{
+                padding: "0.625rem 1.25rem",
+                fontSize: "0.8125rem"
+              }}
+            >
               Class {cls}
             </button>
           ))}
-          <div style={{ marginLeft: "auto", display: "flex", gap: "0.5rem" }}>
-            <button className={`save-btn${saveFlash ? " flashing" : ""}`} onClick={saveProgress}>
-              {saveFlash ? "✓ Saved" : "Save"}
+
+          <div style={{ marginLeft: "auto", display: "flex", gap: "0.75rem" }}>
+            <button
+              onClick={saveProgress}
+              className="btn-primary"
+              style={{
+                padding: "0.625rem 1.25rem",
+                fontSize: "0.8125rem",
+                background: saveFlash 
+                  ? "linear-gradient(135deg, #10b981, #34d399)" 
+                  : "linear-gradient(135deg, #fbbf24, #f59e0b)",
+                transition: "all 0.3s ease"
+              }}
+            >
+              {saveFlash ? "✓ Saved!" : "💾 Save"}
             </button>
-            <button className="reset-btn" onClick={resetProgress}>Reset</button>
+            <button
+              onClick={resetProgress}
+              className="btn-ghost"
+              style={{
+                padding: "0.625rem 1.25rem",
+                fontSize: "0.8125rem",
+                color: "#ef4444"
+              }}
+            >
+              Reset
+            </button>
           </div>
         </div>
 
-        {/* Search */}
-        <div style={{ marginBottom: "1.5rem", position: "relative" }}>
-          <span style={{ position: "absolute", left: "1rem", top: "50%", transform: "translateY(-50%)", color: "#4a5270", fontSize: "0.85rem" }}>⌕</span>
+        {/* Search Bar */}
+        <div style={{ position: "relative", marginBottom: "2rem" }}>
+          <span style={{
+            position: "absolute",
+            left: "1.25rem",
+            top: "50%",
+            transform: "translateY(-50%)",
+            fontSize: "1.125rem",
+            color: "var(--text-ghost)",
+            pointerEvents: "none"
+          }}>
+            🔍
+          </span>
           <input
-            className="search-input"
-            style={{ paddingLeft: "2.25rem" }}
+            type="text"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            placeholder="Search lessons..."
+            placeholder="Search for a lesson..."
+            className="input"
+            style={{
+              paddingLeft: "3rem",
+              fontSize: "0.9375rem"
+            }}
           />
         </div>
 
-        {/* Subject cards */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
-          {Object.entries(currentSyllabus).map(([subjectName, subjectData]) => {
+        {/* Subject Cards */}
+        <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+          {Object.entries(currentSyllabus).map(([subjectName, subjectData], idx) => {
             const completed = countCompletedLessons(subjectData);
             const total = SUBJECT_TOTALS[currentClass]?.[subjectName] ?? getTotalLessons(subjectData);
             const pct = total > 0 ? Math.round((completed / total) * 100) : 0;
@@ -431,47 +641,95 @@ export default function Dashboard() {
             const isOpen = open[subjectName] || (search && nodeHasMatch(subjectData, search));
 
             return (
-              <div key={subjectName} className="subject-card">
-                {/* Subject header */}
-                <button className="subject-header" onClick={() => toggle(subjectName)}>
-                  <span className="subject-icon" style={{ fontSize: "1.1rem", opacity: 0.7, transition: "opacity 0.2s" }}>{icon}</span>
+              <div
+                key={subjectName}
+                className="glass-card"
+                style={{
+                  padding: 0,
+                  opacity: 0,
+                  animation: `fadeInUp 0.4s ease-out ${idx * 0.1}s forwards`
+                }}
+              >
+                {/* Subject Header */}
+                <button
+                  onClick={() => toggle(subjectName)}
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "1rem",
+                    padding: "1.25rem 1.5rem",
+                    background: "transparent",
+                    border: "none",
+                    cursor: "pointer",
+                    transition: "all 0.2s ease"
+                  }}
+                  className="clickable"
+                >
                   <span style={{
-                    fontFamily: "'Syne', sans-serif",
-                    fontSize: "1.1rem",
-                    fontWeight: 700,
-                    color: "#f1f5f9",
-                    letterSpacing: "0.01em",
-                  }}>{subjectName}</span>
+                    fontSize: "1.75rem",
+                    filter: isOpen ? "grayscale(0)" : "grayscale(0.5)",
+                    transition: "filter 0.2s ease"
+                  }}>
+                    {icon}
+                  </span>
 
-                  {/* mini progress bar */}
-                  <div style={{ flex: 1, margin: "0 1rem" }}>
-                    <div style={{ height: "4px", background: "#2e3450", borderRadius: "2px" }}>
-                      <div style={{
-                        height: "100%",
-                        width: `${pct}%`,
-                        background: pct === 100 ? "#22c55e" : "linear-gradient(90deg, #f59e0b80, #f59e0b)",
-                        borderRadius: "2px",
-                        transition: "width 0.5s ease",
-                      }} />
+                  <div style={{ flex: 1, textAlign: "left" }}>
+                    <h3 style={{
+                      fontFamily: "'Bricolage Grotesque', sans-serif",
+                      fontSize: "1.25rem",
+                      fontWeight: 700,
+                      color: "var(--text-primary)",
+                      marginBottom: "0.5rem"
+                    }}>
+                      {subjectName}
+                    </h3>
+                    <div className="progress-container" style={{ height: "6px" }}>
+                      <div 
+                        className="progress-bar" 
+                        style={{ 
+                          width: `${pct}%`,
+                          background: pct === 100
+                            ? "linear-gradient(90deg, #10b981, #34d399)"
+                            : "linear-gradient(90deg, #f59e0b, #fbbf24)"
+                        }} 
+                      />
                     </div>
                   </div>
 
-                  <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.72rem", color: pct === 100 ? "#4ade80" : "#8892aa", whiteSpace: "nowrap" }}>
-                    {completed}/{total}
-                  </span>
-                  <span style={{ color: isOpen ? "#f59e0b" : "#334155", fontSize: "0.6rem", marginLeft: "0.5rem", transition: "color 0.2s" }}>
-                    {isOpen ? "▲" : "▼"}
-                  </span>
+                  <div style={{ textAlign: "right" }}>
+                    <p style={{
+                      fontFamily: "'JetBrains Mono', monospace",
+                      fontSize: "0.8125rem",
+                      color: pct === 100 ? "var(--accent-emerald)" : "var(--text-muted)",
+                      marginBottom: "0.25rem"
+                    }}>
+                      {completed}/{total}
+                    </p>
+                    <span style={{
+                      fontSize: "0.75rem",
+                      color: isOpen ? "var(--accent-amber)" : "var(--text-ghost)",
+                      transition: "all 0.2s ease",
+                      display: "inline-block",
+                      transform: isOpen ? "rotate(180deg)" : "rotate(0deg)"
+                    }}>
+                      ▼
+                    </span>
+                  </div>
                 </button>
 
-                {/* Thin gold line under header when open */}
-                {isOpen && <div style={{ height: "1px", background: "linear-gradient(90deg, #f59e0b30, transparent)" }} />}
-
-                {/* Subject content */}
+                {/* Subject Content */}
                 {isOpen && (
-                  <div style={{ padding: "0.75rem 1rem 1rem" }}>
-                    {renderNode(subjectData)}
-                  </div>
+                  <>
+                    <div style={{
+                      height: "1px",
+                      background: "linear-gradient(90deg, transparent, var(--border-medium), transparent)",
+                      margin: "0 1.5rem"
+                    }} />
+                    <div style={{ padding: "1.25rem 1.5rem" }}>
+                      {renderNode(subjectData)}
+                    </div>
+                  </>
                 )}
               </div>
             );

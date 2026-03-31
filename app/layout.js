@@ -1,28 +1,33 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
 import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
 import NotificationManager from "@/components/NotificationManager";
 import NavButtons from "@/components/NavButtons";
 
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
-
 export const metadata = {
-  title: "Study Tracker",
-  description: "Track your study progress",
-  manifest: "/manifest.json"
+  title: "Study Tracker | Master Your Learning Journey",
+  description: "Track your study progress, master concepts, and achieve academic excellence with our intelligent study tracking system.",
+  manifest: "/manifest.json",
+  themeColor: "#0a0d16",
+  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-black text-white`}>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </head>
+      <body style={{
+        position: "relative",
+        minHeight: "100vh"
+      }}>
         <ServiceWorkerRegister />
         <NotificationManager />
         <NavButtons />
-        {children}
+        <div style={{ position: "relative", zIndex: 10 }}>
+          {children}
+        </div>
       </body>
     </html>
   );
