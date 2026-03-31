@@ -38,8 +38,9 @@ export default function NavButtons() {
   return (
     <div style={{
       position: "fixed",
-      top: "12px",
-      left: "14px",
+      bottom: "20px",
+      left: "50%",
+      transform: "translateX(-50%)",
       display: "flex",
       gap: "6px",
       zIndex: 1000,
