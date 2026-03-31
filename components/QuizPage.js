@@ -23,8 +23,10 @@ function buildQuiz(lessonId, marks) {
 }
 
 /* ─── main component ───────────────────────────────────── */
-export default function QuizPage({ params }) {
-  const { lesson } = params;
+export default function QuizPage({ initialLesson }) {
+  const routeParams = useParams();
+  const lessonParam = routeParams?.lesson ?? initialLesson;
+  const lesson = Array.isArray(lessonParam) ? lessonParam[0] : lessonParam;
   const searchParams = useSearchParams();
   const marks = parseInt(searchParams.get("marks") || "40", 10);
 

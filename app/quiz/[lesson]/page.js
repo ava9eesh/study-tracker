@@ -1,7 +1,9 @@
 import { Suspense } from "react";
 import QuizPage from "@/components/QuizPage";
 
-export default function Page({ params }) {
+export default async function Page({ params }) {
+  const resolvedParams = await params;
+
   return (
     <Suspense fallback={
       <div style={{
@@ -18,7 +20,7 @@ export default function Page({ params }) {
         LOADING...
       </div>
     }>
-      <QuizPage params={params} />
+      <QuizPage initialLesson={resolvedParams?.lesson} />
     </Suspense>
   );
 }
