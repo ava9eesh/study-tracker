@@ -519,16 +519,92 @@ h3 { font-size: clamp(1.25rem, 3vw, 1.5rem); }
 
 @media (max-width: 768px) {
   :root {
-    font-size: 14px;
+    font-size: 16px; /* Larger base for mobile readability */
   }
   
+  body {
+    padding: 0;
+  }
+  
+  /* Larger touch targets for mobile */
   .glass-card {
     border-radius: 12px;
+    padding: 1rem !important;
   }
   
   .btn {
-    padding: 0.625rem 1.25rem;
+    padding: 0.875rem 1.5rem;
+    font-size: 0.9375rem;
+    min-height: 44px; /* iOS touch target minimum */
+  }
+  
+  /* Better button spacing on mobile */
+  .btn-primary,
+  .btn-secondary,
+  .btn-ghost {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Status badges bigger on mobile */
+  .status-badge {
+    padding: 0.5rem 1rem;
     font-size: 0.8125rem;
+    min-height: 36px;
+  }
+  
+  /* Progress bars more visible */
+  .progress-container {
+    height: 10px !important;
+  }
+  
+  /* Inputs larger for mobile */
+  .input {
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+  }
+  
+  /* Navigation buttons bigger */
+  .nav-btn {
+    width: 52px !important;
+    height: 52px !important;
+    font-size: 1.5rem !important;
+  }
+  
+  .nav-container {
+    bottom: 1rem;
+    gap: 1rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  :root {
+    --space-md: 0.75rem;
+    --space-lg: 1rem;
+  }
+  
+  h1 {
+    font-size: 1.75rem !important;
+  }
+  
+  h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  h3 {
+    font-size: 1.25rem !important;
+  }
+  
+  /* Even larger touch targets on small phones */
+  .btn {
+    min-height: 48px;
+    font-size: 1rem;
+  }
+  
+  .status-badge {
+    font-size: 0.75rem;
+    padding: 0.625rem 0.875rem;
   }
 }
 

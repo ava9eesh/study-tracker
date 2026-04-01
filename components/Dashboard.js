@@ -211,7 +211,7 @@ export default function Dashboard() {
         </div>
 
         {/* Counters */}
-        <div style={{ display: "flex", gap: "1.5rem", marginBottom: "1rem" }}>
+        <div style={{ display: "flex", gap: "1.5rem", marginBottom: "1rem" }} className="lesson-counters">
           {[
             { field: "revisions", label: "Revisions", icon: "🔄" },
             { field: "pyqs", label: "PYQs Done", icon: "📝" }
@@ -475,19 +475,67 @@ export default function Dashboard() {
           transform: translateX(4px);
           text-shadow: 0 0 8px currentColor;
         }
+        
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+          .controls-row {
+            flex-direction: column !important;
+            gap: 0.75rem !important;
+          }
+          
+          .controls-row > div {
+            margin-left: 0 !important;
+            width: 100%;
+          }
+          
+          .class-buttons {
+            display: flex;
+            gap: 0.5rem;
+            width: 100%;
+          }
+          
+          .class-buttons button {
+            flex: 1;
+            min-height: 44px;
+          }
+          
+          .action-buttons {
+            display: flex;
+            gap: 0.5rem;
+            width: 100%;
+          }
+          
+          .action-buttons button {
+            flex: 1;
+            min-height: 44px;
+          }
+          
+          .hero-header h1 {
+            font-size: 2rem !important;
+          }
+          
+          .subject-card-header {
+            padding: 1rem !important;
+          }
+          
+          .lesson-counters {
+            flex-direction: column !important;
+            gap: 1rem !important;
+          }
+        }
       `}</style>
 
       <main 
         style={{ 
           maxWidth: "800px", 
           margin: "0 auto", 
-          padding: "2.5rem 1.5rem 5rem",
+          padding: "1.5rem 1rem 5rem",
           position: "relative",
           zIndex: 10
         }}
       >
         {/* Hero Header */}
-        <div style={{ marginBottom: "3rem" }}>
+        <div style={{ marginBottom: "3rem" }} className="hero-header">
           <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "0.75rem" }}>
             <h1 style={{
               fontFamily: "'Bricolage Grotesque', sans-serif",
@@ -555,22 +603,26 @@ export default function Dashboard() {
           alignItems: "center",
           marginBottom: "1.5rem",
           flexWrap: "wrap"
-        }}>
-          {CLASSES.map((cls) => (
-            <button
-              key={cls}
-              onClick={() => setCurrentClass(cls)}
-              className={currentClass === cls ? "btn-primary" : "btn-ghost"}
-              style={{
-                padding: "0.625rem 1.25rem",
-                fontSize: "0.8125rem"
-              }}
-            >
-              Class {cls}
-            </button>
-          ))}
+        }}
+        className="controls-row"
+        >
+          <div className="class-buttons">
+            {CLASSES.map((cls) => (
+              <button
+                key={cls}
+                onClick={() => setCurrentClass(cls)}
+                className={currentClass === cls ? "btn-primary" : "btn-ghost"}
+                style={{
+                  padding: "0.625rem 1.25rem",
+                  fontSize: "0.8125rem"
+                }}
+              >
+                Class {cls}
+              </button>
+            ))}
+          </div>
 
-          <div style={{ marginLeft: "auto", display: "flex", gap: "0.75rem" }}>
+          <div style={{ marginLeft: "auto" }} className="action-buttons">
             <button
               onClick={saveProgress}
               className="btn-primary"
@@ -656,7 +708,7 @@ export default function Dashboard() {
                     cursor: "pointer",
                     transition: "all 0.2s ease"
                   }}
-                  className="clickable"
+                  className="clickable subject-card-header"
                 >
                   <span style={{
                     fontSize: "1.75rem",

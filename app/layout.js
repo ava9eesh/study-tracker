@@ -8,7 +8,12 @@ export const metadata = {
   description: "Track your study progress, master concepts, and achieve academic excellence with our intelligent study tracking system.",
   manifest: "/manifest.json",
   themeColor: "#0a0d16",
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5,
+    userScalable: true
+  }
 };
 
 export default function RootLayout({ children }) {
