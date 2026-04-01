@@ -158,9 +158,7 @@ export default function Dashboard() {
         style={{
           marginTop: "1rem",
           padding: "1.25rem 1.5rem",
-          borderLeft: `3px solid ${cfg.text}`,
-          opacity: 0,
-          animation: "fadeInUp 0.4s ease-out forwards"
+          borderLeft: `3px solid ${cfg.text}`
         }}
       >
         {/* Lesson Header */}
@@ -465,9 +463,7 @@ export default function Dashboard() {
 
   const currentSyllabus = syllabus[currentClass] || {};
   const doneAll = countCompletedLessons(currentSyllabus);
-  const totalAll = SUBJECT_TOTALS[currentClass]
-    ? Object.values(SUBJECT_TOTALS[currentClass]).reduce((a, b) => a + b, 0)
-    : getTotalLessons(currentSyllabus);
+  const totalAll = getTotalLessons(currentSyllabus);
   const overallPct = totalAll > 0 ? Math.round((doneAll / totalAll) * 100) : 0;
 
   if (!mounted) return null;
@@ -497,14 +493,12 @@ export default function Dashboard() {
               fontFamily: "'Bricolage Grotesque', sans-serif",
               fontSize: "clamp(2rem, 5vw, 3rem)",
               fontWeight: 800,
-              background: "linear-gradient(135deg, #fbbf24, #f59e0b, #fbbf24)",
-              backgroundSize: "200% 200%",
+              background: "linear-gradient(135deg, #fbbf24, #f59e0b)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
               margin: 0,
-              letterSpacing: "-0.02em",
-              animation: "shimmer 3s ease-in-out infinite"
+              letterSpacing: "-0.02em"
             }}>
               Study Tracker
             </h1>
@@ -635,7 +629,7 @@ export default function Dashboard() {
         <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
           {Object.entries(currentSyllabus).map(([subjectName, subjectData], idx) => {
             const completed = countCompletedLessons(subjectData);
-            const total = SUBJECT_TOTALS[currentClass]?.[subjectName] ?? getTotalLessons(subjectData);
+            const total = getTotalLessons(subjectData);
             const pct = total > 0 ? Math.round((completed / total) * 100) : 0;
             const icon = SUBJECT_ICONS[subjectName] ?? "📌";
             const isOpen = open[subjectName] || (search && nodeHasMatch(subjectData, search));
@@ -645,9 +639,7 @@ export default function Dashboard() {
                 key={subjectName}
                 className="glass-card"
                 style={{
-                  padding: 0,
-                  opacity: 0,
-                  animation: `fadeInUp 0.4s ease-out ${idx * 0.1}s forwards`
+                  padding: 0
                 }}
               >
                 {/* Subject Header */}
