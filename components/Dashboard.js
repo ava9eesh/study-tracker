@@ -211,12 +211,12 @@ export default function Dashboard() {
         </div>
 
         {/* Counters */}
-        <div style={{ display: "flex", gap: "1.5rem", marginBottom: "1rem" }} className="lesson-counters">
+        <div style={{ display: "flex", gap: "1.5rem", marginBottom: "1rem", flexWrap: "wrap" }} className="lesson-counters">
           {[
             { field: "revisions", label: "Revisions", icon: "🔄" },
             { field: "pyqs", label: "PYQs Done", icon: "📝" }
           ].map(({ field, label, icon }) => (
-            <div key={field} style={{ display: "flex", alignItems: "center", gap: "0.625rem" }}>
+            <div key={field} style={{ display: "flex", alignItems: "center", gap: "0.625rem", flex: "1 1 auto", minWidth: "180px" }}>
               <button
                 onClick={() => updateLesson(id, { [field]: Math.max(0, (data[field] || 0) - 1) })}
                 className="btn-ghost"
@@ -478,6 +478,18 @@ export default function Dashboard() {
         
         /* Mobile optimizations */
         @media (max-width: 768px) {
+          .hero-header {
+            margin-bottom: 1.5rem !important;
+          }
+          
+          .hero-header h1 {
+            font-size: 1.75rem !important;
+          }
+          
+          .hero-header p {
+            font-size: 0.9375rem !important;
+          }
+          
           .controls-row {
             flex-direction: column !important;
             gap: 0.75rem !important;
@@ -510,10 +522,6 @@ export default function Dashboard() {
             min-height: 44px;
           }
           
-          .hero-header h1 {
-            font-size: 2rem !important;
-          }
-          
           .subject-card-header {
             padding: 1rem !important;
           }
@@ -529,17 +537,18 @@ export default function Dashboard() {
         style={{ 
           maxWidth: "800px", 
           margin: "0 auto", 
-          padding: "1.5rem 1rem 5rem",
+          padding: "max(1.5rem, env(safe-area-inset-top)) 1rem 5rem",
           position: "relative",
-          zIndex: 10
+          zIndex: 10,
+          paddingTop: "calc(max(1.5rem, env(safe-area-inset-top)) + 1rem)"
         }}
       >
         {/* Hero Header */}
-        <div style={{ marginBottom: "3rem" }} className="hero-header">
-          <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "0.75rem" }}>
+        <div style={{ marginBottom: "2rem" }} className="hero-header">
+          <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "0.5rem", flexWrap: "wrap" }}>
             <h1 style={{
               fontFamily: "'Bricolage Grotesque', sans-serif",
-              fontSize: "clamp(2rem, 5vw, 3rem)",
+              fontSize: "clamp(1.75rem, 5vw, 3rem)",
               fontWeight: 800,
               background: "linear-gradient(135deg, #fbbf24, #f59e0b)",
               WebkitBackgroundClip: "text",
@@ -556,7 +565,9 @@ export default function Dashboard() {
                 background: "var(--accent-amber-glow)",
                 borderColor: "var(--accent-amber)",
                 color: "var(--accent-amber)",
-                fontWeight: 700
+                fontWeight: 700,
+                padding: "0.375rem 0.875rem",
+                fontSize: "0.8125rem"
               }}
             >
               Class {currentClass}
@@ -565,16 +576,16 @@ export default function Dashboard() {
 
           <p style={{
             fontFamily: "'Crimson Pro', serif",
-            fontSize: "1.125rem",
+            fontSize: "1rem",
             color: "var(--text-tertiary)",
-            margin: "0 0 1.25rem 0",
+            margin: "0 0 1rem 0",
             fontStyle: "italic"
           }}>
             {doneAll} of {totalAll} lessons completed — keep going! 🚀
           </p>
 
           {/* Overall Progress */}
-          <div className="progress-container" style={{ height: "10px" }}>
+          <div className="progress-container" style={{ height: "8px", marginBottom: "0.5rem" }}>
             <div 
               className="progress-bar" 
               style={{ 
@@ -587,9 +598,9 @@ export default function Dashboard() {
           </div>
           <p style={{
             fontFamily: "'JetBrains Mono', monospace",
-            fontSize: "0.875rem",
+            fontSize: "0.8125rem",
             color: "var(--text-muted)",
-            marginTop: "0.5rem",
+            marginTop: "0.25rem",
             textAlign: "right"
           }}>
             {overallPct}% Complete
