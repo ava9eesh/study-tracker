@@ -17,6 +17,7 @@ export default function Page() {
         <span style={{ color: "#f59e0b", fontWeight: 600, marginRight: "0.4rem" }}>⚠ BETA</span>
         MCQs may contain errors — use them as a study aid, not a final reference.
         Found a bug?{" "}
+        For the best experience, please use laptop/desktop.
         <a
           href="mailto:studytracker@yahoo.com"
           style={{ color: "#f59e0b", textDecoration: "none", borderBottom: "1px solid #f59e0b50" }}
