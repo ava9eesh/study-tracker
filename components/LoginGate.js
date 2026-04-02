@@ -172,6 +172,29 @@ export default function LoginGate() {
             paddingTop: "1.5rem",
             borderTop: "1px solid var(--border-subtle)"
           }}>
+            {/* Desktop Recommendation */}
+            <div style={{
+              padding: "0.875rem 1.125rem",
+              background: "rgba(34, 211, 238, 0.05)",
+              border: "1px solid rgba(34, 211, 238, 0.2)",
+              borderRadius: "10px",
+              marginBottom: "1rem",
+              display: "flex",
+              alignItems: "center",
+              gap: "0.75rem"
+            }}>
+              <span style={{ fontSize: "1.25rem", flexShrink: 0 }}>💻</span>
+              <p style={{
+                fontFamily: "'JetBrains Mono', monospace",
+                fontSize: "0.8125rem",
+                color: "var(--accent-cyan)",
+                margin: 0,
+                lineHeight: 1.4
+              }}>
+                <strong>Best Experience:</strong> Use on Desktop/Laptop for optimal performance
+              </p>
+            </div>
+
             <p style={{
               fontFamily: "'JetBrains Mono', monospace",
               fontSize: "0.8125rem",

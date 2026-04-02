@@ -125,14 +125,12 @@ export default function PrerequisitesPage() {
             fontFamily: "'Bricolage Grotesque', sans-serif",
             fontSize: "2rem",
             fontWeight: 800,
-            background: "linear-gradient(135deg, #fbbf24, #f59e0b, #fbbf24)",
-            backgroundSize: "200% 200%",
+            background: "linear-gradient(135deg, #fbbf24, #f59e0b)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
             backgroundClip: "text",
             marginBottom: "0.75rem",
-            letterSpacing: "-0.02em",
-            animation: "shimmer 3s ease-in-out infinite"
+            letterSpacing: "-0.02em"
           }}>
             Prerequisites
           </h1>

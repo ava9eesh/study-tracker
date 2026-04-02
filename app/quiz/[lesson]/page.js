@@ -52,12 +52,33 @@ export default function QuizPage() {
   const [selected, setSelected] = useState(null);
   const [showFeedback, setShowFeedback] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [startTime, setStartTime] = useState(null);
+  const [elapsedTime, setElapsedTime] = useState(0);
+  const [timerInterval, setTimerInterval] = useState(null);
 
   useEffect(() => {
     setMounted(true);
+    // Start timer
+    const start = Date.now();
+    setStartTime(start);
+    
+    const interval = setInterval(() => {
+      setElapsedTime(Math.floor((Date.now() - start) / 1000));
+    }, 1000);
+    
+    setTimerInterval(interval);
+    
+    return () => clearInterval(interval);
   }, []);
 
   if (!mounted) return null;
+
+  // Format time as MM:SS
+  const formatTime = (seconds) => {
+    const mins = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+  };
 
   if (!lessonBlock || !lessonBlock[mode] || questions.length === 0) {
     return (
@@ -121,8 +142,43 @@ export default function QuizPage() {
   };
 
   const handleNext = () => {
+    // If no answer selected, mark as skipped (-1)
+    if (selected === null) {
+      setAnswers((prev) => [...prev, -1]);
+    }
+    
     if (index + 1 === questions.length) {
       setFinished(true);
+      if (timerInterval) clearInterval(timerInterval);
+    } else {
+      setIndex((i) => i + 1);
+      setSelected(null);
+      setShowFeedback(false);
+    }
+  };
+
+  const handleBack = () => {
+    if (index > 0) {
+      setIndex((i) => i - 1);
+      // Restore previous answer if exists
+      const prevAnswer = answers[index - 1];
+      if (prevAnswer !== undefined && prevAnswer !== -1) {
+        setSelected(prevAnswer);
+        setShowFeedback(true);
+      } else {
+        setSelected(null);
+        setShowFeedback(false);
+      }
+      // Remove last answer from array
+      setAnswers((prev) => prev.slice(0, -1));
+    }
+  };
+
+  const handleSkip = () => {
+    setAnswers((prev) => [...prev, -1]);
+    if (index + 1 === questions.length) {
+      setFinished(true);
+      if (timerInterval) clearInterval(timerInterval);
     } else {
       setIndex((i) => i + 1);
       setSelected(null);
@@ -290,6 +346,25 @@ export default function QuizPage() {
                   SCORE
                 </div>
               </div>
+              <div>
+                <div style={{
+                  fontFamily: "'JetBrains Mono', monospace",
+                  fontSize: "3rem",
+                  fontWeight: 700,
+                  color: "var(--accent-cyan)",
+                  lineHeight: 1
+                }}>
+                  {formatTime(elapsedTime)}
+                </div>
+                <div style={{
+                  fontFamily: "'JetBrains Mono', monospace",
+                  fontSize: "0.875rem",
+                  color: "var(--text-muted)",
+                  marginTop: "0.5rem"
+                }}>
+                  TIME TAKEN
+                </div>
+              </div>
             </div>
 
             <button
@@ -319,7 +394,8 @@ export default function QuizPage() {
             {questions.map((q, i) => {
               const userAns = answers[i];
               const correctAns = q.correct;
-              const isCorrect = userAns === correctAns;
+              const isSkipped = userAns === -1 || userAns === undefined;
+              const isCorrect = !isSkipped && userAns === correctAns;
 
               return (
                 <div
@@ -327,7 +403,9 @@ export default function QuizPage() {
                   className="glass-card"
                   style={{
                     padding: "1.5rem",
-                    borderLeft: `4px solid ${isCorrect ? "var(--accent-emerald)" : "#ef4444"}`,
+                    borderLeft: `4px solid ${
+                      isSkipped ? "#94a3b8" : isCorrect ? "var(--accent-emerald)" : "#ef4444"
+                    }`,
                     opacity: 0,
                     animation: `fadeInUp 0.3s ease-out ${i * 0.05}s forwards`
                   }}
@@ -343,21 +421,27 @@ export default function QuizPage() {
                       width: "32px",
                       height: "32px",
                       borderRadius: "8px",
-                      background: isCorrect
+                      background: isSkipped
+                        ? "rgba(148, 163, 184, 0.1)"
+                        : isCorrect
                         ? "rgba(16, 185, 129, 0.1)"
                         : "rgba(239, 68, 68, 0.1)",
-                      border: `1px solid ${isCorrect
-                        ? "rgba(16, 185, 129, 0.3)"
-                        : "rgba(239, 68, 68, 0.3)"}`,
+                      border: `1px solid ${
+                        isSkipped
+                          ? "rgba(148, 163, 184, 0.3)"
+                          : isCorrect
+                          ? "rgba(16, 185, 129, 0.3)"
+                          : "rgba(239, 68, 68, 0.3)"
+                      }`,
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
                       fontFamily: "'JetBrains Mono', monospace",
                       fontSize: "0.875rem",
                       fontWeight: 700,
-                      color: isCorrect ? "var(--accent-emerald)" : "#ef4444"
+                      color: isSkipped ? "#94a3b8" : isCorrect ? "var(--accent-emerald)" : "#ef4444"
                     }}>
-                      {i + 1}
+                      {isSkipped ? "⊘" : i + 1}
                     </span>
                     <div style={{ flex: 1 }}>
                       <p style={{
@@ -372,36 +456,46 @@ export default function QuizPage() {
                       </p>
 
                       <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
-                        {q.options.map((opt, idx) => {
-                          const isUserAnswer = idx === userAns;
-                          const isCorrectAnswer = idx === correctAns;
-                          
-                          return (
-                            <div
-                              key={idx}
-                              className={
-                                isCorrectAnswer ? "correct-badge" :
-                                isUserAnswer ? "wrong-badge" :
-                                "result-badge"
-                              }
-                              style={{
-                                background: !isCorrectAnswer && !isUserAnswer
-                                  ? "var(--bg-elevated)"
-                                  : undefined,
-                                border: !isCorrectAnswer && !isUserAnswer
-                                  ? "1px solid var(--border-subtle)"
-                                  : undefined,
-                                color: !isCorrectAnswer && !isUserAnswer
-                                  ? "var(--text-muted)"
-                                  : undefined
-                              }}
-                            >
-                              {isCorrectAnswer && "✓ "}
-                              {isUserAnswer && !isCorrectAnswer && "✗ "}
-                              {opt}
-                            </div>
-                          );
-                        })}
+                        {isSkipped ? (
+                          <div className="result-badge" style={{
+                            background: "rgba(148, 163, 184, 0.1)",
+                            border: "1px solid rgba(148, 163, 184, 0.3)",
+                            color: "#94a3b8"
+                          }}>
+                            ⊘ Skipped
+                          </div>
+                        ) : (
+                          q.options.map((opt, idx) => {
+                            const isUserAnswer = idx === userAns;
+                            const isCorrectAnswer = idx === correctAns;
+                            
+                            return (
+                              <div
+                                key={idx}
+                                className={
+                                  isCorrectAnswer ? "correct-badge" :
+                                  isUserAnswer ? "wrong-badge" :
+                                  "result-badge"
+                                }
+                                style={{
+                                  background: !isCorrectAnswer && !isUserAnswer
+                                    ? "var(--bg-elevated)"
+                                    : undefined,
+                                  border: !isCorrectAnswer && !isUserAnswer
+                                    ? "1px solid var(--border-subtle)"
+                                    : undefined,
+                                  color: !isCorrectAnswer && !isUserAnswer
+                                    ? "var(--text-muted)"
+                                    : undefined
+                                }}
+                              >
+                                {isCorrectAnswer && "✓ "}
+                                {isUserAnswer && !isCorrectAnswer && "✗ "}
+                                {opt}
+                              </div>
+                            );
+                          })
+                        )}
                       </div>
                     </div>
                   </div>
@@ -431,23 +525,54 @@ export default function QuizPage() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          marginBottom: "1rem"
+          marginBottom: "1rem",
+          gap: "1rem",
+          flexWrap: "wrap"
         }}>
-          <h1 style={{
-            fontFamily: "'Bricolage Grotesque', sans-serif",
-            fontSize: "1.25rem",
-            fontWeight: 700,
-            color: "var(--text-primary)"
+          <div>
+            <h1 style={{
+              fontFamily: "'Bricolage Grotesque', sans-serif",
+              fontSize: "1.25rem",
+              fontWeight: 700,
+              color: "var(--text-primary)",
+              marginBottom: "0.25rem"
+            }}>
+              Quiz Time! 🎯
+            </h1>
+            <span style={{
+              fontFamily: "'JetBrains Mono', monospace",
+              fontSize: "0.875rem",
+              color: "var(--text-tertiary)"
+            }}>
+              Question {index + 1} / {questions.length}
+            </span>
+          </div>
+          <div style={{
+            padding: "0.75rem 1.25rem",
+            background: "var(--glass-bg)",
+            backdropFilter: "blur(12px)",
+            border: "1px solid var(--border-medium)",
+            borderRadius: "10px"
           }}>
-            Quiz Time! 🎯
-          </h1>
-          <span style={{
-            fontFamily: "'JetBrains Mono', monospace",
-            fontSize: "0.875rem",
-            color: "var(--text-tertiary)"
-          }}>
-            Question {index + 1} / {questions.length}
-          </span>
+            <div style={{
+              fontFamily: "'JetBrains Mono', monospace",
+              fontSize: "0.75rem",
+              color: "var(--text-muted)",
+              marginBottom: "0.25rem",
+              textAlign: "center"
+            }}>
+              ⏱️ TIME
+            </div>
+            <div style={{
+              fontFamily: "'JetBrains Mono', monospace",
+              fontSize: "1.5rem",
+              fontWeight: 700,
+              color: "var(--accent-cyan)",
+              textAlign: "center"
+            }}>
+              {formatTime(elapsedTime)}
+            </div>
+          </div>
         </div>
         
         <div className="progress-container" style={{ height: "8px" }}>
@@ -560,21 +685,58 @@ export default function QuizPage() {
         </div>
       </div>
 
-      {/* Next Button */}
-      {selected !== null && (
+      {/* Navigation Buttons */}
+      <div style={{
+        display: "flex",
+        gap: "0.75rem",
+        marginTop: "1.5rem",
+        flexWrap: "wrap"
+      }}>
+        {/* Back Button */}
+        <button
+          onClick={handleBack}
+          disabled={index === 0}
+          className="btn-ghost"
+          style={{
+            flex: "1",
+            padding: "1rem",
+            fontSize: "0.9375rem",
+            opacity: index === 0 ? 0.4 : 1,
+            cursor: index === 0 ? "not-allowed" : "pointer"
+          }}
+        >
+          ← Back
+        </button>
+
+        {/* Skip Button */}
+        {selected === null && (
+          <button
+            onClick={handleSkip}
+            className="btn-secondary"
+            style={{
+              flex: "1",
+              padding: "1rem",
+              fontSize: "0.9375rem"
+            }}
+          >
+            Skip ⏭️
+          </button>
+        )}
+
+        {/* Next Button */}
         <button
           onClick={handleNext}
           className="btn-primary"
           style={{
-            width: "100%",
-            padding: "1rem 2rem",
-            fontSize: "1rem",
-            animation: "fadeInUp 0.3s ease-out"
+            flex: "2",
+            padding: "1rem",
+            fontSize: "0.9375rem",
+            opacity: selected === null ? 0.6 : 1
           }}
         >
-          {index + 1 === questions.length ? "🎉 Finish Quiz" : "Next Question →"}
+          {index + 1 === questions.length ? "🎉 Finish" : "Next →"}
         </button>
-      )}
+      </div>
 
       {/* Score Indicator */}
       <div style={{
