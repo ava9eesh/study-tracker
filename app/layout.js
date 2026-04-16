@@ -2,6 +2,16 @@ import "./globals.css";
 import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
 import NotificationManager from "@/components/NotificationManager";
 import NavButtons from "@/components/NavButtons";
+import { FloatingDonateButton } from '@/components/DonationBanner';
+
+export default function Layout({ children }) {
+  return (
+    <>
+      {children}
+      <FloatingDonateButton />
+    </>
+  );
+}
 
 export const metadata = {
   title: "Study Tracker | Master Your Learning Journey",
