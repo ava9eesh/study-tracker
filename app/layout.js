@@ -2,8 +2,6 @@ import "./globals.css";
 import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
 import NotificationManager from "@/components/NotificationManager";
 import NavButtons from "@/components/NavButtons";
-import { FloatingDonateButton } from '@/components/DonationBanner';
-
 
 export const metadata = {
   title: "Study Tracker | Master Your Learning Journey",
@@ -17,7 +15,6 @@ export const metadata = {
     userScalable: true
   }
 };
-
 
 export default function RootLayout({ children }) {
   return (
