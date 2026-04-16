@@ -24,6 +24,9 @@ export default function Page() {
         >
           studytracker@yahoo.com
         </a>
+        <a href="/qr.jpg" target="_blank">
+  <img src="/qr.jpg" width="200" alt="Scan to pay"> Support us with a donation! </img>
+</a>
       </div>
 
       <LoginGate />
