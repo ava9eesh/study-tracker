@@ -24,10 +24,23 @@ export default function Page() {
 
         <br /><br />
 
-        <a href="/qr.jpg" target="_blank" rel="noopener noreferrer">
-          <img src="/qr.jpg" width="200" alt="Scan to pay" />
-          <div>Support us with a donation 💸</div>
-        </a>
+        <a 
+  href="/qr.jpg" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  style={{
+    display: "inline-block",
+    marginTop: "12px",
+    padding: "8px 14px",
+    background: "#f59e0b",
+    color: "#000",
+    borderRadius: "8px",
+    textDecoration: "none",
+    fontWeight: "600"
+  }}
+>
+  💸 Support Us
+</a>
       </div>
 
       <LoginGate />
