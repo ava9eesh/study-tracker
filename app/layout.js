@@ -17,14 +17,7 @@ export const metadata = {
     userScalable: true
   }
 };
-export default function Layout({ children }) {
-  return (
-    <>
-      {children}
-      <FloatingDonateButton />
-    </>
-  );
-}
+
 
 export default function RootLayout({ children }) {
   return (
