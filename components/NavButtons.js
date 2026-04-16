@@ -96,6 +96,7 @@ export default function NavButtons() {
         >
           →
         </button>
+        <Link href="/support">Support ❤️</Link>
       </div>
     </>
   );

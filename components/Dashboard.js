@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { syllabus } from "../data/syllabus";
-import DonationBanner from '@/components/DonationBanner';
+
 
 const STATUS = ["todo", "doing", "done", "mastered"];
 
