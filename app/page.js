@@ -24,8 +24,9 @@ export default function Page() {
         >
           studytracker@yahoo.com
         </a>
-        <a href="/qr.jpg" target="_blank">
-  <img src="/qr.jpg" width="200" alt="Scan to pay"> Support us with a donation!
+        <a href="/qr.jpg" target="_blank" style={{ textAlign: "center" }}>
+  <img src="/qr.jpg" width="200" alt="Scan to pay" />
+  <div>Support us with a donation 💸</div>
 </a>
       </div>
 
