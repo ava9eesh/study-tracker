@@ -18,8 +18,8 @@ export default function Page() {
 
         <br />
 
-        <a href="mailto:studytracker@yahoo.com">
-          studytracker@yahoo.com
+        <a href="mailto:admin@studytracker.tech">
+          admin@studytracker.tech
         </a>
 
         <br /><br />
@@ -54,7 +54,7 @@ export default function Page() {
         fontFamily: "'DM Mono', monospace",
       }}>
         Built by Team Study Tracker <br />
-        Contact: <a href="mailto:studytracker@yahoo.com">studytracker@yahoo.com</a>
+        Contact: <a href="mailto:admin@studytracker.tech">admin@studytracker.tech</a>
       </footer>
     </>
   );
