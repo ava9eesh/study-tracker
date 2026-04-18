@@ -204,7 +204,7 @@ export default function LoginGate() {
               Built with ❤️ by Team Study Tracker
             </p>
             <a
-              href="mailto:studytracker@yahoo.com"
+              href="mailto:admin@studytracker.tech"
               style={{
                 fontFamily: "'JetBrains Mono', monospace",
                 fontSize: "0.8125rem",
@@ -215,7 +215,7 @@ export default function LoginGate() {
               onMouseEnter={(e) => e.currentTarget.style.textShadow = "0 0 8px currentColor"}
               onMouseLeave={(e) => e.currentTarget.style.textShadow = "none"}
             >
-              studytracker@yahoo.com
+              admin@studytracker.tech
             </a>
           </div>
         </div>
